@@ -703,6 +703,43 @@
     gap: 8px;
     justify-content: flex-end;
   }
+
+  /* TOKEN PICKER */
+  .token-picker-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px;
+    overflow-y: auto;
+    max-height: 50vh;
+  }
+  .token-picker-item {
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    background: var(--surface2);
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .token-picker-item:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .token-picker-item img { width: 100%; display: block; }
+  .token-picker-label {
+    font-size: 9px;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    padding: 3px 2px;
+    color: var(--muted);
+  }
+  .token-picker-noart {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-family: 'Cinzel', serif;
+    color: var(--muted);
+    padding: 4px;
+    text-align: center;
+  }
   .btn-primary {
     background: var(--accent);
     color: var(--bg);

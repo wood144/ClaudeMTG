@@ -96,20 +96,74 @@ function addToken(player) {
   setTimeout(() => document.getElementById('token-name')?.focus(), 100);
 }
 
+let _tokenPicker = null;
+
 async function confirmAddToken(player) {
   const nameEl = document.getElementById('token-name');
   const name = nameEl ? nameEl.value.trim() : '';
   if (!name) { showToast('Enter a token name.'); return; }
   closeModal();
-  const data = await fetchCard(name);
-  const card = makeCard(name, data);
-  card.name = name + ' Token';  // Force user's name even if Scryfall returned different
+
+  const results = await searchTokens(name);
+
+  if (results.length === 0) {
+    // Nothing on Scryfall — text-only card
+    const card = makeCard(name, null);
+    card.name = name.charAt(0).toUpperCase() + name.slice(1) + ' Token';
+    card.uid = ++state[player].uidCounter;
+    const pos = nextBattlefieldPos(player);
+    card.x = pos.x; card.y = pos.y;
+    state[player].battlefield.push(card);
+    showToast(`Created ${card.name} (no art found)`, 'success');
+    render();
+  } else if (results.length === 1) {
+    placeToken(player, results[0]);
+  } else {
+    showTokenPicker(player, name, results);
+  }
+}
+
+function placeToken(player, cardData) {
+  const card = makeCard(cardData.name, cardData);
+  card.name = cardData.name + ' Token';
   card.uid = ++state[player].uidCounter;
   const pos = nextBattlefieldPos(player);
   card.x = pos.x; card.y = pos.y;
   state[player].battlefield.push(card);
   showToast(`Created ${card.name}`, 'success');
   render();
+}
+
+function showTokenPicker(player, name, tokens) {
+  _tokenPicker = { player, tokens };
+  let grid = '';
+  tokens.forEach((t, i) => {
+    const imgUri = getImageUri(t);
+    const pt = (t.power !== undefined && t.toughness !== undefined) ? `${t.power}/${t.toughness}` : '';
+    grid += `
+      <div class="token-picker-item" onclick="selectToken(${i})">
+        ${imgUri
+          ? `<img src="${imgUri}" alt="${t.name}">`
+          : `<div class="token-picker-noart">${t.name}</div>`}
+        <div class="token-picker-label">${t.name}${pt ? ` · ${pt}` : ''}</div>
+      </div>`;
+  });
+  openModal(`
+    <h2>Choose Token</h2>
+    <p style="color:var(--muted);font-size:12px;margin:0;">Multiple "${name}" tokens found — pick the right one.</p>
+    <div class="token-picker-grid">${grid}</div>
+    <div class="modal-btns">
+      <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+    </div>
+  `);
+}
+
+function selectToken(idx) {
+  if (!_tokenPicker) return;
+  const { player, tokens } = _tokenPicker;
+  _tokenPicker = null;
+  closeModal();
+  placeToken(player, tokens[idx]);
 }
 
 // ─── ZONE VIEWER ─────────────────────────────────────────────────────────────
