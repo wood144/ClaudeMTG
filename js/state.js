@@ -10,8 +10,15 @@ const state = {
   goingFirst: 'me',
   decks: JSON.parse(localStorage.getItem('mtg-decks') || '[]'),
   selectedDeck: null,
-  activeCtxCard: null
+  activeCtxCard: null,
+  actionLog: []
 };
+
+function logAction(msg) {
+  const now = new Date();
+  const time = `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
+  state.actionLog.push(`[${time}] ${msg}`);
+}
 
 // Backward-compat: state['me'] and state['opp'] still work everywhere
 Object.defineProperty(state, 'me',  { get: () => state.players[0], enumerable: true });

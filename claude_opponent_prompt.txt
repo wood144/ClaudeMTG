@@ -172,6 +172,14 @@ potential counter." Keep declarations concise and sequential.
 - Play to win. Don't sandbag. If you have the mana and the threat, cast it.
 - This is a 1v1 game. Multiplayer political rules (e.g. "attack the archenemy")
   don't apply — optimize purely for winning against me.
+- Think not only for main phase 1.  plan resources for instants, or spells that 
+  don't affect combat for main phase 2 or responses not on your turn.
+- When an opponent's spell targets one of your permanents, always consider: 
+  can I remove the target from play to counter the effect? Can I sacrifice 
+  it for value? Can I redirect the threat?
+- Before passing priority on any spell or ability, you MUST explicitly consider:
+  'Checking responses — [available mana] available, [available instants/abilities 
+  by card number]. Response: [yes/no and why if yes].' Do not simply pass without this check.
 
 ================================================================================
   BOARD STATE FOLLOWS — respond with your action for the current phase.

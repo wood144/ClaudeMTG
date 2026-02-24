@@ -1,6 +1,9 @@
 // ─── LIFE / DAMAGE ────────────────────────────────────────────────────────────
 function adjustLife(player, delta) {
   state[player].life = Math.max(0, state[player].life + delta);
+  const label = player === 'me' ? 'Human' : 'Claude';
+  const sign = delta > 0 ? '+' : '';
+  logAction(`${label}: Life ${sign}${delta} → now ${state[player].life}`);
   renderLifeTotals();
 }
 
@@ -23,10 +26,12 @@ function toggleGoingFirst() {
 // ─── PHASE / TURN ─────────────────────────────────────────────────────────────
 function nextPhase() {
   state.phaseIdx = (state.phaseIdx + 1) % PHASES.length;
+  logAction(`Phase → ${PHASES[state.phaseIdx]}`);
   renderPhase();
 }
 function prevPhase() {
   state.phaseIdx = (state.phaseIdx - 1 + PHASES.length) % PHASES.length;
+  logAction(`Phase ← ${PHASES[state.phaseIdx]} (stepped back)`);
   renderPhase();
 }
 function nextTurn() {
@@ -35,6 +40,7 @@ function nextTurn() {
   // Only untap the new active player's permanents
   const active = getActivePlayer();
   state[active].battlefield.forEach(c => c.tapped = false);
+  logAction(`--- Turn ${state.turn} begins — Active: ${active === 'me' ? 'Human' : 'Claude'} ---`);
   renderBattlefield(active);
   renderPhase();
 }
@@ -42,6 +48,8 @@ function nextTurn() {
 // ─── CARD ACTIONS ─────────────────────────────────────────────────────────────
 function tapCard(card, player) {
   card.tapped = !card.tapped;
+  const label = player === 'me' ? 'Human' : 'Claude';
+  logAction(`${label}: ${card.tapped ? 'Tapped' : 'Untapped'} ${card.name}`);
   renderBattlefield(player);
 }
 
@@ -53,6 +61,17 @@ function detachAll(card, player) {
 }
 
 function moveCard(card, fromPlayer, fromZone, toPlayer, toZone) {
+  const pLabel = fromPlayer === 'me' ? 'Human' : 'Claude';
+  const tpLabel = toPlayer === 'me' ? 'Human' : 'Claude';
+  const zoneFmt = z => z === 'libCount' ? 'Library' : z.charAt(0).toUpperCase() + z.slice(1);
+  // Hide card name only when human draws from library to hand (hidden information)
+  const isHiddenDraw = fromZone === 'library' && toZone === 'hand' && toPlayer === 'me';
+  const cardName = isHiddenDraw ? '[hidden card]' : card.name;
+  if (fromPlayer === toPlayer) {
+    logAction(`${pLabel}: ${cardName} ${zoneFmt(fromZone)} → ${zoneFmt(toZone)}`);
+  } else {
+    logAction(`${cardName}: ${pLabel}'s ${zoneFmt(fromZone)} → ${tpLabel}'s ${zoneFmt(toZone)}`);
+  }
   if (fromZone === 'battlefield') detachAll(card, fromPlayer);
   const fromArr = state[fromPlayer][fromZone];
   const idx = fromArr.findIndex(c => c.id === card.id);
@@ -114,6 +133,7 @@ async function confirmAddToken(player) {
     const pos = nextBattlefieldPos(player);
     card.x = pos.x; card.y = pos.y;
     state[player].battlefield.push(card);
+    logAction(`${player === 'me' ? 'Human' : 'Claude'}: Created ${card.name}`);
     showToast(`Created ${card.name} (no art found)`, 'success');
     render();
   } else if (results.length === 1) {
@@ -130,6 +150,7 @@ function placeToken(player, cardData) {
   const pos = nextBattlefieldPos(player);
   card.x = pos.x; card.y = pos.y;
   state[player].battlefield.push(card);
+  logAction(`${player === 'me' ? 'Human' : 'Claude'}: Created ${card.name}`);
   showToast(`Created ${card.name}`, 'success');
   render();
 }
@@ -295,6 +316,8 @@ function drawCard(player) {
   if (state[player].library.length === 0) { showToast('Library is empty!'); return; }
   const card = state[player].library.shift();
   state[player].hand.push(card);
+  const label = player === 'me' ? 'Human' : 'Claude';
+  logAction(player === 'me' ? `${label}: Drew a card` : `${label}: Drew ${card.name}`);
   const countEl = document.getElementById('lib-count-display');
   if (countEl) countEl.textContent = state[player].library.length;
   renderZoneCounts();
@@ -428,6 +451,8 @@ function confirmLibraryManip() {
   }
 
   const dest = mode === 'scry' ? 'bottom of library' : 'graveyard';
+  const label = player === 'me' ? 'Human' : 'Claude';
+  logAction(`${label}: ${mode === 'scry' ? 'Scried' : 'Surveiled'} ${cards.length} — kept ${keep.length} on top, sent ${send.length} to ${dest}`);
   showToast(`${mode === 'scry' ? 'Scry' : 'Surveil'}: kept ${keep.length}, sent ${send.length} to ${dest}`, 'success');
   closeModal();
   render();
@@ -793,6 +818,10 @@ function generateBoardState() {
     }).join(', ');
   };
   const fmtZoneUid = cards => cards.length === 0 ? '(empty)' : cards.map(c => `[#${c.uid}] ${c.name}`).join(', ');
+  const actionLogSection = state.actionLog.length > 0
+    ? [`─── ACTIONS SINCE LAST SEND ──────────────────────────────`, ...state.actionLog.map(l => `  ${l}`), ``]
+    : [`─── ACTIONS SINCE LAST SEND ──────────────────────────────`, `  (no actions logged)`, ``];
+
   const lines = [
     `═══════════════════════════════════════════════════════════`,
     `  BOARD STATE — TURN ${state.turn} | PHASE: ${PHASES[state.phaseIdx]}`,
@@ -801,6 +830,7 @@ function generateBoardState() {
     `Refer to your system prompt for all rules and response format.`,
     `Review this board state carefully before announcing any actions.`,
     ``,
+    ...actionLogSection,
     `─── OPPONENT (human — hand hidden) ───────────────────────`,
     `  Life: ${p.life} | Hand: ${p.hand.length} cards [HIDDEN] | Library: ${p.library.length}`,
     `  Commander: ${p.commandZone ? p.commandZone.name : 'Not cast'} | Cmd dmg dealt to you: ${state.cmdDmg['opp-to-me']}`,
@@ -825,6 +855,7 @@ function generateBoardState() {
 function copyBoardState() {
   const text = generateBoardState();
   navigator.clipboard.writeText(text).then(() => {
+    state.actionLog = [];
     const btn = document.querySelector('#modal-container .btn-primary');
     if (btn) { btn.textContent = '✓ Copied!'; setTimeout(() => btn.textContent = '📋 Copy', 2000); }
   });
