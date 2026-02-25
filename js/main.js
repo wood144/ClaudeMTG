@@ -63,7 +63,7 @@ function detachAll(card, player) {
 function moveCard(card, fromPlayer, fromZone, toPlayer, toZone) {
   const pLabel = fromPlayer === 'me' ? 'Human' : 'Claude';
   const tpLabel = toPlayer === 'me' ? 'Human' : 'Claude';
-  const zoneFmt = z => z === 'libCount' ? 'Library' : z.charAt(0).toUpperCase() + z.slice(1);
+  const zoneFmt = z => (z === 'libCount' || z === 'libTop') ? 'Library' : z.charAt(0).toUpperCase() + z.slice(1);
   // Hide card name only when human draws from library to hand (hidden information)
   const isHiddenDraw = fromZone === 'library' && toZone === 'hand' && toPlayer === 'me';
   const cardName = isHiddenDraw ? '[hidden card]' : card.name;
@@ -80,6 +80,9 @@ function moveCard(card, fromPlayer, fromZone, toPlayer, toZone) {
   if (toZone === 'libCount') {
     card.tapped = false;
     state[toPlayer].library.push(card); // bottom of library
+  } else if (toZone === 'libTop') {
+    card.tapped = false;
+    state[toPlayer].library.unshift(card); // top of library
   } else {
     card.tapped = false;
     if (toZone === 'battlefield') {
@@ -192,7 +195,7 @@ function openZone(player, zone) {
   const cards = zone === 'library'
     ? state[player].library
     : zone === 'command'
-    ? (state[player].commandZone ? [state[player].commandZone] : [])
+    ? state[player].commandZone
     : state[player][zone];
 
   const zoneName = zone.charAt(0).toUpperCase() + zone.slice(1);
@@ -256,9 +259,10 @@ function openZone(player, zone) {
       thumb.addEventListener('contextmenu', e => {
         e.preventDefault();
         if (zone === 'command') {
-          if (state[player].commandZone) {
-            const c = state[player].commandZone;
-            state[player].commandZone = null;
+          const cmdZone = state[player].commandZone;
+          const idx = cmdZone.findIndex(c => c.id === card.id);
+          if (idx !== -1) {
+            const [c] = cmdZone.splice(idx, 1);
             const pos = nextBattlefieldPos(player);
             c.x = pos.x; c.y = pos.y;
             state[player].battlefield.push(c);
@@ -373,9 +377,9 @@ function openLibraryManip(player, n, mode) {
   openModal(`
     <h2>${title}</h2>
     <p style="color:var(--muted);font-size:12px;margin-bottom:10px;">
-      Left = top of library. Toggle each card — KEEP stays on top, ${sendLabel.toUpperCase()} goes to ${mode === 'scry' ? 'bottom of library' : 'graveyard'}.
+      Left = top of library. <strong>Drag cards to reorder.</strong> Toggle each card — KEEP stays on top, ${sendLabel.toUpperCase()} goes to ${mode === 'scry' ? 'bottom of library' : 'graveyard'}.
     </p>
-    <div id="libmanip-cards" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;"></div>
+    <div id="libmanip-cards" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;min-height:120px;"></div>
     <div class="modal-btns">
       <button class="btn-secondary" onclick="closeModal()">Cancel</button>
       <button class="btn-primary" onclick="confirmLibraryManip()">Confirm</button>
@@ -383,11 +387,14 @@ function openLibraryManip(player, n, mode) {
   `);
 
   const container = document.getElementById('libmanip-cards');
+  let dragSrc = null;
+
   cards.forEach(card => {
     const wrap = document.createElement('div');
-    wrap.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:4px;';
+    wrap.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:4px;cursor:grab;';
     wrap.dataset.cardId = card.id;
     wrap.dataset.action = 'keep';
+    wrap.draggable = true;
 
     const thumb = document.createElement('div');
     thumb.className = 'zone-card-thumb';
@@ -422,6 +429,26 @@ function openLibraryManip(player, n, mode) {
         btn.textContent = 'KEEP';
         btn.className = 'btn-primary';
         btn.style.cssText = 'font-size:10px;padding:3px 8px;width:100%;';
+      }
+    });
+
+    wrap.addEventListener('dragstart', e => {
+      dragSrc = wrap;
+      e.dataTransfer.effectAllowed = 'move';
+      setTimeout(() => { wrap.style.opacity = '0.4'; }, 0);
+    });
+    wrap.addEventListener('dragend', () => {
+      wrap.style.opacity = '';
+      dragSrc = null;
+    });
+    wrap.addEventListener('dragover', e => {
+      e.preventDefault();
+      if (!dragSrc || dragSrc === wrap) return;
+      const rect = wrap.getBoundingClientRect();
+      if (e.clientX < rect.left + rect.width / 2) {
+        container.insertBefore(dragSrc, wrap);
+      } else {
+        container.insertBefore(dragSrc, wrap.nextSibling);
       }
     });
 
@@ -701,19 +728,19 @@ async function loadDeckForPlayer(player) {
   state[player].graveyard = [];
   state[player].exile = [];
   state[player].library = [];
-  state[player].commandZone = null;
+  state[player].commandZone = [];
   state[player].uidCounter = 0;
 
-  // Find commander from raw list
+  // Find ALL commanders from raw list
   const rawLines = deck.list.split('\n');
-  let cmdName = null;
+  const cmdNames = [];
   for (const line of rawLines) {
     if (/\*CMDR\*/i.test(line)) {
       const m = line.trim().match(/^(\d+)\s+(.+?)\s*\*CMDR\*/i);
-      if (m) { cmdName = m[2].trim(); break; }
+      if (m) cmdNames.push(m[2].trim());
     }
   }
-  if (!cmdName) cmdName = cardNames[0];
+  if (cmdNames.length === 0) cmdNames.push(cardNames[0]);
 
   // Fetch all unique card names in parallel
   const unique = [...new Set(cardNames)];
@@ -727,14 +754,17 @@ async function loadDeckForPlayer(player) {
 
   setP('Building hand...');
 
-  // Set commander
-  const cmdData = await fetchCard(cmdName);
-  const cmdCard = makeCard(cmdName, cmdData);
-  cmdCard.uid = ++state[player].uidCounter;
-  state[player].commandZone = cmdCard;
+  // Set all commanders
+  for (const cmdName of cmdNames) {
+    const cmdData = await fetchCard(cmdName);
+    const cmdCard = makeCard(cmdName, cmdData);
+    cmdCard.uid = ++state[player].uidCounter;
+    state[player].commandZone.push(cmdCard);
+  }
 
-  // Remaining non-commander cards
-  const nonCmd = cardNames.filter(n => n !== cmdName);
+  // Remaining non-commander cards (exclude all commanders)
+  const cmdNameSet = new Set(cmdNames);
+  const nonCmd = cardNames.filter(n => !cmdNameSet.has(n));
 
   // Deal 7-card opening hand
   const shuffled = [...nonCmd].sort(() => Math.random() - 0.5);
@@ -833,13 +863,13 @@ function generateBoardState() {
     ...actionLogSection,
     `─── OPPONENT (human — hand hidden) ───────────────────────`,
     `  Life: ${p.life} | Hand: ${p.hand.length} cards [HIDDEN] | Library: ${p.library.length}`,
-    `  Commander: ${p.commandZone ? p.commandZone.name : 'Not cast'} | Cmd dmg dealt to you: ${state.cmdDmg['opp-to-me']}`,
+    `  Commander: ${p.commandZone.length > 0 ? p.commandZone.map(c => c.name).join(' + ') : 'Not cast'} | Cmd dmg dealt to you: ${state.cmdDmg['opp-to-me']}`,
     `  Battlefield: ${fmtBF(p.battlefield)}`,
     `  Graveyard: ${fmtZone(p.graveyard)} | Exile: ${fmtZone(p.exile)}`,
     ``,
     `─── YOUR BOARD (Claude) ──────────────────────────────────`,
     `  Life: ${o.life} | Library: ${o.library.length}`,
-    `  Commander: ${o.commandZone ? `[#${o.commandZone.uid}] ${o.commandZone.name}` : 'Not cast'} | Cmd dmg taken: ${state.cmdDmg['me-to-opp']}`,
+    `  Commander: ${o.commandZone.length > 0 ? o.commandZone.map(c => `[#${c.uid}] ${c.name}`).join(' + ') : 'Not cast'} | Cmd dmg taken: ${state.cmdDmg['me-to-opp']}`,
     `  Hand: ${fmtZoneUid(o.hand)}`,
     `  Battlefield: ${fmtBFUid(o.battlefield)}`,
     `  Graveyard: ${fmtZoneUid(o.graveyard)} | Exile: ${fmtZoneUid(o.exile)}`,

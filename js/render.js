@@ -272,7 +272,7 @@ function renderZoneCounts() {
     setT(`${p}-gy-count`, state[p].graveyard.length);
     setT(`${p}-exile-count`, state[p].exile.length);
     setT(`${p}-lib-count`, state[p].library.length);
-    setT(`${p}-cmd-name`, state[p].commandZone ? state[p].commandZone.name : '—');
+    setT(`${p}-cmd-name`, state[p].commandZone.length > 0 ? state[p].commandZone.map(c => c.name).join(' / ') : '—');
   }
   // Opp hand count stays in header
   const oppHandEl = document.getElementById('opp-hand-count');
