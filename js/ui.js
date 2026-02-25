@@ -148,6 +148,7 @@ function showCtxMenu(e, card, player) {
   state.activeCtxEvent = { clientX: e.clientX, clientY: e.clientY };
   const menu = document.getElementById('ctx-menu');
   const isField = state[player].battlefield.includes(card);
+  const isCommander = state[player].commandZone?.id === card.id;
 
   menu.innerHTML = `
     <div class="ctx-item" style="font-family:'Cinzel',serif;font-size:10px;color:var(--muted);padding:4px 10px;">${card.name}</div>
@@ -160,6 +161,7 @@ function showCtxMenu(e, card, player) {
     ${isField ? `<div class="ctx-item" onclick="moveCtx('${player}','battlefield','${player}','graveyard')">→ Graveyard</div>` : ''}
     ${isField ? `<div class="ctx-item" onclick="moveCtx('${player}','battlefield','${player}','exile')">→ Exile</div>` : ''}
     ${isField ? `<div class="ctx-item" onclick="moveCtx('${player}','battlefield','${player}','hand')">→ Hand</div>` : ''}
+    ${isCommander ? `<div class="ctx-item" onclick="sendToCommandZone()">→ Command Zone</div>` : ''}
     <div class="ctx-sep"></div>
     <div class="ctx-item danger" onclick="removeCtx()">Remove from Game</div>
   `;
@@ -176,6 +178,7 @@ function showCtxMenu(e, card, player) {
 function showHandCtxMenu(e, card) {
   state.activeCtxCard = { card, player: 'me' };
   const menu = document.getElementById('ctx-menu');
+  const isCommander = state.me.commandZone?.id === card.id;
 
   menu.innerHTML = `
     <div class="ctx-item" style="font-family:'Cinzel',serif;font-size:10px;color:var(--muted);padding:4px 10px;">${card.name}</div>
@@ -184,6 +187,7 @@ function showHandCtxMenu(e, card) {
     <div class="ctx-item" onclick="moveHandCard('graveyard')">→ Graveyard</div>
     <div class="ctx-item" onclick="moveHandCard('exile')">→ Exile</div>
     <div class="ctx-item" onclick="moveHandCard('libCount')">→ Bottom of Library</div>
+    ${isCommander ? `<div class="ctx-item" onclick="sendToCommandZone()">→ Command Zone</div>` : ''}
     <div class="ctx-sep"></div>
     <div class="ctx-item danger" onclick="removeHandCard()">Remove from Game</div>
   `;
@@ -378,6 +382,25 @@ function moveCtx(fp, fz, tp, tz) {
   closeCtxMenu();
 }
 
+function sendToCommandZone() {
+  const { card, player } = state.activeCtxCard;
+  const zones = ['battlefield','hand','graveyard','exile','library'];
+  for (const z of zones) {
+    const arr = state[player][z];
+    const idx = arr.findIndex(c => c.id === card.id);
+    if (idx !== -1) {
+      if (z === 'battlefield') detachAll(card, player);
+      arr.splice(idx, 1);
+      break;
+    }
+  }
+  card.tapped = false;
+  state[player].commandZone = card;
+  logAction(`${player === 'me' ? 'Human' : 'Claude'}: ${card.name} returned to Command Zone`);
+  render();
+  closeCtxMenu();
+}
+
 function showLibraryCtxMenu(e, card, player) {
   state.activeCtxCard = { card, player };
   const menu = document.getElementById('ctx-menu');
@@ -415,6 +438,7 @@ function removeCtx() {
 function showOppHandCtxMenu(e, card) {
   state.activeCtxCard = { card, player: 'opp' };
   const menu = document.getElementById('ctx-menu');
+  const isCommander = state.opp.commandZone?.id === card.id;
 
   menu.innerHTML = `
     <div class="ctx-item" style="font-family:'Cinzel',serif;font-size:10px;color:var(--muted);padding:4px 10px;">#${card.uid}</div>
@@ -423,6 +447,7 @@ function showOppHandCtxMenu(e, card) {
     <div class="ctx-item" onclick="moveOppHandCard('graveyard')">→ Graveyard</div>
     <div class="ctx-item" onclick="moveOppHandCard('exile')">→ Exile</div>
     <div class="ctx-item" onclick="moveOppHandCard('libCount')">→ Bottom of Library</div>
+    ${isCommander ? `<div class="ctx-item" onclick="sendToCommandZone()">→ Command Zone</div>` : ''}
     <div class="ctx-sep"></div>
     <div class="ctx-item danger" onclick="removeOppHandCard()">Remove from Game</div>
   `;
