@@ -680,7 +680,11 @@ function normalizeMTGAFormat(text) {
   let currentSection = 'deck';
   for (const raw of lines) {
     const trimmed = raw.trim();
-    if (!trimmed) continue;
+    if (!trimmed) {
+      // Blank line after commander block = deck section begins (Moxfield format has no "// Deck" header)
+      if (currentSection === 'commander' || currentSection === 'companion') currentSection = 'deck';
+      continue;
+    }
     const lower = trimmed.toLowerCase();
     if (['commander','companion','deck','sideboard','maybeboard'].includes(lower)) {
       currentSection = lower;
