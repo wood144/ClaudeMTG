@@ -94,6 +94,9 @@ document.addEventListener('mouseup', e => {
   const over = f => { const r = f.getBoundingClientRect(); return e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom; };
   const targetPlayer = over(myField) ? 'me' : over(oppField) ? 'opp' : null;
 
+  let mdfc_drag_card = null;
+  let mdfc_drag_player = null;
+
   if (targetPlayer) {
     const { card, sourcePlayer, sourceZone } = dragState;
     const targetField = targetPlayer === 'me' ? myField : oppField;
@@ -114,6 +117,10 @@ document.addEventListener('mouseup', e => {
         card.y = dropY;
         state[targetPlayer].battlefield.push(card);
         showToast(`Played ${card.name}`, 'success');
+        if (card.isDFC && card.dfcType === 'modal_dfc') {
+          mdfc_drag_card   = card;
+          mdfc_drag_player = targetPlayer;
+        }
       }
     }
   }
@@ -128,6 +135,9 @@ document.addEventListener('mouseup', e => {
   setTimeout(() => {
     console.log('pre-render battlefield:', state.me.battlefield.length);
     render();
+    if (mdfc_drag_card) {
+      showDFCFacePicker(mdfc_drag_card, () => renderBattlefield(mdfc_drag_player));
+    }
   }, 50);
 });
 
@@ -158,6 +168,7 @@ function showCtxMenu(e, card, player) {
     ${isField && card.counters && typeof card.counters === 'object' && Object.keys(card.counters).length > 0 ? `<div class="ctx-item" onclick="showRemoveCounterMenu(event)">− Remove Counter ▶</div>` : ''}
     ${isField && !card.attachedTo ? `<div class="ctx-item" onclick="attachFromCtx()">⚙ Attach to...</div>` : ''}
     ${isField && card.attachedTo ? `<div class="ctx-item" onclick="detachFromCtx()">⚙ Detach</div>` : ''}
+    ${card.isDFC && card.dfcType === 'transform' ? `<div class="ctx-item" onclick="transformFromCtx()">⟳ Transform</div>` : ''}
     ${isField ? `<div class="ctx-item" onclick="moveCtx('${player}','battlefield','${player}','graveyard')">→ Graveyard</div>` : ''}
     ${isField ? `<div class="ctx-item" onclick="moveCtx('${player}','battlefield','${player}','exile')">→ Exile</div>` : ''}
     ${isField ? `<div class="ctx-item" onclick="moveCtx('${player}','battlefield','${player}','hand')">→ Hand</div>` : ''}
@@ -202,6 +213,21 @@ function showHandCtxMenu(e, card) {
 
 function playHandCardToBattlefield() {
   const { card } = state.activeCtxCard;
+  closeCtxMenu();
+  if (card.isDFC && card.dfcType === 'modal_dfc') {
+    showDFCFacePicker(card, () => {
+      const idx = state.me.hand.findIndex(c => c.id === card.id);
+      if (idx !== -1) {
+        const c = state.me.hand.splice(idx, 1)[0];
+        c.tapped = false;
+        const pos = nextBattlefieldPos('me');
+        c.x = pos.x; c.y = pos.y;
+        state.me.battlefield.push(c);
+      }
+      render();
+    });
+    return;
+  }
   const idx = state.me.hand.findIndex(c => c.id === card.id);
   if (idx !== -1) {
     const c = state.me.hand.splice(idx, 1)[0];
@@ -211,7 +237,6 @@ function playHandCardToBattlefield() {
     state.me.battlefield.push(c);
   }
   render();
-  closeCtxMenu();
 }
 
 function moveHandCard(toZone) {
@@ -460,6 +485,21 @@ function showOppHandCtxMenu(e, card) {
 
 function playOppHandCard() {
   const { card } = state.activeCtxCard;
+  closeCtxMenu();
+  if (card.isDFC && card.dfcType === 'modal_dfc') {
+    showDFCFacePicker(card, () => {
+      const idx = state.opp.hand.findIndex(c => c.id === card.id);
+      if (idx !== -1) {
+        const c = state.opp.hand.splice(idx, 1)[0];
+        c.tapped = false;
+        const pos = nextBattlefieldPos('opp');
+        c.x = pos.x; c.y = pos.y;
+        state.opp.battlefield.push(c);
+      }
+      render();
+    });
+    return;
+  }
   const idx = state.opp.hand.findIndex(c => c.id === card.id);
   if (idx !== -1) {
     const c = state.opp.hand.splice(idx, 1)[0];
@@ -469,7 +509,6 @@ function playOppHandCard() {
     state.opp.battlefield.push(c);
   }
   render();
-  closeCtxMenu();
 }
 
 function moveOppHandCard(toZone) {
@@ -520,4 +559,57 @@ function openModal(html) {
 function closeModal() {
   document.getElementById('modal-container').innerHTML = '';
   hidePreview();
+}
+
+// ─── DUAL-FACED CARD HELPERS ──────────────────────────────────────────────────
+let _dfcPickerCard = null;
+let _dfcPickerCallback = null;
+
+function showDFCFacePicker(card, callback) {
+  const [f0, f1] = card.cardFaces;
+  _dfcPickerCard = card;
+  _dfcPickerCallback = callback;
+  openModal(`
+    <h2>Choose Face</h2>
+    <p style="color:var(--muted);font-size:12px;margin-bottom:10px;">Which face enters the battlefield?</p>
+    <div class="token-picker-grid" style="justify-content:center;">
+      <div class="token-picker-item" onclick="selectDFCFace(0)">
+        ${f0.imageUri ? `<img src="${f0.imageUri}" alt="${f0.name}">` : `<div class="token-picker-noart">${f0.name}</div>`}
+        <div class="token-picker-label">${f0.name}</div>
+      </div>
+      <div class="token-picker-item" onclick="selectDFCFace(1)">
+        ${f1.imageUri ? `<img src="${f1.imageUri}" alt="${f1.name}">` : `<div class="token-picker-noart">${f1.name}</div>`}
+        <div class="token-picker-label">${f1.name}</div>
+      </div>
+    </div>
+    <div class="modal-btns">
+      <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+    </div>
+  `);
+}
+
+function selectDFCFace(faceIdx) {
+  const card = _dfcPickerCard;
+  const cb   = _dfcPickerCallback;
+  _dfcPickerCard = null;
+  _dfcPickerCallback = null;
+  if (!card) return;
+  card.currentFace = faceIdx;
+  card.imageUri = card.cardFaces[faceIdx].imageUri;
+  closeModal();
+  if (cb) cb();
+}
+
+function transformFromCtx() {
+  const { card, player } = state.activeCtxCard;
+  if (!card.isDFC || !card.cardFaces) return;
+  card.currentFace = card.currentFace === 0 ? 1 : 0;
+  card.imageUri = card.cardFaces[card.currentFace].imageUri;
+  // Re-render whichever zone this card is in
+  if (state[player].battlefield.some(c => c.id === card.id)) {
+    renderBattlefield(player);
+  } else {
+    render();
+  }
+  closeCtxMenu();
 }

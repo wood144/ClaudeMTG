@@ -39,6 +39,13 @@ function saveDecks() {
 // ─── CARD OBJECT ─────────────────────────────────────────────────────────────
 function makeCard(name, cardData) {
   const uri = getImageUri(cardData);
+  const isDFC = !!(cardData?.card_faces?.length >= 2 &&
+                   (cardData.layout === 'transform' || cardData.layout === 'modal_dfc'));
+  const dfcType   = isDFC ? cardData.layout : null;
+  const cardFaces = isDFC ? cardData.card_faces.map(f => ({
+    name: f.name,
+    imageUri: f.image_uris?.normal || null
+  })) : null;
   return {
     id: Math.random().toString(36).slice(2),
     uid: null,
@@ -49,6 +56,10 @@ function makeCard(name, cardData) {
     attachedTo: null,
     x: null,
     y: null,
-    imageUri: uri || null
+    imageUri: uri || null,
+    isDFC,
+    dfcType,
+    cardFaces,
+    currentFace: 0
   };
 }
