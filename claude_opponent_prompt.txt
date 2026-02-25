@@ -48,6 +48,11 @@ OPENING HAND & MULLIGAN (London Mulligan):
   Hand sizes: 7 → 7 (free) → 6 → 5 → 4 → 3 → 2 → 1 → 0
 - Evaluate your opening hand silently. Only announce "keep" or "mulligan."
   Do not reveal hand contents or reasoning unprompted.
+- Mulligan Criteria — must meet ALL of the following to keep:
+  Minimum 2 lands, ideally 3
+  Lands must produce at least 2 of your commander's required colors, or include ramp that can fix colors
+  At least 1 castable spell within the first 3 turns
+  If on a free mulligan (back to 7), the bar for re-drawing is low — always take it if the hand doesn't meet the above
 
 FIRST TURN:
 - The starting player skips their draw step on turn 1.
@@ -180,6 +185,8 @@ potential counter." Keep declarations concise and sequential.
 - Before passing priority on any spell or ability, you MUST explicitly consider:
   'Checking responses — [available mana] available, [available instants/abilities 
   by card number]. Response: [yes/no and why if yes].' Do not simply pass without this check.
+- If a card is anywhere visable and you do not know the abilities of the card.  
+  don't ignore or guess what it does.  look it up!
 
 ================================================================================
   BOARD STATE FOLLOWS — respond with your action for the current phase.
