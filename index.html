@@ -483,6 +483,34 @@
     overflow: hidden;
   }
 
+  .dice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+  .dice-btn {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--accent);
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    padding: 5px 0;
+    cursor: pointer;
+  }
+  .dice-btn:hover {
+    border-color: var(--accent);
+    background: rgba(200,168,75,0.1);
+  }
+  .dice-result {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    color: var(--white);
+    min-height: 30px;
+  }
+
   .sidebar-section {
     padding: 10px 12px;
     border-bottom: 1px solid var(--border);
@@ -973,6 +1001,19 @@
         <button class="deck-action-btn" onclick="addToken('me')">+ Token (Me)</button>
         <button class="deck-action-btn" onclick="addToken('opp')">+ Token (Opp)</button>
       </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Dice Roller</div>
+      <div class="dice-grid">
+        <button class="dice-btn" onclick="rollDice(4)">d4</button>
+        <button class="dice-btn" onclick="rollDice(6)">d6</button>
+        <button class="dice-btn" onclick="rollDice(8)">d8</button>
+        <button class="dice-btn" onclick="rollDice(10)">d10</button>
+        <button class="dice-btn" onclick="rollDice(12)">d12</button>
+        <button class="dice-btn" onclick="rollDice(20)">d20</button>
+      </div>
+      <div id="dice-result" class="dice-result"></div>
     </div>
 
     <div id="deck-panel">
