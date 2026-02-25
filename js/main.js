@@ -686,7 +686,14 @@ function normalizeMTGAFormat(text) {
       currentSection = lower;
       continue;
     }
-    if (trimmed.startsWith('//') || trimmed.startsWith('#')) continue;
+    if (trimmed.startsWith('//') || trimmed.startsWith('#')) {
+      // Moxfield exports use "// COMMANDER", "// Deck", etc. — treat as section headers
+      const commentContent = trimmed.replace(/^[/#]+\s*/, '').trim().toLowerCase();
+      if (['commander','companion','deck','sideboard','maybeboard'].includes(commentContent)) {
+        currentSection = commentContent;
+      }
+      continue;
+    }
     if (/\*CMDR\*/i.test(trimmed)) { output.push(trimmed); continue; }
     if (currentSection === 'commander' || currentSection === 'companion') {
       output.push(trimmed + ' *CMDR*');
