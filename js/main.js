@@ -776,6 +776,7 @@ async function loadDeckForPlayer(player) {
     const cmdData = await fetchCard(cmdName);
     const cmdCard = makeCard(cmdName, cmdData);
     cmdCard.uid = ++state[player].uidCounter;
+    cmdCard.isCommander = true;
     state[player].commandZone.push(cmdCard);
   }
 
@@ -817,6 +818,7 @@ function openBoardState() {
     <pre id="board-output" style="font-size:11px;line-height:1.5;white-space:pre-wrap;max-height:50vh;overflow-y:auto;background:var(--bg);padding:10px;border-radius:6px;border:1px solid var(--border);font-family:monospace;">${state_text}</pre>
     <div class="modal-btns">
       <button class="btn-primary" onclick="copyBoardState()">📋 Copy</button>
+      <button class="btn-secondary" onclick="downloadBoardState()">⬇ Download TXT</button>
       <button class="btn-secondary" onclick="closeModal()">Close</button>
     </div>
   `);
@@ -877,7 +879,6 @@ function generateBoardState() {
     `Refer to your system prompt for all rules and response format.`,
     `Review this board state carefully before announcing any actions.`,
     ``,
-    ...actionLogSection,
     `─── OPPONENT (human — hand hidden) ───────────────────────`,
     `  Life: ${p.life} | Hand: ${p.hand.length} cards [HIDDEN] | Library: ${p.library.length}`,
     `  Commander: ${p.commandZone.length > 0 ? p.commandZone.map(c => c.name).join(' + ') : 'Not cast'} | Cmd dmg dealt to you: ${state.cmdDmg['opp-to-me']}`,
@@ -895,8 +896,22 @@ function generateBoardState() {
     getActivePlayer() === 'me'
       ? `It is the OPPONENT's turn (human). Respond with instants/abilities or pass priority.`
       : `It is YOUR TURN as Claude.`,
+    ``,
+    ...actionLogSection,
   ];
   return lines.join('\n');
+}
+
+function downloadBoardState() {
+  const text = generateBoardState();
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `board-turn-${state.turn}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
+  state.actionLog = [];
 }
 
 function copyBoardState() {

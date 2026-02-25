@@ -158,7 +158,7 @@ function showCtxMenu(e, card, player) {
   state.activeCtxEvent = { clientX: e.clientX, clientY: e.clientY };
   const menu = document.getElementById('ctx-menu');
   const isField = state[player].battlefield.includes(card);
-  const isCommander = state[player].commandZone?.some(c => c.id === card.id);
+  const isCommander = !!card.isCommander;
 
   menu.innerHTML = `
     <div class="ctx-item" style="font-family:'Cinzel',serif;font-size:10px;color:var(--muted);padding:4px 10px;">${card.name}</div>
@@ -191,7 +191,7 @@ function showCtxMenu(e, card, player) {
 function showHandCtxMenu(e, card) {
   state.activeCtxCard = { card, player: 'me' };
   const menu = document.getElementById('ctx-menu');
-  const isCommander = state.me.commandZone?.some(c => c.id === card.id);
+  const isCommander = !!card.isCommander;
 
   menu.innerHTML = `
     <div class="ctx-item" style="font-family:'Cinzel',serif;font-size:10px;color:var(--muted);padding:4px 10px;">${card.name}</div>
@@ -472,7 +472,7 @@ function removeCtx() {
 function showOppHandCtxMenu(e, card) {
   state.activeCtxCard = { card, player: 'opp' };
   const menu = document.getElementById('ctx-menu');
-  const isCommander = state.opp.commandZone?.some(c => c.id === card.id);
+  const isCommander = !!card.isCommander;
 
   menu.innerHTML = `
     <div class="ctx-item" style="font-family:'Cinzel',serif;font-size:10px;color:var(--muted);padding:4px 10px;">#${card.uid}</div>
