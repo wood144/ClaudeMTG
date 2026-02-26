@@ -824,9 +824,41 @@ function openBoardState() {
   `);
 }
 
+// ─── TOON (Token-Oriented Object Notation) LOG TRANSFORMER ───────────────────
+function logToTOON(entry) {
+  const Z = s => ({ Battlefield:'BF', Graveyard:'GY', Library:'LIB', Hand:'H', Exile:'EX' }[s] || s.slice(0,2).toUpperCase());
+  const P = s => s === 'Human' ? 'H' : 'C';
+  let m;
+  if ((m = entry.match(/Turn (\d+) begins.*Active: (Human|Claude)/)))
+    return `TURN:${m[1]}:${P(m[2])}`;
+  if ((m = entry.match(/Phase [→←] (.+?)(?:\s+\(stepped back\))?$/)))
+    return `PH:${m[1].replace('MAIN ', 'M')}`;
+  if ((m = entry.match(/(Human|Claude): Life ([+\-]\d+) → now (\d+)/)))
+    return `${P(m[1])}>LIFE:${m[2]}=${m[3]}`;
+  if ((m = entry.match(/(Human|Claude): Drew a card/)))
+    return `${P(m[1])}>DRAW`;
+  if ((m = entry.match(/(Human|Claude): Drew (.+)/)))
+    return `${P(m[1])}>DRAW:${m[2]}`;
+  if ((m = entry.match(/(Human|Claude): (Tapped|Untapped) (.+)/)))
+    return `${P(m[1])}>${m[2] === 'Tapped' ? 'TAP' : 'UNTAP'}:${m[3]}`;
+  if ((m = entry.match(/(Human|Claude): Created (.+)/)))
+    return `${P(m[1])}>TOKEN:${m[2]}`;
+  if ((m = entry.match(/(Human|Claude): (Scried|Surveiled) (\d+).+kept (\d+).+sent (\d+)/)))
+    return `${P(m[1])}>${m[2] === 'Scried' ? 'SCRY' : 'SURV'}:${m[3]}(k:${m[4]},s:${m[5]})`;
+  if ((m = entry.match(/(Human|Claude): (.+?) (Battlefield|Graveyard|Library|Hand|Exile) → (Battlefield|Graveyard|Library|Hand|Exile)/)))
+    return `${P(m[1])}>MV:${m[2]}[${Z(m[3])}→${Z(m[4])}]`;
+  if ((m = entry.match(/(.+): (Human|Claude)'s (Battlefield|Graveyard|Library|Hand|Exile) → (Human|Claude)'s (Battlefield|Graveyard|Library|Hand|Exile)/)))
+    return `MV:${m[1]}[${P(m[2])}.${Z(m[3])}→${P(m[4])}.${Z(m[5])}]`;
+  return entry; // fallback — return as-is
+}
+
+// ─── BOARD STATE FOR CLAUDE (TOON FORMAT) ─────────────────────────────────────
 function generateBoardState() {
-  const p = state.me;
-  const o = state.opp;
+  const p = state.me;  // human — shown as OPP to Claude
+  const o = state.opp; // Claude
+  const phaseCode = PHASES[state.phaseIdx].replace('MAIN ', 'M');
+  const act = getActivePlayer() === 'me' ? 'HUMAN' : 'CLAUDE';
+
   const buildAttMap = cards => {
     const m = Object.create(null);
     for (const c of cards) {
@@ -837,69 +869,65 @@ function generateBoardState() {
     }
     return m;
   };
+
   const fmtCounters = c => {
     const obj = (typeof c.counters === 'object' && c.counters) ? c.counters : {};
     const entries = Object.entries(obj).filter(([, v]) => v > 0);
     if (!entries.length) return '';
-    return ' [' + entries.map(([t, n]) =>
-      t === '+1/+1' ? `+${n}/+${n}` : t === '-1/-1' ? `-${n}/-${n}` : n > 1 ? `${n}×${t}` : t
-    ).join(', ') + ']';
+    return entries.map(([t, n]) =>
+      t === '+1/+1' ? `[+${n}/+${n}]` : t === '-1/-1' ? `[-${n}/-${n}]` : `[${n}x${t}]`
+    ).join('');
   };
-  const fmtBF = cards => {
-    if (cards.length === 0) return '(empty)';
-    const attMap = buildAttMap(cards);
-    const attachedIds = new Set(cards.filter(c => c.attachedTo).map(c => c.id));
-    return cards.filter(c => !attachedIds.has(c.id)).map(c => {
-      let label = c.name + (c.tapped ? ' [TAPPED]' : '') + fmtCounters(c);
-      if (attMap[c.id]) label += ` (equipped: ${attMap[c.id].map(a => a.name).join(', ')})`;
-      return label;
-    }).join(', ');
-  };
-  const fmtZone = cards => cards.length === 0 ? '(empty)' : cards.map(c => c.name).join(', ');
-  const fmtBFUid = cards => {
-    if (cards.length === 0) return '(empty)';
-    const attMap = buildAttMap(cards);
-    const attachedIds = new Set(cards.filter(c => c.attachedTo).map(c => c.id));
-    return cards.filter(c => !attachedIds.has(c.id)).map(c => {
-      let label = `[#${c.uid}] ${c.name}` + (c.tapped ? ' [TAPPED]' : '') + fmtCounters(c);
-      if (attMap[c.id]) label += ` (equipped: ${attMap[c.id].map(a => `[#${a.uid}] ${a.name}`).join(', ')})`;
-      return label;
-    }).join(', ');
-  };
-  const fmtZoneUid = cards => cards.length === 0 ? '(empty)' : cards.map(c => `[#${c.uid}] ${c.name}`).join(', ');
-  const actionLogSection = state.actionLog.length > 0
-    ? [`─── ACTIONS SINCE LAST SEND ──────────────────────────────`, ...state.actionLog.map(l => `  ${l}`), ``]
-    : [`─── ACTIONS SINCE LAST SEND ──────────────────────────────`, `  (no actions logged)`, ``];
 
-  const lines = [
-    `═══════════════════════════════════════════════════════════`,
-    `  BOARD STATE — TURN ${state.turn} | PHASE: ${PHASES[state.phaseIdx]}`,
-    `═══════════════════════════════════════════════════════════`,
-    ``,
-    `Refer to your system prompt for all rules and response format.`,
-    `Review this board state carefully before announcing any actions.`,
-    ``,
-    `─── OPPONENT (human — hand hidden) ───────────────────────`,
-    `  Life: ${p.life} | Hand: ${p.hand.length} cards [HIDDEN] | Library: ${p.library.length}`,
-    `  Commander: ${p.commandZone.length > 0 ? p.commandZone.map(c => c.name).join(' + ') : 'Not cast'} | Cmd dmg dealt to you: ${state.cmdDmg['opp-to-me']}`,
-    `  Battlefield: ${fmtBF(p.battlefield)}`,
-    `  Graveyard: ${fmtZone(p.graveyard)} | Exile: ${fmtZone(p.exile)}`,
-    ``,
-    `─── YOUR BOARD (Claude) ──────────────────────────────────`,
-    `  Life: ${o.life} | Library: ${o.library.length}`,
-    `  Commander: ${o.commandZone.length > 0 ? o.commandZone.map(c => `[#${c.uid}] ${c.name}`).join(' + ') : 'Not cast'} | Cmd dmg taken: ${state.cmdDmg['me-to-opp']}`,
-    `  Hand: ${fmtZoneUid(o.hand)}`,
-    `  Battlefield: ${fmtBFUid(o.battlefield)}`,
-    `  Graveyard: ${fmtZoneUid(o.graveyard)} | Exile: ${fmtZoneUid(o.exile)}`,
-    ``,
-    `── ACTION ────────────────────────────────────────────────`,
-    getActivePlayer() === 'me'
-      ? `It is the OPPONENT's turn (human). Respond with instants/abilities or pass priority.`
-      : `It is YOUR TURN as Claude.`,
-    ``,
-    ...actionLogSection,
-  ];
-  return lines.join('\n');
+  // Opponent battlefield — no UIDs, hand is hidden
+  const fmtOppBF = cards => {
+    if (cards.length === 0) return '-';
+    const attMap = buildAttMap(cards);
+    const attachedIds = new Set(cards.filter(c => c.attachedTo).map(c => c.id));
+    return cards.filter(c => !attachedIds.has(c.id)).map(c => {
+      let s = c.name;
+      if (c.tapped) s += '[T]';
+      s += fmtCounters(c);
+      if (attMap[c.id]) s += `[+${attMap[c.id].map(a => a.name).join('+')}]`;
+      return s;
+    }).join(',');
+  };
+
+  // Claude's battlefield — with UIDs
+  const fmtCldBF = cards => {
+    if (cards.length === 0) return '-';
+    const attMap = buildAttMap(cards);
+    const attachedIds = new Set(cards.filter(c => c.attachedTo).map(c => c.id));
+    return cards.filter(c => !attachedIds.has(c.id)).map(c => {
+      let s = `#${c.uid}:${c.name}`;
+      if (c.tapped) s += '[T]';
+      s += fmtCounters(c);
+      if (attMap[c.id]) s += `[+${attMap[c.id].map(a => `#${a.uid}:${a.name}`).join('+')}]`;
+      return s;
+    }).join(',');
+  };
+
+  const fmtZone = (cards, uid) =>
+    cards.length === 0 ? '-' : cards.map(c => uid ? `#${c.uid}:${c.name}` : c.name).join(',');
+
+  const fmtCmd = (cards, uid) =>
+    cards.length === 0 ? 'CAST' : cards.map(c => uid ? `#${c.uid}:${c.name}` : c.name).join('+');
+
+  const logLines = state.actionLog.length > 0
+    ? state.actionLog.map(logToTOON)
+    : ['-'];
+
+  return [
+    `[[T${state.turn}|${phaseCode}|${act}]]`,
+    `[[OPP|L:${p.life}|H:${p.hand.length}|LIB:${p.library.length}|CMD:${fmtCmd(p.commandZone, false)}|CDMG:${state.cmdDmg['opp-to-me']}|GY:${fmtZone(p.graveyard, false)}|EX:${fmtZone(p.exile, false)}]]`,
+    `[[OPP_BF|${fmtOppBF(p.battlefield)}]]`,
+    `[[CLD|L:${o.life}|LIB:${o.library.length}|CMD:${fmtCmd(o.commandZone, true)}|CDMG:${state.cmdDmg['me-to-opp']}|GY:${fmtZone(o.graveyard, true)}|EX:${fmtZone(o.exile, true)}]]`,
+    `[[CLD_H|${fmtZone(o.hand, true)}]]`,
+    `[[CLD_BF|${fmtCldBF(o.battlefield)}]]`,
+    `[[POOL:0]]`,
+    `[[LOG]]`,
+    ...logLines,
+  ].join('\n');
 }
 
 function downloadBoardState() {

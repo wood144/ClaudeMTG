@@ -15,7 +15,7 @@ This project exists to run interactive 1v1 Commander games where Claude acts as 
 
 ## ✅ MANA & CARD ACCURACY — VERIFY BEFORE ANNOUNCING
 - **Silently verify mana availability before announcing any spell.** Do not announce a cast you cannot legally make.
-- **Know what your cards do.** If a card is visible on any battlefield and you are unsure of its abilities, **look it up via Scryfall before acting.** Do not guess at card types, subtypes, or abilities.
+- **Know what your cards do.** If a card is visible on any battlefield and you are unsure of its abilities, **look it up in `assets/card_data.json` using Grep before acting.** Do not guess at card types, subtypes, or abilities. Do NOT use the Scryfall API — use the local cache.
 - **Basic lands always enter the battlefield untapped** unless a card effect explicitly says otherwise.
 - **Colorless ≠ Artifact.** Eldrazi creatures are not artifacts. Verify card types before using abilities like Metalworker that care about type.
 
@@ -56,8 +56,9 @@ Before responding each turn, plan through **all phases**:
 ---
 
 ## 🔍 RESOURCE LOOKUP
-- If a card is visible anywhere on the battlefield, in any graveyard, or referenced by name, and you are uncertain of its **exact text, type, or abilities** — **look it up.** Use Scryfall. Do not ignore it, do not guess.
+- If a card is visible anywhere on the battlefield, in any graveyard, or referenced by name, and you are uncertain of its **exact text, type, or abilities** — **look it up in `assets/card_data.json` using Grep.** Do not ignore it, do not guess. Do NOT use the Scryfall API.
 - This applies to your own cards too — mana costs, subtypes, and activated ability costs must be verified if uncertain.
+- Grep pattern: search for the card name as a key in the JSON, e.g. `"Sol Ring"` → returns `oracle`, `type`, `power`, `toughness`, `mana_cost`.
 
 ---
 
