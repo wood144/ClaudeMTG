@@ -432,6 +432,26 @@ function sendToCommandZone() {
   closeCtxMenu();
 }
 
+function showGraveyardCtxMenu(e, card, player) {
+  state.activeCtxCard = { card, player };
+  const menu = document.getElementById('ctx-menu');
+  menu.innerHTML = `
+    <div class="ctx-item" style="font-family:'Cinzel',serif;font-size:10px;color:var(--muted);padding:4px 10px;">${card.name}</div>
+    <div class="ctx-sep"></div>
+    <div class="ctx-item" onclick="moveCtx('${player}','graveyard','${player}','battlefield')">→ Battlefield</div>
+    <div class="ctx-item" onclick="moveCtx('${player}','graveyard','${player}','hand')">→ Hand</div>
+    <div class="ctx-item" onclick="moveCtx('${player}','graveyard','${player}','exile')">→ Exile</div>
+    <div class="ctx-item" onclick="moveCtx('${player}','graveyard','${player}','libTop')">→ Top of Library</div>
+    <div class="ctx-item" onclick="moveCtx('${player}','graveyard','${player}','libCount')">→ Bottom of Library</div>
+    <div class="ctx-sep"></div>
+    <div class="ctx-item danger" onclick="removeCtx()">Remove from Game</div>
+  `;
+  menu.style.display = 'block';
+  menu.style.left = Math.min(e.clientX, window.innerWidth - 180) + 'px';
+  menu.style.top = Math.min(e.clientY, window.innerHeight - menu.offsetHeight - 10) + 'px';
+  setTimeout(() => document.addEventListener('click', closeCtxMenu, { once: true }), 10);
+}
+
 function showLibraryCtxMenu(e, card, player) {
   state.activeCtxCard = { card, player };
   const menu = document.getElementById('ctx-menu');

@@ -278,6 +278,9 @@ function openZone(player, zone) {
         } else if (zone === 'library') {
           closeModal();
           showLibraryCtxMenu(e, card, player);
+        } else if (zone === 'graveyard') {
+          closeModal();
+          showGraveyardCtxMenu(e, card, player);
         } else {
           showCtxMenu(e, card, player);
           closeModal();
