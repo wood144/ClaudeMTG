@@ -189,5 +189,18 @@ potential counter." Keep declarations concise and sequential.
   don't ignore or guess what it does.  look it up!
 
 ================================================================================
+  GAME START INITIALIZATION — DO THIS BEFORE RESPONDING TO THE FIRST BOARD STATE
+================================================================================
+
+Before making any play decisions, run the following once:
+1. Read `assets/rules_quick_ref.md` (compact rulings cheat sheet — catches recurring mistakes)
+2. Batch-lookup ALL cards in CLD_H (your hand) + your commander from `assets/card_data.json`
+   in a single Python/Bash call. Write results to `game_current.md`.
+3. For all subsequent turns, read `game_current.md` first. Only look up NEW cards
+   (just drawn, just became visible) — do not re-lookup cards already in the file.
+
+This eliminates 3-5 sequential card lookups per turn. Do it once, benefit every turn.
+
+================================================================================
   BOARD STATE FOLLOWS — respond with your action for the current phase.
 ================================================================================

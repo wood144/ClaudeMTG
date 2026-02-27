@@ -56,8 +56,26 @@ Before responding each turn, plan through **all phases**:
 ---
 
 ## 🔍 RESOURCE LOOKUP
-- If a card is visible anywhere on the battlefield, in any graveyard, or referenced by name, and you are uncertain of its **exact text, type, or abilities** — **look it up in `assets/card_data.json` using Grep.** Do not ignore it, do not guess. Do NOT use the Scryfall API.
-- This applies to your own cards too — mana costs, subtypes, and activated ability costs must be verified if uncertain.
+
+### Game Start Protocol — Run This Before Making Any Plays
+When the first board state of a new game arrives:
+1. **Read `assets/rules_quick_ref.md`** — compact rulings cheat sheet covering all recurring mistakes.
+2. **Batch-lookup all hand cards + commander** in ONE Bash/Python call against `assets/card_data.json`. Write results to `game_current.md`.
+3. **Read `game_current.md`** at the start of each subsequent response instead of doing fresh lookups.
+4. Only look up cards in `card_data.json` for cards that are **new since your last read** (newly drawn, newly visible opponent cards).
+
+Batch lookup pattern:
+```python
+import json
+with open('assets/card_data.json') as f: d=json.load(f)
+for name in ['Card1','Card2','Card3']:
+    c=d.get(name,{})
+    print(f'- {name} ({c.get("mana_cost","?")} | {c.get("type","?")}) — {c.get("oracle","?")[:150]}')
+```
+
+### Mid-Game Lookups
+- If a card is visible anywhere on the battlefield, in any graveyard, or referenced by name, and you are uncertain of its **exact text, type, or abilities** — **look it up in `assets/card_data.json` using Bash.** Do not ignore it, do not guess. Do NOT use the Scryfall API.
+- **Batch multiple unknowns into one call** rather than sequential lookups.
 - Grep pattern: search for the card name as a key in the JSON, e.g. `"Sol Ring"` → returns `oracle`, `type`, `power`, `toughness`, `mana_cost`.
 
 ---
