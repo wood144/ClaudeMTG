@@ -13043,5 +13043,643 @@
       "Food",
       "Partner"
     ]
+  },
+  "Mr. House, President and CEO": {
+    "name": "Mr. House, President and CEO",
+    "mana_cost": "{R}{W}{B}",
+    "cmc": 3,
+    "type": "Legendary Artifact Creature — Human",
+    "oracle": "Whenever you roll a 4 or higher, create a 3/3 colorless Robot artifact creature token. If you rolled 6 or higher, instead create that token and a Treasure token.\n{4}, {T}: Roll a six-sided die plus an additional six-sided die for each mana from Treasures spent to activate this ability.",
+    "power": "0",
+    "toughness": "4",
+    "keywords": [
+      "Treasure"
+    ]
+  },
+  "Agility Bobblehead": {
+    "name": "Agility Bobblehead",
+    "mana_cost": "{3}",
+    "cmc": 3,
+    "type": "Artifact — Bobblehead",
+    "oracle": "{T}: Add one mana of any color.\n{3}, {T}: Up to X target creatures you control each gain haste until end of turn and can't be blocked this turn except by creatures with haste, where X is the number of Bobbleheads you control as you activate this ability.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Ancient Brass Dragon": {
+    "name": "Ancient Brass Dragon",
+    "mana_cost": "{5}{B}{B}",
+    "cmc": 7,
+    "type": "Creature — Elder Dragon",
+    "oracle": "Flying\nWhenever this creature deals combat damage to a player, roll a d20. When you do, put any number of target creature cards with total mana value X or less from graveyards onto the battlefield under your control, where X is the result.",
+    "power": "7",
+    "toughness": "6",
+    "keywords": [
+      "Flying"
+    ]
+  },
+  "Ancient Copper Dragon": {
+    "name": "Ancient Copper Dragon",
+    "mana_cost": "{4}{R}{R}",
+    "cmc": 6,
+    "type": "Creature — Elder Dragon",
+    "oracle": "Flying\nWhenever this creature deals combat damage to a player, roll a d20. You create a number of Treasure tokens equal to the result.",
+    "power": "6",
+    "toughness": "5",
+    "keywords": [
+      "Flying",
+      "Treasure"
+    ]
+  },
+  "Ancient Gold Dragon": {
+    "name": "Ancient Gold Dragon",
+    "mana_cost": "{5}{W}{W}",
+    "cmc": 7,
+    "type": "Creature — Elder Dragon",
+    "oracle": "Flying\nWhenever this creature deals combat damage to a player, roll a d20. You create a number of 1/1 blue Faerie Dragon creature tokens with flying equal to the result.",
+    "power": "7",
+    "toughness": "10",
+    "keywords": [
+      "Flying"
+    ]
+  },
+  "Bag of Devouring": {
+    "name": "Bag of Devouring",
+    "mana_cost": "{B}",
+    "cmc": 1,
+    "type": "Artifact",
+    "oracle": "Whenever you sacrifice another nontoken artifact or creature, exile it.\n{2}, {T}, Sacrifice another artifact or creature: Draw a card.\n{3}, {T}, Sacrifice this artifact: Roll a d10. Return up to X cards from among cards exiled with this artifact to their owners' hands, where X is the result.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Barbarian Class": {
+    "name": "Barbarian Class",
+    "mana_cost": "{R}",
+    "cmc": 1,
+    "type": "Enchantment — Class",
+    "oracle": "(Gain the next level as a sorcery to add its ability.)\nIf you would roll one or more dice, instead roll that many dice plus one and ignore the lowest roll.\n{1}{R}: Level 2\nWhenever you roll one or more dice, target creature you control gets +2/+0 and gains menace until end of turn.\n{2}{R}: Level 3\nCreatures you control have haste.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Brazen Dwarf": {
+    "name": "Brazen Dwarf",
+    "mana_cost": "{1}{R}",
+    "cmc": 2,
+    "type": "Creature — Dwarf Shaman",
+    "oracle": "Whenever you roll one or more dice, this creature deals 1 damage to each opponent.",
+    "power": "1",
+    "toughness": "3",
+    "keywords": []
+  },
+  "Caustic Bronco": {
+    "name": "Caustic Bronco",
+    "mana_cost": "{1}{B}",
+    "cmc": 2,
+    "type": "Creature — Snake Horse Mount",
+    "oracle": "Whenever this creature attacks, reveal the top card of your library and put it into your hand. You lose life equal to that card's mana value if this creature isn't saddled. Otherwise, each opponent loses that much life.\nSaddle 3 (Tap any number of other creatures you control with total power 3 or more: This Mount becomes saddled until end of turn. Saddle only as a sorcery.)",
+    "power": "2",
+    "toughness": "2",
+    "keywords": [
+      "Saddle"
+    ]
+  },
+  "Chaos Channeler": {
+    "name": "Chaos Channeler",
+    "mana_cost": "{2}{R}{R}",
+    "cmc": 4,
+    "type": "Creature — Human Shaman",
+    "oracle": "Wild Magic Surge — Whenever this creature attacks, roll a d20.\n1—9 | Exile the top card of your library. You may play it this turn.\n10—19 | Exile the top two cards of your library. You may play them this turn.\n20 | Exile the top three cards of your library. You may play them this turn.",
+    "power": "4",
+    "toughness": "3",
+    "keywords": []
+  },
+  "Chaos Dragon": {
+    "name": "Chaos Dragon",
+    "mana_cost": "{1}{R}{R}",
+    "cmc": 3,
+    "type": "Creature — Dragon",
+    "oracle": "Flying, haste\nThis creature attacks each combat if able.\nAt the beginning of combat on your turn, each player rolls a d20. If one or more opponents had the highest result, this creature can't attack those players or planeswalkers they control this combat.",
+    "power": "4",
+    "toughness": "4",
+    "keywords": [
+      "Flying",
+      "Haste"
+    ]
+  },
+  "Charisma Bobblehead": {
+    "name": "Charisma Bobblehead",
+    "mana_cost": "{3}",
+    "cmc": 3,
+    "type": "Artifact — Bobblehead",
+    "oracle": "{T}: Add one mana of any color.\n{4}, {T}: Create X 1/1 white Soldier creature tokens, where X is the number of Bobbleheads you control. Activate only as a sorcery.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Component Pouch": {
+    "name": "Component Pouch",
+    "mana_cost": "{3}",
+    "cmc": 3,
+    "type": "Artifact",
+    "oracle": "{T}, Remove a component counter from this artifact: Add two mana of different colors.\n{T}: Roll a d20.\n1—9 | Put a component counter on this artifact.\n10—20 | Put two component counters on this artifact.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Contraband Livestock": {
+    "name": "Contraband Livestock",
+    "mana_cost": "{1}{W}",
+    "cmc": 2,
+    "type": "Instant",
+    "oracle": "Exile target creature, then roll a d20.\n1—9 | Its controller creates a 4/4 green Ox creature token.\n10—19 | Its controller creates a 2/2 green Boar creature token.\n20 | Its controller creates a 0/1 white Goat creature token.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Danse Macabre": {
+    "name": "Danse Macabre",
+    "mana_cost": "{3}{B}{B}",
+    "cmc": 5,
+    "type": "Sorcery",
+    "oracle": "Each player sacrifices a nontoken creature of their choice. Roll a d20 and add the toughness of the creature you sacrificed this way.\n1—14 | Return a creature card put into a graveyard this way to the battlefield under your control.\n15+ | Return up to two creature cards put into graveyards this way to the battlefield under your control.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Deadly Rollick": {
+    "name": "Deadly Rollick",
+    "mana_cost": "{3}{B}",
+    "cmc": 4,
+    "type": "Instant",
+    "oracle": "If you control a commander, you may cast this spell without paying its mana cost.\nExile target creature.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Delina, Wild Mage": {
+    "name": "Delina, Wild Mage",
+    "mana_cost": "{3}{R}",
+    "cmc": 4,
+    "type": "Legendary Creature — Elf Shaman",
+    "oracle": "Whenever Delina attacks, choose target creature you control, then roll a d20.\n1—14 | Create a tapped and attacking token that's a copy of that creature, except it's not legendary and it has \"At end of combat, exile this token.\"\n15—20 | Create one of those tokens. You may roll again.",
+    "power": "3",
+    "toughness": "2",
+    "keywords": []
+  },
+  "Dolmen Gate": {
+    "name": "Dolmen Gate",
+    "mana_cost": "{2}",
+    "cmc": 2,
+    "type": "Artifact",
+    "oracle": "Prevent all combat damage that would be dealt to attacking creatures you control.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Earth-Cult Elemental": {
+    "name": "Earth-Cult Elemental",
+    "mana_cost": "{4}{R}{R}",
+    "cmc": 6,
+    "type": "Creature — Elemental",
+    "oracle": "Siege Monster — When this creature enters, roll a d20.\n1—9 | Each player sacrifices a permanent of their choice.\n10—19 | Each opponent sacrifices a permanent of their choice.\n20 | Each opponent sacrifices two permanents of their choice.",
+    "power": "6",
+    "toughness": "6",
+    "keywords": []
+  },
+  "Farideh's Fireball": {
+    "name": "Farideh's Fireball",
+    "mana_cost": "{3}{R}{R}",
+    "cmc": 5,
+    "type": "Instant",
+    "oracle": "Farideh's Fireball deals 5 damage to target creature or planeswalker. Roll a d20.\n1—9 | Farideh's Fireball deals 2 damage to each player.\n10—20 | Farideh's Fireball deals 2 damage to each opponent.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Fetid Heath": {
+    "name": "Fetid Heath",
+    "mana_cost": "",
+    "cmc": 0,
+    "type": "Land",
+    "oracle": "{T}: Add {C}.\n{W/B}, {T}: Add {W}{W}, {W}{B}, or {B}{B}.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Foreboding Ruins": {
+    "name": "Foreboding Ruins",
+    "mana_cost": "",
+    "cmc": 0,
+    "type": "Land",
+    "oracle": "As this land enters, you may reveal a Swamp or Mountain card from your hand. If you don't, this land enters tapped.\n{T}: Add {B} or {R}.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Graven Cairns": {
+    "name": "Graven Cairns",
+    "mana_cost": "",
+    "cmc": 0,
+    "type": "Land",
+    "oracle": "{T}: Add {C}.\n{B/R}, {T}: Add {B}{B}, {B}{R}, or {R}{R}.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Havoc Jester": {
+    "name": "Havoc Jester",
+    "mana_cost": "{4}{R}",
+    "cmc": 5,
+    "type": "Creature — Devil",
+    "oracle": "Whenever you sacrifice a permanent, this creature deals 1 damage to any target.",
+    "power": "5",
+    "toughness": "5",
+    "keywords": []
+  },
+  "Hedron Detonator": {
+    "name": "Hedron Detonator",
+    "mana_cost": "{2}{R}",
+    "cmc": 3,
+    "type": "Creature — Goblin Artificer",
+    "oracle": "Whenever an artifact you control enters, this creature deals 1 damage to target opponent.\n{T}, Sacrifice two artifacts: Exile the top card of your library. You may play that card this turn.",
+    "power": "2",
+    "toughness": "3",
+    "keywords": []
+  },
+  "Hexing Squelcher": {
+    "name": "Hexing Squelcher",
+    "mana_cost": "{1}{R}",
+    "cmc": 2,
+    "type": "Creature — Goblin Sorcerer",
+    "oracle": "This spell can't be countered.\nWard—Pay 2 life.\nSpells you control can't be countered.\nOther creatures you control have \"Ward—Pay 2 life.\"",
+    "power": "2",
+    "toughness": "2",
+    "keywords": [
+      "Ward"
+    ]
+  },
+  "Hoarding Ogre": {
+    "name": "Hoarding Ogre",
+    "mana_cost": "{3}{R}",
+    "cmc": 4,
+    "type": "Creature — Ogre",
+    "oracle": "Whenever this creature attacks, roll a d20.\n1—9 | Create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")\n10—19 | Create two Treasure tokens.\n20 | Create three Treasure tokens.",
+    "power": "3",
+    "toughness": "3",
+    "keywords": [
+      "Treasure"
+    ]
+  },
+  "Impact Tremors": {
+    "name": "Impact Tremors",
+    "mana_cost": "{1}{R}",
+    "cmc": 2,
+    "type": "Enchantment",
+    "oracle": "Whenever a creature you control enters, this enchantment deals 1 damage to each opponent.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Ingenious Artillerist": {
+    "name": "Ingenious Artillerist",
+    "mana_cost": "{2}{R}",
+    "cmc": 3,
+    "type": "Creature — Human Artificer",
+    "oracle": "Whenever one or more artifacts you control enter, this creature deals that much damage to each opponent.",
+    "power": "3",
+    "toughness": "1",
+    "keywords": []
+  },
+  "Inspiring Statuary": {
+    "name": "Inspiring Statuary",
+    "mana_cost": "{3}",
+    "cmc": 3,
+    "type": "Artifact",
+    "oracle": "Nonartifact spells you cast have improvise. (Your artifacts can help cast those spells. Each artifact you tap after you're done activating mana abilities pays for {1}.)",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Intelligence Bobblehead": {
+    "name": "Intelligence Bobblehead",
+    "mana_cost": "{3}",
+    "cmc": 3,
+    "type": "Artifact — Bobblehead",
+    "oracle": "{T}: Add one mana of any color.\n{5}, {T}: Draw X cards, where X is the number of Bobbleheads you control.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Iron Mastiff": {
+    "name": "Iron Mastiff",
+    "mana_cost": "{4}",
+    "cmc": 4,
+    "type": "Artifact Creature — Dog",
+    "oracle": "Whenever this creature attacks, roll a d20 for each player being attacked and ignore all but the highest roll.\n1—9 | This creature deals damage equal to its power to you.\n10—19 | This creature deals damage equal to its power to defending player.\n20 | This creature deals damage equal to its power to each opponent.",
+    "power": "4",
+    "toughness": "4",
+    "keywords": []
+  },
+  "Kambal, Profiteering Mayor": {
+    "name": "Kambal, Profiteering Mayor",
+    "mana_cost": "{1}{W}{B}",
+    "cmc": 3,
+    "type": "Legendary Creature — Human Advisor",
+    "oracle": "Whenever one or more tokens your opponents control enter, for each of them, create a tapped token that's a copy of it. This ability triggers only once each turn.\nWhenever one or more tokens you control enter, each opponent loses 1 life and you gain 1 life.",
+    "power": "2",
+    "toughness": "4",
+    "keywords": []
+  },
+  "Lae'zel's Acrobatics": {
+    "name": "Lae'zel's Acrobatics",
+    "mana_cost": "{3}{W}",
+    "cmc": 4,
+    "type": "Instant",
+    "oracle": "Exile all nontoken creatures you control, then roll a d20.\n1—9 | Return those cards to the battlefield under their owner's control at the beginning of the next end step.\n10—20 | Return those cards to the battlefield under their owner's control, then exile them again. Return those cards to the battlefield under their owner's control at the beginning of the next end step.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Lightfoot Rogue": {
+    "name": "Lightfoot Rogue",
+    "mana_cost": "{1}{B}",
+    "cmc": 2,
+    "type": "Creature — Halfling Rogue",
+    "oracle": "Sneak Attack — Whenever this creature attacks, roll a d20.\n1—9 | This creature gains deathtouch until end of turn.\n10—19 | It gets +1/+0 and gains deathtouch until end of turn.\n20 | It gets +3/+0 and gains first strike and deathtouch until end of turn.",
+    "power": "2",
+    "toughness": "1",
+    "keywords": [
+      "Sneak"
+    ]
+  },
+  "Luck Bobblehead": {
+    "name": "Luck Bobblehead",
+    "mana_cost": "{3}",
+    "cmc": 3,
+    "type": "Artifact — Bobblehead",
+    "oracle": "{T}: Add one mana of any color.\n{1}, {T}: Roll X six-sided dice, where X is the number of Bobbleheads you control. Create a tapped Treasure token for each even result. If you rolled 6 exactly seven times, you win the game.",
+    "power": null,
+    "toughness": null,
+    "keywords": [
+      "Treasure"
+    ]
+  },
+  "Maddening Hex": {
+    "name": "Maddening Hex",
+    "mana_cost": "{1}{R}{R}",
+    "cmc": 3,
+    "type": "Enchantment — Aura Curse",
+    "oracle": "Enchant player\nWhenever enchanted player casts a noncreature spell, roll a d6. This Aura deals damage to that player equal to the result. Then attach this Aura to another one of your opponents chosen at random.",
+    "power": null,
+    "toughness": null,
+    "keywords": [
+      "Enchant"
+    ]
+  },
+  "Myrkul's Edict": {
+    "name": "Myrkul's Edict",
+    "mana_cost": "{1}{B}",
+    "cmc": 2,
+    "type": "Sorcery",
+    "oracle": "Roll a d20.\n1—9 | Choose an opponent. That player sacrifices a creature of their choice.\n10—19 | Each opponent sacrifices a creature of their choice.\n20 | Each opponent sacrifices a creature with the greatest power among creatures that player controls.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Neyali, Suns' Vanguard": {
+    "name": "Neyali, Suns' Vanguard",
+    "mana_cost": "{2}{R}{W}",
+    "cmc": 4,
+    "type": "Legendary Creature — Human Rebel",
+    "oracle": "Attacking tokens you control have double strike.\nWhenever one or more tokens you control attack a player, exile the top card of your library. During any turn you attacked with a token, you may play that card.",
+    "power": "3",
+    "toughness": "3",
+    "keywords": []
+  },
+  "Nomad Outpost": {
+    "name": "Nomad Outpost",
+    "mana_cost": "",
+    "cmc": 0,
+    "type": "Land",
+    "oracle": "This land enters tapped.\n{T}: Add {R}, {W}, or {B}.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Ojer Axonil, Deepest Might // Temple of Power": {
+    "name": "Ojer Axonil, Deepest Might // Temple of Power",
+    "mana_cost": "{2}{R}{R} // ",
+    "cmc": 4,
+    "type": "Legendary Creature — God // Land",
+    "oracle": "[Ojer Axonil, Deepest Might] Trample\nIf a red source you control would deal an amount of noncombat damage less than Ojer Axonil's power to an opponent, that source deals damage equal to Ojer Axonil's power instead.\nWhen Ojer Axonil dies, return it to the battlefield tapped and transformed under its owner's control. // [Temple of Power] (Transforms from Ojer Axonil, Deepest Might.)\n{T}: Add {R}.\n{2}{R}, {T}: Transform this land. Activate only if red sources you controlled dealt 4 or more noncombat damage this turn and only as a sorcery.",
+    "power": "4",
+    "toughness": "4",
+    "keywords": [
+      "Transform",
+      "Trample"
+    ]
+  },
+  "Perception Bobblehead": {
+    "name": "Perception Bobblehead",
+    "mana_cost": "{3}",
+    "cmc": 3,
+    "type": "Artifact — Bobblehead",
+    "oracle": "{T}: Add one mana of any color.\n{3}, {T}: Look at the top X cards of your library, where X is the number of Bobbleheads you control. You may cast a spell with mana value 3 or less from among them without paying its mana cost. Put the rest on the bottom of your library in a random order.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Radiant Summit": {
+    "name": "Radiant Summit",
+    "mana_cost": "",
+    "cmc": 0,
+    "type": "Land — Mountain Plains",
+    "oracle": "({T}: Add {R} or {W}.)\nThis land enters tapped unless you control two or more basic lands.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Ragavan, Nimble Pilferer": {
+    "name": "Ragavan, Nimble Pilferer",
+    "mana_cost": "{R}",
+    "cmc": 1,
+    "type": "Legendary Creature — Monkey Pirate",
+    "oracle": "Whenever Ragavan deals combat damage to a player, create a Treasure token and exile the top card of that player's library. Until end of turn, you may cast that card.\nDash {1}{R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)",
+    "power": "2",
+    "toughness": "1",
+    "keywords": [
+      "Treasure",
+      "Dash"
+    ]
+  },
+  "Reckless Fireweaver": {
+    "name": "Reckless Fireweaver",
+    "mana_cost": "{1}{R}",
+    "cmc": 2,
+    "type": "Creature — Human Artificer",
+    "oracle": "Whenever an artifact you control enters, this creature deals 1 damage to each opponent.",
+    "power": "1",
+    "toughness": "3",
+    "keywords": []
+  },
+  "Recruitment Drive": {
+    "name": "Recruitment Drive",
+    "mana_cost": "{2}{W}",
+    "cmc": 3,
+    "type": "Sorcery",
+    "oracle": "Roll a d20.\n1—9 | Create two 1/1 white Soldier creature tokens.\n10—19 | Create two 2/2 white Knight creature tokens.\n20 | Create three 2/2 white Knight creature tokens.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Revel in Riches": {
+    "name": "Revel in Riches",
+    "mana_cost": "{4}{B}",
+    "cmc": 5,
+    "type": "Enchantment",
+    "oracle": "Whenever a creature an opponent controls dies, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")\nAt the beginning of your upkeep, if you control ten or more Treasures, you win the game.",
+    "power": null,
+    "toughness": null,
+    "keywords": [
+      "Treasure"
+    ]
+  },
+  "Revivify": {
+    "name": "Revivify",
+    "mana_cost": "{2}{W}",
+    "cmc": 3,
+    "type": "Instant",
+    "oracle": "Roll a d20 and add the number of creature cards in your graveyard that were put there from the battlefield this turn.\n1—14 | Return all creature cards in your graveyard that were put there from the battlefield this turn to your hand.\n15+ | Return those cards from your graveyard to the battlefield.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Ruinous Ultimatum": {
+    "name": "Ruinous Ultimatum",
+    "mana_cost": "{R}{R}{W}{W}{W}{B}{B}",
+    "cmc": 7,
+    "type": "Sorcery",
+    "oracle": "Destroy all nonland permanents your opponents control.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Strength Bobblehead": {
+    "name": "Strength Bobblehead",
+    "mana_cost": "{3}",
+    "cmc": 3,
+    "type": "Artifact — Bobblehead",
+    "oracle": "{T}: Add one mana of any color.\n{3}, {T}: Put X +1/+1 counters on target creature, where X is the number of Bobbleheads you control. Activate only as a sorcery.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Sundown Pass": {
+    "name": "Sundown Pass",
+    "mana_cost": "",
+    "cmc": 0,
+    "type": "Land",
+    "oracle": "This land enters tapped unless you control two or more other lands.\n{T}: Add {R} or {W}.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Swarming Goblins": {
+    "name": "Swarming Goblins",
+    "mana_cost": "{4}{R}",
+    "cmc": 5,
+    "type": "Creature — Goblin",
+    "oracle": "When this creature enters, roll a d20.\n1—9 | Create a 1/1 red Goblin creature token.\n10—19 | Create two of those tokens.\n20 | Create three of those tokens.",
+    "power": "4",
+    "toughness": "3",
+    "keywords": []
+  },
+  "Sword of Hours": {
+    "name": "Sword of Hours",
+    "mana_cost": "{2}",
+    "cmc": 2,
+    "type": "Artifact — Equipment",
+    "oracle": "Whenever equipped creature attacks, put a +1/+1 counter on it.\nWhenever equipped creature deals combat damage, roll a d12. If the result is greater than the damage dealt or the result is 12, double the number of +1/+1 counters on that creature.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+    "power": null,
+    "toughness": null,
+    "keywords": [
+      "Equip"
+    ]
+  },
+  "The Deck of Many Things": {
+    "name": "The Deck of Many Things",
+    "mana_cost": "{5}",
+    "cmc": 5,
+    "type": "Legendary Artifact",
+    "oracle": "{2}, {T}: Roll a d20 and subtract the number of cards in your hand. If the result is 0 or less, discard your hand.\n1—9 | Return a card at random from your graveyard to your hand.\n10—19 | Draw two cards.\n20 | Put a creature card from any graveyard onto the battlefield under your control. When that creature dies, its owner loses the game.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Underdark Rift": {
+    "name": "Underdark Rift",
+    "mana_cost": "",
+    "cmc": 0,
+    "type": "Land",
+    "oracle": "{T}: Add {C}.\n{5}, {T}, Exile this land: Roll a d10. Put target artifact, creature, or planeswalker into its owner's library just beneath the top X cards of that library, where X is the result. Activate only as a sorcery.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Wand of Wonder": {
+    "name": "Wand of Wonder",
+    "mana_cost": "{3}{R}",
+    "cmc": 4,
+    "type": "Artifact",
+    "oracle": "{4}, {T}: Roll a d20. Each opponent exiles cards from the top of their library until they exile an instant or sorcery card, then shuffles the rest into their library. You may cast up to X instant and/or sorcery spells from among cards exiled this way without paying their mana costs.\n1—9 | X is one.\n10—19 | X is two.\n20 | X is three.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Warleader's Call": {
+    "name": "Warleader's Call",
+    "mana_cost": "{1}{R}{W}",
+    "cmc": 3,
+    "type": "Enchantment",
+    "oracle": "Creatures you control get +1/+1.\nWhenever a creature you control enters, this enchantment deals 1 damage to each opponent.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Witty Roastmaster": {
+    "name": "Witty Roastmaster",
+    "mana_cost": "{2}{R}",
+    "cmc": 3,
+    "type": "Creature — Devil Citizen",
+    "oracle": "Alliance — Whenever another creature you control enters, this creature deals 1 damage to each opponent.",
+    "power": "3",
+    "toughness": "2",
+    "keywords": [
+      "Alliance"
+    ]
+  },
+  "Wyll's Reversal": {
+    "name": "Wyll's Reversal",
+    "mana_cost": "{2}{R}",
+    "cmc": 3,
+    "type": "Instant",
+    "oracle": "Choose target spell or ability with one or more targets. Roll a d20 and add the greatest power among creatures you control.\n1—14 | You may choose new targets for that spell or ability.\n15+ | You may choose new targets for that spell or ability. Then copy it. You may choose new targets for the copy.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Wyll, Blade of Frontiers": {
+    "name": "Wyll, Blade of Frontiers",
+    "mana_cost": "{1}{R}",
+    "cmc": 2,
+    "type": "Legendary Creature — Human Warlock",
+    "oracle": "If you would roll one or more dice, instead roll that many dice plus one and ignore the lowest roll.\nWhenever you roll one or more dice, put a +1/+1 counter on Wyll.\nChoose a Background (You can have a Background as a second commander.)",
+    "power": "1",
+    "toughness": "1",
+    "keywords": [
+      "Choose a background"
+    ]
   }
 }

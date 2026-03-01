@@ -68,14 +68,23 @@ function fetchCard(name) {
   });
 }
 
-async function main() {
-  const data = JSON.parse(fs.readFileSync(DECKS_PATH, 'utf8'));
-  const decks = Object.values(data);
+// Parse a specific deck name from --deck flag, or null for all decks
+function parseDeckFilter() {
+  const idx = process.argv.indexOf('--deck');
+  return idx !== -1 && process.argv[idx + 1] ? process.argv[idx + 1] : null;
+}
 
-  // Collect unique card names
+// Look up a card in the cache, handling DFC names (e.g. "Ojer Axonil" matches "Ojer Axonil // Temple of Power")
+function cacheHas(cache, name) {
+  if (cache[name]) return true;
+  return Object.keys(cache).some(k => k.startsWith(name + ' //'));
+}
+
+function collectCardNames(decks, deckFilter) {
   const unique = new Set();
   for (const deck of decks) {
     if (!deck.list) continue;
+    if (deckFilter && deck.name !== deckFilter) continue;
     for (const line of deck.list.split('\n')) {
       const match = line.trim().match(/^\d+\s+(.+)$/);
       if (match) {
@@ -84,22 +93,46 @@ async function main() {
       }
     }
   }
+  return [...unique];
+}
 
-  const names = [...unique];
-  console.log(`Fetching ${names.length} unique cards from Scryfall...`);
+async function main() {
+  const checkOnly = process.argv.includes('--check');
+  const deckFilter = parseDeckFilter();
+  const data = JSON.parse(fs.readFileSync(DECKS_PATH, 'utf8'));
+  const decks = Object.values(data);
 
-  // Load existing cache to allow resuming interrupted runs
+  const names = collectCardNames(decks, deckFilter);
+  const scope = deckFilter ? `deck "${deckFilter}"` : 'all decks';
+
+  // Load existing cache
   let cache = {};
   if (fs.existsSync(OUTPUT_PATH)) {
     cache = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf8'));
-    const cached = names.filter(n => cache[n]).length;
-    console.log(`${cached} already cached, fetching ${names.length - cached} new cards.`);
   }
+
+  const missing = names.filter(n => !cacheHas(cache, n));
+
+  // --check mode: just report missing cards and exit
+  if (checkOnly) {
+    if (missing.length === 0) {
+      console.log(`All ${names.length} cards from ${scope} are cached.`);
+    } else {
+      console.log(`${missing.length} cards from ${scope} missing from cache:`);
+      missing.forEach(n => console.log(`  - ${n}`));
+      console.log(`\nRun without --check to fetch them: node scripts/build-card-cache.js${deckFilter ? ` --deck "${deckFilter}"` : ''}`);
+    }
+    process.exit(missing.length > 0 ? 1 : 0);
+  }
+
+  console.log(`Fetching ${names.length} unique cards from Scryfall (${scope})...`);
+  const cached = names.length - missing.length;
+  console.log(`${cached} already cached, fetching ${missing.length} new cards.`);
 
   let fetched = 0, failed = 0;
   for (let i = 0; i < names.length; i++) {
     const name = names[i];
-    if (cache[name]) continue; // already have it
+    if (cacheHas(cache, name)) continue; // already have it (handles DFC front-face matches)
 
     await sleep(RATE_LIMIT_MS);
     const card = await fetchCard(name);
