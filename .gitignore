@@ -7,3 +7,9 @@ Thumbs.db
 
 # Node (if tooling ever added)
 node_modules/
+
+# Personal tracker (not for repo)
+assets/mtg_commander_tracker.xlsx
+
+# Game session notes
+game_current.md
