@@ -61,9 +61,10 @@ Before responding each turn, plan through **all phases**:
 When the first board state of a new game arrives:
 1. **Validate the card cache first.** Run `node scripts/build-card-cache.js --check` (or `--check --deck "DeckName"` for a specific deck). If any cards are missing, run `node scripts/build-card-cache.js` to fetch them from Scryfall before proceeding. Do NOT play with un-cached cards.
 2. **Read `assets/rules_quick_ref.md`** — compact rulings cheat sheet covering all recurring mistakes.
-3. **Batch-lookup all hand cards + commander** in ONE Bash/Python call against `assets/card_data.json`. Write results to `game_current.md`.
-4. **Read `game_current.md`** at the start of each subsequent response instead of doing fresh lookups.
-5. Only look up cards in `card_data.json` for cards that are **new since your last read** (newly drawn, newly visible opponent cards).
+3. **Read your deck primer:** Read `decks/<your-deck>/primer.md` for deck strategy and past game lessons. **If the primer does not exist**, create one using the template in `decks/README.md` — look up the commander and key cards from `assets/decks.json` + `assets/card_data.json`, populate Strategy & Combo Lines, and leave Game History empty.
+4. **Batch-lookup all hand cards + commander** in ONE Bash/Python call against `assets/card_data.json`. Write results to `game_current.md`.
+5. **Read `game_current.md`** at the start of each subsequent response instead of doing fresh lookups.
+6. Only look up cards in `card_data.json` for cards that are **new since your last read** (newly drawn, newly visible opponent cards).
 
 Batch lookup pattern:
 ```python
@@ -89,31 +90,6 @@ for name in ['Card1','Card2','Card3']:
 
 ---
 
-## 📝 LESSONS LEARNED — GAMEPLAY HISTORY
-
-### Game 1: Fblthp (Blue Combo) vs. Zhulodok (Colorless Eldrazi)
-**Result:** Fblthp wins via Thassa's Oracle + Enter the Infinite.
-
-**Strategic failures:**
-- Tapped out every Main 1 without considering interaction — played each turn in isolation.
-- Misidentified Hullbreaker Horror threat: tried to counter triggers instead of removing Horror itself.
-- Wasted Not of This World on a single trigger when the real answer was exile/destroy effects (Scour from Existence, Cityscape Leveler, All Is Dust) already in hand/deck.
-- Metalworker revealed Eldrazi (non-artifacts) — needed rules lookup.
-- Summoning sickness on Metalworker — needed opponent correction.
-
-**Key takeaway:** Once a game-winning threat resolves, shift immediately to identifying a *complete* answer, not a partial one. If no complete answer exists, commit to a race plan.
-
-### Game 7: Fun Guys/Ghave (Claude) vs. Dicebots/Mr. House (Human)
-**Result:** Claude wins T20 via infinite Zulaport Cutthroat drain.
-
-**Combo line:** Ghave + Parallel Lives + Ashnod's Altar + Zulaport Cutthroat. Remove counter → 2 Saprolings (PL) → sac 1 to Altar ({C}{C}) → sac other to Ghave for counter ({1}) → Zulaport drains 2. Mana-neutral, counter-neutral, infinite.
-
-**Key lessons:**
-- Ghave is BLACK — immune to Attrition's "destroy target nonblack creature."
-- Kambal, Profiteering Mayor copies opponent tokens only once per turn. Subsequent batches in the same turn are not copied.
-- Mana tracking: permanents don't untap until YOUR untap step. Don't overcount available mana on opponent's turn.
-- Damnation is premium against token/pinger strategies — use it before the engine fires, not after.
-
----
+*Game-specific lessons have been moved to per-deck primers in `decks/<deck-name>/primer.md`.*
 
 *Updated: March 2026*

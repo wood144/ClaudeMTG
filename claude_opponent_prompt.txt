@@ -194,9 +194,13 @@ potential counter." Keep declarations concise and sequential.
 
 Before making any play decisions, run the following once:
 1. Read `assets/rules_quick_ref.md` (compact rulings cheat sheet — catches recurring mistakes)
-2. Batch-lookup ALL cards in CLD_H (your hand) + your commander from `assets/card_data.json`
+2. Read your deck primer: `decks/<your-deck>/primer.md` for deck strategy and past game
+   lessons. **If the primer does not exist**, create one — look up the commander and key
+   cards from `assets/decks.json` + `assets/card_data.json`, populate Strategy & Combo Lines,
+   and leave Game History empty.
+3. Batch-lookup ALL cards in CLD_H (your hand) + your commander from `assets/card_data.json`
    in a single Python/Bash call. Write results to `game_current.md`.
-3. For all subsequent turns, read `game_current.md` first. Only look up NEW cards
+4. For all subsequent turns, read `game_current.md` first. Only look up NEW cards
    (just drawn, just became visible) — do not re-lookup cards already in the file.
 
 This eliminates 3-5 sequential card lookups per turn. Do it once, benefit every turn.

@@ -1,0 +1,25 @@
+# Every Shrine Ever — Deck Primer
+Commander: Go-Shintai of Life's Origin | Colors: WUBRG (5-color)
+
+## Strategy & Combo Lines
+- **Honden of Seeing Winds** (drawing X per upkeep where X = shrines) is the card draw engine. Protect it and stack shrines fast.
+- **Sanctum of All** (6 shrines = all shrine abilities trigger twice) is the true win condition — tutor for it early with Shrine Steward.
+- **Go-Shintai of Life's Origin** costs {3}{G} (4 mana), not 5. Creates shrine tokens on each nontoken shrine entering — crucial for flooding the board quickly.
+- **Sanctum of Shattered Heights** needs discard fodder — only land cards and shrine cards qualify. Plan ahead.
+
+## Key Rulings
+- **Northern Air Temple** triggers on ANY shrine entering (including tokens) — gains life on every shrine ETB.
+- **Go-Shintai of Life's Origin trigger** is "nontoken Shrine" entering only — tokens don't chain-trigger it.
+- **Drakuseth trigger** ("4 to any target + 3 to each of up to 2 OTHER targets") — in 1v1 with no other valid targets, only 4 damage fires (other targets must be DIFFERENT from first).
+- **Grave Titan** creates TWO 2/2 Zombie tokens on ETB/attack, not one.
+
+## Game History
+
+### Game 4: Every Shrine Ever (Claude) vs. The Claw!/Cruelclaw (Human)
+**Result:** Human wins ~T15. Cruelclaw trigger engine snowballed out of control.
+
+**Key mistakes to avoid:**
+- **Shrine deck needs to survive long enough to draw into removal.** Every shrine matters for card draw AND Sanctum damage.
+
+## Matchup Notes
+- **vs. Cruelclaw:** Cruelclaw + Access Tunnel + Lightning Greaves is a must-answer package. Lightning Greaves gives shroud (can't target with Sanctum) AND haste. Access Tunnel makes it unblockable. Priority: destroy Lightning Greaves with Hull Breach ASAP. Butcher of Malakir + any board wipe = forced sacrifice — killing opponent's creatures triggers Butcher, costing you a creature too. Dread Defiler's drain ability has no tap cost — can activate multiple times per turn at instant speed.
