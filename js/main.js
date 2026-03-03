@@ -804,12 +804,12 @@ async function loadDeckForPlayer(player) {
 
   // Fetch all unique card names in parallel
   const unique = [...new Set(cardNames)];
-  const BATCH = 10;
+  const BATCH = 5;
   for (let i = 0; i < unique.length; i += BATCH) {
     const batch = unique.slice(i, i + BATCH);
     setP(`Fetching cards ${i+1}–${Math.min(i+BATCH, unique.length)} of ${unique.length}...`);
     await Promise.all(batch.map(n => fetchCard(n)));
-    if (i + BATCH < unique.length) await sleep(80);
+    if (i + BATCH < unique.length) await sleep(150);
   }
 
   setP('Building hand...');

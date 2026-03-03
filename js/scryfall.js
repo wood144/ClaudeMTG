@@ -1,17 +1,27 @@
 // ─── CARD DATA ────────────────────────────────────────────────────────────────
 const cardCache = {};
 
-async function fetchCard(name) {
+async function fetchCard(name, _retries = 2) {
   if (cardCache[name]) return cardCache[name];
   if (cardCache[name.toLowerCase()]) return cardCache[name.toLowerCase()];
   try {
     const r = await fetch(`https://api.scryfall.com/cards/named?fuzzy=${encodeURIComponent(name)}`);
+    if (r.status === 429 && _retries > 0) {
+      await new Promise(ok => setTimeout(ok, 500));
+      return fetchCard(name, _retries - 1);
+    }
     if (!r.ok) return null;
     const d = await r.json();
     cardCache[name] = d;
     cardCache[name.toLowerCase()] = d;
     return d;
-  } catch { return null; }
+  } catch {
+    if (_retries > 0) {
+      await new Promise(ok => setTimeout(ok, 500));
+      return fetchCard(name, _retries - 1);
+    }
+    return null;
+  }
 }
 
 async function searchTokens(name) {
