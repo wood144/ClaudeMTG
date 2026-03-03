@@ -20,6 +20,9 @@
     --muted: #6b6880;
     --white: #f0ece4;
     --hand-bg: #0e0e16;
+    --card-w: 63px;
+    --card-h: 88px;
+    --radius-card: 5px;
     --drop-highlight: rgba(200,168,75,0.15);
     --drop-border: var(--accent);
   }
@@ -211,18 +214,20 @@
   }
   .send-btn:hover { opacity: 0.85; transform: translateY(-1px); }
 
-  /* CARDS */
-  .card-slot {
+  /* CARDS — shared card sizing */
+  .card-slot, .hand-card, .opp-hand-card, .zone-card-thumb {
     flex-shrink: 0;
-    width: 63px;
-    height: 88px;
-    border-radius: 5px;
+    width: var(--card-w);
+    height: var(--card-h);
+    border-radius: var(--radius-card);
     border: 1px solid var(--border);
     overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.15s, box-shadow 0.15s;
     position: relative;
     background: var(--surface2);
+  }
+  .card-slot {
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
   }
   .card-slot:hover {
     transform: translateY(-4px) scale(1.04);
@@ -255,7 +260,7 @@
     inset: 0;
     z-index: 1;
   }
-  .card-slot .card-name-fallback {
+  .card-name-fallback {
     position: absolute;
     inset: 0;
     display: flex;
@@ -266,8 +271,8 @@
     padding: 4px;
     color: var(--muted);
     font-family: 'Cinzel', serif;
-    z-index: 0;
   }
+  .card-slot .card-name-fallback { z-index: 0; }
   .counters-container {
     position: absolute;
     top: 50%;
@@ -322,9 +327,8 @@
   #opp-field .card-stack .card-slot { transform: none; }
 
   /* HAND ZONES */
-  #opp-hand-zone {
+  #opp-hand-zone, #my-hand-zone {
     background: var(--hand-bg);
-    border-bottom: 1px solid var(--border);
     padding: 6px 14px;
     display: flex;
     align-items: center;
@@ -334,26 +338,19 @@
     overflow-y: hidden;
     position: relative;
   }
-  #opp-hand-zone::-webkit-scrollbar { height: 4px; }
-  #opp-hand-zone::-webkit-scrollbar-track { background: transparent; }
-  #opp-hand-zone::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+  #opp-hand-zone { border-bottom: 1px solid var(--border); }
+  #my-hand-zone  { border-top: 1px solid var(--border); }
 
-  /* HAND ZONE — visible strip below player's battlefield */
-  #my-hand-zone {
-    background: var(--hand-bg);
-    border-top: 1px solid var(--border);
-    padding: 6px 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    min-height: 56px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    position: relative;
-  }
-  #my-hand-zone::-webkit-scrollbar { height: 4px; }
-  #my-hand-zone::-webkit-scrollbar-track { background: transparent; }
-  #my-hand-zone::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+  /* Shared thin scrollbars */
+  #opp-hand-zone::-webkit-scrollbar,
+  #my-hand-zone::-webkit-scrollbar,
+  #deck-list::-webkit-scrollbar { width: 4px; height: 4px; }
+  #opp-hand-zone::-webkit-scrollbar-track,
+  #my-hand-zone::-webkit-scrollbar-track,
+  #deck-list::-webkit-scrollbar-track { background: transparent; }
+  #opp-hand-zone::-webkit-scrollbar-thumb,
+  #my-hand-zone::-webkit-scrollbar-thumb,
+  #deck-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 
   .hand-label {
     font-family: 'Cinzel', serif;
@@ -367,16 +364,8 @@
   }
 
   .hand-card {
-    flex-shrink: 0;
-    width: 63px;
-    height: 88px;
-    border-radius: 5px;
-    border: 1px solid var(--border);
-    overflow: hidden;
     cursor: grab;
     transition: transform 0.15s, box-shadow 0.15s;
-    position: relative;
-    background: var(--surface2);
   }
   .hand-card:hover {
     transform: translateY(-12px) scale(1.08);
@@ -394,19 +383,7 @@
     display: block;
     pointer-events: none;
   }
-  .hand-card .card-name-fallback {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 9px;
-    text-align: center;
-    padding: 4px;
-    color: var(--muted);
-    font-family: 'Cinzel', serif;
-    pointer-events: none;
-  }
+  .hand-card .card-name-fallback { pointer-events: none; }
 
   .hand-empty {
     color: var(--border);
@@ -417,15 +394,7 @@
   }
 
   .opp-hand-card {
-    flex-shrink: 0;
-    width: 63px;
-    height: 88px;
-    border-radius: 5px;
-    border: 1px solid var(--border);
-    overflow: hidden;
     cursor: default;
-    position: relative;
-    background: var(--surface2);
   }
   .opp-hand-card img {
     width: 100%;
@@ -447,9 +416,9 @@
     position: fixed;
     pointer-events: none;
     z-index: 500;
-    width: 63px;
-    height: 88px;
-    border-radius: 5px;
+    width: var(--card-w);
+    height: var(--card-h);
+    border-radius: var(--radius-card);
     overflow: hidden;
     box-shadow: 0 16px 48px rgba(0,0,0,0.8), 0 0 0 2px var(--accent);
     opacity: 0.92;
@@ -461,19 +430,7 @@
     object-fit: cover;
     display: block;
   }
-  .drag-ghost .card-name-fallback {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 9px;
-    text-align: center;
-    padding: 4px;
-    color: var(--muted);
-    font-family: 'Cinzel', serif;
-    background: var(--surface2);
-  }
+  .drag-ghost .card-name-fallback { background: var(--surface2); }
 
   /* SIDEBAR */
   #sidebar {
@@ -619,9 +576,6 @@
     overflow-y: auto;
     padding: 6px;
   }
-  #deck-list::-webkit-scrollbar { width: 4px; }
-  #deck-list::-webkit-scrollbar-track { background: transparent; }
-  #deck-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 
   .deck-item {
     display: flex;
@@ -834,14 +788,7 @@
     align-content: flex-start;
   }
   .zone-card-thumb {
-    width: 63px;
-    height: 88px;
-    border-radius: 5px;
-    overflow: hidden;
-    border: 1px solid var(--border);
     cursor: pointer;
-    background: var(--surface2);
-    position: relative;
     transition: transform 0.15s;
   }
   .zone-card-thumb:hover { transform: scale(1.05); border-color: var(--accent); }

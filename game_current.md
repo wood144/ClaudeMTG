@@ -1,59 +1,20 @@
-# Active Game Session
-<!-- Overwrite this file at the start of every new game. -->
-<!-- NEVER carry data from a previous game. -->
+# Game 9 — Dicebots (Claude) vs Dargons (Human)
 
-## Game Info
-- **My Deck:** [deck name]
-- **Opponent Deck:** [deck name or unknown]
-- **Turn Order:** [I go first / I go second]
-- **Started:** [date]
+## Setup
+- **Claude:** Mr. House, President and CEO (Dicebots — Mardu)
+- **Opponent:** Scion of the Ur-Dragon (Dargons — WUBRG)
+- Human goes first
 
----
+## Commander Notes
+- **Mr. House** ({R}{W}{B} | 0/4): Roll 4+ → 3/3 Robot token. Roll 6+ → Robot + Treasure. {4}{T}: Roll d6 + one per Robot.
+- **Scion** ({W}{U}{B}{R}{G} | 4/4 flying): {2}: Search library for Dragon, put in GY, Scion becomes copy until EOT. Watch for Atarka double strike combo and Ureni protection trick.
 
-## Commander
-<!-- Populated from card_data.json at game start -->
-- **Name:** —
-- **Cost/PT:** —
-- **Abilities:** —
-- **Tax paid so far:** 0 (base cost only)
+## Hand (card references by ID only)
+- #2, #3, #4, #5, #6, #7, #8
 
----
+## Life Totals
+- Claude: 40
+- Opponent: 40
 
-## My Hand
-<!-- Batch-populated at game start. Update as cards are drawn or played. -->
-<!-- Format: #UID: Name (cost | type) — oracle summary -->
-
-
----
-
-## My Battlefield
-<!-- Add cards here as they resolve. Saves re-reading the board state each turn. -->
-<!-- Format: #UID: Name — key ability note | [TAPPED/UNTAPPED] -->
-
-
----
-
-## Mana Base (Untapped Sources)
-<!-- Update at start of each of my turns after untap. Quick tally for casting decisions. -->
-<!-- Format: Source → what it produces -->
-
-
----
-
-## Graveyard / Exile (Notable)
-<!-- Only cards with activated abilities or recursion relevance. -->
-
-
----
-
-## Strategic Notes
-<!-- Win condition, key threats I've identified, interaction I'm holding. -->
-- **My win line:** —
-- **Opponent threats to answer:** —
-- **Interaction I'm holding:** —
-
----
-
-## Turn Log (My Notes)
-<!-- One line per turn I've taken. Helps reconstruct game state without re-reading full log. -->
-<!-- Format: T[N]: [what I did in brief] -->
+## Turn Log
+- T1: Human's turn (going first)
