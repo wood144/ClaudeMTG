@@ -35,6 +35,22 @@ Commander: Scion of the Ur-Dragon | Colors: WUBRG (5-color)
 
 **Deck performed well.** Reanimation + Ureni's free dragon engine overwhelmed a ground-based opponent with no flying defense.
 
+### Game 14: Dargons/Scion (Human) vs. Meteor Apes/Roxanne (Claude)
+**Result:** Human loses T14. Claude wins via exact lethal (16 damage, opponent at 16).
+
+**Key plays:**
+- Human mulliganed to 6 (2 mulligans). Slow start — Savage Lands entered tapped T1.
+- T6: Claude's Collective Resistance destroyed Arcane Signet. Without the Signet, Dargons could only produce 3 of 5 colors at a time — Scion was uncastable for the rest of the game.
+- T8: Roxanne landed on curve. Meteorite pings began.
+- T12: Roxanne + Port Razer double combat = 16 damage in one turn. Locthwain Scorn attempted on Roxanne but Tamiyo's Safekeeping granted hexproof → Scorn fizzled.
+- T14: Exact lethal via double combat again.
+
+**Lessons:**
+- **Arcane Signet is critical for 5-color.** Losing it with no backup fixer was game-ending. Consider running Chromatic Lantern, Fellwar Stone, or additional color fixers for redundancy.
+- **Cascading Cataracts needs 6+ mana sources to activate ({5},{T}).** It's not a color fix when behind on mana.
+- Locthwain Scorn should have been held for a better window or a different target — Roxanne's protection suite (Tamiyo's, Heroic Intervention, etc.) is deep.
+
 ## Matchup Notes
 - **vs. Ghave (Abzan tokens):** Kill The Mycotyrant early before token generation spirals. Scion → Ureni blanks all of Abzan's best removal (Path, Swords, black kill spells).
 - **vs. Dicebots (Mardu dice/tokens):** Deck has no flyers — Scion attacks freely. Ureni's top-8 trigger generates massive advantage. Locthwain Scorn is excellent early removal for their dice enablers (Wyll, Brazen Dwarf). Reanimation package (Coiling Rebirth, Virtue of Persistence) keeps dragon threats coming back.
+- **vs. Meteor Apes/Roxanne (Gruul extra combats):** Protect mana rocks at all costs — losing color fixers locks Scion out of the game. Roxanne generates massive value with Meteorite tokens (mana + pings) and chains extra combats via Port Razer. Need to land Scion before Roxanne + extra combat pieces come online. Locthwain Scorn is weak into their deep protection suite (Tamiyo's Safekeeping, Heroic Intervention, Collective Resistance, etc.).

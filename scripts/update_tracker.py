@@ -34,7 +34,38 @@ import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment
 
 TRACKER_PATH = 'assets/mtg_commander_tracker.xlsx'
+DECKS_PATH = 'assets/decks.json'
 Z = 1.645  # 90% CI for Wilson Score
+
+
+# ── Deck name normalization ──────────────────────────────────────────
+
+def load_canonical_deck_names():
+    """Load canonical deck names from decks.json."""
+    try:
+        with open(DECKS_PATH) as f:
+            decks = json.load(f)
+        if isinstance(decks, list):
+            return {d['name']: d['name'] for d in decks if 'name' in d}
+        elif isinstance(decks, dict):
+            return {k: k for k in decks}
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+    return {}
+
+
+def normalize_deck_name(name, canonical_names):
+    """Match a deck name to its canonical form (case-insensitive).
+    Falls back to original name if no match found."""
+    lower_map = {k.lower(): v for k, v in canonical_names.items()}
+    match = lower_map.get(name.lower())
+    if match:
+        if match != name:
+            print(f"  Normalized deck name: '{name}' → '{match}'")
+        return match
+    # No match — warn and return as-is
+    print(f"  WARNING: '{name}' not found in decks.json — using as-is")
+    return name
 
 
 # ── Scoring formulas (from Instructions sheet) ──────────────────────
@@ -65,6 +96,11 @@ def calc_loser_perf(sides):
 
 def update_tracker(game_data):
     wb = openpyxl.load_workbook(TRACKER_PATH)
+    canonical = load_canonical_deck_names()
+
+    # Normalize deck names in game_data
+    game_data['winner_deck'] = normalize_deck_name(game_data['winner_deck'], canonical)
+    game_data['loser_deck'] = normalize_deck_name(game_data['loser_deck'], canonical)
 
     # ── 1. GAME LOG ─────────────────────────────────────────────────
     ws_log = wb['Game Log']
@@ -109,7 +145,8 @@ def update_tracker(game_data):
             continue
         all_games.append({
             'id': row[0], 'won_by': row[2],
-            'winner_deck': row[3], 'loser_deck': row[4],
+            'winner_deck': normalize_deck_name(row[3], canonical) if row[3] else row[3],
+            'loser_deck': normalize_deck_name(row[4], canonical) if row[4] else row[4],
             'winner_cmdr': row[6], 'loser_cmdr': row[7],
             'sides': row[9],
         })

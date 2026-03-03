@@ -1,20 +1,21 @@
-# Game 9 — Dicebots (Claude) vs Dargons (Human)
+# Game Current — Meteor Apes vs Dargons
 
-## Setup
-- **Claude:** Mr. House, President and CEO (Dicebots — Mardu)
-- **Opponent:** Scion of the Ur-Dragon (Dargons — WUBRG)
-- Human goes first
+## Game Info
+- Claude: Meteor Apes (Roxanne, Starfall Savant) — on the draw
+- Human: Dargons (Scion of the Ur-Dragon) — going first, mulliganed to 6
 
-## Commander Notes
-- **Mr. House** ({R}{W}{B} | 0/4): Roll 4+ → 3/3 Robot token. Roll 6+ → Robot + Treasure. {4}{T}: Roll d6 + one per Robot.
-- **Scion** ({W}{U}{B}{R}{G} | 4/4 flying): {2}: Search library for Dragon, put in GY, Scion becomes copy until EOT. Watch for Atarka double strike combo and Ureni protection trick.
+## Commander
+- Roxanne, Starfall Savant ({3}{R}{G} | Legendary Creature — Cat Druid | 4/3)
+  - Whenever Roxanne enters or attacks, create a tapped colorless artifact token named Meteorite with "When this token enters, it deals 2 damage to any target" and "{T}: Add one mana of any color."
+  - Whenever you tap an artifact token for mana, add one mana of any type that artifact token produced.
 
-## Hand (card references by ID only)
+## Hand (7 cards)
 - #2, #3, #4, #5, #6, #7, #8
 
-## Life Totals
-- Claude: 40
-- Opponent: 40
+## Opponent Visible
+- Commander: Scion of the Ur-Dragon (Command Zone)
+- Hand: 6 cards (mulliganed twice)
+- Battlefield: empty
 
 ## Turn Log
 - T1: Human's turn (going first)
