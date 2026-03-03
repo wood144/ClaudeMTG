@@ -49,5 +49,29 @@ Commander: Roxanne, Starfall Savant ({3}{R}{G}) | Colors: R/G (Gruul)
 
 **No major rules mistakes this game.**
 
+### Game 2: Meteor Apes/Roxanne (Claude) vs. Eldrazi/Zhulodok (Human)
+**Result:** Human wins T20 via combat lethal (Ulamog + Deceiver of Form + Annihilator 4).
+
+**Key plays:**
+- T7: Roxanne cast using Simian Spirit Guide for 5th mana. Meteorite pings began.
+- T9: Collective Resistance destroyed Forsaken Monument — cut opponent's mana engine and +2/+2 buff. Roxanne attacked for 5 + 2 ping.
+- T11: Flopsie buffed board (+1/+1 counters). Roxanne swung for 5 + 2 ping. Opponent down to 27.
+- T12: Cityscape Leveler cascade turn — Thran Dynamo + Swiftfoot Boots free. Leveler destroyed Flopsie, attacked.
+- T13: **Heroic Intervention saved Roxanne from Scour from Existence** (cascaded off Cityscape Leveler). Fizzled the Leveler attack trigger too. Roxanne blocked Leveler (indestructible), took 5 trample.
+- T15: Starstorm X=9 wiped the board (Zhulodok, Leveler, Artisan, Platinum Emperion, Roxanne). Removed Platinum Emperion life-lock.
+- T17: Silverback Elder + Kird Ape deployed. Elder trigger destroyed Swiftfoot Boots.
+- T18: Ulamog (indestructible, Annihilator 4) cascaded into Sensei's Top + Deceiver of Form. Game over.
+
+**Lessons:**
+- **Gruul has no answer to indestructible.** No exile effects in the deck. Ulamog was unbeatable once it resolved. Consider adding Chaos Warp (shuffles into library), Song of the Dryads (turns into a Forest), or Beast Within (destroys any permanent — though indestructible blocks this).
+- **Heroic Intervention is the best card in the deck** against cascade — fizzles all targeting and saves everything. Surveil keeping it on top was the correct call.
+- **Destroying Forsaken Monument early was correct** — it delayed Zhulodok by a full turn and cut the +2/+2 buff.
+- **Commander damage was a real threat:** 14 of 21 from Zhulodok. Had to chump block to avoid lethal.
+- **Silverback Elder + cheap creatures = artifact destruction engine.** Kird Ape triggering Elder to destroy Boots was a strong play.
+- **No ramp in opening hand** (only Gruul Keyrune at 3 CMC) meant Roxanne didn't land until T7 (needed Simian Spirit Guide). Sol Ring or 2-CMC rock would have enabled T4-5 Roxanne.
+
+**No major rules mistakes this game.**
+
 ## Matchup Notes
 - **vs. Scion/Dargons (5-color dragons):** Opponent has a slow mana base but explosive turns with Scion activation combos. Rush Roxanne out and pressure before they stabilize. Watch for Scion → Atarka (double strike) or Scion → Ureni (protection). **Destroying color fixers (Arcane Signet, Chromatic Lantern) is game-winning** — without them, 5-color decks can't cast their commander. Watch for Virtue of Persistence (the enchantment half of Locthwain Scorn) as late-game reanimation threat.
+- **vs. Eldrazi/Zhulodok (colorless ramp):** Opponent ramps explosively into Zhulodok, then cascades 7+ MV colorless spells for 2 free permanents per cast. **Priority targets:** Forsaken Monument (mana + buff engine), Swiftfoot Boots (hexproof/haste enabler), mana rocks (Thran Dynamo, Mana Vault). Rush Roxanne and pressure life total before cascade chains start. **Critical weakness:** no exile effects in Gruul to answer indestructible threats (Ulamog, Blightsteel). Must kill before they resolve, or add non-destroy answers like Chaos Warp or Song of the Dryads.

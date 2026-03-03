@@ -40,6 +40,26 @@ Commander: Zhulodok, Void Gorger | Colors: Colorless
 - Forsaken Monument life gain offset Ancient Tomb's damage and kept life total healthy.
 - Flayer of Loyalties cast trigger + Swiftfoot Boots = immediate 10/10 attacker with haste, trample, annihilator 2 on the same turn.
 
+### Game 4: Eldrazi/Zhulodok (Human) vs. Meteor Apes/Roxanne (Claude)
+**Result:** Human wins T20 via combat lethal (Ulamog + Deceiver of Form + Zhulodok with Annihilator 4).
+
+**Key plays:**
+- T6: Forsaken Monument online → massive mana acceleration + creature buffs.
+- T8: Zhulodok cast with Swiftfoot Boots for hexproof + haste.
+- T9: Opponent destroyed Forsaken Monument with Collective Resistance — slowed mana significantly.
+- T12: Cityscape Leveler ({8}) double cascaded into Thran Dynamo + Swiftfoot Boots. Destroyed Flopsie, attacked.
+- T13: Opponent's Heroic Intervention saved Roxanne from Scour (cascaded off Leveler). Strong defensive play.
+- T15: Opponent Starstormed X=9 — wiped all creatures including Platinum Emperion. Board reset.
+- T16: Zhulodok recast + Boots equipped. Attacked for 7 (commander damage 14/21).
+- T18: **Ulamog, the Infinite Gyre** double cascaded into Sensei's Divining Top + Deceiver of Form. Destroyed Silverback Elder. Annihilator 4 locked the game.
+
+**Key observations:**
+- Forsaken Monument being destroyed early was painful — delayed Zhulodok by a turn and removed the +2/+2 buff.
+- Swiftfoot Boots was destroyed by Silverback Elder trigger (Kird Ape cast). Lost hexproof on Zhulodok.
+- Ulamog's indestructible was unanswerable in Gruul — no exile effects available.
+- Mana Vault damage (1/turn when tapped) was minor but added up.
+
 ## Matchup Notes
 - **vs. Fblthp (blue combo):** Must hold interaction for combo turn. Race plan alone won't work — need exile/destroy effects for Hullbreaker Horror and removal for combo pieces.
 - **vs. Atla Palani (creature toolbox):** Steal effects are devastating — Atla Palani's sacrifice ability turns against the opponent. Flayer of Loyalties is the MVP.
+- **vs. Meteor Apes/Roxanne (Gruul aggro):** Opponent pressures early with Roxanne pings and combat damage. **Protect Forsaken Monument** — it's the #1 removal target. Swiftfoot Boots is also high priority for them to destroy. Gruul has NO exile effects, so Ulamog and other indestructible threats are unanswerable. Platinum Emperion locks out their damage plan entirely. Rush to Ulamog or Blightsteel for the win.
