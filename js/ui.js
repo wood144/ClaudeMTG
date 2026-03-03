@@ -411,6 +411,12 @@ function moveCtx(fp, fz, tp, tz) {
   const { card } = state.activeCtxCard;
   moveCard(card, fp, fz, tp, tz);
   closeCtxMenu();
+  if (fz === 'library') {
+    const viewer = document.getElementById('zone-viewer-content');
+    if (viewer && viewer.style.display !== 'none') {
+      showLibraryGrid(fp);
+    }
+  }
 }
 
 function sendToCommandZone() {

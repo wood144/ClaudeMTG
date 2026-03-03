@@ -23,5 +23,18 @@ Commander: Scion of the Ur-Dragon | Colors: WUBRG (5-color)
 
 **No major rules mistakes this game.**
 
+### Game 13: Dargons/Scion (Human) vs. Dicebots/Mr. House (Claude)
+**Result:** Human wins T15 via commander damage (21 exactly).
+
+**Key plays:**
+- T5: Locthwain Scorn killed Wyll early, shutting down dice engine.
+- T11: Scion → Ureni of the Unwritten copy. Attack trigger cheated Scion of Draco onto battlefield for free.
+- T12: Earth-Cult Elemental ETB (rolled 19) forced sac of Scion of Draco — good counterplay.
+- T13: Coiling Rebirth reanimated Ureni. Attack trigger found Rith, Liberated Primeval.
+- T15: Scion → Earthquake Dragon (10/10 flying trample). 10 CDMG + 11 prior = 21 lethal.
+
+**Deck performed well.** Reanimation + Ureni's free dragon engine overwhelmed a ground-based opponent with no flying defense.
+
 ## Matchup Notes
 - **vs. Ghave (Abzan tokens):** Kill The Mycotyrant early before token generation spirals. Scion → Ureni blanks all of Abzan's best removal (Path, Swords, black kill spells).
+- **vs. Dicebots (Mardu dice/tokens):** Deck has no flyers — Scion attacks freely. Ureni's top-8 trigger generates massive advantage. Locthwain Scorn is excellent early removal for their dice enablers (Wyll, Brazen Dwarf). Reanimation package (Coiling Rebirth, Virtue of Persistence) keeps dragon threats coming back.

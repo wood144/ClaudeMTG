@@ -298,6 +298,7 @@ function showLibraryGrid(player) {
   const viewer = document.getElementById('zone-viewer-content');
   if (!viewer) return;
   viewer.style.display = '';
+  viewer.innerHTML = '';
   state[player].library.forEach(card => {
     const thumb = document.createElement('div');
     thumb.className = 'zone-card-thumb';
@@ -318,7 +319,6 @@ function showLibraryGrid(player) {
     thumb.addEventListener('mouseleave', hidePreview);
     thumb.addEventListener('contextmenu', e => {
       e.preventDefault();
-      closeModal();
       showLibraryCtxMenu(e, card, player);
     });
     viewer.appendChild(thumb);
