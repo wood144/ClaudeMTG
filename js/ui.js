@@ -414,6 +414,8 @@ function moveCtx(fp, fz, tp, tz) {
   if (fz === 'library') {
     const viewer = document.getElementById('zone-viewer-content');
     if (viewer && viewer.style.display !== 'none') {
+      const searchInput = document.getElementById('library-search-input');
+      if (searchInput) searchInput.value = '';
       showLibraryGrid(fp);
     }
   }

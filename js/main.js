@@ -1,3 +1,12 @@
+// ─── SHUFFLE (Fisher-Yates) ──────────────────────────────────────────────────
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 // ─── DICE ROLLER ──────────────────────────────────────────────────────────────
 function rollDice(sides) {
   const result = Math.floor(Math.random() * sides) + 1;
@@ -222,6 +231,10 @@ function openZone(player, zone) {
         <button class="btn-secondary" onclick="showLibraryGrid('${player}')">Show Library</button>
         <span style="font-family:'Cinzel',serif;font-size:11px;color:var(--muted);margin-left:10px;">Library order is hidden information</span>
       </div>
+      <div id="library-search-bar" style="display:none;margin-bottom:10px;">
+        <input type="text" id="library-search-input" placeholder="Search by name..."
+          style="width:100%;padding:6px 10px;background:var(--bg);color:var(--fg);border:1px solid var(--border);border-radius:4px;font-family:'Cinzel',serif;font-size:12px;outline:none;">
+      </div>
       <div class="zone-viewer" id="zone-viewer-content" style="display:none;"></div>
       <div class="modal-btns"><button class="btn-secondary" onclick="closeModal()">Close</button></div>
     `;
@@ -298,8 +311,35 @@ function showLibraryGrid(player) {
   const viewer = document.getElementById('zone-viewer-content');
   if (!viewer) return;
   viewer.style.display = '';
+
+  // Show search bar and wire up filtering
+  const searchBar = document.getElementById('library-search-bar');
+  const searchInput = document.getElementById('library-search-input');
+  if (searchBar) searchBar.style.display = '';
+  if (searchInput) {
+    searchInput.value = '';
+    searchInput.onkeyup = () => {
+      const q = searchInput.value.toLowerCase();
+      const filtered = q
+        ? state[player].library.filter(c => c.name.toLowerCase().includes(q))
+        : state[player].library;
+      renderLibraryCards(filtered, player);
+    };
+    setTimeout(() => searchInput.focus(), 50);
+  }
+
+  renderLibraryCards(state[player].library, player);
+}
+
+function renderLibraryCards(cards, player) {
+  const viewer = document.getElementById('zone-viewer-content');
+  if (!viewer) return;
   viewer.innerHTML = '';
-  state[player].library.forEach(card => {
+  if (cards.length === 0) {
+    viewer.innerHTML = '<span style="color:var(--muted);font-family:\'Cinzel\',serif;font-size:12px;">No matching cards</span>';
+    return;
+  }
+  cards.forEach(card => {
     const thumb = document.createElement('div');
     thumb.className = 'zone-card-thumb';
     const fb = document.createElement('div');
@@ -338,7 +378,7 @@ function drawCard(player) {
 }
 
 function shuffleLibrary(player) {
-  state[player].library.sort(() => Math.random() - 0.5);
+  shuffle(state[player].library);
   showToast('Library shuffled!', 'success');
 }
 
@@ -497,7 +537,7 @@ function confirmLibraryManip() {
 function shuffleGYIntoLib(player) {
   state[player].library.push(...state[player].graveyard);
   state[player].graveyard = [];
-  state[player].library.sort(() => Math.random() - 0.5);
+  shuffle(state[player].library);
   closeModal();
   render();
 }
@@ -788,7 +828,7 @@ async function loadDeckForPlayer(player) {
   const nonCmd = cardNames.filter(n => !cmdNameSet.has(n));
 
   // Deal 7-card opening hand
-  const shuffled = [...nonCmd].sort(() => Math.random() - 0.5);
+  const shuffled = shuffle([...nonCmd]);
   const handCards = shuffled.slice(0, 7);
   for (const n of handCards) {
     const d = await fetchCard(n);
@@ -957,7 +997,6 @@ function copyBoardState() {
 // ─── KEYBOARD SHORTCUTS ───────────────────────────────────────────────────────
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') { closeModal(); closeCtxMenu(); }
-  if (e.key === 'n' && !e.ctrlKey && !e.metaKey && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') nextPhase();
 });
 
 // ─── DECK FILE PERSISTENCE ────────────────────────────────────────────────────
