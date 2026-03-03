@@ -187,23 +187,24 @@ function showCtxMenu(e, card, player) {
   }, 10);
 }
 
-// Context menu for hand cards
-function showHandCtxMenu(e, card) {
-  state.activeCtxCard = { card, player: 'me' };
+// Context menu for hand cards (both players)
+function showHandCtxMenu(e, card, player) {
+  state.activeCtxCard = { card, player };
   const menu = document.getElementById('ctx-menu');
   const isCommander = !!card.isCommander;
+  const label = player === 'me' ? card.name : `#${card.uid}`;
 
   menu.innerHTML = `
-    <div class="ctx-item" style="font-family:'Cinzel',serif;font-size:10px;color:var(--muted);padding:4px 10px;">${card.name}</div>
+    <div class="ctx-item" style="font-family:'Cinzel',serif;font-size:10px;color:var(--muted);padding:4px 10px;">${label}</div>
     <div class="ctx-sep"></div>
-    <div class="ctx-item" onclick="playHandCardToBattlefield()">→ Play to Battlefield</div>
-    <div class="ctx-item" onclick="moveHandCard('graveyard')">→ Graveyard</div>
-    <div class="ctx-item" onclick="moveHandCard('exile')">→ Exile</div>
-    <div class="ctx-item" onclick="moveHandCard('libTop')">→ Top of Library</div>
-    <div class="ctx-item" onclick="moveHandCard('libCount')">→ Bottom of Library</div>
+    <div class="ctx-item" onclick="playHandCardToBattlefield('${player}')">→ Play to Battlefield</div>
+    <div class="ctx-item" onclick="moveHandCard('${player}','graveyard')">→ Graveyard</div>
+    <div class="ctx-item" onclick="moveHandCard('${player}','exile')">→ Exile</div>
+    <div class="ctx-item" onclick="moveHandCard('${player}','libTop')">→ Top of Library</div>
+    <div class="ctx-item" onclick="moveHandCard('${player}','libCount')">→ Bottom of Library</div>
     ${isCommander ? `<div class="ctx-item" onclick="sendToCommandZone()">→ Command Zone</div>` : ''}
     <div class="ctx-sep"></div>
-    <div class="ctx-item danger" onclick="removeHandCard()">Remove from Game</div>
+    <div class="ctx-item danger" onclick="removeHandCard('${player}')">Remove from Game</div>
   `;
 
   menu.style.display = 'block';
@@ -214,58 +215,58 @@ function showHandCtxMenu(e, card) {
   }, 10);
 }
 
-function playHandCardToBattlefield() {
+function playHandCardToBattlefield(player) {
   const { card } = state.activeCtxCard;
   closeCtxMenu();
   if (card.isDFC && card.dfcType === 'modal_dfc') {
     showDFCFacePicker(card, () => {
-      const idx = state.me.hand.findIndex(c => c.id === card.id);
+      const idx = state[player].hand.findIndex(c => c.id === card.id);
       if (idx !== -1) {
-        const c = state.me.hand.splice(idx, 1)[0];
+        const c = state[player].hand.splice(idx, 1)[0];
         c.tapped = false;
-        const pos = nextBattlefieldPos('me');
+        const pos = nextBattlefieldPos(player);
         c.x = pos.x; c.y = pos.y;
-        state.me.battlefield.push(c);
+        state[player].battlefield.push(c);
       }
       render();
     });
     return;
   }
-  const idx = state.me.hand.findIndex(c => c.id === card.id);
+  const idx = state[player].hand.findIndex(c => c.id === card.id);
   if (idx !== -1) {
-    const c = state.me.hand.splice(idx, 1)[0];
+    const c = state[player].hand.splice(idx, 1)[0];
     c.tapped = false;
-    const pos = nextBattlefieldPos('me');
+    const pos = nextBattlefieldPos(player);
     c.x = pos.x; c.y = pos.y;
-    state.me.battlefield.push(c);
+    state[player].battlefield.push(c);
   }
   render();
 }
 
-function moveHandCard(toZone) {
+function moveHandCard(player, toZone) {
   const { card } = state.activeCtxCard;
-  const idx = state.me.hand.findIndex(c => c.id === card.id);
+  const idx = state[player].hand.findIndex(c => c.id === card.id);
   if (idx !== -1) {
-    state.me.hand.splice(idx, 1);
+    state[player].hand.splice(idx, 1);
     if (toZone === 'libCount') {
       card.tapped = false;
-      state.me.library.push(card); // bottom of library
+      state[player].library.push(card); // bottom of library
     } else if (toZone === 'libTop') {
       card.tapped = false;
-      state.me.library.unshift(card); // top of library
+      state[player].library.unshift(card); // top of library
     } else {
       card.tapped = false;
-      state.me[toZone].push(card);
+      state[player][toZone].push(card);
     }
   }
   render();
   closeCtxMenu();
 }
 
-function removeHandCard() {
+function removeHandCard(player) {
   const { card } = state.activeCtxCard;
-  const idx = state.me.hand.findIndex(c => c.id === card.id);
-  if (idx !== -1) state.me.hand.splice(idx, 1);
+  const idx = state[player].hand.findIndex(c => c.id === card.id);
+  if (idx !== -1) state[player].hand.splice(idx, 1);
   render();
   closeCtxMenu();
 }
@@ -455,8 +456,7 @@ function showGraveyardCtxMenu(e, card, player) {
     <div class="ctx-item danger" onclick="removeCtx()">Remove from Game</div>
   `;
   menu.style.display = 'block';
-  menu.style.left = Math.min(e.clientX, window.innerWidth - 180) + 'px';
-  menu.style.top = Math.min(e.clientY, window.innerHeight - menu.offsetHeight - 10) + 'px';
+  positionCtxMenu(e);
   setTimeout(() => document.addEventListener('click', closeCtxMenu, { once: true }), 10);
 }
 
@@ -477,8 +477,7 @@ function showLibraryCtxMenu(e, card, player) {
     <div class="ctx-item danger" onclick="removeCtx()">Remove from Game</div>
   `;
   menu.style.display = 'block';
-  menu.style.left = Math.min(e.clientX, window.innerWidth - 180) + 'px';
-  menu.style.top = Math.min(e.clientY, window.innerHeight - menu.offsetHeight - 10) + 'px';
+  positionCtxMenu(e);
   setTimeout(() => document.addEventListener('click', closeCtxMenu, { once: true }), 10);
 }
 
@@ -497,78 +496,6 @@ function removeCtx() {
   closeCtxMenu();
 }
 
-function showOppHandCtxMenu(e, card) {
-  state.activeCtxCard = { card, player: 'opp' };
-  const menu = document.getElementById('ctx-menu');
-  const isCommander = !!card.isCommander;
-
-  menu.innerHTML = `
-    <div class="ctx-item" style="font-family:'Cinzel',serif;font-size:10px;color:var(--muted);padding:4px 10px;">#${card.uid}</div>
-    <div class="ctx-sep"></div>
-    <div class="ctx-item" onclick="playOppHandCard()">→ Play to Battlefield</div>
-    <div class="ctx-item" onclick="moveOppHandCard('graveyard')">→ Graveyard</div>
-    <div class="ctx-item" onclick="moveOppHandCard('exile')">→ Exile</div>
-    <div class="ctx-item" onclick="moveOppHandCard('libTop')">→ Top of Library</div>
-    <div class="ctx-item" onclick="moveOppHandCard('libCount')">→ Bottom of Library</div>
-    ${isCommander ? `<div class="ctx-item" onclick="sendToCommandZone()">→ Command Zone</div>` : ''}
-    <div class="ctx-sep"></div>
-    <div class="ctx-item danger" onclick="removeOppHandCard()">Remove from Game</div>
-  `;
-
-  menu.style.display = 'block';
-  menu.style.left = Math.min(e.clientX, window.innerWidth - 180) + 'px';
-  menu.style.top = Math.min(e.clientY, window.innerHeight - menu.offsetHeight - 10) + 'px';
-  setTimeout(() => document.addEventListener('click', closeCtxMenu, { once: true }), 10);
-}
-
-function playOppHandCard() {
-  const { card } = state.activeCtxCard;
-  closeCtxMenu();
-  if (card.isDFC && card.dfcType === 'modal_dfc') {
-    showDFCFacePicker(card, () => {
-      const idx = state.opp.hand.findIndex(c => c.id === card.id);
-      if (idx !== -1) {
-        const c = state.opp.hand.splice(idx, 1)[0];
-        c.tapped = false;
-        const pos = nextBattlefieldPos('opp');
-        c.x = pos.x; c.y = pos.y;
-        state.opp.battlefield.push(c);
-      }
-      render();
-    });
-    return;
-  }
-  const idx = state.opp.hand.findIndex(c => c.id === card.id);
-  if (idx !== -1) {
-    const c = state.opp.hand.splice(idx, 1)[0];
-    c.tapped = false;
-    const pos = nextBattlefieldPos('opp');
-    c.x = pos.x; c.y = pos.y;
-    state.opp.battlefield.push(c);
-  }
-  render();
-}
-
-function moveOppHandCard(toZone) {
-  const { card } = state.activeCtxCard;
-  const idx = state.opp.hand.findIndex(c => c.id === card.id);
-  if (idx !== -1) {
-    state.opp.hand.splice(idx, 1);
-    if (toZone === 'libCount') { card.tapped = false; state.opp.library.push(card); } // bottom of library
-    else if (toZone === 'libTop') { card.tapped = false; state.opp.library.unshift(card); } // top of library
-    else { card.tapped = false; state.opp[toZone].push(card); }
-  }
-  render();
-  closeCtxMenu();
-}
-
-function removeOppHandCard() {
-  const { card } = state.activeCtxCard;
-  const idx = state.opp.hand.findIndex(c => c.id === card.id);
-  if (idx !== -1) state.opp.hand.splice(idx, 1);
-  render();
-  closeCtxMenu();
-}
 
 // ─── CARD PREVIEW ─────────────────────────────────────────────────────────────
 function showPreview(e, card) {

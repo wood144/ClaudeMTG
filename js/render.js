@@ -211,7 +211,7 @@ function renderHand() {
     // Right-click context menu for hand cards
     el.addEventListener('contextmenu', e => {
       e.preventDefault();
-      showHandCtxMenu(e, card);
+      showHandCtxMenu(e, card, 'me');
     });
 
     // Preview on hover
@@ -253,7 +253,7 @@ function renderOppHand() {
 
     el.addEventListener('contextmenu', e => {
       e.preventDefault();
-      showOppHandCtxMenu(e, card);
+      showHandCtxMenu(e, card, 'opp');
     });
 
     el.addEventListener('mousedown', e => {
