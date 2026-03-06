@@ -32,6 +32,28 @@ Commander: Ghave, Guru of Spores | Colors: White/Black/Green (Abzan)
 - **Damnation is premium against token/pinger strategies** — use it before the engine fires, not after.
 - **No summoning sickness violations this game.** No hidden information violations this game.
 
+### Game 9 (piloted): Fun Guys/Ghave (Claude) vs. Avatar Allies/Sokka (Human)
+**Result:** Human wins T26 via combat damage (76 total attack power). Claude at -30 life.
+
+**Key plays:**
+- T5: Demonic Tutor for Sol Ring — ramped early.
+- T8: Opponent Path to Exiled Ghave before it could generate value. Ghave to Command Zone, searched Plains.
+- T15: Ghave recast (with tax) + Fungus Frolic adventure for 4 saprolings (Mondrak doubling).
+- T16: Opponent Waterbended Watery Grasp on Mondrak. Claude sac'd Mondrak to Ghave in response (graveyard > library), but lost the token doubler permanently.
+- T17: Privileged Position + Brightcap Badger deployed. Hexproof protected board but couldn't stop Munda's Vanguard counters.
+- T22+: Munda's Vanguard cohort every turn snowballed opponent's board beyond recovery.
+
+**Key lessons:**
+- **Munda's Vanguard is must-kill.** Repeatable +1/+1 counters on ALL creatures compounds exponentially. Prioritize removal on Munda over Sokka.
+- **Mondrak is fragile.** At 4 toughness with no innate protection, it dies to most removal. Consider holding it until Privileged Position is online.
+- **Don't sac to avoid shuffle-into-library.** This deck has almost no graveyard recursion. If an opponent tries to shuffle a key piece back into your library, LET IT HAPPEN — you can redraw or tutor for it later. Saccing it to Ghave makes it gone forever. And if you do sac to Ghave, prefer making a Saproling (remove counter) over adding a counter (sac creature) — saprolings have 10+ uses in this deck, a lone counter does nothing.
+- **Saproling armies can't race counter-based go-wide.** 1/1 tokens are outclassed when every opponent creature grows by +1/+1 per turn cycle.
+- **Need board wipes against Allies.** Damnation, Toxic Deluge, or similar would have reset the Munda snowball.
+- **Combo pieces never assembled.** Drew no Parallel Lives, Ashnod's Altar, or Zulaport Cutthroat. Consider adding more tutors or card draw.
+- **Tutor discipline:** Unless you're missing land drops, save Demonic Tutor for a combo finisher (Blood Artist / Zulaport Cutthroat) or a stabilizer (Dictate of Erebos). Ghave builds board presence slowly but reliably — once you have a wide board, a single tutor for the right piece can flip the game. Tutoring for ramp is valid when you're stuck on colors or missing drops, but if the mana will come naturally, hold the tutor for something that wins.
+- **No summoning sickness violations.** Multiple hidden information violations early (hand evaluation reasoning leaked).
+
 ## Matchup Notes
 - **vs. Scion of the Ur-Dragon:** Scion → Ureni blanks Path to Exile and black removal. Need exile effects that don't target (board wipes, sacrifice effects) or colorless removal.
 - **vs. Dicebots/Mr. House:** Agility Bobblehead + Saddle + Sword of Hours is a must-answer package (unblockable + growing counters = fast clock). Damnation before the pinger engine assembles.
+- **vs. Avatar Allies/Sokka:** Kill Munda's Vanguard on sight — cohort snowballs permanently. Sokka giving menace to all Allies makes chump blocking difficult (need 2 blockers per attacker). Deploy Privileged Position early to blank targeted removal and ETB damage (Momo). Board wipes are essential; 1/1 saprolings can't keep up with growing Allies.

@@ -443,6 +443,7 @@ function sendToCommandZone() {
 
 function showGraveyardCtxMenu(e, card, player) {
   state.activeCtxCard = { card, player };
+  const isCommander = !!card.isCommander;
   const menu = document.getElementById('ctx-menu');
   menu.innerHTML = `
     <div class="ctx-item" style="font-family:'Cinzel',serif;font-size:10px;color:var(--muted);padding:4px 10px;">${card.name}</div>
@@ -452,6 +453,28 @@ function showGraveyardCtxMenu(e, card, player) {
     <div class="ctx-item" onclick="moveCtx('${player}','graveyard','${player}','exile')">→ Exile</div>
     <div class="ctx-item" onclick="moveCtx('${player}','graveyard','${player}','libTop')">→ Top of Library</div>
     <div class="ctx-item" onclick="moveCtx('${player}','graveyard','${player}','libCount')">→ Bottom of Library</div>
+    ${isCommander ? `<div class="ctx-item" onclick="sendToCommandZone()">→ Command Zone</div>` : ''}
+    <div class="ctx-sep"></div>
+    <div class="ctx-item danger" onclick="removeCtx()">Remove from Game</div>
+  `;
+  menu.style.display = 'block';
+  positionCtxMenu(e);
+  setTimeout(() => document.addEventListener('click', closeCtxMenu, { once: true }), 10);
+}
+
+function showExileCtxMenu(e, card, player) {
+  state.activeCtxCard = { card, player };
+  const isCommander = !!card.isCommander;
+  const menu = document.getElementById('ctx-menu');
+  menu.innerHTML = `
+    <div class="ctx-item" style="font-family:'Cinzel',serif;font-size:10px;color:var(--muted);padding:4px 10px;">${card.name}</div>
+    <div class="ctx-sep"></div>
+    <div class="ctx-item" onclick="moveCtx('${player}','exile','${player}','battlefield')">→ Battlefield</div>
+    <div class="ctx-item" onclick="moveCtx('${player}','exile','${player}','hand')">→ Hand</div>
+    <div class="ctx-item" onclick="moveCtx('${player}','exile','${player}','graveyard')">→ Graveyard</div>
+    <div class="ctx-item" onclick="moveCtx('${player}','exile','${player}','libTop')">→ Top of Library</div>
+    <div class="ctx-item" onclick="moveCtx('${player}','exile','${player}','libCount')">→ Bottom of Library</div>
+    ${isCommander ? `<div class="ctx-item" onclick="sendToCommandZone()">→ Command Zone</div>` : ''}
     <div class="ctx-sep"></div>
     <div class="ctx-item danger" onclick="removeCtx()">Remove from Game</div>
   `;

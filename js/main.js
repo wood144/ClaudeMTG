@@ -294,6 +294,9 @@ function openZone(player, zone) {
         } else if (zone === 'graveyard') {
           closeModal();
           showGraveyardCtxMenu(e, card, player);
+        } else if (zone === 'exile') {
+          closeModal();
+          showExileCtxMenu(e, card, player);
         } else {
           showCtxMenu(e, card, player);
           closeModal();
