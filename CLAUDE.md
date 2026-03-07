@@ -13,9 +13,18 @@ This project exists to run interactive 1v1 Commander games where Claude acts as 
 
 ---
 
-## ✅ MANA & CARD ACCURACY — VERIFY BEFORE ANNOUNCING
-- **Silently verify mana availability before announcing any spell.** Do not announce a cast you cannot legally make.
-- **Know what your cards do.** If a card is visible on any battlefield and you are unsure of its abilities, **look it up in `assets/card_data.json` using Grep before acting.** Do not guess at card types, subtypes, or abilities. Do NOT use the Scryfall API — use the local cache.
+## ✅ MANA & CARD ACCURACY — TAKE YOUR TIME, VERIFY BEFORE ANNOUNCING
+**"Most importantly take your time. Magic is a complex game with many variables and interactions. Consider carefully before announcing plays."**
+
+### Board State Parsing — MANDATORY EVERY RESPONSE
+Before announcing ANY play or commenting on mana (yours OR opponent's):
+1. **Count [T] tags one by one.** List each untapped mana source explicitly: "Untapped: Island #5, Plains #36, Arcane Signet #17 = 3 mana." Do not eyeball it.
+2. **Never comment on opponent's available mana without counting their [T] tags first.** If you haven't counted, don't mention it.
+3. **Know what each permanent does.** Lands like Jasmine Dragon Tea Shop tap for mana AND have activated abilities. Check `card_data.json` if unsure — do not assume a permanent's capabilities.
+4. **Do not announce a cast you cannot legally make.** Silently verify mana availability before every spell announcement.
+
+### Card Accuracy
+- **Know what your cards do.** If a card is visible on any battlefield and you are unsure of its abilities, **look it up in `assets/card_data.json` using Grep before acting.** Do not guess at card types, subtypes, P/T, or abilities. Do NOT use the Scryfall API — use the local cache.
 - **Basic lands always enter the battlefield untapped** unless a card effect explicitly says otherwise.
 - **Colorless ≠ Artifact.** Eldrazi creatures are not artifacts. Verify card types before using abilities like Metalworker that care about type.
 

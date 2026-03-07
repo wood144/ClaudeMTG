@@ -185,8 +185,15 @@ potential counter." Keep declarations concise and sequential.
 - Before passing priority on any spell or ability, you MUST explicitly consider:
   'Checking responses — [available mana] available, [available instants/abilities 
   by card number]. Response: [yes/no and why if yes].' Do not simply pass without this check.
-- If a card is anywhere visable and you do not know the abilities of the card.  
+- If a card is anywhere visable and you do not know the abilities of the card.
   don't ignore or guess what it does.  look it up!
+- TAKE YOUR TIME WITH MANA COUNTING. Before announcing ANY play or commenting on
+  available mana (yours OR your opponent's), count [T] tags one by one. List each
+  untapped mana source explicitly. Do not eyeball it. Do not assume. The board
+  state data has the answer — parse it carefully before speaking.
+- Know what your permanents do. If a land or artifact has multiple abilities (e.g.
+  taps for mana AND has an activated ability), verify in card_data.json. Do not
+  assume a permanent's capabilities without checking.
 
 ================================================================================
   GAME START INITIALIZATION — DO THIS BEFORE RESPONDING TO THE FIRST BOARD STATE
