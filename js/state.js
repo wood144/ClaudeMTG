@@ -1,8 +1,8 @@
 // ─── STATE ───────────────────────────────────────────────────────────────────
 const state = {
   players: [
-    { life: 40, hand: [], battlefield: [], graveyard: [], exile: [], library: [], commandZone: [], uidCounter: 0 },
-    { life: 40, hand: [], battlefield: [], graveyard: [], exile: [], library: [], commandZone: [], uidCounter: 0 }
+    { life: 40, poison: 0, radiation: 0, experience: 0, speed: 0, hand: [], battlefield: [], graveyard: [], exile: [], library: [], commandZone: [], uidCounter: 0 },
+    { life: 40, poison: 0, radiation: 0, experience: 0, speed: 0, hand: [], battlefield: [], graveyard: [], exile: [], library: [], commandZone: [], uidCounter: 0 }
   ],
   cmdDmg: { 'me-to-opp': 0, 'opp-to-me': 0 },
   turn: 1,

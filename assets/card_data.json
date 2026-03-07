@@ -13681,5 +13681,25 @@
     "keywords": [
       "Choose a background"
     ]
+  },
+  "Sky Diamond": {
+    "name": "Sky Diamond",
+    "mana_cost": "{2}",
+    "cmc": 2,
+    "type": "Artifact",
+    "oracle": "This artifact enters tapped.\n{T}: Add {U}.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
+  },
+  "Star Compass": {
+    "name": "Star Compass",
+    "mana_cost": "{2}",
+    "cmc": 2,
+    "type": "Artifact",
+    "oracle": "This artifact enters tapped.\n{T}: Add one mana of any color that a basic land you control could produce.",
+    "power": null,
+    "toughness": null,
+    "keywords": []
   }
 }

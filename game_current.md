@@ -1,22 +1,48 @@
-# Game 9 — Fun Guys (Claude) vs Avatar Allies (Human)
-Claude goes first. Opponent mulled to 6.
+# Game Current — Boros Equipment (Claude) vs Wrexial Mill/Steal (Human)
 
-## My Hand
-- #2: Demonic Tutor ({1}{B} | Sorcery) — Search library for any card, put into hand, shuffle.
-- #3: Infested Thrinax ({3}{B}{G} | Creature — Lizard) — Flash. ETB: until EOT, whenever a nontoken creature you control dies, create saprolings equal to its power.
-- #4: Path of Ancestry (Land) — Enters tapped. {T}: Add one mana of commander's color identity. Scry 1 when spent on creature sharing type with commander.
-- #5: Mondrak, Glory Dominus ({2}{W}{W} | Legendary Creature — Phyrexian Horror) — Token doubler. Can get indestructible counter for {1}{W/P}{W/P} + sac 2.
-- #6: Thallid Devourer ({1}{G}{G} | Creature — Fungus) — Upkeep: add spore counter. Remove 3 spore counters: create 1/1 Saproling. Sac a Saproling: +2/+2 until EOT.
-- #7: Forest
-- #8: Swamp
+Human goes first. RESUME FROM T10 MAIN 1.
 
-## Commander
-- #1: Ghave, Guru of Spores ({2}{W}{B}{G}) — ETB with 5 +1/+1 counters. {1}, remove counter: create 1/1 Saproling. {1}, sac creature: put +1/+1 counter on target creature.
+## My Commander
+- #1: Kellan, the Fae-Blooded // Birthright Boon ({2}{R} // {1}{W})
+- 2/2 Double strike. Other creatures get +1/+0 per Aura/Equipment on Kellan.
+- Adventure: {1}{W} — Search library for an Aura or Equipment, put into hand.
 
 ## Opponent Commander
-- Sokka, Tenacious Tactician ({1}{U}{R}{W} | 3/3) — Menace, prowess. Other Allies get menace + prowess. Noncreature spell -> create 1/1 Ally token.
+- Wrexial, the Risen Deep ({3}{U}{U}{B}) — 5/8
+- Islandwalk, swampwalk. On combat damage: cast instant/sorcery from my GY free.
+- Notable deck cards: Counterspell, Arcane Denial, Cancel, Drown in the Loch, Consuming Aberration, Captain N'ghathrod, Breach the Multiverse, Bloatfly Swarm, Hedron Crab, Archmage Emeritus
 
-## Notes
-- Opponent mulled to 6 — potential weak start.
-- Sokka is Jeskai Allies. Noncreature spells fuel tokens + pump. Expect counterspells, Path to Exile, Swords to Plowshares.
-- My hand has 2 lands (1 tapped, 1 untapped). Need to draw into more lands. Demonic Tutor can find a land or combo piece.
+## Last Board State (T10 start, before my plays)
+- OPP: L:36, H:4, CMD zone, GY: Go for the Throat
+- OPP_BF: Waterlogged Teachings (land side), 2x Island, Darkwater Catacombs, Misleading Signpost (mana rock), Archmage Emeritus (2/2, magecraft draw), Dimir Signet, Hedron Crab (landfall mill 3)
+- CLD: L:40, LIB:82, GY: Plains, Brotherhood Regalia, Nettlecyst, Sram
+- CLD_BF: Needle Spires, 3x Plains, Mountain, Gingerbrute (equipped: Sword of the Animist)
+- CLD_H: #2 Plains, #5 Puresteel Paladin, #6 Mountain, #12 Mantle of the Ancients, #13 Mace of the Valiant, #31 Plains
+
+## Actions Taken T10 (CONFIRMED)
+- Played #6 (land) — 6 mana total
+- Cast #13 Mace of the Valiant (3 mana) — resolved. SEQUENCING ERROR: should have cast this BEFORE #5 so Paladin ETB gives Mace a charge counter.
+- Cast #5 Puresteel Paladin (2 mana) — resolved. Puresteel drew a card when #13 entered? NO — #5 wasn't on field yet when #13 entered. No draw trigger.
+- 1 mana remaining. Metalcraft active (3 artifacts: Gingerbrute, Sword of the Animist, Mace of the Valiant). Equip costs {0}.
+- Equipped #13 onto #8 (Gingerbrute) for {0}.
+- PENDING: Combat — attacking with #8. Sword of the Animist trigger (search Plains, tapped). Awaiting blocks.
+
+## Card Reference
+- Sword of the Animist ({2} Equip {2}) — +1/+1, on attack search basic land tapped
+- Mace of the Valiant ({2}{W} Equip {3}) — +1/+1 per charge counter, vigilance, creature ETB = charge counter
+- Puresteel Paladin ({W}{W} 2/2) — Equipment ETB draw, Metalcraft: equip {0}
+- Mantle of the Ancients ({3}{W}{W} Aura) — return Auras/Equipment from GY attached, +1/+1 per attached
+- Brotherhood Regalia ({2} Equip {3}, Equip legendary {1}) — ward {2}, unblockable, Assassin type
+- Nettlecyst ({3} Equip {2}) — living weapon, +1/+1 per artifact/enchantment
+- Gingerbrute ({1} 1/1) — haste, {1}: unblockable except haste, food sacrifice
+- Hedron Crab ({U} 0/2) — landfall mill 3
+- Archmage Emeritus ({2}{U}{U} 2/2) — magecraft draw on instant/sorcery cast/copy
+- Misleading Signpost ({2}{U}) — flash, {T}: add {U}, redirect attacker on ETB during declare attackers
+
+## Issues This Game
+- REPEATED hidden info violations (naming hand cards, describing triggers that reveal hand). STOP.
+- REPEATED mana miscounts on 2nd+ action per turn. ALWAYS subtract prior spending before announcing.
+- Sequencing error (cast creature before equipment, missing charge counter).
+
+## Mill Button Feature Request
+- User wants a mill button with quantity input on the tracker. Add post-game.

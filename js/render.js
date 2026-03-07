@@ -28,6 +28,17 @@ function renderLifeTotals() {
       el.className = 'cdval' + (val >= 21 ? ' danger' : '');
     }
   }
+  // Player counters
+  for (const p of ['me','opp']) {
+    for (const ctr of ['poison','radiation','experience','speed']) {
+      const el = document.getElementById(`${p}-${ctr}`);
+      if (el) {
+        const val = state[p][ctr] || 0;
+        el.textContent = val;
+        el.className = 'pctr-val' + (ctr === 'poison' && val >= 10 ? ' danger' : '');
+      }
+    }
+  }
 }
 
 // ─── CARD SLOT BUILDER ────────────────────────────────────────────────────────

@@ -105,6 +105,46 @@
   }
   .life-total.low { color: var(--red); }
 
+  .player-counters {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin-left: 8px;
+  }
+  .pctr {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 1px 3px;
+    font-family: 'Cinzel', serif;
+  }
+  .pctr-label {
+    font-size: 8px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    margin-right: 3px;
+  }
+  .pctr-btn {
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 12px;
+    padding: 0 2px;
+    line-height: 1;
+  }
+  .pctr-btn:hover { color: var(--accent); }
+  .pctr-val {
+    font-size: 11px;
+    color: var(--white);
+    min-width: 12px;
+    text-align: center;
+  }
+  .pctr-val.danger { color: var(--red); }
+
   .cmd-dmg-btn {
     font-size: 11px;
     color: var(--muted);
@@ -863,6 +903,12 @@
       <span class="life-total" id="opp-life">40</span>
       <button class="life-btn" onclick="adjustLife('opp',1)">+</button>
     </div>
+    <div class="player-counters">
+      <div class="pctr" title="Poison"><span class="pctr-label">PSN</span><button class="pctr-btn" onclick="adjustPlayerCounter('opp','poison',-1)">−</button><span class="pctr-val" id="opp-poison">0</span><button class="pctr-btn" onclick="adjustPlayerCounter('opp','poison',1)">+</button></div>
+      <div class="pctr" title="Radiation"><span class="pctr-label">RAD</span><button class="pctr-btn" onclick="adjustPlayerCounter('opp','radiation',-1)">−</button><span class="pctr-val" id="opp-radiation">0</span><button class="pctr-btn" onclick="adjustPlayerCounter('opp','radiation',1)">+</button></div>
+      <div class="pctr" title="Experience"><span class="pctr-label">EXP</span><button class="pctr-btn" onclick="adjustPlayerCounter('opp','experience',-1)">−</button><span class="pctr-val" id="opp-experience">0</span><button class="pctr-btn" onclick="adjustPlayerCounter('opp','experience',1)">+</button></div>
+      <div class="pctr" title="Speed"><span class="pctr-label">SPD</span><button class="pctr-btn" onclick="adjustPlayerCounter('opp','speed',-1)">−</button><span class="pctr-val" id="opp-speed">0</span><button class="pctr-btn" onclick="adjustPlayerCounter('opp','speed',1)">+</button></div>
+    </div>
   </div>
 
   <!-- OPPONENT HAND STRIP -->
@@ -908,6 +954,12 @@
       <button class="life-btn" onclick="adjustLife('me',-1)">−</button>
       <span class="life-total" id="me-life">40</span>
       <button class="life-btn" onclick="adjustLife('me',1)">+</button>
+    </div>
+    <div class="player-counters">
+      <div class="pctr" title="Poison"><span class="pctr-label">PSN</span><button class="pctr-btn" onclick="adjustPlayerCounter('me','poison',-1)">−</button><span class="pctr-val" id="me-poison">0</span><button class="pctr-btn" onclick="adjustPlayerCounter('me','poison',1)">+</button></div>
+      <div class="pctr" title="Radiation"><span class="pctr-label">RAD</span><button class="pctr-btn" onclick="adjustPlayerCounter('me','radiation',-1)">−</button><span class="pctr-val" id="me-radiation">0</span><button class="pctr-btn" onclick="adjustPlayerCounter('me','radiation',1)">+</button></div>
+      <div class="pctr" title="Experience"><span class="pctr-label">EXP</span><button class="pctr-btn" onclick="adjustPlayerCounter('me','experience',-1)">−</button><span class="pctr-val" id="me-experience">0</span><button class="pctr-btn" onclick="adjustPlayerCounter('me','experience',1)">+</button></div>
+      <div class="pctr" title="Speed"><span class="pctr-label">SPD</span><button class="pctr-btn" onclick="adjustPlayerCounter('me','speed',-1)">−</button><span class="pctr-val" id="me-speed">0</span><button class="pctr-btn" onclick="adjustPlayerCounter('me','speed',1)">+</button></div>
     </div>
     <div style="display:flex;gap:6px;align-items:center;flex:1;justify-content:flex-end;">
       <span class="zone-btn" onclick="openZone('me','graveyard')">GY: <span id="me-gy-count">0</span></span>

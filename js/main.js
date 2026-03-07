@@ -27,6 +27,13 @@ function adjustCmdDmg(key, delta) {
   renderLifeTotals();
 }
 
+function adjustPlayerCounter(player, type, delta) {
+  state[player][type] = Math.max(0, (state[player][type] || 0) + delta);
+  const label = player === 'me' ? 'Human' : 'Claude';
+  logAction(`${label}: ${type.charAt(0).toUpperCase() + type.slice(1)} → ${state[player][type]}`);
+  renderLifeTotals();
+}
+
 // ─── TURN ORDER ───────────────────────────────────────────────────────────────
 function getActivePlayer() {
   const isOddTurn = state.turn % 2 === 1;
@@ -226,6 +233,7 @@ function openZone(player, zone) {
         <button class="btn-secondary" onclick="shuffleLibrary('${player}')">Shuffle</button>
         <button class="btn-secondary" onclick="openScryPrompt('${player}')">Scry</button>
         <button class="btn-secondary" onclick="openSurveilPrompt('${player}')">Surveil</button>
+        <button class="btn-secondary" onclick="openMillPrompt('${player}')">Mill</button>
       </div>
       <div id="show-library-bar" style="margin-bottom:10px;">
         <button class="btn-secondary" onclick="showLibraryGrid('${player}')">Show Library</button>
@@ -383,6 +391,35 @@ function drawCard(player) {
 function shuffleLibrary(player) {
   shuffle(state[player].library);
   showToast('Library shuffled!', 'success');
+}
+
+function openMillPrompt(player) {
+  const max = state[player].library.length;
+  if (max === 0) { showToast('Library is empty!'); return; }
+  openModal(`
+    <h2>Mill</h2>
+    <p style="color:var(--muted);font-size:12px;margin-bottom:8px;">How many cards to mill?</p>
+    <input type="number" id="mill-n" min="1" max="${max}" value="1" style="margin-bottom:8px;width:80px;">
+    <div class="modal-btns">
+      <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+      <button class="btn-primary" onclick="confirmMill('${player}', +document.getElementById('mill-n').value)">Mill</button>
+    </div>
+  `);
+  setTimeout(() => document.getElementById('mill-n')?.select(), 100);
+}
+
+function confirmMill(player, n) {
+  const lib = state[player].library;
+  n = Math.min(Math.max(1, n), lib.length);
+  const milled = lib.splice(0, n);
+  state[player].graveyard.push(...milled);
+  const label = player === 'me' ? 'Human' : 'Claude';
+  for (const card of milled) {
+    logAction(`${label}: ${card.name} Library → Graveyard`);
+  }
+  showToast(`Milled ${n} card${n > 1 ? 's' : ''}`, 'success');
+  closeModal();
+  render();
 }
 
 function openScryPrompt(player) {
@@ -793,6 +830,10 @@ async function loadDeckForPlayer(player) {
   state[player].library = [];
   state[player].commandZone = [];
   state[player].uidCounter = 0;
+  state[player].poison = 0;
+  state[player].radiation = 0;
+  state[player].experience = 0;
+  state[player].speed = 0;
 
   // Find ALL commanders from raw list
   const rawLines = deck.list.split('\n');
@@ -965,9 +1006,9 @@ function generateBoardState() {
 
   return [
     `[[T${state.turn}|${phaseCode}|${act}]]`,
-    `[[OPP|L:${p.life}|H:${p.hand.length}|LIB:${p.library.length}|CMD:${fmtCmd(p.commandZone, false)}|CDMG:${state.cmdDmg['opp-to-me']}|GY:${fmtZone(p.graveyard, false)}|EX:${fmtZone(p.exile, false)}]]`,
+    `[[OPP|L:${p.life}|H:${p.hand.length}|LIB:${p.library.length}|CMD:${fmtCmd(p.commandZone, false)}|CDMG:${state.cmdDmg['opp-to-me']}${p.poison ? '|PSN:'+p.poison : ''}${p.radiation ? '|RAD:'+p.radiation : ''}${p.experience ? '|EXP:'+p.experience : ''}${p.speed ? '|SPD:'+p.speed : ''}|GY:${fmtZone(p.graveyard, false)}|EX:${fmtZone(p.exile, false)}]]`,
     `[[OPP_BF|${fmtOppBF(p.battlefield)}]]`,
-    `[[CLD|L:${o.life}|LIB:${o.library.length}|CMD:${fmtCmd(o.commandZone, true)}|CDMG:${state.cmdDmg['me-to-opp']}|GY:${fmtZone(o.graveyard, true)}|EX:${fmtZone(o.exile, true)}]]`,
+    `[[CLD|L:${o.life}|LIB:${o.library.length}|CMD:${fmtCmd(o.commandZone, true)}|CDMG:${state.cmdDmg['me-to-opp']}${o.poison ? '|PSN:'+o.poison : ''}${o.radiation ? '|RAD:'+o.radiation : ''}${o.experience ? '|EXP:'+o.experience : ''}${o.speed ? '|SPD:'+o.speed : ''}|GY:${fmtZone(o.graveyard, true)}|EX:${fmtZone(o.exile, true)}]]`,
     `[[CLD_H|${fmtZone(o.hand, true)}]]`,
     `[[CLD_BF|${fmtCldBF(o.battlefield)}]]`,
     `[[POOL:0]]`,
