@@ -62,6 +62,25 @@ BG Aristocrats/Token deck built around Food and Squirrel tokens. The deck genera
 
 ## Game History
 
+### Game 24 (piloted by Claude): Squirrel Food/Chatterfang vs. Fblthp (Human)
+**Result:** Claude loses T12 via Enter the Infinite → Thassa's Oracle. Final life: Claude 31, Human 40.
+
+**Key plays:**
+- T5: Chatterfang + Underworld Cookbook deployed. Solid engine start.
+- T6: Opponent deployed Extraplanar Lens (doubling Islands) + Tezzeret → tutored Sensei's Divining Top.
+- T7: Killed Tezzeret with Chatterfang combat, but Lens + Top already online.
+- T9: Odd Acorn Gang cast but bounced by Repulse. Camellia bounced by Unsummon in combat.
+- T10: Opponent chained One with the Multiverse → Urza (free cast) → Nerd Rage on Malcolm. Massive snowball turn.
+- T11: Deadly Dispute saccing Heaped Harvest for good value (draw 2 + land + tokens). Recast Camellia.
+- T12: Malcolm (4 acorn counters) looted Enter the Infinite, cast it for free. Thassa's Oracle wins.
+
+**Key lessons:**
+- **Malcolm was the real threat.** 2/1 flyer building acorn counters each hit. Only blocker was Birds of Paradise (mana fixer). Sacrificing Birds would fix the Malcolm problem but lose the only black mana fixer — impossible choice.
+- **No artifact/enchantment removal available.** Extraplanar Lens went unanswered. One with the Multiverse went unanswered. Spider Food wasn't drawn.
+- **Bake into a Pie never cast.** Only removal spell in hand all game, but always had to choose between developing and holding 4 mana open. Opponent was tapped out when Claude had mana, and vice versa.
+- **Tapped out every turn.** Never had mana open on opponent's turns. Need to plan for holding up interaction.
+- **Deck lacks flying blockers/reach** (same issue as Game 16). Odd Acorn Gang (reach) was the answer but got bounced.
+
 ### Game 16 (piloted by Claude): Squirrel Food/Chatterfang vs. Cats/Mirri (Human)
 **Result:** Claude loses T15 via lethal combat damage. Final life: Claude 0, Human 31.
 
