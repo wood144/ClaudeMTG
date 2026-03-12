@@ -72,6 +72,21 @@ Commander: Roxanne, Starfall Savant ({3}{R}{G}) | Colors: R/G (Gruul)
 
 **No major rules mistakes this game.**
 
+### Game 3: Meteor Apes/Roxanne (Human) vs. Mill/Steal/Wrexial (Claude)
+**Result:** Human wins T18 via combat damage. Heroic Intervention + Savage Twister X=6 one-sided wipe into lethal swing.
+**Key plays:**
+- Roxanne came down T10, immediately began Meteorite engine. By T18, 5 Meteorite tokens on board.
+- Roxanne died in combat T16 (blocked by Mirelurk Queen 5/5), but recast in Main 2. Meteorite ETB sniped the damaged Queen (4 combat damage + 2 Meteorite = 6 on 5 toughness). Excellent sequencing.
+- Anzrag countered by Arcane Denial T16 — would have been game-ending with Bloodscent + Withstand Death in hand for infinite combats.
+- T18: Heroic Intervention + Savage Twister X=6 = one-sided wipe. Lethal swing with full board (10 power + Meteorite ping).
+- Opponent's Glimpse the Unthinkable milled Aggravated Assault, Savage Beating, AND Relentless Assault — all three extra combat spells removed. Mill is a real threat to this deck's combo lines.
+**Lessons:**
+- **Recasting Roxanne to snipe damaged creatures with Meteorite ETB is a strong line.** Sacrifice in combat, recast, ping the wounded survivor.
+- **Heroic Intervention + sweeper is the best finisher** in the deck. One-sided board wipe into lethal.
+- **Mill is dangerous for this deck.** Losing Aggravated Assault + Savage Beating + Relentless Assault to a single Glimpse effectively removes the combo finish. Consider Elixir of Immortality or similar GY-shuffle effects.
+- **Anzrag must be protected or cast with backup.** Getting countered was the deck's biggest setback — would have ended the game on the spot.
+
 ## Matchup Notes
 - **vs. Scion/Dargons (5-color dragons):** Opponent has a slow mana base but explosive turns with Scion activation combos. Rush Roxanne out and pressure before they stabilize. Watch for Scion → Atarka (double strike) or Scion → Ureni (protection). **Destroying color fixers (Arcane Signet, Chromatic Lantern) is game-winning** — without them, 5-color decks can't cast their commander. Watch for Virtue of Persistence (the enchantment half of Locthwain Scorn) as late-game reanimation threat.
+- **vs. Mill/Steal/Wrexial (Dimir mill):** Opponent mills aggressively to strip combo pieces and fuel Wrexial's GY-casting. Losing Aggravated Assault + Savage Beating + Relentless Assault to Glimpse the Unthinkable was devastating — consider GY protection (Elixir of Immortality?). **Wrexial has islandwalk** — Eluge puts flood counters on your lands making them Islands, so Wrexial becomes unblockable. Kill Eluge immediately (Meteorite pings are perfect for this). Heroic Intervention + sweeper is the best finisher against Dimir since they run few creatures. Anzrag is the best threat but MUST resolve — hold protection or bait the counterspell first.
 - **vs. Eldrazi/Zhulodok (colorless ramp):** Opponent ramps explosively into Zhulodok, then cascades 7+ MV colorless spells for 2 free permanents per cast. **Priority targets:** Forsaken Monument (mana + buff engine), Swiftfoot Boots (hexproof/haste enabler), mana rocks (Thran Dynamo, Mana Vault). Rush Roxanne and pressure life total before cascade chains start. **Critical weakness:** no exile effects in Gruul to answer indestructible threats (Ulamog, Blightsteel). Must kill before they resolve, or add non-destroy answers like Chaos Warp or Song of the Dryads.

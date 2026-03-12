@@ -53,6 +53,13 @@ Commander: Ghave, Guru of Spores | Colors: White/Black/Green (Abzan)
 - **Tutor discipline:** Unless you're missing land drops, save Demonic Tutor for a combo finisher (Blood Artist / Zulaport Cutthroat) or a stabilizer (Dictate of Erebos). Ghave builds board presence slowly but reliably — once you have a wide board, a single tutor for the right piece can flip the game. Tutoring for ramp is valid when you're stuck on colors or missing drops, but if the mana will come naturally, hold the tutor for something that wins.
 - **No summoning sickness violations.** Multiple hidden information violations early (hand evaluation reasoning leaked).
 
+### Game 23 (as opponent): Fun Guys/Ghave (Human) vs. Fblthp (Claude)
+**Result:** Human wins T23 via combat damage. Human 65 life, Claude 15.
+- Aura Shards T8 locked out all artifact/enchantment development.
+- Winding Constrictor + Ghave sac loops net +1 counter per cycle with Zulaport draining.
+- Mycoloth devoured 5 creatures for 10 counters, generating 10 Saprolings per upkeep.
+- Claude kept a zero-land hand and never recovered.
+
 ## Matchup Notes
 - **vs. Scion of the Ur-Dragon:** Scion → Ureni blanks Path to Exile and black removal. Need exile effects that don't target (board wipes, sacrifice effects) or colorless removal.
 - **vs. Dicebots/Mr. House:** Agility Bobblehead + Saddle + Sword of Hours is a must-answer package (unblockable + growing counters = fast clock). Damnation before the pinger engine assembles.

@@ -23,6 +23,16 @@ GW Cat tribal go-wide/go-tall deck. Mirri provides combat control — limits opp
 
 ## Matchup Notes
 
+### vs. Avatar Allies / Sokka (Game 21)
+- **Result: Cats LOSS (T14, combat damage — 44 damage lethal)**
+- Honest Work on Feline Sovereign T12 neutralized the lord effect AND the artifact/enchantment removal engine. Devastating for 1 mana.
+- Shield of the Oversoul on Mirri created a 7/5 flying indestructible first strike threat, but Boomerang Basics bounced her for {U} next turn — Aura went to graveyard permanently.
+- Sokka's Charge (double strike + lifelink for all Allies during opponent's turn) combined with 3 prowess triggers = 44 damage lethal swing.
+- **Key lesson:** Aura-based protection (Shield of the Oversoul) is fragile against bounce. Sokka deck runs cheap bounce (Boomerang Basics) and cheap enchantment-based removal (Honest Work). Need equipment or innate hexproof/indestructible instead.
+- **Key lesson:** Whirlwind of Thought + Sokka = every noncreature spell draws a card + creates a token + prowess. Must destroy Whirlwind ASAP — Feline Sovereign's combat trigger was the answer but got Honest Work'd before connecting.
+- **Key lesson:** Don't tap out for development when opponent has cheap interaction. Holding {G}{W} for Bronzehide indestructible or mana for Clever Concealment is critical.
+- **Deck suggestion:** More instant-speed interaction (e.g., Heroic Intervention) would help against the blowout turn pattern of bounce + removal + alpha strike.
+
 ### vs. Squirrel Food / Chatterfang (Game 16)
 - **Result: Cats WIN (T15, combat damage)**
 - Felidar Retreat + Skyknight Squire was the game. Skyknight grew to 10/10 flying.
@@ -32,6 +42,14 @@ GW Cat tribal go-wide/go-tall deck. Mirri provides combat control — limits opp
 - Chatterfang's forestwalk was the main threat — opponent's Radiant Grove being a Forest enabled unblockable attacks.
 
 ## Game History
+
+### Game 21 (piloted by Claude): Cats/Mirri vs. Avatar Allies/Sokka (Human)
+**Result:** Human wins T14 via 44-damage lethal combat swing.
+- T3: Bronzehide Lion deployed early. T5: King of the Pride + Feline Sovereign built a lord-heavy board.
+- T9: Sovereign Okinec Ahau deployed but immediately exiled by Swords to Plowshares (gained 6 life).
+- T11: Mirri deployed + Shield of the Oversoul = 7/5 flying indestructible first strike. Dealt 7 commander damage.
+- T12: Honest Work neutered Feline Sovereign into a 1/1 mana dork. Lost lord effect and enchantment removal.
+- T14: Opponent's devastating turn — Boomerang Basics bounced Mirri (Shield to graveyard), Sokka's Charge gave all Allies double strike + lifelink, Path to Exile removed King of the Pride + Bronzehide Lion Aura. Three noncreature spells = 3 prowess triggers + 3 Ally tokens + 3 Whirlwind draws. Lethal alpha strike with 44 total damage.
 
 ### Game 16 (piloted by Human): Cats/Mirri vs. Squirrel Food/Chatterfang (Claude)
 **Result:** Human wins T15 via lethal combat damage.

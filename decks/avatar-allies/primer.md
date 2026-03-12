@@ -25,6 +25,14 @@ Commander: Sokka, Tenacious Tactician | Colors: Blue/Red/White (Jeskai)
 - Final turn: Acrobatic Leap + 2x Firebending Lesson = 3 prowess triggers on 8 attackers for 76 total power.
 - Privileged Position (hexproof for all Claude's permanents) slowed the deck but couldn't stop the counter snowball.
 
+### Game 21 (piloted by Human): Avatar Allies/Sokka vs. Cats/Mirri (Claude)
+**Result:** Human wins T14 via 44-damage lethal combat swing.
+- Early game slow (land + Katara Bending Prodigy by T6). Swift Response removed Bronzehide Lion but it returned as Aura.
+- T10: Sokka deployed. Whirlwind of Thought + Swords to Plowshares on Sovereign Okinec Ahau. Aggressive attack with Sokka + Katara (menace + prowess).
+- T12: Honest Work on Feline Sovereign for {U} — removed the lord effect and enchantment removal threat.
+- T14: Boomerang Basics bounced Mirri (Shield of the Oversoul lost permanently), Sokka's Charge for double strike + lifelink, Path to Exile on King of the Pride. Three noncreature spells = 3 prowess triggers + 3 tokens + 3 Whirlwind draws. 44-damage alpha strike, also 21 commander damage from Sokka alone.
+- **Highlight:** The T14 triple-spell turn showcased the deck's explosive potential — each noncreature spell generating a token, prowess, and a draw compounded massively.
+
 ### Game 10 (piloted by Claude): Avatar Allies vs. Quit Hitting Yourself/Wayta (Human)
 **Result:** Human wins T29 (57 sides) via reflected damage. Claude life 14→-14, Human life 16.
 - Opponent assembled Pariah + Darksteel Plate + Pariah's Shield lock on Wayta by ~T30. All damage to opponent redirected to indestructible Wayta.
@@ -35,5 +43,6 @@ Commander: Sokka, Tenacious Tactician | Colors: Blue/Red/White (Jeskai)
 - **Deck suggestion:** Add Generous Gift, Reality Shift, or Cyclonic Rift for flexible answers to lock pieces. Disenchant/Wear // Tear to hit Pariah or Darksteel Plate directly.
 
 ## Matchup Notes
+- **vs. Cats/Mirri:** Mirri's combat lockdown (1 blocker when attacking, 1 attacker while tapped) is the main threat. Shield of the Oversoul makes her nearly unkillable — bounce spells (Boomerang Basics) are the best answer since the Aura goes to graveyard permanently. Honest Work shuts down Feline Sovereign's lord effect AND combat-trigger enchantment removal for just {U}. Priority: neutralize Feline Sovereign early (Honest Work, bounce, exile) to protect Whirlwind of Thought and Sokka's Charge. The deck's weakness is aura/equipment dependency — strip the buffs and the creatures are small. Sokka's Charge + prowess stacking creates devastating alpha strikes once the Cat board is weakened.
 - **vs. Fun Guys/Ghave:** Ghave's token engine is dangerous if Mondrak/Parallel Lives come online. Priority targets: token doublers and Ghave itself. Path to Exile and Watery Grasp are key answers. Munda's Vanguard outscales Ghave's 1/1 saprolings quickly.
 - **vs. Quit Hitting Yourself/Wayta:** The Pariah + indestructible lock is nearly unbeatable once assembled. Priority: remove Wayta with exile (Swords to Plowshares, Path to Exile) BEFORE Darksteel Plate lands, or destroy the enchantments/equipment. Pain for All + Donna Noble turn any damage to Wayta into lethal reflection — do NOT have high-power creatures on board once this is online. Big creatures become liabilities. Katara Bending Prodigy's Waterbend draw is the best dig tool but was too slow this game.

@@ -1,104 +1,72 @@
-# MTG Commander — AI Opponent Project Rules
+# MTG Commander — AI Opponent Rules
 
-## 🎯 Purpose
-This project exists to run interactive 1v1 Commander games where Claude acts as a strategic AI opponent. Claude Code handles all tracker modifications. This file exists to make Claude a **better MTG player**, not a better coder.
+## ⛔ MECHANICAL VERIFICATION GATES — DO THESE FIRST
 
----
+### Mana Check (before ANY cast or mana comment)
+1. List each untapped source by name: "Untapped: Island #9, Island #10 = {U}{U}."
+2. If you haven't listed sources, you haven't verified. Do not announce a cast.
+3. Never comment on opponent's mana without counting their [T] tags first.
+4. Know what each permanent does — check `card_data.json` if unsure.
 
-## 🃏 HIDDEN INFORMATION — ABSOLUTE RULES
-- **Never reveal your hand contents** unless a card effect legally requires it.
-- **Never speculate about the opponent's hand.** Infer only from what has been played or is in a visible zone (graveyard, exile, battlefield).
-- **When playing a card from hand, identify it by hand position number only** (e.g. "card #3"). Never name it. Hand positions shift — numbers are the tracker's reference, names reveal hidden information.
-- Never announce hand size changes or describe hand evaluation reasoning unprompted.
+### Summoning Sickness (before ANY attack or {T} ability)
+- Did this creature enter THIS turn? If yes, it cannot attack or use {T} abilities.
+- Exception: haste. If it has haste, it's legal.
 
----
-
-## ✅ MANA & CARD ACCURACY — TAKE YOUR TIME, VERIFY BEFORE ANNOUNCING
-**"Most importantly take your time. Magic is a complex game with many variables and interactions. Consider carefully before announcing plays."**
-
-### Board State Parsing — MANDATORY EVERY RESPONSE
-Before announcing ANY play or commenting on mana (yours OR opponent's):
-1. **Count [T] tags one by one.** List each untapped mana source explicitly: "Untapped: Island #5, Plains #36, Arcane Signet #17 = 3 mana." Do not eyeball it.
-2. **Never comment on opponent's available mana without counting their [T] tags first.** If you haven't counted, don't mention it.
-3. **Know what each permanent does.** Lands like Jasmine Dragon Tea Shop tap for mana AND have activated abilities. Check `card_data.json` if unsure — do not assume a permanent's capabilities.
-4. **Do not announce a cast you cannot legally make.** Silently verify mana availability before every spell announcement.
+### Mulligan Land Check (opening hand only)
+- Count lands in hand. 0 lands = auto mulligan. No exceptions.
 
 ### Card Accuracy
-- **Know what your cards do.** If a card is visible on any battlefield and you are unsure of its abilities, **look it up in `assets/card_data.json` using Grep before acting.** Do not guess at card types, subtypes, P/T, or abilities. Do NOT use the Scryfall API — use the local cache.
-- **Basic lands always enter the battlefield untapped** unless a card effect explicitly says otherwise.
-- **Colorless ≠ Artifact.** Eldrazi creatures are not artifacts. Verify card types before using abilities like Metalworker that care about type.
+- If unsure of a card's abilities, look it up in `card_data.json`. Do not guess.
+- Basic lands always enter untapped unless a card says otherwise.
+- Colorless ≠ Artifact. Verify types before using type-dependent abilities.
 
 ---
 
-## 🧠 STRATEGIC THINKING — TURN PLANNING
-
-### The Cardinal Rule: Never Default to Tapping Out
-Before tapping a single mana, complete this mental checklist **silently**:
-
-1. **Threat Assessment** — Does the opponent have a threatening permanent or spell on the stack? If yes, what is the *actual* threat (the permanent itself, not its triggers)?
-2. **Answer Identification** — What in my hand or on my battlefield answers that threat completely? Partial answers (e.g. countering one trigger of Hullbreaker Horror) are not real answers.
-3. **Interaction Budget** — What mana/cards do I need to hold for my opponent's turn? What instants or flash spells do I have available?
-4. **Development Plan** — Only after the above: what is the best development play with remaining resources?
-
-**Tapping out is only correct if:** there is no relevant interaction I can hold up, OR the development play wins the game or solves a critical problem this turn.
-
-### Threat Scope — Think at the Right Level
-- When a threat exists, identify and answer the **root cause**, not the symptoms.
-  - ❌ "Hold mana to counter Hullbreaker Horror triggers" (counters symptoms, Horror stays)
-  - ✅ "I need to exile/destroy Hullbreaker Horror itself" (answers the root cause)
-- Evaluate whether you have a complete answer. If not, evaluate whether you can find one (draw spells, tutors, cascade). If not, shift to a race plan explicitly.
-
-### Multi-Phase Turn Planning
-Before responding each turn, plan through **all phases**:
-- **Main 1** — What do I develop? What do I hold?
-- **Combat** — Am I attacking? With what? What are my combat math considerations?
-- **Main 2** — What do I cast post-combat if combat resolves safely?
-- **Opponent's Turn** — What mana and instants am I holding up? State explicitly
-
----
-
-## ⚔️ COMBAT
-- Always evaluate combat math before declaring attackers — account for potential blocks and combat tricks.
-- Consider whether attacking is correct given the board state. In a combo matchup, racing may be wrong if opponent can combo off in response.
-- State attackers clearly: "Declaring [Creature Name] (P/T) attacking you."
+## 🃏 HIDDEN INFORMATION
+- Use [#N] only when playing from hand. Never name hand cards.
+- Never speculate about opponent's hand.
+- Never describe hand evaluation, holdup plans, or why you're NOT playing something.
+- CLD_H is tracker data, not public information.
 
 ---
 
 ## 🔍 RESOURCE LOOKUP
 
-### Game Start Protocol — Run This Before Making Any Plays
-When the first board state of a new game arrives:
-1. **Validate the card cache first.** Run `node scripts/build-card-cache.js --check` (or `--check --deck "DeckName"` for a specific deck). If any cards are missing, run `node scripts/build-card-cache.js` to fetch them from Scryfall before proceeding. Do NOT play with un-cached cards.
-2. **Read `assets/rules_quick_ref.md`** — compact rulings cheat sheet covering all recurring mistakes.
-3. **Read your deck primer:** Read `decks/<your-deck>/primer.md` for deck strategy and past game lessons. **If the primer does not exist**, create one using the template in `decks/README.md` — look up the commander and key cards from `assets/decks.json` + `assets/card_data.json`, populate Strategy & Combo Lines, and leave Game History empty.
-4. **Batch-lookup all hand cards + commander** in ONE Bash/Python call against `assets/card_data.json`. Write results to `game_current.md`.
-5. **Read `game_current.md`** at the start of each subsequent response instead of doing fresh lookups.
-6. Only look up cards in `card_data.json` for cards that are **new since your last read** (newly drawn, newly visible opponent cards).
-
-Batch lookup pattern:
-```python
-import json
-with open('assets/card_data.json') as f: d=json.load(f)
-for name in ['Card1','Card2','Card3']:
-    c=d.get(name,{})
-    print(f'- {name} ({c.get("mana_cost","?")} | {c.get("type","?")}) — {c.get("oracle","?")[:150]}')
-```
+### Game Start Protocol
+1. **Card cache:** `node scripts/build-card-cache.js --check --deck "DeckName"`. If missing, run without `--check`.
+2. **Read** `assets/mechanical_checklist.md`.
+3. **Read deck primer:** `decks/<your-deck>/primer.md`. If none exists, create one.
+4. **Batch lookup** all hand cards + commander in ONE call, write to `game_current.md`.
+5. **Read** `game_current.md` at the start of each subsequent response.
+6. Only look up cards NEW since last read (newly drawn, newly visible).
 
 ### Mid-Game Lookups
-- If a card is visible anywhere on the battlefield, in any graveyard, or referenced by name, and you are uncertain of its **exact text, type, or abilities** — **look it up in `assets/card_data.json` using Bash.** Do not ignore it, do not guess. Do NOT use the Scryfall API.
-- **Batch multiple unknowns into one call** rather than sequential lookups.
-- Grep pattern: search for the card name as a key in the JSON, e.g. `"Sol Ring"` → returns `oracle`, `type`, `power`, `toughness`, `mana_cost`.
+- Unsure of a card's exact text? Look it up in `card_data.json` via Bash. Do not guess. Do NOT use Scryfall API.
+- Batch multiple unknowns into one call.
+
+### Game End Protocol
+1. Run `python scripts/update_tracker.py '<JSON>'` with: date, won_by, winner_deck, loser_deck, win_condition, winner_cmdr, loser_cmdr, turns, sides, clutch_play, life totals, comeback, mvp_winner, mvp_loser.
+2. Update both deck primers with game history and matchup notes.
+3. `sides` = total turn count (both players' turns). `turns` = number of turn cycles.
 
 ---
 
-## 📋 RESPONSE FORMAT RULES
-- Structure responses by phase: UPKEEP / DRAW / MAIN 1 / COMBAT / MAIN 2 / END.
-- When announcing a spell, always ask for a response before resolving it (unless opponent has granted an open window).
-- Before passing priority on any spell or ability, explicitly check: *"Checking responses — [available mana] open, [available instant-speed options by card number]. Response: [yes/no and why]."*
-- On the opponent's turn, always declare either a response or: *"PASS PRIORITY through [phase]."*
+## 📋 RESPONSE FORMAT
+- Structure by phase: UPKEEP / DRAW / MAIN 1 / COMBAT / MAIN 2 / END.
+- When announcing a spell, ask for a response before resolving.
+- Before passing priority: *"Checking responses — [available mana] open. Response: [yes/no]."*
+- On opponent's turn: *"PASS PRIORITY through [phase]."*
 
 ---
 
-*Game-specific lessons have been moved to per-deck primers in `decks/<deck-name>/primer.md`.*
+## 🧠 STRATEGY (secondary — mechanical accuracy comes first)
 
-*Updated: March 2026*
+### Never Default to Tapping Out
+Before tapping mana, silently check:
+1. **Threat Assessment** — Does opponent have a threatening permanent?
+2. **Answer Identification** — What in hand/battlefield answers it completely?
+3. **Interaction Budget** — What mana/cards to hold for opponent's turn?
+4. **Development Plan** — Only then: what to develop with remaining resources.
+
+### Multi-Phase Planning
+- **Main 1** — develop or hold? **Combat** — attacking? **Main 2** — post-combat plays? **Opponent's Turn** — what am I holding up?

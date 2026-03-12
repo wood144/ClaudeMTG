@@ -90,7 +90,7 @@ At the start of each game, paste the contents of `claude_opponent_prompt.txt` in
 | `claude_opponent_prompt.txt` | Paste this at game start to initialize Claude as your opponent |
 | `CLAUDE.md` | Project rules loaded automatically by Claude Code — governs AI behavior |
 | `assets/card_data.json` | Local card oracle cache (built by you, gitignored) |
-| `assets/rules_quick_ref.md` | Compact MTG rulings cheat sheet — Claude reads this at game start |
+| `assets/mechanical_checklist.md` | Compact MTG rulings cheat sheet — Claude reads this at game start |
 | `game_current.md` | Per-game session notes Claude maintains — overwritten each game |
 | `assets/decks.json` | Your saved decklists (optional — can also paste decklists in the UI) |
 
@@ -113,7 +113,7 @@ Claude Code plays the opponent role through these key mechanisms:
 - **Board state format:** The tracker generates a compressed TOON-format snapshot (`[[CLD_BF|...]]`, `[[OPP|...]]`, etc.) that Claude parses each turn
 - **Card lookup:** Claude uses `assets/card_data.json` via Bash/Python for instant oracle lookups — no Scryfall API calls mid-game
 - **Game session file:** At game start, Claude batch-looks up all hand cards and writes `game_current.md` — subsequent turns read this file instead of doing fresh lookups, cutting turn time significantly
-- **Rules reference:** `assets/rules_quick_ref.md` is read once per game — compact cheat sheet of recurring rules edge cases
+- **Rules reference:** `assets/mechanical_checklist.md` is read once per game — compact cheat sheet of recurring rules edge cases
 
 Behavior is governed by `CLAUDE.md` (auto-loaded by Claude Code) and `claude_opponent_prompt.txt` (pasted at game start).
 

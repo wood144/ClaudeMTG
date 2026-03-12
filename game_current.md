@@ -1,25 +1,29 @@
-# Game 10 — Avatar Allies (Claude) vs Quit Hitting Yourself (Human)
-Date: 2025-03-07
+# Current Game — Fblthp vs Ghave (Fun Guys)
 
-## Claude's Commander
-- #1: Sokka, Tenacious Tactician — {1}{U}{R}{W} | Legendary Creature — Human Warrior Ally 3/3
-- Menace, prowess; other Allies get menace+prowess; noncreature spells create 1/1 Ally tokens
+## Game Info
+- **Claude's Deck:** Fblthp, the Lost (Mono-U combo)
+- **Opponent's Deck:** Fun Guys / Ghave, Guru of Spores (Abzan tokens/combo)
+- **Claude is on the play**
 
-## Claude's Hand (T1)
-- #2: Honest Work — {U} | Enchantment — Aura | Enchant opp creature, tap+remove counters, loses abilities, becomes 0/1 Citizen
-- #3: Iroh, Firebending Instructor — {2}{R} | Legendary Creature — Human Noble Ally 2/2 | Attacking creatures +1/+1
-- #4: Secluded Courtyard — Land | Choose type; {T}: {C} or colored for that type
-- #5: Island — Basic Land
-- #6: The Cave of Two Lovers — {3}{R} | Enchantment — Saga | I: two 1/1 Ally tokens; II: search Mountain/Cave; III: TBD
-- #7: Katara, Water Tribe's Hope — {2}{W}{U}{U} | Legendary Creature — Human Warrior Ally | Vigilance, ETB Ally token, Waterbend X = all creatures base X/X
-- #8: Terramorphic Expanse — Land | Sac: fetch basic tapped
+## Commander
+- Fblthp, the Lost ({1}{U}) — 1/1 Legendary Homunculus. ETB draw 1 (draw 2 if from library). Targeted by spell → shuffle into library.
 
-## Opponent: Wayta, Trainer Prodigy (Quit Hitting Yourself)
-- Commander: {R}{G}{W} 1/5 Haste. {2}{G},{T}: two creatures fight ({2} less if both yours). If your creature being dealt damage causes a triggered ability, it triggers an additional time.
-- Deck theme: Damage redirection + indestructible creatures. Board wipes become one-sided.
-- Key threats: Boros Reckoner, Brash Taunter (indestructible), Stuffy Doll (indestructible), Spitemare, Screaming Nemesis, Blazing Sunsteel, Fiendlash
-- Board wipes: Blasphemous Act (13 to all), Star of Extinction (20 to all), Earthquake (X to non-flyers+players)
-- Protection: Darksteel Plate, Shielded by Faith (indestructible), en-Kor ({0}: redirect 1 damage)
-- Combo: Guilty Conscience on Boros Reckoner/Brash Taunter = infinite damage loop
-- Tutors: Eladamri's Call, Enlightened Tutor, Open the Armory
-- Counter: Stormwild Capridor (noncombat dmg prevented, gets +1/+1 counters instead)
+## Opponent Commander
+- Ghave, Guru of Spores ({2}{W}{B}{G}) — 0/0, ETB with 5 +1/+1 counters. {1}, remove counter: make 1/1 Saproling. {1}, sac creature: +1/+1 counter on target.
+
+## Hand (7 cards)
+- #2: Insight Engine ({2}{U}) | Artifact | {2},{T}: charge counter, draw per counter
+- #3: Leyline of Anticipation ({2}{U}{U}) | Enchantment | Opening hand → starts on BF. All spells have flash.
+- #4: Apprentice Wizard ({1}{U}{U}) | 0/1 Creature | {U},{T}: Add {C}{C}{C}
+- #5: Unsummon ({U}) | Instant | Bounce target creature
+- #6: Whirlpool Drake ({3}{U}) | 2/2 Flyer | ETB: shuffle hand into library, draw same number
+- #7: Enter the Infinite ({8}{U}{U}{U}{U}) | Sorcery | Draw entire library, put 1 card back
+- #8: Future Sight ({2}{U}{U}{U}) | Enchantment | Play top card of library revealed, cast from top
+
+## Leyline Note
+Leyline of Anticipation (#3) is in opening hand — begins the game on the battlefield.
+
+## Key Threats to Watch (Ghave)
+- Ghave + Parallel Lives + Ashnod's Altar + Zulaport Cutthroat = infinite drain
+- The Mycotyrant — token snowball
+- Ghave is BLACK (immune to Attrition)

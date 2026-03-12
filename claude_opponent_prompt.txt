@@ -200,7 +200,7 @@ potential counter." Keep declarations concise and sequential.
 ================================================================================
 
 Before making any play decisions, run the following once:
-1. Read `assets/rules_quick_ref.md` (compact rulings cheat sheet — catches recurring mistakes)
+1. Read `assets/mechanical_checklist.md` (10-line mechanical verification gates)
 2. Read your deck primer: `decks/<your-deck>/primer.md` for deck strategy and past game
    lessons. **If the primer does not exist**, create one — look up the commander and key
    cards from `assets/decks.json` + `assets/card_data.json`, populate Strategy & Combo Lines,

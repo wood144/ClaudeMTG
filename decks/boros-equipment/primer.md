@@ -41,7 +41,16 @@ Commander: Kellan, the Fae-Blooded // Birthright Boon | Colors: Red/White (Boros
 - Sequencing matters: cast equipment AFTER Puresteel (for draw triggers) and BEFORE other creatures (for Mace charge counters).
 - Sword of Once and Future (pro U/B) is backbreaking against Dimir opponents.
 
+### Game 20 (opponent): Boros Equipment (Human) vs. The Claw! (Claude)
+**Result:** Human wins T15 via commander damage. Puresteel Paladin drew cards early off equipment ETBs and enabled free equips via Metalcraft. Damnation wiped the board on T8, but Kellan rebuilt with Sword of the Animist ramping into Blackblade Reforged + Loxodon Warhammer + Chitinous Cloak for a one-shot commander damage kill.
+**Lessons:**
+- Sword of the Animist tutored via Birthright Boon is the default opener — expect it every game.
+- Blackblade Reforged + Sword of the Animist is a devastating combo: each attack ramps AND buffs Blackblade.
+- Kellan's double strike doubles commander damage — only 2-3 hits needed for lethal 21. With lifelink, racing is nearly impossible.
+- Board wipes don't answer equipment — they stay on the battlefield and get re-equipped cheaply to Kellan (legendary equip costs).
+
 ## Matchup Notes
 - **vs Mill decks:** Mantle of the Ancients turns mill into a win condition. Hold Mantle and let them fill your GY. Cloudsteel Kirin prevents mill-out loss.
 - **vs Dimir (U/B):** Sword of Once and Future grants protection from both their colors. Near-total lockout on the equipped creature.
 - Bruenor + equipment + lifelink is a strong clock. Prioritize removing Bruenor or key equipment pieces early (when opposing).
+- **vs Rakdos (The Claw!):** Opponent lacks artifact removal. Damnation hurts but doesn't touch equipment. Rebuild with Kellan + Sword and voltron up. Commander damage is the fastest kill — double strike makes it 2-3 swings.
