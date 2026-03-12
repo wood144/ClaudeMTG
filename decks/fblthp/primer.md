@@ -63,7 +63,15 @@ Commander: Fblthp, the Lost | Colors: Blue (Mono-U)
 - **USE YOUR COMMANDER TO DIG.** Fblthp costs {1}{U} and draws a card on ETB. He's not the win condition — he's a cantrip on legs. When mana-screwed, cast Fblthp to draw into lands/ramp. He chump blocks, and if he dies he goes to command zone for recast. If targeted by a spell, shuffles into library. There is never a reason to sit on 2 open mana doing nothing when your commander is available.
 - **Fblthp + any bounce spell = draw + shuffle.** Cast Fblthp (draw 1), then target him with any bounce effect (Unsummon, Snap, Unsubstantiate, etc.). Fblthp sees the targeting → shuffles into library, reshuffling the deck. One piece is always in the command zone, and the deck runs many bounce effects. Use this to break up known-bad top cards after Ponder/scry.
 
+### Game 25 (opponent): Fblthp vs. Faeries/Tegwyll (Claude)
+**Result:** Fblthp wins T13 via Leveler + Thassa's Oracle. Final life: Human 31, Claude 41.
+- Leyline of Anticipation T0 gave all spells flash for the entire game.
+- Lab Maniac deployed T7 but killed by Breathe Your Last T8 and exiled by Bojuka Bog.
+- Rain of Revelation countered by Lofty Denial, Yue countered by Arcane Denial.
+- Patient play: waited until Claude tapped out T13, then Leveler (5 mana) + Oracle (2 mana) = 7 mana, clean combo kill.
+- Faeries applied 9 commander damage over the game but couldn't close before combo assembled.
+
 ## Matchup Notes
-- This deck has been faced three times as opponent (won all three) and once as pilot (lost). Critical weakness: relies on resolving Enter the Infinite (12 mana sorcery). Counterspells or hand disruption before T9-10 are the best answers.
+- Faced four times as opponent (won all four) and once as pilot (lost). Multiple combo lines available — Leveler + Oracle is cheapest (7 mana), Enter the Infinite is late-game backup.
 - **vs. Fun Guys/Ghave:** Aura Shards shuts down the artifact/enchantment mana engine entirely. Need to counter or bounce Aura Shards before deploying Extraplanar Lens/Gauntlet of Power. Bounce spells are temporary — Ghave decks have enough mana to replay threats immediately.
 - **vs. Squirrel Food/Chatterfang:** Golgari has no counterspells and limited artifact removal. Malcolm builds acorn counters freely against decks with no flyers. Mm'menon + Urza + One with the Multiverse create an unstoppable engine. Enter the Infinite doesn't even need hard-casting — Malcolm at 4 counters free-casts it off a loot.

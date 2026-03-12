@@ -1,45 +1,55 @@
-# Current Game — Squirrel Food (Claude) vs Fblthp (Opponent)
+# Current Game — Fun Guys (Claude) vs Boros Equipment (Opponent)
 
 ## Game Info
-- **Claude's Deck:** Squirrel Food / Chatterfang, Squirrel General (BG Golgari)
-- **Opponent's Deck:** Fblthp, the Lost (Mono-U combo)
-- **Claude is on the play (going first)**
+- **Claude's Deck:** Fun Guys / Ghave, Guru of Spores (WBG Abzan)
+- **Opponent's Deck:** Boros Equipment / Kellan, the Fae-Blooded (RW Boros)
+- **Opponent is on the play (kept 7)**
+- **Claude is on the draw**
+- **Game #:** Fun Guys Game 7, Boros Equipment Game 4
 
 ## Commander
-- **#1 Chatterfang, Squirrel General** — {2}{G} — 3/3 Legendary Creature — Squirrel Warrior
-  - Forestwalk. Token doubler (any token creation also makes that many 1/1 Squirrels).
-  - {B}, Sacrifice X Squirrels: Target creature gets +X/-X until end of turn.
+- **#1 Ghave, Guru of Spores** — {2}{W}{B}{G} — 0/0, enters with 5 +1/+1 counters.
+  - {1}, Remove a +1/+1 counter from a creature: Create a 1/1 green Saproling.
+  - {1}, Sacrifice a creature: Put a +1/+1 counter on target creature.
 
 ## Opponent Commander
-- Fblthp, the Lost ({1}{U}) — 1/1 Legendary Homunculus. ETB draw 1 (draw 2 if from library). Targeted by spell → shuffle into library.
+- **Kellan, the Fae-Blooded // Birthright Boon** — {2}{R} // {1}{W}
+  - 2/2 double strike. Other creatures +1/+0 per Aura/Equipment on Kellan.
+  - Adventure ({1}{W}): Tutor Aura or Equipment to hand.
 
-## Hand (T1, 7 cards)
-- **#2 Heaped Harvest** — {2}{G} — Artifact Food. ETB + sac: search basic land to BF tapped. Also {2},{T},Sac: gain 3 life.
-- **#3 Forest** — Basic Land
-- **#4 Endless Atlas** — {2} — Artifact. {2},{T}: Draw a card (only if 3+ same-name lands).
-- **#5 Bake into a Pie** — {2}{B}{B} — Instant. Destroy target creature + create Food token.
-- **#6 Birds of Paradise** — {G} — 0/1 Creature Bird. Flying. {T}: Add one mana of any color.
-- **#7 Forest** — Basic Land
-- **#8 The Underworld Cookbook** — {1} — Artifact. {T}, Discard: create Food. {4},{T},Sac: return creature from GY.
+## Hand (T2, 8 cards after draw)
+- **[#2]** Forest — Basic Land.
+- **[#3]** Swamp — Basic Land.
+- **[#4]** Forest — Basic Land.
+- **[#5]** Eldrazi Monument — {5} — Artifact. Creatures get +1/+1, flying, indestructible. Upkeep: sac a creature or sac this.
+- **[#6]** Insidious Roots — {B}{G} — Enchantment. Creature tokens have "{T}: Add any color." Creature cards leave GY → create 0/1 Plant, +1/+1 counter on each Plant.
+- **[#7]** Forest — Basic Land.
+- **[#8]** Vitaspore Thallid — {1}{G} — 1/1 Fungus. Upkeep: spore counter. Remove 3 spore counters: create 1/1 Saproling. Sac Saproling: target creature haste.
+- **[#9]** Command Tower — Land. {T}: Add any color in commander identity.
 
-## Key Threats to Watch (Fblthp)
-- Enter the Infinite + Thassa's Oracle / Lab Maniac / Jace = instant win
-- Extraplanar Lens + Gauntlet of Power = explosive mana
-- Hullbreaker Horror = uncounterable nonland bounce engine
-- Teferi / Tidal Barracuda before combo = locks out instant-speed interaction
+## Key Threats to Watch (Boros Equipment)
+- **Sword of the Animist** — Ramp on attack. Expect Birthright Boon T2 to tutor it.
+- **Colossus Hammer** — +10/+10. Trivial with free equip effects.
+- **Puresteel Paladin** — Free equips at Metalcraft. Draw on equipment ETB.
+- **Mantle of the Ancients** — Mass recursion from GY. Late-game bomb.
+- **Cloudsteel Kirin** — Flying + "can't lose the game."
+- **Kellan + double strike** — Commander damage kill in 2-3 swings with equipment.
+- **Boros Charm** — Indestructible mode blanks Damnation.
 
-## Opponent Key Cards (visible)
-- **Malcolm, Alluring Scoundrel** — {1}{U} — 2/1 Siren Pirate. Flash, Flying. Combat damage → chorus counter, loot. 4+ counters → cast discarded card free.
-- **Sol Ring** — {1} — {T}: Add {C}{C}.
+## Our Key Cards (in deck, not yet seen)
+- **Aura Shards** — MVP this matchup. Every creature/token ETB destroys artifact/enchantment.
+- **Damnation** — Board wipe (won't hit equipment though).
+- **Darksteel Mutation** — Shuts down Kellan.
+- **Dictate of Erebos** — Punishes sac loops.
+- **Parallel Lives / Anointed Procession / Doubling Season** — Token doublers.
+- **Combo: Ghave + token doubler + Ashnod's Altar + Zulaport/Blood Artist** = infinite drain.
 
-## New Cards
-- **#9 The Odd Acorn Gang** — {3}{B}{G} — 5/5 Legendary Creature — Squirrel Warrior
-  - Menace, trample, reach. Squirrels have "{T}: Target Squirrel +2/+2 and trample until EOT (sorcery only)."
-  - Whenever 1+ Squirrels deal combat damage to a player, draw a card.
-- **#79 Camellia, the Seedmiser** — {1}{B}{G} — 3/3 Legendary Creature — Squirrel Warlock
-  - Menace. Other Squirrels get menace. Sac Food → create 1/1 Squirrel.
-  - {2}, Forage (exile 3 from GY or sac Food): +1/+1 counter on each other Squirrel.
+## Opponent Battlefield
+- Needle Spires (RW tapland, currently tapped from T1)
+
+## Turn Plan (updated T14 — GAME OVER)
+Game concluded T14, Human wins.
 
 ## Game Log
-- T1: Keep 7. Play Forest, cast Birds of Paradise.
-- T2 (opp): Played Island. No other visible plays.
+- T1 (Opp): Played Needle Spires (tapped). Passed.
+- T2 (Claude): Drew Command Tower.

@@ -53,6 +53,25 @@ Commander: Ghave, Guru of Spores | Colors: White/Black/Green (Abzan)
 - **Tutor discipline:** Unless you're missing land drops, save Demonic Tutor for a combo finisher (Blood Artist / Zulaport Cutthroat) or a stabilizer (Dictate of Erebos). Ghave builds board presence slowly but reliably — once you have a wide board, a single tutor for the right piece can flip the game. Tutoring for ramp is valid when you're stuck on colors or missing drops, but if the mana will come naturally, hold the tutor for something that wins.
 - **No summoning sickness violations.** Multiple hidden information violations early (hand evaluation reasoning leaked).
 
+### Game 24 (piloted): Fun Guys/Ghave (Claude) vs. Boros Equipment/Kellan (Human)
+**Result:** Human wins T14 via combat damage (lethal on board). Claude 16 life, Human 40.
+
+**Key plays:**
+- T6: Darksteel Mutation on Kellan — strong tempo play, shut down commander.
+- T7: Opponent used Skullclamp on mutated Kellan (0/1 + 1/-1 = 0 toughness, indestructible doesn't save from SBA). Drew 2, Kellan to command zone. Darksteel Mutation wasted.
+- T9: Bruenor Battlehammer deployed. Foundry Inspector reduced all artifact costs by {1}.
+- T10: Claude held 5 mana open (Ghave mana) to hold Swords to Plowshares. Telegraphed interaction by not casting Ghave.
+- T11: Opponent cast Haystack (protection piece). **Claude let it resolve while holding Swords — critical error.** Should have Swordsed Bruenor in response to Haystack on the stack. Instead waited, opponent activated Haystack to phase out Bruenor in response to Swords. Swords fizzled.
+- T12: Ghave deployed but immediately Stroke of Midnight'd. Opponent deployed Vorrac Battlehorns (trample) ending chump block plan.
+- T14: Bruenor (13/3 trample) + Foundry Inspector (13-17/6-8) + Germ (11-12/9-10) = lethal with no answer available.
+
+**Key lessons:**
+- **Use removal BEFORE protection resolves.** When holding instant-speed removal and opponent casts a protection piece (Haystack, Lightning Greaves, etc.), respond while it's on the stack. Once it resolves, the window is gone. Treat protection pieces like counterspells — they signal your last clean shot.
+- **Don't telegraph interaction.** Having exactly commander mana and passing without casting anything screams "I have removal." Either cast Ghave and find removal later, or Swords immediately at the start of opponent's turn before they can deploy protection.
+- **Skullclamp kills Darksteel Mutation targets.** 0/1 + Skullclamp (+1/-1) = 0 toughness. Indestructible doesn't prevent SBA from 0 toughness. Opponent draws 2 and recasts commander. Darksteel Mutation is less effective when Skullclamp is on the field.
+- **Foundry Inspector + Bruenor is the explosive engine.** Discounted equipment + free equips = multiple equipment per turn. Board snowballs fast. Must be disrupted early.
+- **Insidious Roots mana engine never came online.** Ghave kept getting removed before saprolings could accumulate. Need to protect Ghave or deploy token generators that don't depend on the commander.
+
 ### Game 23 (as opponent): Fun Guys/Ghave (Human) vs. Fblthp (Claude)
 **Result:** Human wins T23 via combat damage. Human 65 life, Claude 15.
 - Aura Shards T8 locked out all artifact/enchantment development.
@@ -64,3 +83,4 @@ Commander: Ghave, Guru of Spores | Colors: White/Black/Green (Abzan)
 - **vs. Scion of the Ur-Dragon:** Scion → Ureni blanks Path to Exile and black removal. Need exile effects that don't target (board wipes, sacrifice effects) or colorless removal.
 - **vs. Dicebots/Mr. House:** Agility Bobblehead + Saddle + Sword of Hours is a must-answer package (unblockable + growing counters = fast clock). Damnation before the pinger engine assembles.
 - **vs. Avatar Allies/Sokka:** Kill Munda's Vanguard on sight — cohort snowballs permanently. Sokka giving menace to all Allies makes chump blocking difficult (need 2 blockers per attacker). Deploy Privileged Position early to blank targeted removal and ETB damage (Momo). Board wipes are essential; 1/1 saprolings can't keep up with growing Allies.
+- **vs. Boros Equipment/Kellan:** Aura Shards is the MVP — every saproling made destroys an equipment. Deploy it before Kellan assembles voltron. Expect Birthright Boon T2 tutoring Sword of the Animist. Equipment survives Damnation so prioritize Aura Shards / Stroke of Midnight over board wipes. Kellan's double strike + flying equipment can go over saproling tokens. Darksteel Mutation on Kellan works but beware Skullclamp (kills 0/1 mutated creature, draws 2, commander returns). Foundry Inspector + Bruenor is the explosive engine — disrupt early or they deploy 3+ equipment per turn. Haystack gives repeatable phasing protection — remove it or use removal BEFORE it resolves. Race to combo if they're ramping faster.

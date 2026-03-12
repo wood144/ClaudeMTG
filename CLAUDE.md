@@ -57,6 +57,20 @@
 - Before passing priority: *"Checking responses — [available mana] open. Response: [yes/no]."*
 - On opponent's turn: *"PASS PRIORITY through [phase]."*
 
+### Rolling Turn Plan (update in `game_current.md` every turn)
+At the start of each turn, update the `## Turn Plan` section in `game_current.md` with:
+```
+## Turn Plan (updated TX)
+- **This turn:** [what to cast/hold, key decision and why]
+- **Next opponent turn:** [what to respond to, what triggers to watch, removal timing]
+- **My next turn:** [development goal, what mana I need]
+- **Watch for:** [specific cards/plays that change the plan — protection pieces, board wipes, combo pieces]
+```
+This forces forward-looking strategy instead of reactive play. Key rules:
+- **Removal timing:** If the plan says "hold removal," specify WHEN to use it — "before protection resolves" not just "when it matters."
+- **Update on new information:** Opponent plays something unexpected? Revise the plan before acting.
+- **Protection pieces are removal deadlines.** If opponent casts Greaves/Boots/Haystack/Swiftfoot and you're holding removal, that spell on the stack is your last clean window. Act or lose the chance.
+
 ---
 
 ## 🧠 STRATEGY (secondary — mechanical accuracy comes first)
