@@ -31,6 +31,19 @@ Commander: Wayta, Trainer Prodigy | Colors: Red/Green/White (Naya)
 
 ## Game History
 
+### Game 28 (piloted by Human): Quit Hitting Yourself vs. Avatar Allies/Sokka (Claude)
+**Result:** Human wins T12 (23 sides). Human life 8, Claude life 17→-7.
+- Early game: Claude ramped into Sokka T7, attacked freely while opponent built reflection engine. Blazing Sunsteel equipped to Wayta T8.
+- T10: Guilty Conscience + Heroic Intervention attempted — but opponent cast GC first, then HI. Claude responded to HI with Firebending Lesson on Wayta, starting the loop without indestructible. Wayta died, GC to GY. Claude took 12 from the loop (40→28). **Key lesson: HI should have come first for hexproof+indestructible before GC.**
+- T12: Savage Twister X=4 cleared Sokka/Iroh. T14: Swords to Plowshares exiled Sokka (2nd removal). Wayta recast.
+- T15: Sokka recast 3rd time. T17: Combat with Wayta blocking — Sunsteel kills Sun Warriors.
+- T18: Path to Exile exiled Sokka again. Fiendlash cast + equipped to Wayta alongside Sunsteel. Double reflection engine online.
+- T20: Neyith of the Dire Hunt cast, then Wayta fights Sokka (4th cast). Claude sacced Commander's Sphere + Mind Stone, drew Acrobatic Leap. Leap buffed Sokka to 5/7, killing Wayta in the fight. But Sunsteel+Fiendlash triggers killed Sokka anyway. Both commanders dead.
+- T22: Equipment moved to Neyith (6/3 reach). Attacked for 6 unblocked.
+- **T23 (lethal):** Claude swung for exactly 8 with 4 creatures. Opponent cast Gideon's Sacrifice targeting Neyith — all combat damage redirected. 4 sources = 4 Fiendlash triggers × 6 power = 24 damage. Lethal from 17.
+- **MVP: Fiendlash** — power-based reflection (not just damage reflection) was the key multiplier. Each trigger dealt Neyith's full power (6) regardless of the actual damage taken.
+- **Dominance: 3** — deck was humming despite the T10 sequencing error.
+
 ### Game 10 (piloted by Human): Quit Hitting Yourself vs. Avatar Allies/Sokka (Claude)
 **Result:** Human wins T29 (57 sides). Human life 16, Claude life 14→-14.
 - Assembled Pariah + Darksteel Plate lock on Wayta by ~T30. Added Pariah's Shield on Kellan for redundancy, later moved to Wayta after Kellan died to Blasphemous Act.
@@ -40,4 +53,4 @@ Commander: Wayta, Trainer Prodigy | Colors: Red/Green/White (Naya)
 - MVP: Pain for All — turned the defensive lock into a lethal weapon.
 
 ## Matchup Notes
-- **vs. Avatar Allies/Sokka:** Wide boards of Ally tokens are cleaned up easily by Blasphemous Act / Reckless Blaze. Sokka at 3/3 dies to both. The real danger is exile removal (Swords to Plowshares, Path to Exile) — prioritize getting Darksteel Plate on Wayta before opponent finds exile. Once the lock is assembled, opponent's big creatures (Appa 6/6) become liabilities with Pain for All / Donna Noble reflection. Use Wayta's fight to weaponize their board against them.
+- **vs. Avatar Allies/Sokka:** 2-0 in the matchup. Sokka's menace prevents profitable blocking with a single reflector, forcing the deck to use removal (Swords, Path, Savage Twister) to clear Sokka repeatedly. Commander tax eventually prices Sokka out (5th cast = 12 mana). Key tactics: (1) Sequence protection BEFORE combo pieces — cast Heroic Intervention first for hexproof+indestructible, then Guilty Conscience. (2) Fiendlash on any creature turns Gideon's Sacrifice into a lethal counter — multiple damage sources = multiple triggers at POWER (not reflected amount). (3) Neyith is a strong backup equipment carrier — fight draws cards, reach blocks flyers, and she's a real body. (4) Don't underestimate chip damage from equipped creatures — even without Wayta's doubling, Sunsteel + Fiendlash on any creature creates dangerous reflection.

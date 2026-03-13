@@ -135,5 +135,25 @@ Stack lords (Tegwyll + Scion + Glen Elendra Liege) to make 1/1 tokens into 4/4 o
 - **Need more card draw.** Only drew naturally + 1 Arcane Denial trigger over 6 turns. The counter suite depletes fast without refueling.
 - **Free counters (Fierce Guardianship, Flare of Denial) are critical.** Neither was drawn. These would have answered Leveler even while tapped out.
 
+### Game 27 (opponent): Faeries/Tegwyll (Human) vs The Claw!/Cruelclaw (Claude)
+**Result: Faeries wins T20 via lethal flying combat. Faeries 40, Cruelclaw 6. Dominance 3.**
+
+**Key plays:**
+- T7: Snaremaster Sprite tapped + stunned Cruelclaw, delaying first attack by a full turn cycle.
+- T8: Claude cast Damnation to clear board. Tegwyll death triggers drew 2 cards. Opponent rebuilt faster with flash package.
+- T9: Talion choosing 3 directly taxed every Cruelclaw cast (MV/P/T all 3).
+- T12: Claude played Court of Ire for monarch — opponent stole it immediately with flyers. Fed opponent 4-5 extra draws.
+- T14: Flare of Denial countered Phyrexian Obliterator (saccing Glamermite). Then Glamermite tap + double block killed Cruelclaw and Tegwyll simultaneously.
+- T17: Deepfathom Skulker created overwhelming card draw engine — 3 draws per combat.
+- T20: Snap cleanly answered Olivia + reanimated Obliterator. Lethal on board.
+
+**Key lessons:**
+- Flash creatures (Snaremaster, Glamermite) are the key to locking out Cruelclaw — tap it down before it can attack.
+- Talion choosing 3 is the perfect call vs Cruelclaw.
+- Deepfathom Skulker + flying board = massive card advantage engine.
+- Opponent's Court of Ire/monarch was a gift — flyers steal monarchy trivially.
+- Flare of Denial counters ANY spell (not just noncreature). Keep this in mind for future games.
+
 ## Matchup Notes
 - **vs. Fblthp (0-1):** Fblthp combo is fast and resilient. Lab Maniac, Thassa's Oracle, and Jace are three independent win conditions — removing one isn't enough. Leyline of Anticipation enables instant-speed combo deployment. Priority targets to counter: Leveler/Mirror of Fate (library exile) > mana doublers > card draw. Faeries' dense counter suite is the primary defense but depletes quickly without draw engines online.
+- **vs. The Claw!/Cruelclaw (1-0):** Cruelclaw is helpless without evasion enablers. Flash creatures tap it down repeatedly. Talion choosing 3 taxes every Cruelclaw cast. Dense counter suite handles any hardcast threats. Deepfathom Skulker is the MVP draw engine. Monarch effects from opponent are free card advantage — flyers steal it trivially.

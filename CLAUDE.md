@@ -45,7 +45,7 @@
 - Batch multiple unknowns into one call.
 
 ### Game End Protocol
-1. Run `python scripts/update_tracker.py '<JSON>'` with: date, won_by, winner_deck, loser_deck, win_condition, winner_cmdr, loser_cmdr, turns, sides, clutch_play, life totals, comeback, mvp_winner, mvp_loser.
+1. Run `python scripts/update_tracker.py '<JSON>'` with: date, won_by, winner_deck, loser_deck, win_condition, winner_cmdr, loser_cmdr, turns, sides, clutch_play, life totals, comeback, mvp_winner, mvp_loser, dominance (1-3: 1=opponent stumbled, 2=hard-fought, 3=deck humming). Ask the user for the dominance rating.
 2. Update both deck primers with game history and matchup notes.
 3. `sides` = total turn count (both players' turns). `turns` = number of turn cycles.
 

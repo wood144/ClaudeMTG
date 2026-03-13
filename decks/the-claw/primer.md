@@ -38,6 +38,18 @@ Commander: The Infamous Cruelclaw | Colors: Black/Red (Rakdos)
 - Commander damage reached 18 after just two Kellan hits (6 + 12). Double strike doubles the commander damage pressure.
 - Blackblade Reforged scales terrifyingly with Sword of the Animist ramp — each attack fetches a land, making Blackblade bigger.
 
+### Game 27 (pilot): The Claw! (Claude) vs. Faeries/Tegwyll (Human)
+**Result:** Human wins T20 via lethal flying combat damage. Faeries 40, Cruelclaw 6. Dominance 3.
+**Lessons:**
+- Cruelclaw never connected once. Flash creatures (Snaremaster Sprite, Glamermite) tapped it down repeatedly. Without evasion enablers, menace alone isn't enough against a deck with plentiful flying blockers.
+- Damnation T8 was correct to stop the bleeding from 3 evasive flyers. But Tegwyll death triggers drew opponent 2 cards, and opponent rebuilt faster with flash package.
+- Court of Ire/monarch was a mistake against Faeries — flyers trivially steal monarchy. Gave opponent 4-5 extra draws for ~8 damage dealt. Bad trade.
+- Phyrexian Obliterator ({B}{B}{B}{B}) was countered by Flare of Denial (saccing Glamermite). Flare counters ANY spell, not just noncreature — primer was wrong.
+- Olivia, Crimson Bride reanimation was answered cleanly by Snap bouncing Olivia, exiling the reanimated Obliterator.
+- Deepfathom Skulker was the engine that buried Cruelclaw — 3 combat damage draws per turn fueled hand sculpting, not just digging.
+- Never drew an evasion enabler (Access Tunnel, Lightning Greaves, Trailblazer's Boots, Rogues' Passage) in 10 turns.
+
 ## Matchup Notes
 - The Cruelclaw trigger engine is the primary win condition. Must answer the enablers (Lightning Greaves, Access Tunnel) not the commander itself (which has shroud).
 - **vs Boros Equipment:** Kellan's double strike makes commander damage lethal fast. Prioritize artifact/equipment removal over creature removal. Damnation doesn't answer equipment — need cards like Vandalblast, Shatterstorm, or targeted artifact destruction. Trailblazer's Boots is useless if opponent runs mostly basics early.
+- **vs Faeries/Tegwyll (0-1):** Faeries' flash package and dense counter suite completely lock Cruelclaw out without evasion enablers. Menace is insufficient — they have enough flying bodies to double-block. Damnation is double-edged (Tegwyll draws for each dead Faerie). DO NOT play monarch effects (Court of Ire) — flyers steal it trivially and the extra draws fuel their already-strong card advantage. Talion choosing 3 directly taxes Cruelclaw (MV 3, P 3, T 3). Must find evasion enablers or the game is unwinnable. Bontu's Monument + Deepfathom Skulker create an overwhelming value engine if left unchecked.

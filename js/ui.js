@@ -283,9 +283,10 @@ function tapFromCtx() {
 
 // ─── COUNTER TYPES ─────────────────────────────────────────────────────────────
 const COUNTER_TYPES = {
-  'P/T': ['+1/+1', '-1/-1', '+2/+2'],
+  'P/T': ['+1/+1', '-1/-1'],
   'Keyword': ['Flying', 'First Strike', 'Double Strike', 'Deathtouch', 'Trample', 'Vigilance', 'Lifelink', 'Reach', 'Hexproof', 'Menace', 'Haste', 'Indestructible', 'Flash', 'Ward'],
-  'Special': ['Charge', 'Energy', 'Stun', 'Shield', 'Finality', 'Time', 'Age', 'Lore', 'Doom', 'Verse', 'Divinity', 'Defense', 'Loyalty', 'Poison', 'Experience', 'Oil', 'Spore', 'Level', 'Gold', 'Quest', 'Acorn', 'Blaze', 'Brick', 'Fungus', 'Task', 'Storage']
+  'Special': ['Charge', 'Chorus', 'Component', 'Energy', 'Experience', 'Finality', 'Flood', 'Fungus', 'Gold', 'Hour', 'Knowledge', 'Lore', 'Loyalty', 'Luck', 'Poison', 'Rad', 'Ribbon', 'Shield', 'Spore', 'Storage', 'Stun', 'Time'],
+  'Status': ['Blight', 'Burden']
 };
 
 function showAddCounterMenu(e) {

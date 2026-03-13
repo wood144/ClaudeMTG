@@ -17,6 +17,16 @@ Commander: Sokka, Tenacious Tactician | Colors: Blue/Red/White (Jeskai)
 
 ## Game History
 
+### Game 28 (piloted by Claude): Avatar Allies vs. Quit Hitting Yourself/Wayta (Human)
+**Result:** Human wins T12 (23 sides) via Gideon's Sacrifice + Fiendlash reflection. Claude life 17→-7, Human life 8.
+- Sokka cast 4 times total (T7, T13, T15, T19). Removed by Savage Twister, Swords to Plowshares, Path to Exile, and Wayta fight+Sunsteel. 5th cast would have been 12 mana.
+- T10: Successfully disrupted Guilty Conscience + Heroic Intervention combo by casting Firebending Lesson on Wayta in response to HI (before indestructible resolved). Wayta died, GC went to GY. Took 12 damage from the loop but dismantled the combo.
+- T20: Drew Acrobatic Leap off Commander's Sphere sac in response to fight. Leap buffed Sokka to 5/7, killing Wayta in the fight. But Sunsteel+Fiendlash triggers killed Sokka too.
+- T21: Warring Triad activated as 5/5 flying trample (GY at 11 cards). Sea Gate Loremaster cast for card draw engine. Dealt 7 (opp 15→8).
+- **T23 (death):** Swung for exactly 8 with 4 creatures into Gideon's Sacrifice. Fiendlash triggered 4 times at power 6 = 24 damage. Lethal from 17.
+- **Lesson:** Fiendlash deals POWER, not reflected damage amount. Multiple small attackers into Gideon's Sacrifice = multiple Fiendlash triggers, each at full power. Should have drawn cards with Loremaster instead of going for the kill — was at 8 vs 17, had time to draw and verify the coast was clear.
+- **Deck suggestion:** Need instant-speed artifact/enchantment removal (Wear // Tear, Disenchant) to strip equipment before attacking into reflection. Also counterspells to stop combo assembly.
+
 ### Game 9 (piloted by Human): Avatar Allies vs. Fun Guys/Ghave (Claude)
 **Result:** Human wins T26 via massive combat damage (76 total attack power).
 - Sokka deployed T8 after Path to Exiling Claude's Ghave.
@@ -45,4 +55,4 @@ Commander: Sokka, Tenacious Tactician | Colors: Blue/Red/White (Jeskai)
 ## Matchup Notes
 - **vs. Cats/Mirri:** Mirri's combat lockdown (1 blocker when attacking, 1 attacker while tapped) is the main threat. Shield of the Oversoul makes her nearly unkillable — bounce spells (Boomerang Basics) are the best answer since the Aura goes to graveyard permanently. Honest Work shuts down Feline Sovereign's lord effect AND combat-trigger enchantment removal for just {U}. Priority: neutralize Feline Sovereign early (Honest Work, bounce, exile) to protect Whirlwind of Thought and Sokka's Charge. The deck's weakness is aura/equipment dependency — strip the buffs and the creatures are small. Sokka's Charge + prowess stacking creates devastating alpha strikes once the Cat board is weakened.
 - **vs. Fun Guys/Ghave:** Ghave's token engine is dangerous if Mondrak/Parallel Lives come online. Priority targets: token doublers and Ghave itself. Path to Exile and Watery Grasp are key answers. Munda's Vanguard outscales Ghave's 1/1 saprolings quickly.
-- **vs. Quit Hitting Yourself/Wayta:** The Pariah + indestructible lock is nearly unbeatable once assembled. Priority: remove Wayta with exile (Swords to Plowshares, Path to Exile) BEFORE Darksteel Plate lands, or destroy the enchantments/equipment. Pain for All + Donna Noble turn any damage to Wayta into lethal reflection — do NOT have high-power creatures on board once this is online. Big creatures become liabilities. Katara Bending Prodigy's Waterbend draw is the best dig tool but was too slow this game.
+- **vs. Quit Hitting Yourself/Wayta:** 0-2 in the matchup. The reflection engine is the core threat in multiple forms: (1) Guilty Conscience loops (disrupt by dealing damage before indestructible resolves — sequence matters, respond to the SECOND spell). (2) Blazing Sunsteel + Fiendlash on ANY creature creates dangerous reflection — Fiendlash deals POWER per trigger, not damage amount. Multiple attackers = multiple triggers. (3) Gideon's Sacrifice turns your own lethal swing into your death — never alpha strike into open {W} mana without artifact/enchantment removal first. (4) Neyith draws cards off fights AND gains reach from Fiendlash, blocking flyers. **Critical rule:** Count Fiendlash triggers before committing to combat. Each separate damage source = one trigger at full power. 4 attackers into Gideon's Sacrifice = 4 × power damage. Strip the equipment or don't attack. Sokka's menace is the key advantage — forces 2 blockers, preventing single-creature reflection blocks. But Sokka is fragile at 3/3 and gets taxed out quickly.

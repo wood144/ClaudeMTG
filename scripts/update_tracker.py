@@ -22,8 +22,14 @@ Example:
         "loser_life": 0,
         "comeback": "N",
         "mvp_winner": "Appa, the Vigilant",
-        "mvp_loser": "Danitha Capashen"
+        "mvp_loser": "Danitha Capashen",
+        "dominance": 2
     }'
+
+Dominance scale (winner only):
+    1 = Won because opponent stumbled (mana screw/flood, bad decisions)
+    2 = Hard-fought, back and forth
+    3 = Deck was humming, gameplan executed
 """
 
 import sys
@@ -109,14 +115,17 @@ def wilson_lower(wins, games):
     return round((center - spread) / denom, 4)
 
 
-def calc_winner_perf(sides):
-    """Winner Perf = 7.0 + max(0, 1.10 + 0.06 * (17 - sides))"""
-    return round(7.0 + max(0, 1.10 + 0.06 * (17 - sides)), 2)
+def calc_winner_perf(sides, dominance=2):
+    """Winner Perf = 7.0 + speed_bonus + (dominance - 2) * 0.75
+    dominance: 1=opponent stumbled, 2=hard-fought, 3=deck humming"""
+    speed_bonus = max(0, 1.10 + 0.06 * (17 - sides))
+    feels_bonus = (dominance - 2) * 0.75
+    return round(7.0 + speed_bonus + feels_bonus, 2)
 
 
 def calc_loser_perf(sides):
-    """Loser Perf = max(0, 2/30 * (sides - 10))"""
-    return round(max(0, (2 / 30) * (sides - 10)), 2)
+    """Loser Perf = min(1.5, max(0, 2/30 * (sides - 10)))"""
+    return round(min(1.5, max(0, (2 / 30) * (sides - 10))), 2)
 
 
 # ── Main update logic ───────────────────────────────────────────────
@@ -156,6 +165,7 @@ def update_tracker(game_data):
         game_data.get('comeback', 'N'),
         game_data.get('mvp_winner'),
         game_data.get('mvp_loser'),
+        game_data.get('dominance', 2),
     ]
 
     for col_idx, val in enumerate(log_values, start=1):
@@ -176,6 +186,7 @@ def update_tracker(game_data):
             'loser_deck': normalize_deck_name(row[4], canonical, alias_map) if row[4] else row[4],
             'winner_cmdr': row[6], 'loser_cmdr': row[7],
             'sides': row[9],
+            'dominance': row[16] if len(row) > 16 and row[16] is not None else 2,
         })
 
     # Aggregate per-deck stats
@@ -195,7 +206,7 @@ def update_tracker(game_data):
             sides = g['sides'] if g['sides'] is not None else 16  # fallback
             if is_winner:
                 s['wins'] += 1
-                s['perfs'].append(calc_winner_perf(sides))
+                s['perfs'].append(calc_winner_perf(sides, g.get('dominance', 2)))
             else:
                 s['losses'] += 1
                 s['perfs'].append(calc_loser_perf(sides))
