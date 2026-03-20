@@ -44,6 +44,22 @@ Commander: Wrexial, the Risen Deep ({3}{U}{U}{B}) | Colors: Blue/Black (Dimir)
 - **Save counterspells for Anzrag.** Anzrag + forced block effects = infinite combats. Must be countered on the stack.
 - **Stormtide Leviathan would have been the ultimate answer** — shuts down all non-flying/non-islandwalk attackers. At 8 mana it was too slow this game. Deck already runs heavy 2-drop ramp — the issue is tempo, not ramp count. Prioritize early blockers and saving removal/counters for key threats while racing to 8 mana.
 
+### Game 35 (Human): Mill/Steal (Human) vs. Cats/Mirri (Claude)
+**Result:** Human wins T22 via 17 unblockable (Wrexial islandwalk + Bloatfly Swarm 12/12 flying). Comeback from 1 life.
+**Key plays:**
+- T8: Mirelurk Queen gave Claude 2 rad counters, started mill engine + card draw. Removed by Beast Within T9.
+- T10: Bloatfly Swarm deployed. Claude's Generous Gift countered by Negate T11 — Swarm stayed on board.
+- T11: Mirri blocked by Bloatfly Swarm — 3 counters removed, 3 rad each. Mirri died to Swarm's return damage. Swarm at +2 counters.
+- T14: King Narfi's Betrayal Chapter II — cast The Flood of Mars + Sovereign Okinec Ahau (stolen from Claude's GY) from exile. Flood put flood counter on Claude's Plains, enabling permanent islandwalk.
+- T16: Wrexial cast, full board deployed. T18: Wrexial attacked, stole Adaptive Automaton from Claude's GY (naming Kraken for Wrexial buff). Massive mill via Wrexial trigger.
+- T19: Claude attacked for 10, pushing Human to 2. Warleader double-blocked and killed.
+- T20: At 1 life, Wrexial's combat trigger stole Teferi's Protection from Claude's GY — phased out everything, protection from all damage until T22. Game-winning play.
+- T22: Bloatfly Swarm at +12 counters (Sovereign doubled on attack) + Wrexial = 17 unblockable. Lethal from Claude's 11 life.
+**Lessons:**
+- Bloatfly Swarm + Sovereign Okinec Ahau is a devastating combo — counters double every attack.
+- Flood of Mars enables islandwalk permanently via flood counters. One flood counter = Wrexial always unblockable.
+- Wrexial stealing opponent's best instants (Teferi's Protection) from their own graveyard is the deck's ultimate payoff. Mill quality interaction into the GY, then weaponize it.
+
 ## Matchup Notes
 - **vs non-U/B decks (no Islands/Swamps):** Wrexial's islandwalk/swampwalk is dead without land-type changers (Urborg, Spreading Seas, etc.). Same for Nemesis of Reason and N'ghathrod — menace alone isn't reliable evasion. Mulligan and early game should prioritize finding land-type enablers or lean on non-combat mill instead.
 - **vs Equipment/Voltron:** HIGH RISK to mill aggressively. Check for Mantle of the Ancients, Open the Vaults, or similar mass recursion before committing. Exile-based removal (Tormod's Crypt, Nihil Spellbomb) is essential.

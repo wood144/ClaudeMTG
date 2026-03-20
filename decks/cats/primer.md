@@ -23,6 +23,17 @@ GW Cat tribal go-wide/go-tall deck. Mirri provides combat control — limits opp
 
 ## Matchup Notes
 
+### vs. mill/steal / Wrexial (Game 35)
+- **Result: Cats LOSS (T22, combat damage — 17 unblockable via islandwalk + flying)**
+- Early aggression worked well: Arahbo T5 into Mirri T7, dealt 8 damage T7.
+- Mirelurk Queen T8 started the rad/mill engine. Beast Within removed it but Generous Gift got Negated, leaving Bloatfly Swarm on board.
+- Bloatfly Swarm is a nightmare: blocking it gives rad counters, and Sovereign Okinec Ahau doubles its counters on attack. Grew from 5/5 to 12/12 over the game.
+- Flood of Mars turned a Plains into an Island, enabling islandwalk for both Flood and Wrexial. Once islandwalk was online, 8+ unblockable damage per turn.
+- Wrexial stealing Teferi's Protection from Claude's graveyard at 1 life was game-winning — bought a full turn of invincibility with phased-out board.
+- **Key lesson:** Against mill/steal, minimize graveyard quality. Powerful instants (Teferi's Protection, Path to Exile, Heroic Intervention) become weapons for Wrexial.
+- **Key lesson:** Must remove Bloatfly Swarm with destruction effects (Gift/Stroke), not combat damage. Combat damage triggers rad counters.
+- **Key lesson:** Flood of Mars's flood counters enable islandwalk permanently. Kill Flood ASAP or the game becomes unblockable damage every turn.
+
 ### vs. Dinosaur Eggs / Atla Palani (Game 34)
 - **Result: Cats LOSS (T13, combat damage — concession during lethal)**
 - Marauding Raptor auto-kills Egg tokens, giving Atla free creatures every turn. Removing either piece is critical.
@@ -61,6 +72,18 @@ GW Cat tribal go-wide/go-tall deck. Mirri provides combat control — limits opp
 - **Rating:** 2 — Cats mana screwed (one land drop after T4) prevented the deck from executing its game plan.
 
 ## Game History
+
+### Game 35 (piloted by Claude): Cats/Mirri vs. mill-steal/Wrexial (Human)
+**Result:** Human wins T22 via 17 unblockable combat damage (Wrexial islandwalk + Bloatfly Swarm flying).
+- T5: Arahbo deployed, Cat token generated. T7: Mirri cast (Raptor discount analogue — Courtyard mana). Attacked for 4 (Arahbo + token).
+- T9: Beast Within removed Mirelurk Queen. Attacked for 8 (Mirri + Arahbo + tokens). Arahbo died to Beast token block — critical error losing the lord/token generator.
+- T11: Generous Gift on Bloatfly Swarm Negated. Bronzehide Lion deployed. Bloatfly Swarm + rad counters milling key cards.
+- T13: Leonin Warleader deployed. T15: Mirri recast (5 mana), attacked T17 for 10 with Warleader. Opponent to 5.
+- T18: Wrexial attacked, stole Adaptive Automaton from GY (naming Kraken). Clever Concealment saved Warleader from Stroke of Midnight.
+- T19: All-out attack pushed opponent to 2. Warleader died to double block but Lion survived (indestructible).
+- T20: Wrexial stole Teferi's Protection at 1 life — phased out everything, protection from everything until T22. Bought lethal turn.
+- T22: Bloatfly Swarm at 12 counters + Wrexial = 17 unblockable. Lethal from 11 life.
+- **Critical mistake:** Attacking with Arahbo T9 into a 3/3 Beast blocker. Arahbo (2/2 no evasion) should have stayed back as a token generator. One more Cat token would have pushed through lethal on T19.
 
 ### Game 34 (piloted by Human): Cats/Mirri vs. Dinosaur Eggs/Atla Palani (Claude)
 **Result:** Claude wins T13 via combat damage (concession during lethal attack).

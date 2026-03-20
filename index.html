@@ -933,6 +933,7 @@
     <span style="font-family:'Cinzel',serif;font-size:9px;color:var(--muted);letter-spacing:0.05em;">First:</span>
     <button class="phase-btn" onclick="toggleGoingFirst()" id="going-first-label" title="Click to toggle who goes first (affects untap step)">YOU</button>
     <div style="flex:1"></div>
+    <span id="live-status" style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#666;margin-right:6px;vertical-align:middle;cursor:default" title="Live bridge: disconnected"></span>
     <button class="send-btn" onclick="openBoardState()">📋 Send to Claude</button>
   </div>
 
@@ -1043,5 +1044,6 @@
 <script src="js/render.js"></script>
 <script src="js/ui.js"></script>
 <script src="js/main.js"></script>
+<script src="js/live-bridge.js"></script>
 </body>
 </html>
