@@ -21,5 +21,16 @@ Commander: Go-Shintai of Life's Origin | Colors: WUBRG (5-color)
 **Key mistakes to avoid:**
 - **Shrine deck needs to survive long enough to draw into removal.** Every shrine matters for card draw AND Sanctum damage.
 
+### Game 33: Every Shrine Ever (Claude) vs. Zinnia Precon (Human)
+**Result:** Claude wins T16 by concession. Farewell board wipe + Honden engine generating 3 draws/3 discards per turn proved unrecoverable.
+
+**Key takeaways:**
+- **Honden of Seeing Winds + Honden of Night's Reach** is a devastating combo — drawing 3 while opponent discards 3 each upkeep.
+- **Hull Breach removes shield counters** — targeting an enchantment creature with a shield counter removes the counter instead of destroying it, breaking Shield Broker's control effect.
+- **Go-Shintai of Hidden Cruelty** is critical removal vs token strategies. End step trigger scales with shrine count.
+- **Survived Martial Coup (X=8)** by having enchantment-based engines that don't die to creature wipes.
+- **Eternal Witness** to recur Hidden Cruelty was a key play rebuilding after the wipe.
+
 ## Matchup Notes
+- **vs. Zinnia Precon:** Zinnia's offspring engine creates tons of base-power-1 tokens, pumping Zinnia into a massive flyer. Curiosity Crafter + tokens = card draw engine. Shield Broker (cheated in via Arthur) steals enchantment creatures with shield counters. Hull Breach is the answer — destroy your own stolen enchantment creature, shield counter absorbs it, control reverts. Farewell (exile creatures + artifacts, NOT enchantments) is the ideal wipe since Honden engines survive. Honden of Night's Reach shreds their hand post-wipe.
 - **vs. Cruelclaw:** Cruelclaw + Access Tunnel + Lightning Greaves is a must-answer package. Lightning Greaves gives shroud (can't target with Sanctum) AND haste. Access Tunnel makes it unblockable. Priority: destroy Lightning Greaves with Hull Breach ASAP. Butcher of Malakir + any board wipe = forced sacrifice — killing opponent's creatures triggers Butcher, costing you a creature too. Dread Defiler's drain ability has no tap cost — can activate multiple times per turn at instant speed.

@@ -49,7 +49,22 @@ Commander: The Infamous Cruelclaw | Colors: Black/Red (Rakdos)
 - Deepfathom Skulker was the engine that buried Cruelclaw — 3 combat damage draws per turn fueled hand sculpting, not just digging.
 - Never drew an evasion enabler (Access Tunnel, Lightning Greaves, Trailblazer's Boots, Rogues' Passage) in 10 turns.
 
+### Game 30 (opponent): The Claw/Cruelclaw vs. Quit Hitting Yourself/Wayta (Claude)
+**Result:** Claude wins T13 (25 sides). Claude life 4, Human life 25→dead. Dominance 3.
+- Cruelclaw + Lightning Greaves deployed T3, connected immediately. First hit flipped Ancient Stone Idol (10/10 trample) for free — dream start.
+- Menace kept connecting until opponent found a second blocker (Boros Reckoner via Eladamri's Call T5). Life dropped to low teens before stabilizing.
+- **The lock:** Opponent assembled Darksteel Plate + Pariah's Shield on Wayta by T13 at 4 life. All damage redirected to indestructible Wayta. Cruelclaw's trigger completely neutralized — Pariah's Shield is a replacement effect, combat damage never reaches player, so "deals combat damage to a player" never fires.
+- Crabomination stole Wrathful Raptors from opponent's GY — strong play but couldn't break the lock.
+- Scytheclaw attempted as life-loss angle — doesn't work either, same replacement effect prevents the combat damage trigger from firing.
+- Drakuseth + Greaves provided repeated 3/3/4 breath damage — all harmlessly redirected to indestructible Wayta.
+- Moving Lightning Greaves from Cruelclaw to Drakuseth gave opponent a removal window — Fear Fire Foes X=3 killed Cruelclaw (recast would cost {7}{B}{R}).
+- **Death blow:** Star of Extinction + Blazing Sunsteel reflection (doubled by Wayta) = 40 damage. Lethal from 25 life.
+- **Near miss:** Shadowgrange Archfiend was on top of library — one Erebos draw away from forcing sacrifice of Wayta (greatest power on the board after equipment), breaking the lock entirely. The Scytheclaw misplay cost a draw step that would have found it.
+- **MVP loser: Crabomination** — stealing Wrathful Raptors removed a reflection piece. If it had been Shadowgrange Archfiend instead of Scytheclaw, the lock would have broken.
+- **Lesson:** Against Pariah's Shield + indestructible locks, combat damage triggers are completely dead. The deck needs sacrifice effects (Shadowgrange Archfiend, Flare of Malice) or artifact destruction (Megaton's Fate) to break the lock. Don't waste turns on combat damage angles (Scytheclaw) — every draw step matters when racing to find the out.
+
 ## Matchup Notes
 - The Cruelclaw trigger engine is the primary win condition. Must answer the enablers (Lightning Greaves, Access Tunnel) not the commander itself (which has shroud).
 - **vs Boros Equipment:** Kellan's double strike makes commander damage lethal fast. Prioritize artifact/equipment removal over creature removal. Damnation doesn't answer equipment — need cards like Vandalblast, Shatterstorm, or targeted artifact destruction. Trailblazer's Boots is useless if opponent runs mostly basics early.
 - **vs Faeries/Tegwyll (0-1):** Faeries' flash package and dense counter suite completely lock Cruelclaw out without evasion enablers. Menace is insufficient — they have enough flying bodies to double-block. Damnation is double-edged (Tegwyll draws for each dead Faerie). DO NOT play monarch effects (Court of Ire) — flyers steal it trivially and the extra draws fuel their already-strong card advantage. Talion choosing 3 directly taxes Cruelclaw (MV 3, P 3, T 3). Must find evasion enablers or the game is unwinnable. Bontu's Monument + Deepfathom Skulker create an overwhelming value engine if left unchecked.
+- **vs Quit Hitting Yourself/Wayta (0-1):** Pariah's Shield + Darksteel Plate on any creature is a full lockout — combat damage triggers (Cruelclaw, Scytheclaw) are completely dead because damage never reaches the player. The lock must be broken with sacrifice effects (Shadowgrange Archfiend, Flare of Malice) or artifact destruction (Megaton's Fate), NOT more combat damage angles. Every draw step matters once the lock lands — Erebos draw is the best tool to dig for outs. Do NOT move Lightning Greaves off Cruelclaw unless absolutely necessary — it creates a removal window for instant-speed burn. Breath damage from Drakuseth is meaningless into indestructible + Pariah's Shield. Priority: find sacrifice/artifact removal before opponent finds their reflection finisher (Star of Extinction + Blazing Sunsteel = 40+ one-shot).

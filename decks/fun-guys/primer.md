@@ -79,8 +79,26 @@ Commander: Ghave, Guru of Spores | Colors: White/Black/Green (Abzan)
 - Mycoloth devoured 5 creatures for 10 counters, generating 10 Saprolings per upkeep.
 - Claude kept a zero-land hand and never recovered.
 
+### Game 31 (piloted): Fun Guys/Ghave (Claude) vs. Avatar Allies/Sokka (Human)
+**Result:** Human wins T8 (15 sides) via combat damage. Katara waterbend 9 alpha strike. Claude 22 life, Human 40.
+
+**Key plays:**
+- T2: Skullclamp deployed T2, Saproling Migration T4 for clamp targets.
+- T6: Clamped a Saproling for 2 draws (Swamp + Mycotyrant). Opponent used Firebending Lesson to kill the second Saproling before Skullclamp could equip, denying 2 draws + creating an Ally token from Sokka trigger.
+- T8: Undercellar Myconid deployed for any-color mana dork. Opponent attacked with Sokka + Ally, Acrobatic Leap on Suki in response to blocks pumped her to 4/8, killing both Mycotyrant and Saproling blockers.
+- T10: Stroke of Midnight removed Sokka (to command zone). Mycotyrant redeployed. But opponent recast Sokka T11 + Suki + Katara.
+- T12: Mycoloth deployed, devoured Myconid for 2 counters (6/6). Opponent answered with Razor Rings (4 damage) then combat finished it off.
+- T14: Ghave finally cast. Opponent used Katara waterbend 9 next turn for lethal alpha strike (6 creatures at 9/9+).
+
+**Key lessons:**
+- **Razor Rings + combat is efficient Mycoloth removal.** 4 damage softens a devoured Mycoloth enough for combat to finish it. Protect Mycoloth or don't devour if removal is likely.
+- **Color screw was the core problem.** Opening hand had 2 Forests, no W or B. Ghave ({2}{W}{B}{G}) didn't come down until T14. Skullclamp engine found colors but too slowly.
+- **Katara waterbend scales with board presence.** With 6+ creatures, even tapping half to pay for waterbend leaves lethal attackers. Must keep opponent's creature count low.
+- **Sokka tax doesn't matter when Katara can finish.** Removing Sokka twice bought tempo but Katara is an independent win condition via waterbend.
+- **No combo pieces drawn.** Again failed to assemble Parallel Lives / Ashnod's Altar / Zulaport. Need more card draw or tutors to find the combo.
+
 ## Matchup Notes
 - **vs. Scion of the Ur-Dragon:** Scion → Ureni blanks Path to Exile and black removal. Need exile effects that don't target (board wipes, sacrifice effects) or colorless removal.
 - **vs. Dicebots/Mr. House:** Agility Bobblehead + Saddle + Sword of Hours is a must-answer package (unblockable + growing counters = fast clock). Damnation before the pinger engine assembles.
-- **vs. Avatar Allies/Sokka:** Kill Munda's Vanguard on sight — cohort snowballs permanently. Sokka giving menace to all Allies makes chump blocking difficult (need 2 blockers per attacker). Deploy Privileged Position early to blank targeted removal and ETB damage (Momo). Board wipes are essential; 1/1 saprolings can't keep up with growing Allies.
+- **vs. Avatar Allies/Sokka (0-2):** Kill Munda's Vanguard on sight — cohort snowballs permanently. Sokka giving menace to all Allies makes chump blocking difficult (need 2 blockers per attacker). Deploy Privileged Position early to blank targeted removal and ETB damage (Momo). Board wipes are essential; 1/1 saprolings can't keep up with growing Allies. **Katara, Water Tribe's Hope is an independent win condition** — waterbend X sets all creatures to X/X, lethal with any board. Must remove Katara or keep opponent's creature count low. Razor Rings is efficient removal against our big creatures (softens for combat cleanup). Prioritize color fixing in opening hand — Ghave needs WBG and coming down late is often fatal.
 - **vs. Boros Equipment/Kellan:** Aura Shards is the MVP — every saproling made destroys an equipment. Deploy it before Kellan assembles voltron. Expect Birthright Boon T2 tutoring Sword of the Animist. Equipment survives Damnation so prioritize Aura Shards / Stroke of Midnight over board wipes. Kellan's double strike + flying equipment can go over saproling tokens. Darksteel Mutation on Kellan works but beware Skullclamp (kills 0/1 mutated creature, draws 2, commander returns). Foundry Inspector + Bruenor is the explosive engine — disrupt early or they deploy 3+ equipment per turn. Haystack gives repeatable phasing protection — remove it or use removal BEFORE it resolves. Race to combo if they're ramping faster.

@@ -23,6 +23,14 @@ GW Cat tribal go-wide/go-tall deck. Mirri provides combat control — limits opp
 
 ## Matchup Notes
 
+### vs. Dinosaur Eggs / Atla Palani (Game 34)
+- **Result: Cats LOSS (T13, combat damage — concession during lethal)**
+- Marauding Raptor auto-kills Egg tokens, giving Atla free creatures every turn. Removing either piece is critical.
+- Regal Caracal's lifelink + lord was the best shot at stabilizing, but Contest of Claws sniped it T13.
+- Mirri's first strike is relevant against Raptor-damaged creatures but can't hold back multiple tramplers.
+- Drew zero interaction (Path to Exile, Swords, Generous Gift all in deck but never found). Against combo-style engines, the Cats deck needs early disruption or it falls behind.
+- **Deck suggestion:** Consider adding more early interaction or tutors that find removal. The deck's interaction suite is good but inconsistent when it matters most.
+
 ### vs. Avatar Allies / Sokka (Game 21)
 - **Result: Cats LOSS (T14, combat damage — 44 damage lethal)**
 - Honest Work on Feline Sovereign T12 neutralized the lord effect AND the artifact/enchantment removal engine. Devastating for 1 mana.
@@ -41,7 +49,37 @@ GW Cat tribal go-wide/go-tall deck. Mirri provides combat control — limits opp
 - Trouble in Pairs taxed Claude's double-draws and double-spells effectively.
 - Chatterfang's forestwalk was the main threat — opponent's Radiant Grove being a Forest enabled unblockable attacks.
 
+### vs. Bello precon / Bello, Bard of the Brambles (Game 32)
+- **Result: Cats LOSS (T16, combat damage — concession during lethal attack)**
+- Mana screwed after T4 — only 1 land drop post-T4 destroyed the game plan. Hardened Scales + Prowling Felidar + Keeper of Fables engine never got running.
+- Bounding Felidar (tap Mirri safely without combat + buff + lifegain) was the planned defensive engine but never arrived due to mana/draw issues.
+- Heroic Intervention T12 saved entire board from Warstorm Surge's 10-damage trigger — good timing but only delayed the inevitable.
+- Generous Gift correctly removed Warstorm Surge on opponent's turn (when Bello's indestructible isn't active). Key interaction window.
+- Luminous Broodmoth provided recursion but both key creatures (Mirri, Prowling Felidar) already had flying counters from Broodmoth returns, limiting future recursion value.
+- **Key lesson:** Bello's animated enchantments/artifacts lose indestructible on opponent's turn — that's the removal window. Time removal for their end step or your turn.
+- **Key lesson:** Grothama is a double-edged sword. Fighting it draws cards but costs creatures. Evaluate whether the card draw is worth the board loss — at 14 life with no Broodmoth, the 8 cards wouldn't have mattered.
+- **Rating:** 2 — Cats mana screwed (one land drop after T4) prevented the deck from executing its game plan.
+
 ## Game History
+
+### Game 34 (piloted by Human): Cats/Mirri vs. Dinosaur Eggs/Atla Palani (Claude)
+**Result:** Claude wins T13 via combat damage (concession during lethal attack).
+- T3: Sol Ring into T3 Mirri — strong opener.
+- T8: Prowling Felidar + Plains (2 landfall counters). Mirri attacked for 3 commander damage.
+- T10: Regal Caracal + 2 Cat tokens. Board looked strong with lifelink across the team.
+- T12: Keeper of Fables for card draw engine. But Claude's board already had Quartzwood Crasher, Gishath, Bonehoard Dracosaur.
+- T13: Claude killed Caracal with Contest of Claws (removing lord effect + lifelink), Discovered Forerunner → tutored Stampede Tyrant → Atla flipped it → dumped 5 creatures from hand. 40 power of attackers, concession.
+- **Rating:** 2 — Drew zero interaction despite the deck being full of it. Couldn't disrupt the Atla + Raptor engine.
+- **Key lesson:** Must hold removal for Marauding Raptor or Atla Palani. The egg combo snowballs too fast without disruption. Even a single Path to Exile on Raptor would have significantly slowed the engine.
+
+### Game 32 (piloted by Human): Cats/Mirri vs. Bello precon (Claude)
+**Result:** Claude wins T16 via lethal combat damage (concession).
+- T1: Evolving Wilds → Forest. T3: Hardened Scales.
+- T5: Brushland + Prowling Felidar. T7: Mirri deployed, attacked for 3 commander damage.
+- T9: Luminous Broodmoth deployed. Mirri + Felidar attacked — Felidar got flying counter from Broodmoth after dying to animated Warstorm Surge block.
+- T11: Helpful Hunter + Keeper of Fables. Attacked with Mirri + Felidar (flying). Only 1 land drop after T4 crippled development.
+- T13: Heroic Intervention saved board from 10-damage Warstorm Surge trigger. Generous Gift killed Surge. Bronzehide Lion deployed. But only casting one spell per turn while opponent ramped freely.
+- T15: 36 power on opponent's board, lethal through all blocks. Conceded.
 
 ### Game 21 (piloted by Claude): Cats/Mirri vs. Avatar Allies/Sokka (Human)
 **Result:** Human wins T14 via 44-damage lethal combat swing.

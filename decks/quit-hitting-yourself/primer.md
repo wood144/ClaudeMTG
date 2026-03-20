@@ -52,5 +52,23 @@ Commander: Wayta, Trainer Prodigy | Colors: Red/Green/White (Naya)
 - Claude drew aggressively (Waterbend x3 in one turn) but Swords to Plowshares was 14th from top.
 - MVP: Pain for All — turned the defensive lock into a lethal weapon.
 
+### Game 30 (piloted by Claude): Quit Hitting Yourself vs. The Claw/Cruelclaw (Human)
+**Result:** Claude wins T13 (25 sides). Claude life 4, Human life 25→dead.
+- Opener: Forest, Mountain, Pariah's Shield, Savage Twister, Boros Signet, Star of Extinction, Fear Fire Foes. Ramp plan: Signet T2, Wayta T3 with haste.
+- T3: Wayta deployed with haste. Opponent played Cruelclaw + Lightning Greaves same turn — connected immediately via menace, flipping free Ancient Stone Idol (10/10 trample).
+- T5: Eladamri's Call tutored Boros Reckoner for a second body to block menace. Critical — without two blockers, Cruelclaw connects every turn.
+- T7: Darksteel Plate cast + equipped to Wayta. Indestructible online.
+- T9: Boros Reckoner deployed. Menace now blockable. Life bleeding stopped but already at low teens.
+- T11: Pariah's Shield cast ({5}). One turn from lock completion. Opponent's window closing.
+- T13: Pariah's Shield equipped to Wayta at 4 life. Lock complete — all damage redirected to indestructible Wayta. Cruelclaw's "deals combat damage to a player" trigger neutralized (Pariah's Shield is a replacement effect — damage is NEVER dealt to player, so "deals combat damage to a player" never occurs).
+- Opponent played Crabomination, stealing Wrathful Raptors from Claude's GY. Tried Scytheclaw (life loss angle) — also doesn't work since "deals combat damage to a player" never fires through Pariah's Shield.
+- Opponent deployed Drakuseth + Lightning Greaves, dealing 3/3/4 breath damage each combat — all harmlessly redirected to indestructible Wayta.
+- T21: Opponent moved Lightning Greaves from Cruelclaw to Drakuseth. Claude responded with Fear Fire Foes X=3 to kill the now-targetable Cruelclaw (recast cost {7}{B}{R}). Enlightened Tutor put Blazing Sunsteel on top.
+- **T25 (lethal):** Star of Extinction — 20 damage to each creature. Wayta takes 20, Blazing Sunsteel reflects 20, Wayta's ability doubles it = 40 damage to opponent from 25 life. Lethal from behind the lock at 4 life.
+- **Comeback:** Survived at 4 life. Opponent's top card was Shadowgrange Archfiend (force sacrifice greatest power) — one draw away from breaking the lock entirely.
+- **MVP: Blazing Sunsteel** — turned Star of Extinction into a one-shot kill via Wayta-doubled reflection.
+- **Dominance: 3** — both decks did their thing.
+
 ## Matchup Notes
+- **vs. The Claw/Cruelclaw:** 1-0. Cruelclaw's menace requires TWO blockers — Eladamri's Call or early creature deployment is essential to stop the trigger engine. Lightning Greaves gives shroud, so removal must target Cruelclaw when Greaves moves to another creature (opponent will move Greaves for equip — that's the window). Pariah's Shield + Darksteel Plate on Wayta completely shuts down the deck: (1) combat damage never reaches player, so Cruelclaw's trigger never fires, (2) Scytheclaw's "loses half their life" also requires combat damage to a player. Without the trigger engine, The Claw has no card advantage and grinds to a halt. Star of Extinction + Blazing Sunsteel is the finisher through the lock. Key danger: sacrifice effects (Shadowgrange Archfiend, Flare of Malice) bypass indestructible and break the lock — race to the kill once lock is assembled.
 - **vs. Avatar Allies/Sokka:** 2-0 in the matchup. Sokka's menace prevents profitable blocking with a single reflector, forcing the deck to use removal (Swords, Path, Savage Twister) to clear Sokka repeatedly. Commander tax eventually prices Sokka out (5th cast = 12 mana). Key tactics: (1) Sequence protection BEFORE combo pieces — cast Heroic Intervention first for hexproof+indestructible, then Guilty Conscience. (2) Fiendlash on any creature turns Gideon's Sacrifice into a lethal counter — multiple damage sources = multiple triggers at POWER (not reflected amount). (3) Neyith is a strong backup equipment carrier — fight draws cards, reach blocks flyers, and she's a real body. (4) Don't underestimate chip damage from equipped creatures — even without Wayta's doubling, Sunsteel + Fiendlash on any creature creates dangerous reflection.
