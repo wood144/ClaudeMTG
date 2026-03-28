@@ -1,4 +1,6 @@
 # Squirrel Food / Chatterfang — Deck Primer
+> **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
+
 Commander: Chatterfang, Squirrel General | Colors: Black/Green (Golgari)
 
 ## Strategy Overview
@@ -45,6 +47,15 @@ BG Aristocrats/Token deck built around Food and Squirrel tokens. The deck genera
 
 ## Matchup Notes
 
+### vs. Bears / Ayula (Game 42)
+- **Result: Squirrel Food LOSS (T12, commander damage 22)**
+- Ayula's fight trigger is the primary problem. Once Ayula hits 4/4+ (just one bear ETB with counters), she one-shots Chatterfang (3 toughness). Every replacement creature met the same fate — Dreyleader fought, Fell Beast fought.
+- Chatterfang's forestwalk was unblockable (mono-green opponent) but only 3 damage per swing — too slow to race Ayula's snowball.
+- Chomping Changeling (Changeling = Bear) destroyed Underworld Connections AND triggered Ayula fight, a devastating two-for-one.
+- Drew zero removal all game (no Go for the Throat, no Bake into a Pie, no Meathook). Must mulligan aggressively for interaction against creature-heavy decks.
+- **Key takeaway:** Against Ayula, do NOT deploy Chatterfang until you can protect it or have removal for Ayula. A naked Chatterfang into a 4/4+ Ayula is just feeding the fight trigger.
+- **Key takeaway:** Tarrian's Journal and Endless Atlas were drawn but never cast — too slow when behind on board. Prioritize creatures and removal over card advantage when under pressure.
+
 ### vs. Cats / Mirri (Game 16)
 - **Result: Squirrel Food LOSS (T15, lethal combat)**
 - Felidar Retreat is the #1 threat — must remove it ASAP. Every landfall snowballs their board.
@@ -56,11 +67,30 @@ BG Aristocrats/Token deck built around Food and Squirrel tokens. The deck genera
 - **Mana counting lesson**: Double-check mana after casting. Miscounted available mana on T12 (claimed {B} open when tapped out), which affected planning.
 
 ### Deck Improvement Suggestions
-- **Lack of flying blockers/reach**: The deck has no way to block flyers. Consider adding Ishkanah, Grafwidow (reach + spider tokens) or Silklash Spider.
-- **Enchantment removal**: Spider Food is the only maindeck enchantment removal. Against Felidar Retreat, needed more answers. Consider Haywire Mite (artifact creature, sac to exile artifact/enchantment, gains life for Vito).
+- **Lack of flying blockers/reach**: 3 games now lost to flying damage with zero answers. Consider Ishkanah, Grafwidow (reach + spider tokens), Silklash Spider, or Hornet Queen (flying deathtouch tokens + Chatterfang doubles).
+- **Instant removal is thin**: Bake into a Pie ({2}{B}{B}) and Go for the Throat are the main creature removal. Against must-answer threats like Scion, drawing one of two cards isn't reliable. Consider Beast Within ({2}{G}, hits any permanent), Deadly Rollick (free with commander), or Assassin's Trophy ({B}{G}).
+- **Enchantment removal**: Spider Food is the only maindeck enchantment removal. Consider Haywire Mite (artifact creature, sac to exile artifact/enchantment, gains life for Vito).
 - **Board wipes needed earlier**: Kindred Dominance and Meathook Massacre are the main wipes but both are expensive. Consider Toxic Deluge ({2}{B}, pay life for -X/-X) — synergizes with Vito (if you gain life afterward).
 
 ## Game History
+
+### Game 36 (piloted by Claude): Squirrel Food/Chatterfang vs. Dargons/Scion (Human)
+**Result:** Claude loses T14 via commander damage (22). Final life: Claude 24, Human 37.
+
+**Key plays:**
+- T5: Chatterfang deployed. T7: Signet + Atlas + Dreyleader + Chatterfang attack for 3.
+- T9: Sol Ring + Cabbage Merchant + Academy Manufactor (from Atlas draw). Engine building.
+- T10: Scion → Scourge of Kher Ridges wiped all 3 creatures (4 damage to non-flyers). Chatterfang returned to command zone. Scion attacked for 6.
+- T11: Rebuilt with Nuka-Cola Vending Machine (non-creature, survives Scourge).
+- T12: Scion → Earthquake Dragon (10/10). 10 commander damage (total 16).
+- T13: Recast Chatterfang ({4}{G} with tax). Deployed engine pieces but no removal found.
+- T14: Scion → Atarka (6/4). 6 commander damage = 22 total, lethal.
+
+**Key lessons:**
+- **Bake into a Pie was bottomed during mulligan** — the only creature removal in reach all game. Go for the Throat never drawn either. Against Scion's toolbox, instant-speed removal is critical.
+- **Scourge of Kher Ridges is devastating.** Repeatable 2-damage sweep kills the entire token/creature strategy. Non-creature artifacts (Nuka-Cola, Atlas) survived — prioritize deploying these first against repeated sweepers.
+- **Commander tax spiral:** Chatterfang died T10, recast T13 for {4}{G}. If it died again, {6}{G} would have been near-uncastable. Protect Chatterfang or don't deploy into guaranteed board wipes.
+- **No flying defense again** (same as Games 16 and 24). Scion flies over everything. Deck desperately needs reach/flying blockers or more instant removal.
 
 ### Game 24 (piloted by Claude): Squirrel Food/Chatterfang vs. Fblthp (Human)
 **Result:** Claude loses T12 via Enter the Infinite → Thassa's Oracle. Final life: Claude 31, Human 40.

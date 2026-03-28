@@ -1,4 +1,6 @@
 # Boros Equipment — Deck Primer
+> **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
+
 Commander: Kellan, the Fae-Blooded // Birthright Boon | Colors: Red/White (Boros)
 
 ## Strategy & Key Cards

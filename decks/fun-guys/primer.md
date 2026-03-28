@@ -1,4 +1,6 @@
 # Fun Guys / Ghave — Deck Primer
+> **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
+
 Commander: Ghave, Guru of Spores | Colors: White/Black/Green (Abzan)
 
 ## Strategy & Combo Lines
@@ -97,7 +99,22 @@ Commander: Ghave, Guru of Spores | Colors: White/Black/Green (Abzan)
 - **Sokka tax doesn't matter when Katara can finish.** Removing Sokka twice bought tempo but Katara is an independent win condition via waterbend.
 - **No combo pieces drawn.** Again failed to assemble Parallel Lives / Ashnod's Altar / Zulaport. Need more card draw or tutors to find the combo.
 
+### Game 45 (as opponent): Dinosaur Eggs/Atla Palani (Claude) vs. Fun Guys/Ghave (Human)
+**Result:** Claude wins T8 (15 sides) via lethal combat. Claude 34, Human 16.
+- T6: Fungus Frolic (adventure) for 2 Saprolings. T8: Parallel Lives + Insidious Roots deployed.
+- T10: Ghave cast + Brightcap Badger + Slimefoot. Combo infrastructure online but no Ashnod's Altar or drain piece.
+- T11: Smart blocking — Saproling chumped Dino Token attacking the Siege (saved it at 1 counter), Ghave traded with Temple Altisaur (removed damage prevention).
+- T13: Opponent destroyed Parallel Lives with Thrashing Brontodon. Combo plan collapsed.
+- T15: Opponent's Atla + Marauding Raptor engine flipped Rampaging Brontodon (14/14 trample). 45 total power, lethal through any blocks.
+- **Closest outs (per Human):** Damnation, Glare of Subdual, Dictate of Erebos, Eldrazi Monument, or 2 tutors to find them. Closest was 4 draws away.
+
+**Key lessons:**
+- **Parallel Lives without protection is fragile.** A single Naturalize effect dismantles the combo plan. Consider holding Parallel Lives until Privileged Position or hexproof is available.
+- **Slimefoot alone isn't enough drain.** 1 damage per Sap death is too slow against a board generating 45 power. Need Zulaport/Blood Artist for the infinite loop.
+- **Atla + Palani's Hatcher + Marauding Raptor is a must-disrupt engine.** Each combat auto-flips a free creature with haste. Removing any one piece (especially Atla or Palani's Hatcher) breaks the chain. Prioritize removal on Atla.
+
 ## Matchup Notes
+- **vs. Dinosaur Eggs/Atla Palani (0-1):** Atla + Palani's Hatcher + Marauding Raptor = self-sustaining engine that flips free hasty creatures every combat. Remove Atla on sight. Damnation is the best answer — resets the entire Dino board. Dictate of Erebos punishes their Egg sacrifices. Parallel Lives needs protection before deploying (Privileged Position). Saproling chump blocks buy time but tramplers (Rampaging Brontodon, Trumpeting Carnosaur) push through regardless.
 - **vs. Scion of the Ur-Dragon:** Scion → Ureni blanks Path to Exile and black removal. Need exile effects that don't target (board wipes, sacrifice effects) or colorless removal.
 - **vs. Dicebots/Mr. House:** Agility Bobblehead + Saddle + Sword of Hours is a must-answer package (unblockable + growing counters = fast clock). Damnation before the pinger engine assembles.
 - **vs. Avatar Allies/Sokka (0-2):** Kill Munda's Vanguard on sight — cohort snowballs permanently. Sokka giving menace to all Allies makes chump blocking difficult (need 2 blockers per attacker). Deploy Privileged Position early to blank targeted removal and ETB damage (Momo). Board wipes are essential; 1/1 saprolings can't keep up with growing Allies. **Katara, Water Tribe's Hope is an independent win condition** — waterbend X sets all creatures to X/X, lethal with any board. Must remove Katara or keep opponent's creature count low. Razor Rings is efficient removal against our big creatures (softens for combat cleanup). Prioritize color fixing in opening hand — Ghave needs WBG and coming down late is often fatal.

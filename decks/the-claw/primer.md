@@ -1,4 +1,6 @@
 # The Claw! / Cruelclaw — Deck Primer (Opponent Notes)
+> **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
+
 Commander: The Infamous Cruelclaw | Colors: Black/Red (Rakdos)
 
 ## Strategy & Key Cards
@@ -63,8 +65,24 @@ Commander: The Infamous Cruelclaw | Colors: Black/Red (Rakdos)
 - **MVP loser: Crabomination** — stealing Wrathful Raptors removed a reflection piece. If it had been Shadowgrange Archfiend instead of Scytheclaw, the lock would have broken.
 - **Lesson:** Against Pariah's Shield + indestructible locks, combat damage triggers are completely dead. The deck needs sacrifice effects (Shadowgrange Archfiend, Flare of Malice) or artifact destruction (Megaton's Fate) to break the lock. Don't waste turns on combat damage angles (Scytheclaw) — every draw step matters when racing to find the out.
 
+### Game 40 (opponent): The Claw/Cruelclaw vs. Dargons/Scion (Claude)
+**Result:** Human wins T13 (13 sides). Human life 48, Claude life 19→dead. Dominance 3.
+- Cruelclaw deployed T5 with Rakdos Signet + Talisman of Indulgence for fast mana.
+- T7: First Cruelclaw connect → free Stuffy Doll (choosing Claude). Immediate recurring damage engine.
+- T9: Second connect → discarded Ancient Stone Idol, free Desolation Twin (10/10 + 10/10 token). Two massive bodies for one discard.
+- Mogis, God of Slaughter hardcast T9 — 2 damage per upkeep with no creatures to sac.
+- T12: Claude reanimated Scion with Resurrection, held 3 mana for Scion's copy ability.
+- T13: Shadowgrange Archfiend hardcast ({6}{B}) — ETB forced Claude to sac Scion (only creature). Claude activated Scion → Hellkite Overlord copy in response (dumping Hellkite to GY for future reanimate), but opponent gained 8 life (48). Lethal combat followed: Cruelclaw (3) + Desolation Twin (10) + Eldrazi Token (10) = 23 vs 19 life.
+- **MVP:** Cruelclaw — every connect generated massive value. Desolation Twin for one discard was the backbreaker.
+
+**Lessons:**
+- Cruelclaw didn't need evasion enablers this game — Scion deck had no early creatures to block menace.
+- 5-color mana base is inherently slow. Cruelclaw's T5 deploy + T7 first connect gave it a 2-turn head start on value generation.
+- Shadowgrange Archfiend as a finisher — forces sac of the only blocker then swings lethal. Strong closer.
+
 ## Matchup Notes
 - The Cruelclaw trigger engine is the primary win condition. Must answer the enablers (Lightning Greaves, Access Tunnel) not the commander itself (which has shroud).
 - **vs Boros Equipment:** Kellan's double strike makes commander damage lethal fast. Prioritize artifact/equipment removal over creature removal. Damnation doesn't answer equipment — need cards like Vandalblast, Shatterstorm, or targeted artifact destruction. Trailblazer's Boots is useless if opponent runs mostly basics early.
 - **vs Faeries/Tegwyll (0-1):** Faeries' flash package and dense counter suite completely lock Cruelclaw out without evasion enablers. Menace is insufficient — they have enough flying bodies to double-block. Damnation is double-edged (Tegwyll draws for each dead Faerie). DO NOT play monarch effects (Court of Ire) — flyers steal it trivially and the extra draws fuel their already-strong card advantage. Talion choosing 3 directly taxes Cruelclaw (MV 3, P 3, T 3). Must find evasion enablers or the game is unwinnable. Bontu's Monument + Deepfathom Skulker create an overwhelming value engine if left unchecked.
+- **vs Dargons/Scion (1-0):** 5-color mana base is too slow to establish blockers before Cruelclaw connects. Menace goes uncontested when opponent has no early creatures. Desolation Twin is a premium Cruelclaw flip — two 10/10s for one discard. Shadowgrange Archfiend is a strong closer: forces sac of their biggest creature, then swing lethal.
 - **vs Quit Hitting Yourself/Wayta (0-1):** Pariah's Shield + Darksteel Plate on any creature is a full lockout — combat damage triggers (Cruelclaw, Scytheclaw) are completely dead because damage never reaches the player. The lock must be broken with sacrifice effects (Shadowgrange Archfiend, Flare of Malice) or artifact destruction (Megaton's Fate), NOT more combat damage angles. Every draw step matters once the lock lands — Erebos draw is the best tool to dig for outs. Do NOT move Lightning Greaves off Cruelclaw unless absolutely necessary — it creates a removal window for instant-speed burn. Breath damage from Drakuseth is meaningless into indestructible + Pariah's Shield. Priority: find sacrifice/artifact removal before opponent finds their reflection finisher (Star of Extinction + Blazing Sunsteel = 40+ one-shot).

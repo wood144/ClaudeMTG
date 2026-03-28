@@ -1,4 +1,6 @@
 # Fblthp, the Lost — Deck Primer (Opponent Notes)
+> **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
+
 Commander: Fblthp, the Lost | Colors: Blue (Mono-U)
 
 ## Strategy & Combo Lines

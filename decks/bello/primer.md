@@ -1,4 +1,6 @@
 # Bello precon / Bello, Bard of the Brambles — Deck Primer
+> **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
+
 Commander: Bello, Bard of the Brambles | Colors: Red/Green (Gruul)
 
 ## Strategy Overview

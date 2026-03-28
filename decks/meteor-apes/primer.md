@@ -1,4 +1,6 @@
 # Meteor Apes / Roxanne, Starfall Savant — Deck Primer
+> **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
+
 Commander: Roxanne, Starfall Savant ({3}{R}{G}) | Colors: R/G (Gruul)
 
 ## Strategy & Combo Lines
@@ -86,7 +88,43 @@ Commander: Roxanne, Starfall Savant ({3}{R}{G}) | Colors: R/G (Gruul)
 - **Mill is dangerous for this deck.** Losing Aggravated Assault + Savage Beating + Relentless Assault to a single Glimpse effectively removes the combo finish. Consider Elixir of Immortality or similar GY-shuffle effects.
 - **Anzrag must be protected or cast with backup.** Getting countered was the deck's biggest setback — would have ended the game on the spot.
 
+### Game 37: Meteor Apes/Roxanne (Claude) vs. Mill/Steal/Wrexial (Human)
+**Result:** Claude wins T26 via combat damage (Port Razer extra combat into lethal). Comeback from 2-land screw and Imprisoned in the Moon.
+**Key plays:**
+- Mana-screwed on 2 Forests for turns 4-14. Worldly Tutor for Simian Spirit Guide enabled Gruul Cluestone T10, but opponent Narset's Reversal'd Safekeeping (protecting Cluestone from Boomerang), buffing Bloatfly Swarm and bouncing Cluestone. Devastating tempo swing.
+- T18: Roxanne finally cast. Imprisoned in the Moon immediately locked her down T19.
+- T20: Klauth's Will X=3 (both modes with commander on board) destroyed Imprisoned + Thran Dynamo + Misleading Signpost, freed Roxanne. Meteorite ETB killed Flopsie (3 KW damage + 2 ping = 5 on 5 toughness). Roxanne swung unblocked for 4.
+- T22: Deployed Hooting Mandrills (delve 5, exiling instants/sorceries to blank Wrexial) + Towering Gibbon (reach blocker). Gibbon blocked and killed Bloatfly Swarm in T23 combat (6 damage stripped all remaining counters → 0/0 died).
+- T24: Port Razer + Pulse of Murasa (gain 6 life, return Kogla). Heroic Intervention saved Port Razer from Wrexial block.
+- T26: Kogla ETB killed Mirko Vosk. Gearbane Orangutan destroyed Forger's Foundry. Full alpha strike: Roxanne + Port Razer + Gibbon = 14 + 2 Meteorite ping. Port Razer triggered extra combat for lethal.
+**Lessons:**
+- **Delving instants/sorceries to blank Wrexial is critical.** With no valid targets in GY, Wrexial's combat trigger does nothing.
+- **Meteorite mana doubling snowballs fast.** 4 Meteorites + Roxanne = 8 bonus mana per turn. Going from 2 Forests to 14 mana in a few turns.
+- **Klauth's Will with commander = best comeback card.** Both modes (damage + artifact/enchantment destruction) is a one-card board reset.
+- **Mirko Vosk milled 10+ cards in one hit.** Must be killed on sight — Kogla's fight ETB is perfect for this.
+- **Bloatfly Swarm's damage prevention makes combat math tricky.** Shrinking it with Meteorite pings + blocking with big creatures to strip counters is the correct approach. Accept the rad counters.
+
+### Game 43: Meteor Apes/Roxanne (Claude) vs. Faeries/Tegwyll (Human)
+**Result:** Human wins T15 via lethal flying combat (17 damage, exact lethal). Final life: Claude 0, Human 36. Dominance 2.
+
+**Key plays:**
+- T6: Roxanne cast while opponent tapped out. Meteorite ETB killed Cloud of Faeries (2/2 with lord). Good timing — free counters (Fierce Guardianship, Flare of Denial) can't hit creature spells.
+- T7: Eaten by Piranhas on Roxanne while tapped out. Roxanne became 1/1 Skeleton with no abilities. Meteorite engine offline for 4+ turns.
+- T8-T12: Drew 3 lure effects (Shinen, Roar of Challenge, Lure) but no removal or creatures to leverage them. Attempted Roar of Challenge on Roxanne to force Tegwyll block — caught that Tegwyll was tapped from attacking. Chip damage with 1/1 Roxanne + Shinen.
+- T12: Sheltered Thicket provided crucial 3rd green source for Silverback Elder.
+- T14: Opponent Snap'd Elder on upkeep (Alela token trigger). Recast Elder + Hajar → Elder trigger destroyed Eaten by Piranhas. Roxanne freed! But Snaremaster Sprite immediately tapped + stunned Roxanne.
+- T14 end step: Opponent flashed in Faerie Bladecrafter (via High Fae Trickster). Total air force = 17 flying damage = exact lethal.
+
+**Lessons:**
+- **Eaten by Piranhas / aura-based removal is devastating.** No enchantment removal in hand all game. Silverback Elder was the only answer found — and it required a 2-card combo (Elder + creature to trigger). Deck needs cheaper enchantment answers.
+- **Tapping out for Roxanne into open UB mana is dangerous.** Opponent had Eaten by Piranhas ready. Consider holding 2 mana for Heroic Intervention when casting Roxanne ({3}{R}{G} + {1}{G} = 7 mana minimum).
+- **Flash package + Trickster is oppressive.** Every end step they deploy threats. Gruul has no instant-speed interaction beyond protection spells.
+- **Flying remains the #1 weakness.** Zero flying/reach blockers drawn. 6 evasive flyers = unblockable lethal. Deck desperately needs reach creatures or damage-based sweepers drawn earlier.
+- **Summoning sickness check matters.** Almost declared attackers with freshly cast Elder + Hajar — caught by board state review.
+- **0 counterspells from Faeries this game** — won entirely on tempo, flash, and aura removal. Counter suite didn't even need to show up.
+
 ## Matchup Notes
+- **vs. Faeries/Tegwyll (0-1):** Tegwyll's deathtouch makes blocking dangerous, +1/+1 lord buffs all Faeries to survive Meteorite 2-damage pings (base 1/1 → 2/2). Flash package (High Fae Trickster, Alela, Snaremaster) deploys threats on end steps. **Priority:** don't tap out for Roxanne without protection mana. Eaten by Piranhas/aura removal shuts Roxanne down completely — need enchantment removal in hand or on board (Silverback Elder, Collective Resistance, Klauth's Will). **Snaremaster Sprite is a key tempo piece** — taps + stuns for 2 turns. **Air force snowballs fast** — 3-4 flyers by mid-game becomes 10+ damage/turn. Need Starstorm, Magmaquake, or Rolling Earthquake to sweep the board before it's too late.
 - **vs. Scion/Dargons (5-color dragons):** Opponent has a slow mana base but explosive turns with Scion activation combos. Rush Roxanne out and pressure before they stabilize. Watch for Scion → Atarka (double strike) or Scion → Ureni (protection). **Destroying color fixers (Arcane Signet, Chromatic Lantern) is game-winning** — without them, 5-color decks can't cast their commander. Watch for Virtue of Persistence (the enchantment half of Locthwain Scorn) as late-game reanimation threat.
-- **vs. Mill/Steal/Wrexial (Dimir mill):** Opponent mills aggressively to strip combo pieces and fuel Wrexial's GY-casting. Losing Aggravated Assault + Savage Beating + Relentless Assault to Glimpse the Unthinkable was devastating — consider GY protection (Elixir of Immortality?). **Wrexial has islandwalk** — Eluge puts flood counters on your lands making them Islands, so Wrexial becomes unblockable. Kill Eluge immediately (Meteorite pings are perfect for this). Heroic Intervention + sweeper is the best finisher against Dimir since they run few creatures. Anzrag is the best threat but MUST resolve — hold protection or bait the counterspell first.
+- **vs. Mill/Steal/Wrexial (Dimir mill):** Opponent mills aggressively to strip combo pieces and fuel Wrexial's GY-casting. **Delve away instants/sorceries from GY to blank Wrexial's trigger** — Hooting Mandrills is perfect for this. Wrexial has islandwalk — Eluge/Flood of Mars enable it, kill on sight. **Mirko Vosk is the scariest mill threat** — reveals until 4 lands, easily mills 10+ cards. Kill immediately (Kogla fights it cleanly). Bloatfly Swarm's damage prevention means combat shrinks it rather than killing it — accept rad counters to strip counters. **Imprisoned in the Moon on Roxanne is devastating** — Klauth's Will (both modes with commander) or Collective Resistance are the answers. Record: 2-1 (Claude wins Games 1, 37; Human wins Game 3/22).
 - **vs. Eldrazi/Zhulodok (colorless ramp):** Opponent ramps explosively into Zhulodok, then cascades 7+ MV colorless spells for 2 free permanents per cast. **Priority targets:** Forsaken Monument (mana + buff engine), Swiftfoot Boots (hexproof/haste enabler), mana rocks (Thran Dynamo, Mana Vault). Rush Roxanne and pressure life total before cascade chains start. **Critical weakness:** no exile effects in Gruul to answer indestructible threats (Ulamog, Blightsteel). Must kill before they resolve, or add non-destroy answers like Chaos Warp or Song of the Dryads.

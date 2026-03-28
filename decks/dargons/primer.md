@@ -1,4 +1,6 @@
 # Dargons / Scion of the Ur-Dragon — Deck Primer
+> **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
+
 Commander: Scion of the Ur-Dragon | Colors: WUBRG (5-color)
 
 ## Strategy & Combo Lines
@@ -50,7 +52,57 @@ Commander: Scion of the Ur-Dragon | Colors: WUBRG (5-color)
 - **Cascading Cataracts needs 6+ mana sources to activate ({5},{T}).** It's not a color fix when behind on mana.
 - Locthwain Scorn should have been held for a better window or a different target — Roxanne's protection suite (Tamiyo's, Heroic Intervention, etc.) is deep.
 
+### Game 36: Dargons/Scion (Human) vs. Squirrel Food/Chatterfang (Claude)
+**Result:** Human wins T14 via commander damage (22 ≥ 21). Final life: Human 37, Claude 24.
+
+**Key plays:**
+- T8: Scion cast on curve with 5-color mana (Command Tower, Path of Ancestry, Island, Maelstrom, Mountain + Birds) — all 5 colors without a single Forest.
+- T10: Scion → Scourge of Kher Ridges. Two activations of {1}{R} dealt 4 damage to all non-flyers, wiping Chatterfang, Honored Dreyleader, and The Cabbage Merchant. Then attacked for 6.
+- T12: Scion → Earthquake Dragon (10/10 flying trample) during combat for 10 commander damage (total 16).
+- T14: Scion → Atarka, World Render (6/4 flying trample). 6 commander damage (total 22) for the kill.
+
+**Notes:**
+- Human was mana flooded (2 lands in hand + 8-drop dragon) but Scion's toolbox kept the pressure up regardless.
+- Claude never found creature removal (Bake into a Pie bottomed in mulligan, Go for the Throat never drawn). Scion was vulnerable but never tested.
+- Human held a Forest in hand to play post-attack to give Chatterfang forestwalk defense via Earthquake Dragon's land-sac recursion — smart hedge that wasn't needed.
+
+**Dominance: 2** (hard-fought — Claude had engine pieces but Scourge wipe was the backbreaker)
+
+### Game 40: Dargons/Scion (Claude) vs. The Claw!/Cruelclaw (Human)
+**Result:** Human wins T13. Final life: Human 48, Claude 19→dead. Dominance 3.
+
+**Key plays:**
+- T4: Demonic Tutor → Arcane Signet for color fixing. Correct tutor target.
+- T8: Prismatic Omen + Arcane Signet online. All lands produce any color.
+- T10: Scion cast on curve (WUBRG via Prismatic Omen). But Cruelclaw already connected twice — free Stuffy Doll T7, free Desolation Twin (two 10/10s) T9.
+- T11: Blocked one 10/10 with Scion. Took 10 from the other (31→21). Scion to GY for reanimation.
+- T12: Resurrected Scion, activated → Hellkite Overlord to GY. But Shadowgrange Archfiend T13 forced sac of Scion, then lethal 23-damage swing.
+
+**Notes:**
+- No early creatures = Cruelclaw's menace was uncontested. Every connect generated massive value.
+- Mogis (2/turn) + Stuffy Doll (1/turn) added passive damage that compressed the clock.
+- Reanimation package (Resurrection, Dread Return, Dose of Dawnglow) was available but couldn't keep up with the sacrifice pressure.
+- Activating Scion → Hellkite in response to Shadowgrange was correct (dumped reanimate target) but the extra 4 life gain for opponent was irrelevant since combat was already lethal.
+
+### Game 44 (opponent): Dargons/Scion (Human) vs. Mill/Steal/Wrexial (Claude)
+**Result: Scion wins T11 via commander damage (24 CDMG, Atarka double strike combo). Scion 40, Wrexial 26. Dominance 3.**
+
+**Key plays:**
+- T3: Poison Dart Frog deployed. T5: Lotus Petal + Mountain + Forest + Blood Crypt + Frog = WUBRG. Scion T3 (turn cycle).
+- T7: Betor (5/7) deployed. Scion attacked for 4 CDMG. Betor end step drew a card (12 total toughness ≥ 10).
+- T9: Teneb deployed ({3}{W}{B}{G}). Scion + Betor attacked for 9 (4 CDMG + 5). Claude at 27, 8 CDMG.
+- T11: Earthquake Dragon cast for {G} (16 MV discount). Claude countered with Cancel. Then Scion → Atarka (double strike trigger) → second activation into big dragon. 16+ CDMG with double strike = 24 total CDMG. Lethal.
+
+**Key lessons:**
+- **Lotus Petal enables T3 Scion** — virtually unbeatable if opponent has no T1-2 counter.
+- **Earthquake Dragon as counter bait is a strong line.** Costs {G} with 3 dragons, draws out the only counter, then Scion's uncounterable activation finishes the game.
+- **Betor's card draw at 10+ toughness is trivially easy.** Scion + any dragon = 10+. Free card every end step.
+- **Teneb reanimates countered creatures.** Had Earthquake Dragon been needed, Teneb would have brought it back from GY after combat damage.
+
 ## Matchup Notes
+- **vs. Mill/Steal/Wrexial (1-0):** Dimir mill is too slow to interact with T3-5 Scion. Wrexial needs Scion's instants/sorceries in GY to steal — but Scion puts creatures in GY via activation (useless for Wrexial). Counter suite can't stop Scion's {2} activated ability. Earthquake Dragon at {G} baits counters. Teneb reanimates anything that gets countered. Betor's 10+ toughness draw is free with any 2 dragons. **Risk:** if game goes long, mill strips combo pieces from library. End it fast.
 - **vs. Ghave (Abzan tokens):** Kill The Mycotyrant early before token generation spirals. Scion → Ureni blanks all of Abzan's best removal (Path, Swords, black kill spells).
 - **vs. Dicebots (Mardu dice/tokens):** Deck has no flyers — Scion attacks freely. Ureni's top-8 trigger generates massive advantage. Locthwain Scorn is excellent early removal for their dice enablers (Wyll, Brazen Dwarf). Reanimation package (Coiling Rebirth, Virtue of Persistence) keeps dragon threats coming back.
+- **vs. Squirrel Food/Chatterfang (Golgari tokens):** Scourge of Kher Ridges is devastating — 2 damage to all non-flyers wipes their token/creature board while Scion flies over. Deck has limited removal for Scion (Bake into a Pie, Go for the Throat). Watch for Chatterfang's forestwalk if you control a Forest — avoid playing Forests unless needed. Earthquake Dragon recursion ({2}{G}, sac a land) can preemptively remove a Forest to turn off forestwalk.
+- **vs. The Claw!/Cruelclaw (Rakdos discard/reanimate, 0-1):** Cruelclaw deploys fast (T3-5) and menace goes uncontested since Scion deck has no early creatures. Every connect flips huge threats for free (Desolation Twin, Stuffy Doll). Need early interaction or blockers — Demonic Tutor for removal instead of mana fixing if Cruelclaw is already on board. Shadowgrange Archfiend is a brutal closer: forces sac of Scion then lethal swing. Prioritize artifact removal for Lightning Greaves and Access Tunnel. Consider holding Scion activation for defensive copy (Hellkite Overlord regenerate) rather than offensive.
 - **vs. Meteor Apes/Roxanne (Gruul extra combats):** Protect mana rocks at all costs — losing color fixers locks Scion out of the game. Roxanne generates massive value with Meteorite tokens (mana + pings) and chains extra combats via Port Razer. Need to land Scion before Roxanne + extra combat pieces come online. Locthwain Scorn is weak into their deep protection suite (Tamiyo's Safekeeping, Heroic Intervention, Collective Resistance, etc.).

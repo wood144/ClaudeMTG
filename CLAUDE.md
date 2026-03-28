@@ -32,13 +32,18 @@
 
 ## 🔍 RESOURCE LOOKUP
 
+### Live Board State
+- The tracker writes live game state to `game_live.txt`. **Read this file** whenever the user says "your turn," "your go," "updated," etc. Do NOT ask the user to paste board state.
+- Read `game_live.txt` at the start of every response during a game.
+
 ### Game Start Protocol
-1. **Card cache:** `node scripts/build-card-cache.js --check --deck "DeckName"`. If missing, run without `--check`.
-2. **Read** `assets/mechanical_checklist.md`.
-3. **Read deck primer:** `decks/<your-deck>/primer.md`. If none exists, create one.
-4. **Batch lookup** all hand cards + commander in ONE call, write to `game_current.md`.
-5. **Read** `game_current.md` at the start of each subsequent response.
-6. Only look up cards NEW since last read (newly drawn, newly visible).
+1. **Read `game_live.txt`** to identify decks, commanders, and opening hand.
+2. **Card cache:** `node scripts/build-card-cache.js --check --deck "DeckName"`. If missing, run without `--check`.
+3. **Read** `assets/mechanical_checklist.md`.
+4. **Read deck primer:** `decks/<your-deck>/primer.md`. If none exists, create one.
+5. **Batch lookup** all hand cards + commander in ONE call, write to `game_current.md`.
+6. **Read** `game_current.md` at the start of each subsequent response.
+7. Only look up cards NEW since last read (newly drawn, newly visible).
 
 ### Mid-Game Lookups
 - Unsure of a card's exact text? Look it up in `card_data.json` via Bash. Do not guess. Do NOT use Scryfall API.

@@ -1,4 +1,6 @@
 # Cats / Mirri — Deck Primer
+> **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
+
 Commander: Mirri, Weatherlight Duelist | Colors: Green/White (Selesnya)
 
 ## Strategy Overview
@@ -111,6 +113,20 @@ GW Cat tribal go-wide/go-tall deck. Mirri provides combat control — limits opp
 - T11: Mirri deployed + Shield of the Oversoul = 7/5 flying indestructible first strike. Dealt 7 commander damage.
 - T12: Honest Work neutered Feline Sovereign into a 1/1 mana dork. Lost lord effect and enchantment removal.
 - T14: Opponent's devastating turn — Boomerang Basics bounced Mirri (Shield to graveyard), Sokka's Charge gave all Allies double strike + lifelink, Path to Exile removed King of the Pride + Bronzehide Lion Aura. Three noncreature spells = 3 prowess triggers + 3 Ally tokens + 3 Whirlwind draws. Lethal alpha strike with 44 total damage.
+
+### Game 39 (piloted by Human): Cats/Mirri vs. Every Shrine Ever/Go-Shintai (Claude)
+**Result:** Claude wins T16 (sides 31) by concession. Shrine drain engine (Stone Fangs draining 7+/turn).
+- T3: Mirri cast. Early aggression with first strike pressure.
+- T5: Feline Sovereign cast but immediately Pathed — key loss of enchantment removal engine.
+- T6: Fumigate with Shielded by Faith on Mirri — wiped Claude's board while Mirri survived indestructible. Gained 5 life.
+- T9: Lightning Greaves equipped to Mirri. Shroud prevented Sanctum of Tranquil Light from tapping her.
+- T10: Rogue's Passage + Greaves shuffle attempted, but Claude tapped Mirri in response window when Greaves moved off.
+- T11: Arahbo deployed for lord effect + token generation. Pride Sovereign growing with Cat count.
+- T13: Pride Sovereign + Rogue's Passage = unblockable 8-10 damage per swing. Key threat.
+- T14: Aurora Awakener Vivid dumped 5 permanents including Shrine Steward → tutored Sanctum of Stone Fangs. Massive swing.
+- T15: Sanctum of Stone Fangs draining 7/turn. Go-Shintai blocking Mirri favorably (3/4 survives 3/2 first strike). Concession at drain 8 incoming.
+- **Rating:** 2 — Hard-fought but Claude took too long to use Sanctum of Tranquil Light's cheap tap ability aggressively. Should have tapped multiple attackers during upkeep with excess mana.
+- **Key lesson:** Greaves shroud blocks Rogue's Passage on equipped creature — Swiftfoot Boots (hexproof) would have allowed both.
 
 ### Game 16 (piloted by Human): Cats/Mirri vs. Squirrel Food/Chatterfang (Claude)
 **Result:** Human wins T15 via lethal combat damage.

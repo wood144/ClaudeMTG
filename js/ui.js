@@ -285,7 +285,7 @@ function tapFromCtx() {
 const COUNTER_TYPES = {
   'P/T': ['+1/+1', '-1/-1'],
   'Keyword': ['Flying', 'First Strike', 'Double Strike', 'Deathtouch', 'Trample', 'Vigilance', 'Lifelink', 'Reach', 'Hexproof', 'Menace', 'Haste', 'Indestructible', 'Flash', 'Ward'],
-  'Special': ['Charge', 'Chorus', 'Component', 'Energy', 'Experience', 'Finality', 'Flood', 'Fungus', 'Gold', 'Hour', 'Knowledge', 'Lore', 'Loyalty', 'Luck', 'Poison', 'Rad', 'Ribbon', 'Shield', 'Spore', 'Storage', 'Stun', 'Time'],
+  'Special': ['Charge', 'Chorus', 'Component', 'Defense', 'Energy', 'Experience', 'Finality', 'Flood', 'Fungus', 'Gold', 'Hour', 'Knowledge', 'Lore', 'Loyalty', 'Luck', 'Poison', 'Rad', 'Ribbon', 'Shield', 'Spore', 'Storage', 'Stun', 'Time'],
   'Status': ['Blight', 'Burden']
 };
 

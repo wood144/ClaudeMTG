@@ -1,4 +1,6 @@
 # Mill/Steal — Deck Primer
+> **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
+
 Commander: Wrexial, the Risen Deep ({3}{U}{U}{B}) | Colors: Blue/Black (Dimir)
 
 ## Strategy & Key Cards
@@ -60,8 +62,43 @@ Commander: Wrexial, the Risen Deep ({3}{U}{U}{B}) | Colors: Blue/Black (Dimir)
 - Flood of Mars enables islandwalk permanently via flood counters. One flood counter = Wrexial always unblockable.
 - Wrexial stealing opponent's best instants (Teferi's Protection) from their own graveyard is the deck's ultimate payoff. Mill quality interaction into the GY, then weaponize it.
 
+### Game 37 (Human): Mill/Steal (Human) vs. Meteor Apes/Roxanne (Claude)
+**Result:** Claude wins T26 via combat damage (Port Razer extra combat). Comeback from mana screw + Imprisoned in the Moon on Roxanne.
+**Key plays:**
+- T11: Narset's Reversal on Safekeeping (protecting Cluestone from Boomerang) — copied Safekeeping onto Bloatfly Swarm, bounced Cluestone. Triple value play that set Claude back 2+ turns on mana.
+- Bloatfly Swarm deployed T7 with 5 counters. Didn't attack until T15 — too passive? Earlier attacks would have pressured Claude's 2-land board harder.
+- T19: Imprisoned in the Moon locked down Roxanne. Dream Harvest exiled Claude's Flopsie and cast it, buffing all creatures with +1/+1 counters. Board looked dominant.
+- T20: Klauth's Will X=3 (both modes) destroyed Imprisoned + Thran Dynamo + Misleading Signpost. Roxanne freed, attacked, Meteorite killed Flopsie. Turning point.
+- Mirko Vosk milled ~15 cards from Claude's library but Claude delved instants/sorceries out of GY, blanking Wrexial's trigger completely.
+- T26: Kogla ETB killed Mirko. Port Razer extra combat provided lethal.
+**Lessons:**
+- **Bloatfly Swarm should attack earlier vs mana-screwed opponents.** 5 damage per turn when opponent has no flyers/reach is free pressure. Holding it back let Claude stabilize.
+- **Imprisoned in the Moon on Roxanne is the right play** but needs backup — enchantment destruction (Klauth's Will, Collective Resistance) exists in Gruul. Follow up with more pressure or hold counterspells.
+- **Delve blanks Wrexial.** Opponent exiling all instants/sorceries from their GY means Wrexial's combat trigger finds nothing. Consider GY hate (Tormod's Crypt) to exile their GY before they can delve selectively.
+- **Singularity Rupture would have been the correct play** — board wipe when opponent had 4 Meteorites + Roxanne doubling mana. Missing that window cost the game.
+- **Mana rocks got destroyed too easily.** Losing Thran Dynamo + Misleading Signpost + later Forger's Foundry to targeted destruction crippled mana development.
+
+### Game 44 (Claude): Mill/Steal/Wrexial (Claude) vs. Dargons/Scion (Human)
+**Result:** Human wins T11 via commander damage (Scion + Atarka double strike combo, 24 CDMG). Final life: Claude 26, Human 40. Dominance 3.
+
+**Key plays:**
+- T5: Scion cast off Lotus Petal + 4 sources = WUBRG on opponent's T3. Impossible to interact — no counters in hand, only 1 land on board.
+- T8: Water Crystal deployed. Discounted Cancel to {U}{U}, Memories Returning to {1}{U}{U}.
+- T9: Betor (5/7 flying) + Scion = 9 flying damage. Life 36 → 27. Teneb, the Harvester deployed.
+- T10: Memories Returning found Consuming Aberration + Mirko Vosk (opponent denied Ruin Crab + Talisman). Held up Cancel with {U}{U}.
+- T11: Earthquake Dragon cast for {G} (16 MV discount from 3 dragons). Countered with Cancel. Opponent then activated Scion → Atarka (double strike trigger) → second activation into big dragon = 16+ CDMG with double strike. 8 existing + 16 = 24 CDMG. Lethal.
+
+**Lessons:**
+- **Lotus Petal + mana dork = T3 Scion is unbeatable without a T1-2 counter.** Opening hands against Scion MUST have early interaction or the game is over before it starts. Mulligan aggressively for 1-2 mana counters (Arcane Denial, Drown in the Loch).
+- **One Cancel isn't enough.** Earthquake Dragon bait drew out the only counter, then Scion's activated ability (uncounterable by Cancel) delivered lethal. Need Stifle-type effects or removal for Scion itself.
+- **Drew 5 lands in first 8 cards.** Flood killed any chance of early development. Water Crystal T8 was 2 turns too late.
+- **Memories Returning is complex to resolve.** The pick order (caster first, opponent bottoms, caster picks, opponent bottoms, last to caster) needs to be communicated clearly. Good card advantage but slow at 4 mana.
+- **Scion's {2} activation can't be countered by normal counterspells.** Need Stifle, Trickbind, Tale's End, or just kill Scion before combat.
+- **Teneb + countered creatures = free reanimation.** Countering Earthquake Dragon put it in GY for Teneb to recur. Against Teneb, exile-based removal is better than counters.
+
 ## Matchup Notes
+- **vs Dargons/Scion (0-1):** Scion has islandwalk/swampwalk targets in Dimir (irrelevant — Scion flies). Scion's Atarka double strike combo is the primary kill condition — **cannot be stopped by counterspells** (activated ability). Need Stifle effects, instant-speed removal (Go for the Throat Scion before damage), or blockers. Lotus Petal / fast mana enables T3 Scion which is nearly unbeatable without early counters. **Teneb reanimates countered creatures** — exile removal preferred. Betor at 20+ total toughness untaps all creatures = no safe attack window. Earthquake Dragon costs {G} with 3 dragons on board. **Mulligan for early interaction aggressively.**
 - **vs non-U/B decks (no Islands/Swamps):** Wrexial's islandwalk/swampwalk is dead without land-type changers (Urborg, Spreading Seas, etc.). Same for Nemesis of Reason and N'ghathrod — menace alone isn't reliable evasion. Mulligan and early game should prioritize finding land-type enablers or lean on non-combat mill instead.
 - **vs Equipment/Voltron:** HIGH RISK to mill aggressively. Check for Mantle of the Ancients, Open the Vaults, or similar mass recursion before committing. Exile-based removal (Tormod's Crypt, Nihil Spellbomb) is essential.
 - **vs Boros Equipment specifically:** Sword of Once and Future grants pro U/B, making the creature untouchable. Prioritize removing equipment enablers (Puresteel Paladin, Sigarda's Aid) before they snowball.
-- **vs Meteor Apes/Roxanne (Gruul extra combats):** Mill is SAFE here — R/G has minimal GY recursion. Aggressive mill strips combo pieces (Aggravated Assault, Savage Beating, Relentless Assault, Anzrag). **Priority:** Eluge to enable islandwalk, then Wrexial to cast their spells. Roxanne's Meteorite engine is the real threat — each attack = 2 ping + ramp, and Roxanne doubling artifact token mana snowballs fast. **Counter Anzrag at all costs** — with Bloodscent/Lure effects it creates infinite combats. Stormtide Leviathan is the ultimate stabilizer (shuts down all ground attackers). Watch for Heroic Intervention + board wipe combos (Savage Twister, Starstorm).
+- **vs Meteor Apes/Roxanne (Gruul extra combats):** Mill is SAFE here — R/G has minimal GY recursion, BUT opponent can delve instants/sorceries to blank Wrexial. Aggressive mill strips combo pieces (Aggravated Assault, Savage Beating, Relentless Assault, Anzrag). **Imprisoned in the Moon on Roxanne is the best answer** — shuts down the Meteorite engine entirely. Back it up with counterspells or more pressure. **Attack with Bloatfly Swarm early** when opponent has no reach/flyers — don't hold it back. Roxanne's Meteorite engine snowballs exponentially (4 tokens = 8 bonus mana). **Klauth's Will is their best comeback card** — destroys enchantments + sweeps creatures. Counter it or keep Roxanne locked down. Port Razer + extra combats is the kill condition — prioritize removing it. Record: 1-2 (Human wins Game 3/22; Claude wins Games 1, 37).

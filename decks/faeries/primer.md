@@ -1,4 +1,6 @@
 # Faeries / Tegwyll, Duke of Splendor — Deck Primer
+> **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
+
 Commander: Tegwyll, Duke of Splendor | Colors: Blue/Black (Dimir)
 
 ## Strategy Overview
@@ -154,6 +156,24 @@ Stack lords (Tegwyll + Scion + Glen Elendra Liege) to make 1/1 tokens into 4/4 o
 - Opponent's Court of Ire/monarch was a gift — flyers steal monarchy trivially.
 - Flare of Denial counters ANY spell (not just noncreature). Keep this in mind for future games.
 
+### Game 43 (opponent): Faeries/Tegwyll (Human) vs Meteor Apes/Roxanne (Claude)
+**Result: Faeries wins T15 via lethal flying combat (17 exact). Faeries 36, Roxanne 0. Dominance 2.**
+
+**Key plays:**
+- T6: Roxanne cast while tapped out. Meteorite killed Cloud of Faeries (Tegwyll drew a card).
+- T7: Eaten by Piranhas on Roxanne — shut down Meteorite engine for 4+ turns. Key timing: cast while Claude tapped out.
+- T10-T12: High Fae Trickster flashed in end of T10, giving all spells flash. Alela flashed in end of T12 — token generation + goad engine online.
+- T14: Snap bounced Silverback Elder on Claude's upkeep (Alela token trigger). Claude recast Elder + Hajar to trigger Elder → destroyed Piranhas. Snaremaster Sprite immediately tapped + stunned the freed Roxanne.
+- T14 end step: Faerie Bladecrafter flashed in. Total air force = 17 = exact lethal.
+
+**Key lessons:**
+- **Eaten by Piranhas is the best answer to Roxanne.** Strips all abilities — no Meteorite generation, no mana doubling. Roxanne becomes a vanilla 1/1.
+- **Flash package won the game without a single counterspell drawn.** High Fae Trickster enabling sorcery-speed cards at flash was the backbone. Every end step deployed a threat.
+- **Snaremaster Sprite is premium tempo.** Tapping + stunning Roxanne right after she was freed was the nail in the coffin.
+- **Alela's goad forced Shinen to attack alone** — pulled it into a lethal block situation, removing Claude's only lure creature.
+- **1 card in hand by end of game** — flash deployment drains the hand fast. Need draw engines (Tegwyll death triggers, Nymris, Deepfathom Skulker) to sustain.
+
 ## Matchup Notes
+- **vs. Meteor Apes/Roxanne (1-0):** Roxanne's Meteorite ETB (2 damage) threatens Faerie tokens but with Tegwyll lord they survive at 2/2. **Eaten by Piranhas is the #1 answer** — strips Roxanne's abilities entirely. Flash in threats on end steps to dodge sorcery-speed interaction. Snaremaster Sprite locks down Roxanne for 2 turns. Gruul has very limited flying/reach blockers — air force is nearly unblockable. Watch for Starstorm/Magmaquake/Rolling Earthquake as board wipes. Silverback Elder destroys enchantments on creature cast trigger — remove it or bounce it before Elder can trigger.
 - **vs. Fblthp (0-1):** Fblthp combo is fast and resilient. Lab Maniac, Thassa's Oracle, and Jace are three independent win conditions — removing one isn't enough. Leyline of Anticipation enables instant-speed combo deployment. Priority targets to counter: Leveler/Mirror of Fate (library exile) > mana doublers > card draw. Faeries' dense counter suite is the primary defense but depletes quickly without draw engines online.
 - **vs. The Claw!/Cruelclaw (1-0):** Cruelclaw is helpless without evasion enablers. Flash creatures tap it down repeatedly. Talion choosing 3 taxes every Cruelclaw cast. Dense counter suite handles any hardcast threats. Deepfathom Skulker is the MVP draw engine. Monarch effects from opponent are free card advantage — flyers steal it trivially.

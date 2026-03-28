@@ -1,4 +1,6 @@
 # Eldrazi / Zhulodok — Deck Primer
+> **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
+
 Commander: Zhulodok, Void Gorger | Colors: Colorless
 
 ## Strategy & Combo Lines
@@ -59,7 +61,25 @@ Commander: Zhulodok, Void Gorger | Colors: Colorless
 - Ulamog's indestructible was unanswerable in Gruul — no exile effects available.
 - Mana Vault damage (1/turn when tapped) was minor but added up.
 
+### Game 38: Eldrazi/Zhulodok (Human) vs. Bears/Ayula (Claude)
+**Result:** Human wins T13 via lethal combat damage (Cicada 22/22 trample + Construct 7/7, concession).
+
+**Key plays:**
+- T5: Urza's Saga Chapter III tutored Sensei's Divining Top. Scavenger Grounds for Top filtering.
+- T9: Thran Dynamo deployed. Attacked with 4/4 Construct.
+- T10: Flashed in Zhulodok via Skittering Cicada on Claude's combat step, pumping Cicada to 8/8 (MV 6). Blocked and killed Balduvian Bears.
+- T11: Platinum Angel ({7}) double cascaded into Ornithopter of Paradise + Palladium Myr. Cicada pumped to 14/14 trample (+7+2+3). Attacked with Cicada + Construct for 21 damage.
+- T12: Claude's Roaming Throne (Bear type) triggered Ayula twice — fought and killed Platinum Angel. But Ulamog recovered to hand via Ugin's Labyrinth sacrifice.
+- T13: Ulamog ({11}) double cascaded into Expedition Map + Breaker of Armies. Cast trigger destroyed Ayula. Cicada pumped to 22/22 trample (+11+1+8). Lethal with Construct.
+
+**Key observations:**
+- Skittering Cicada is the real MVP — flash enabler turns the deck reactive AND each colorless cast pumps it into a massive trample threat.
+- Zuko's Exile at instant speed removed a 7/7 Ayula mid-combat, preventing 7 commander damage. Excellent timing.
+- Ugin's Labyrinth sacrifice to recover Ulamog after Platinum Angel died was a strong pivot.
+- Construct Token scales with every artifact cascaded — reached 7/7 by T13.
+
 ## Matchup Notes
 - **vs. Fblthp (blue combo):** Must hold interaction for combo turn. Race plan alone won't work — need exile/destroy effects for Hullbreaker Horror and removal for combo pieces.
 - **vs. Atla Palani (creature toolbox):** Steal effects are devastating — Atla Palani's sacrifice ability turns against the opponent. Flayer of Loyalties is the MVP.
 - **vs. Meteor Apes/Roxanne (Gruul aggro):** Opponent pressures early with Roxanne pings and combat damage. **Protect Forsaken Monument** — it's the #1 removal target. Swiftfoot Boots is also high priority for them to destroy. Gruul has NO exile effects, so Ulamog and other indestructible threats are unanswerable. Platinum Emperion locks out their damage plan entirely. Rush to Ulamog or Blightsteel for the win.
+- **vs. Bears/Ayula (mono-G aggro):** Bears can pressure early but lack interaction for the cascade engine. Ayula's fight trigger is the main threat to key pieces (killed Platinum Angel). Cicada flash + pump is the primary win condition — each cascade turn creates a massive trample attacker. Zuko's Exile and removal timing on Ayula is critical since she accumulates counters quickly with Kami of Whispered Hopes.

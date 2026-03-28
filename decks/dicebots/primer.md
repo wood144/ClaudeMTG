@@ -1,4 +1,6 @@
 # Dicebots / Mr. House — Deck Primer (Opponent Notes)
+> **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
+
 Commander: Mr. House, President and CEO | Colors: Red/White/Black (Mardu)
 
 ## Strategy & Key Cards
@@ -29,6 +31,17 @@ Commander: Mr. House, President and CEO | Colors: Red/White/Black (Mardu)
 - Mr. House never cast — game ended too fast.
 - **Lesson:** Deck struggled without early dice engine. Need to protect Wyll or have backup dice rollers early. No flying blockers = Scion flies over freely.
 
+### Game 41 (opponent): Dicebots/Mr. House vs. Every Shrine Ever/Go-Shintai (Claude)
+**Result:** Human wins T7 (sides 13) via concession. Dominant snowball — Mr. House + Wyll + Ancient Copper Dragon.
+- Sol Ring T1 into Arcane Signet = explosive start. Mr. House T3.
+- Hull Breach removed Mr. House T4, but recast T5 at commander tax with ease.
+- Wyll + Bobbleheads created a dice-rolling engine that scaled every trigger. Wyll grew to 8/8 by end.
+- Ancient Copper Dragon nat 20 = 20 Treasures. Game-ending resource explosion.
+- Inspiring Statuary + Treasure pile = cast anything. Earth-Cult Elemental forced a sac, Chaos Dragon added flying pressure.
+- Agility Bobblehead making Wyll + Earth-Cult unblockable was the kill — 14 unavoidable damage vs 5 life.
+- **Lesson:** Deck fires on all cylinders when Wyll survives. Ancient Copper Dragon is a must-answer threat — connecting once generates unrecoverable advantage.
+
 ## Matchup Notes
 - Token/pinger strategy is vulnerable to well-timed board wipes. Don't wait for the engine to assemble — wipe proactively.
 - **vs. Dargons/Scion:** No flying defense is a major problem. Scion copies 10/10 flyers for lethal commander damage. Need early pressure + removal for Scion before it snowballs. Reanimation (Coiling Rebirth, Virtue of Persistence) brings back dragons — exile-based removal preferred.
+- **vs. Every Shrine Ever/Go-Shintai:** Shrine deck is slow to set up. Aggro with unblockable Robots + Agility Bobblehead outraces the shrine engine. Ancient Copper Dragon + Wyll boosted rolls = Treasure avalanche. Only real out is Farewell — if shrine player sacs a land instead of a shrine to Earth-Cult Elemental, they don't have it.

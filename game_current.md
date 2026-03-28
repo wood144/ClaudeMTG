@@ -1,18 +1,21 @@
-# Game 34 — Dinosaur Eggs (Claude) vs. Cats (Human)
+# Game — Atla Palani vs Ghave
 
 ## Deck Info
-- **Claude:** Atla Palani, Nest Tender (Naya) — Dinosaur Eggs
-- **Opponent:** Mirri, Weatherlight Duelist (Selesnya) — Cats
+- **My deck:** Dinosaur Eggs (Atla Palani, Nest Tender) — Naya (RGW)
+- **Opponent:** Fun Guys (Ghave, Guru of Spores) — Abzan (WBG)
 
-## Turn Plan (updated T5)
-- **This turn:** Play Canopy Vista (tapped). Swing Raptor for 2. No other plays.
-- **Next opponent turn:** Opponent has 2 lands, could deploy a 2-drop or Mirri (3 mana next turn). No interaction available from us.
-- **My next turn (T7):** Cast Atla Palani for {R}{G}{W} (Raptor discount). 3 untapped lands cover it.
-- **Watch for:** Early Mirri (combat lockdown). Felidar Retreat. Cat lords. Removal on Marauding Raptor before Atla comes down.
+## Key Threats to Watch
+- Ghave + Parallel Lives + Ashnod's Altar + Zulaport Cutthroat = infinite drain
+- The Mycotyrant — snowball token generator
+- Aura Shards — every creature/token destroys an artifact/enchantment
 
-## Game Log
-- T1 (Claude): Mosswort Bridge (tapped, hideaway 4).
-- T2 (Opp): Fortified Village (untapped, revealed Forest).
-- T3 (Claude): Furycalm Snarl (untapped, revealed Canopy Vista). Cast Marauding Raptor.
-- T4 (Opp): Forest.
-- T5 (Claude): Canopy Vista (tapped). Drew Restless Ridgeline. Attack Raptor for 2.
+## My Gameplan
+- Ramp → Atla Palani → make Eggs → sacrifice Eggs → cheat big creatures
+- Marauding Raptor auto-kills Eggs if found
+- Ideal: Atla T4, start flipping T5+
+
+## Turn Plan (updated T7)
+- **This turn:** Atla Palani deployed. 1 mana open (Jetmir's Garden).
+- **Next opponent turn:** Opponent has 3 lands + Brightcap Badger castable from exile. Watch for Ghave (needs 5 mana — not yet). Saprolings could attack for 2.
+- **My next turn:** Make an Egg with Atla ({2}, tap), need a sac outlet or way to kill the Egg. Draw into Marauding Raptor ideal.
+- **Watch for:** Aura Shards (every creature destroys an artifact/enchantment), removal on Atla, Brightcap Badger giving hexproof.
