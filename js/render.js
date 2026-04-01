@@ -10,6 +10,7 @@ function render() {
   renderZoneCounts();
   renderPhase();
   renderDecks();
+  saveGameState();
 }
 
 function renderLifeTotals() {

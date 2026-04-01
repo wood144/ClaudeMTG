@@ -1116,6 +1116,23 @@ function exportDecks() {
   showToast('Saved! Place decks.json in your assets/ folder and commit it.', 'success');
 }
 
+// ─── NEW GAME ────────────────────────────────────────────────────────────────
+function newGame() {
+  if (!confirm('Start a new game? Current game state will be lost.')) return;
+  clearGameState();
+  for (const p of [state.me, state.opp]) {
+    p.life = 40; p.poison = 0; p.radiation = 0; p.experience = 0; p.speed = 0;
+    p.hand = []; p.battlefield = []; p.graveyard = []; p.exile = [];
+    p.library = []; p.commandZone = []; p.uidCounter = 0;
+  }
+  state.cmdDmg = { 'me-to-opp': 0, 'opp-to-me': 0 };
+  state.turn = 1; state.phaseIdx = 0; state.actionLog = [];
+  render();
+}
+
 // ─── INIT ─────────────────────────────────────────────────────────────────────
+if (loadGameState()) {
+  console.log('Game state restored from localStorage');
+}
 render();
 seedDecksFromFile();
