@@ -65,9 +65,23 @@ Commander: Kellan, the Fae-Blooded // Birthright Boon | Colors: Red/White (Boros
 - Skullclamp is a flexible answer to Darksteel Mutation on your own creatures (0/1 + 1/-1 = death, draw 2).
 - Bruenor's +2/+0 per equipment on ALL creatures makes the whole board threatening, not just the voltron target.
 
+### Game 47 (opponent): Boros Equipment (Human) vs. Fblthp (Claude)
+**Result:** Claude wins T19 via concession. Human 17 life, Claude 21.
+- Cid + Kellan applied strong early pressure (Claude 40→21 by T12). Kellan commander damage reached 8.
+- Sword of the Animist was milled by Kellan's surveil and never came online — critical loss of ramp engine.
+- T15: Cyclonic Rift overloaded wiped all nonland permanents. Protection from blue on Sword of Once and Future didn't help — overload doesn't target.
+- Attempted to re-equip Sword to Kellan T17 but Unsubstantiate bounced Kellan in response (equip hadn't resolved, so no protection yet).
+- Rhystic Study + Omniscience made replaying equipment punishing — pay {1} tax or give Claude free cards that cast for free.
+- T19: Hullbreaker Horror + Omniscience locked the board. No answer available.
+**Lessons:**
+- Sword protection from blue is NOT reliable vs overloaded Rift (no targeting) or bounce in response to equip (protection not yet granted).
+- Without Sword of the Animist ramp, the deck falls behind on mana and can't rebuild after a board wipe.
+- Against Omniscience + Rhystic Study, every recast is punishing. Need enchantment removal (Disenchant, Wear // Tear) to answer those engines.
+
 ## Matchup Notes
 - **vs Mill decks:** Mantle of the Ancients turns mill into a win condition. Hold Mantle and let them fill your GY. Cloudsteel Kirin prevents mill-out loss.
 - **vs Dimir (U/B):** Sword of Once and Future grants protection from both their colors. Near-total lockout on the equipped creature.
 - Bruenor + equipment + lifelink is a strong clock. Prioritize removing Bruenor or key equipment pieces early (when opposing).
 - **vs Rakdos (The Claw!):** Opponent lacks artifact removal. Damnation hurts but doesn't touch equipment. Rebuild with Kellan + Sword and voltron up. Commander damage is the fastest kill — double strike makes it 2-3 swings.
+- **vs Fblthp (Mono-U combo):** Kellan's early pressure is the best weapon — double strike + equipment stacks commander damage fast. Sword of the Animist is critical for ramp; without it, can't rebuild after board wipes. Protection from blue (Sword of Once and Future) is unreliable — overloaded Rift bypasses targeting, and bounce spells catch Kellan before equip resolves. Need to close the game before Omniscience or One with the Multiverse comes online. Hold Disenchant/Wear effects for enchantment-based engines.
 - **vs Fun Guys/Ghave (Abzan tokens/combo):** AURA SHARDS is the #1 threat — every creature/token ETB destroys an artifact or enchantment. If Aura Shards resolves with Ghave online, all equipment dies. Hold Disenchant/Deconstruction Hammer for it. Darksteel Mutation shuts down Kellan. Flying goes over saproling tokens. Equipment survives Damnation — rebuild faster. Race the infinite combo (Ghave + Parallel Lives + Ashnod's Altar + Zulaport). Be aggressive.

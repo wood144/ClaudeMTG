@@ -78,8 +78,23 @@ Commander: Zhulodok, Void Gorger | Colors: Colorless
 - Ugin's Labyrinth sacrifice to recover Ulamog after Platinum Angel died was a strong pivot.
 - Construct Token scales with every artifact cascaded — reached 7/7 by T13.
 
+### Game 46: Eldrazi/Zhulodok (Claude) vs. Meteor Apes/Roxanne (Human)
+**Result:** Claude wins T9 via concession. Opponent conceded facing 17/14 trample annihilator 2 Zhulodok + Ultima + cascade into Metalworker + Eye of Ugin.
+
+**Key plays:**
+- T1: Dream ramp — Ugin's Labyrinth (exile Conscription) + Sol Ring + Thought Vessel + World Map. 4 artifacts on board T1.
+- T3: Thran Dynamo deployed. Sacrificed World Map ({3} mode) to find Ancient Tomb.
+- T5: Zhulodok cast using Thran+Sol+Vessel, then tapped Labyrinth to return Conscription to hand. Opponent destroyed Thran Dynamo with Uktabi Orangutan.
+- T7: Attacked with Zhulodok (killed Uktabi in blocks). Scour from Existence ({7}) exiled opponent's Forest — cascade cascade hit Mystic Forge + Ultima, Origin of Oblivion. Ultima immediately doubled all colorless land mana, replacing the lost Thran Dynamo output.
+- T9: Eldrazi Conscription on Zhulodok ({8}) — cascade cascade into Metalworker + Eye of Ugin. 17/14 trample annihilator 2 with no answers available. Opponent conceded.
+
+**Key observations:**
+- Ugin's Labyrinth is the deck's best land. T1 exile → {C}{C}, then return the exiled bomb when ready to cast it. Sequencing the return on the same turn as Zhulodok deployment was key.
+- Ultima's mana doubling replaced Thran Dynamo's output immediately after it was destroyed — cascade backfilling ramp.
+- Opponent mana-screwed (1 land through T4, 3 lands by T8). Roxanne never cast.
+
 ## Matchup Notes
 - **vs. Fblthp (blue combo):** Must hold interaction for combo turn. Race plan alone won't work — need exile/destroy effects for Hullbreaker Horror and removal for combo pieces.
 - **vs. Atla Palani (creature toolbox):** Steal effects are devastating — Atla Palani's sacrifice ability turns against the opponent. Flayer of Loyalties is the MVP.
-- **vs. Meteor Apes/Roxanne (Gruul aggro):** Opponent pressures early with Roxanne pings and combat damage. **Protect Forsaken Monument** — it's the #1 removal target. Swiftfoot Boots is also high priority for them to destroy. Gruul has NO exile effects, so Ulamog and other indestructible threats are unanswerable. Platinum Emperion locks out their damage plan entirely. Rush to Ulamog or Blightsteel for the win.
+- **vs. Meteor Apes/Roxanne (Gruul aggro, 1-1):** Gruul has NO exile effects — indestructible threats are unanswerable. Protect Forsaken Monument (#1 removal target) and Swiftfoot Boots. Uktabi Orangutan / Silverback Elder destroy artifacts on ETB/cast — expect ramp to get picked off. Ultima's mana doubling is excellent cascade backfill if rocks die. Ugin's Labyrinth sequencing (exile a bomb T1, return it when ready to cast) is the deck's strongest opening. If Roxanne never lands, the game is effectively over — ramp past their curve and cascade to victory.
 - **vs. Bears/Ayula (mono-G aggro):** Bears can pressure early but lack interaction for the cascade engine. Ayula's fight trigger is the main threat to key pieces (killed Platinum Angel). Cicada flash + pump is the primary win condition — each cascade turn creates a massive trample attacker. Zuko's Exile and removal timing on Ayula is critical since she accumulates counters quickly with Kami of Whispered Hopes.

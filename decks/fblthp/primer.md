@@ -73,7 +73,20 @@ Commander: Fblthp, the Lost | Colors: Blue (Mono-U)
 - Patient play: waited until Claude tapped out T13, then Leveler (5 mana) + Oracle (2 mana) = 7 mana, clean combo kill.
 - Faeries applied 9 commander damage over the game but couldn't close before combo assembled.
 
+### Game 47 (piloted): Fblthp (Claude) vs. Boros Equipment/Kellan (Human)
+**Result:** Claude wins T19 via concession (Omniscience + Hullbreaker Horror lock). Final life: Claude 21, Human 17.
+- Kellan + Cid + equipment applied heavy pressure early — Claude went from 40 to 21 life by T12.
+- T13: Cresting Mosasaurus bounced all non-Dinosaurs. Lab Maniac deployed from library via One with the Multiverse.
+- T15: OwtM free-cast Omniscience from top of library. Overloaded Cyclonic Rift cleared opponent's entire board. Deployed Tidal Barracuda + Mm'menon + Silver Myr + Triskaidekaphile for free.
+- T17: Unsubstantiate cast from top of library (OwtM + flash from Barracuda) bounced Kellan in response to equip — denied Sword of Once and Future protection from blue.
+- T19: Jace -8 drew 7, found Hullbreaker Horror + Urza. Hullbreaker + Omniscience = every free spell bounces a permanent. Opponent conceded.
+**Lessons:**
+- Play lands from top of library (OwtM) before hand lands to clear bricks and maximize card selection.
+- Hullbreaker + Omniscience is an instant-lock — opponent cannot maintain a board.
+- Overloaded Cyclonic Rift bypasses protection from blue (no targeting). Unsubstantiate works before equip resolves.
+
 ## Matchup Notes
-- Faced four times as opponent (won all four) and once as pilot (lost). Multiple combo lines available — Leveler + Oracle is cheapest (7 mana), Enter the Infinite is late-game backup.
+- Faced four times as opponent (won all four), once as pilot (lost), once as pilot (won). Multiple combo lines available — Leveler + Oracle is cheapest (7 mana), Enter the Infinite is late-game backup.
 - **vs. Fun Guys/Ghave:** Aura Shards shuts down the artifact/enchantment mana engine entirely. Need to counter or bounce Aura Shards before deploying Extraplanar Lens/Gauntlet of Power. Bounce spells are temporary — Ghave decks have enough mana to replay threats immediately.
 - **vs. Squirrel Food/Chatterfang:** Golgari has no counterspells and limited artifact removal. Malcolm builds acorn counters freely against decks with no flyers. Mm'menon + Urza + One with the Multiverse create an unstoppable engine. Enter the Infinite doesn't even need hard-casting — Malcolm at 4 counters free-casts it off a loot.
+- **vs. Boros Equipment/Kellan:** Kellan's double strike + equipment stacks commander damage fast (8 by T12). Bounce spells (Snap, Unsubstantiate, Cyclonic Rift) are the key interaction — they strip equipment by returning the creature and force expensive re-equip. Sword of Once and Future's protection from blue is bypassed by overloaded Rift (no targeting) and by bouncing before equip resolves. One with the Multiverse into Omniscience is game-ending — Boros has no enchantment removal in hand typically. Rhystic Study taxes their rebuilds.
