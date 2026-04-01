@@ -9,7 +9,9 @@ Requires: pip install websockets
 """
 
 import asyncio
+import json
 import os
+import re
 import sys
 import tempfile
 from datetime import datetime
@@ -21,6 +23,7 @@ except ImportError:
     sys.exit(1)
 
 OUTPUT = os.path.join(os.path.dirname(__file__), '..', 'game_live.txt')
+LIBRARY_OUT = os.path.join(os.path.dirname(__file__), '..', 'claude_library.json')
 PORT = 8765
 
 
@@ -37,16 +40,35 @@ def write_atomic(path, content):
         raise
 
 
+def extract_library(message):
+    """Extract [[CLD_LIB|...]] from message, write to claude_library.json.
+    Returns message with the CLD_LIB line stripped."""
+    lines = message.split('\n')
+    clean = []
+    for line in lines:
+        m = re.match(r'^\[\[CLD_LIB\|(.+)\]\]$', line)
+        if m:
+            try:
+                lib = json.loads(m.group(1))
+                write_atomic(LIBRARY_OUT, json.dumps(lib, indent=2))
+            except (json.JSONDecodeError, TypeError):
+                pass  # skip bad data silently
+        else:
+            clean.append(line)
+    return '\n'.join(clean)
+
+
 async def handler(websocket):
     remote = websocket.remote_address
     print(f"[{datetime.now():%H:%M:%S}] Client connected from {remote}")
     try:
         async for message in websocket:
             timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            content = f"[LIVE UPDATE: {timestamp}]\n{message}"
+            stripped = extract_library(message)
+            content = f"[LIVE UPDATE: {timestamp}]\n{stripped}"
             write_atomic(OUTPUT, content)
             # Print a short summary
-            lines = message.strip().split('\n')
+            lines = stripped.strip().split('\n')
             header = lines[0] if lines else '?'
             print(f"[{timestamp}] {header}  ({len(message)} bytes)")
     except websockets.ConnectionClosed:

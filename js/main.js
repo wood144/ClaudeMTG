@@ -1011,6 +1011,7 @@ function generateBoardState() {
     `[[CLD|L:${o.life}|LIB:${o.library.length}|CMD:${fmtCmd(o.commandZone, true)}|CDMG:${state.cmdDmg['me-to-opp']}${o.poison ? '|PSN:'+o.poison : ''}${o.radiation ? '|RAD:'+o.radiation : ''}${o.experience ? '|EXP:'+o.experience : ''}${o.speed ? '|SPD:'+o.speed : ''}|GY:${fmtZone(o.graveyard, true)}|EX:${fmtZone(o.exile, true)}]]`,
     `[[CLD_H|${fmtZone(o.hand, true)}]]`,
     `[[CLD_BF|${fmtCldBF(o.battlefield)}]]`,
+    `[[CLD_LIB|${JSON.stringify(o.library.map(c => c.name))}]]`,
     `[[POOL:0]]`,
     `[[LOG]]`,
     ...logLines,
