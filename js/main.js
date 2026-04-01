@@ -896,6 +896,48 @@ async function loadDeckForPlayer(player) {
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
+// ─── REFRESH ART ─────────────────────────────────────────────────────────────
+async function refreshArt() {
+  // Collect every card object across all zones for both players
+  const allCards = [];
+  for (const p of ['me', 'opp']) {
+    for (const zone of ['hand', 'battlefield', 'graveyard', 'exile', 'commandZone', 'library']) {
+      if (state[p][zone]) allCards.push(...state[p][zone]);
+    }
+  }
+  if (allCards.length === 0) { alert('No cards loaded.'); return; }
+
+  // Unique names to re-fetch
+  const names = [...new Set(allCards.map(c => c.name))];
+
+  openModal(`<h2>Refreshing art...</h2><div id="load-progress" style="font-family:'Cinzel',serif;font-size:11px;color:var(--accent);margin-top:8px;">0 / ${names.length}</div>`);
+  const setP = t => { const el = document.getElementById('load-progress'); if (el) el.textContent = t; };
+
+  // Clear cache so we get fresh data
+  for (const key of Object.keys(cardCache)) delete cardCache[key];
+
+  // Re-fetch in batches
+  const BATCH = 4;
+  for (let i = 0; i < names.length; i += BATCH) {
+    const batch = names.slice(i, i + BATCH);
+    setP(`${i + batch.length} / ${names.length}`);
+    await Promise.all(batch.map(n => fetchCard(n)));
+    if (i + BATCH < names.length) await sleep(400);
+  }
+
+  // Update imageUri on every card object
+  for (const card of allCards) {
+    const data = cardCache[card.name] || cardCache[card.name.toLowerCase()];
+    if (data) {
+      card.data = data;
+      card.imageUri = getImageUri(data);
+    }
+  }
+
+  closeModal();
+  render();
+}
+
 // ─── BOARD STATE FOR CLAUDE ───────────────────────────────────────────────────
 function openBoardState() {
   const state_text = generateBoardState();
