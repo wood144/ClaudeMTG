@@ -1117,7 +1117,7 @@ function exportDecks() {
 }
 
 // ─── NEW GAME ────────────────────────────────────────────────────────────────
-function newGame() {
+async function newGame() {
   if (!confirm('Start a new game? Current game state will be lost.')) return;
   clearGameState();
   for (const p of [state.me, state.opp]) {
@@ -1128,6 +1128,38 @@ function newGame() {
   state.cmdDmg = { 'me-to-opp': 0, 'opp-to-me': 0 };
   state.turn = 1; state.phaseIdx = 0; state.actionLog = [];
   render();
+
+  const numDecks = state.decks.length;
+  if (numDecks === 0) return;
+
+  // Roll for Claude's deck
+  const rollClaude = Math.floor(Math.random() * 20) + 1;
+  const claudeIdx = rollClaude % numDecks;
+  state.selectedDeck = claudeIdx;
+  document.getElementById('dice-result').textContent = `Claude: d20 → ${rollClaude} → ${state.decks[claudeIdx].name}`;
+  renderDecks();
+  await loadDeckForPlayer('opp');
+
+  // Roll for Human's deck (re-roll if same deck)
+  let rollHuman, humanIdx;
+  do {
+    rollHuman = Math.floor(Math.random() * 20) + 1;
+    humanIdx = rollHuman % numDecks;
+  } while (humanIdx === claudeIdx && numDecks > 1);
+  state.selectedDeck = humanIdx;
+  document.getElementById('dice-result').textContent = `You: d20 → ${rollHuman} → ${state.decks[humanIdx].name}`;
+  renderDecks();
+  await loadDeckForPlayer('me');
+
+  // Roll for who goes first
+  const rollFirst = Math.floor(Math.random() * 2);
+  state.goingFirst = rollFirst === 0 ? 'me' : 'opp';
+  const firstLabel = state.goingFirst === 'me' ? 'You go first' : 'Claude goes first';
+  document.getElementById('dice-result').textContent = firstLabel;
+
+  state.selectedDeck = null;
+  render();
+  logAction(`New game: Claude → ${state.decks[claudeIdx].name}, You → ${state.decks[humanIdx].name}. ${firstLabel}.`);
 }
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
