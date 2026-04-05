@@ -54,6 +54,16 @@ GW Cat tribal go-wide/go-tall deck. Mirri provides combat control — limits opp
 - **Key lesson:** Don't tap out for development when opponent has cheap interaction. Holding {G}{W} for Bronzehide indestructible or mana for Clever Concealment is critical.
 - **Deck suggestion:** More instant-speed interaction (e.g., Heroic Intervention) would help against the blowout turn pattern of bounce + removal + alpha strike.
 
+### vs. Squirrel Food / Chatterfang (Game 51)
+- **Result: Cats LOSS (T14, commander damage — concession with lethal on board)**
+- Chatterfang forestwalk was unblockable the entire game (Temple Garden = Forest). No answer drawn.
+- Aura Shards destroyed Sol Ring and Food tokens but couldn't stop the creature-based engine.
+- Brimaz died T9 to Savor + Chatterfang sac combo. Lost the token generator early.
+- Adept Watershaper's indestructible-for-tapped-creatures protected Mirri but didn't matter — forestwalk bypasses blockers entirely.
+- The Odd Acorn Gang's Squirrel pump pushed Chatterfang to 6/6+ for commander damage kills.
+- **Key lesson:** Deck needs instant-speed answers to forestwalk/evasion commanders. Path to Exile or Swords to Plowshares on Chatterfang would have shut down the entire gameplan. Time of Need T12 for Arahbo was too slow — should tutor for removal or a creature with removal ETB.
+- **Key lesson:** Mirri's tapped restriction (1 attacker) slowed Claude but didn't stop forestwalk. Need removal, not just combat tricks.
+
 ### vs. Squirrel Food / Chatterfang (Game 16)
 - **Result: Cats WIN (T15, combat damage)**
 - Felidar Retreat + Skyknight Squire was the game. Skyknight grew to 10/10 flying.
@@ -127,6 +137,15 @@ GW Cat tribal go-wide/go-tall deck. Mirri provides combat control — limits opp
 - T15: Sanctum of Stone Fangs draining 7/turn. Go-Shintai blocking Mirri favorably (3/4 survives 3/2 first strike). Concession at drain 8 incoming.
 - **Rating:** 2 — Hard-fought but Claude took too long to use Sanctum of Tranquil Light's cheap tap ability aggressively. Should have tapped multiple attackers during upkeep with excess mana.
 - **Key lesson:** Greaves shroud blocks Rogue's Passage on equipped creature — Swiftfoot Boots (hexproof) would have allowed both.
+
+### Game 51 (piloted by Human): Cats/Mirri vs. Squirrel Food/Chatterfang (Claude)
+**Result:** Claude wins T14 via commander damage (concession). Final life: Claude 34, Human 18.
+- T6: Brimaz deployed (3 lands, tapped out). T8: Aura Shards + Brimaz attack (destroyed Sol Ring via Cat token ETB).
+- T9: Brimaz killed by Savor + Chatterfang sac. Lost primary token engine.
+- T10: Mirri + Adept Watershaper deployed. Mirri attacked for 3.
+- T12: Time of Need tutored Arahbo. Mirri attacked for 3. But Chatterfang forestwalk dealing 4-7 per swing was outpacing Mirri's 3.
+- T13: Concession with Claude at 13 commander damage and lethal guaranteed next turn.
+- **Rating:** 2 — Hard-fought, drew no removal for Chatterfang despite running Path/Swords.
 
 ### Game 16 (piloted by Human): Cats/Mirri vs. Squirrel Food/Chatterfang (Claude)
 **Result:** Human wins T15 via lethal combat damage.

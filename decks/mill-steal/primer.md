@@ -96,7 +96,25 @@ Commander: Wrexial, the Risen Deep ({3}{U}{U}{B}) | Colors: Blue/Black (Dimir)
 - **Scion's {2} activation can't be countered by normal counterspells.** Need Stifle, Trickbind, Tale's End, or just kill Scion before combat.
 - **Teneb + countered creatures = free reanimation.** Countering Earthquake Dragon put it in GY for Teneb to recur. Against Teneb, exile-based removal is better than counters.
 
+### Game 49 (Human): Mill-Steal/Wrexial (Human) vs. Bears/Ayula (Claude)
+**Result:** Human wins T24 via concession. Final life: Human 32, Claude 23. Dominance 2.
+**Key plays:**
+- T8: Stasis Field locked Ayula. Claude's Snakeskin Veil countered by Negate — 2-for-1.
+- T12: Wrexial cast off 6 mana (Sapphire Medallion discount). Forced Claude to chump block every turn to prevent GY steal trigger.
+- T15: Saw It Coming (foretold) countered Ayula's third cast attempt. Commander tax spiraled to +{8}.
+- T20: Memories Returning found Stormtide Leviathan. Magic Mirror at 2 knowledge counters providing exponential draw.
+- T22: Stormtide Leviathan deployed. All lands became Islands — Wrexial permanently unblockable, bears locked out of combat.
+- T23: Narset's Reversal on own kicked Maddening Cacophony — milled 27, kept Cacophony in hand. Milled both of Claude's outs (Boseiju, Chomping Changeling).
+- T24: Bloatfly Swarm + Wrexial + Stormtide = 18 unblockable damage available. Concession.
+**Lessons:**
+- **Stormtide Leviathan is the ultimate lock vs mono-G.** No flying, no islandwalk = can't attack. All lands become Islands = Wrexial permanently unblockable. Deploy it when you have board control.
+- **Foretelling counters is strong.** Saw It Coming foretold T14, cast for {1}{U} T15 — left mana for development while still holding interaction.
+- **Stasis Field + Negate is a devastating combo.** Lock down commander, counter the protection spell. Forces opponent to spend removal on their own enchantment (Beast Within).
+- **Narset's Reversal on your own spells is premium value.** Copy the kicked Cacophony, return original to hand for later. Two half-library mills from one card.
+- **Wrexial GY steal forces awkward blocks.** Claude had to sacrifice Werebear, Pest token, Kami, and Ayula just to prevent Beast Within being cast from their own GY.
+
 ## Matchup Notes
+- **vs Bears/Ayula (1-0):** Mono-G has no counterspells and limited removal. Counter Ayula aggressively — each recast adds +{2} tax, quickly becomes uncastable. Stasis Field / Witness Protection are better than killing her (no command zone redirect, no tax increase, permanent lockout). Stormtide Leviathan is game-ending — bears have no flying or islandwalk. Mill is safe here — bears have minimal GY recursion (only Mother Bear). Wrexial steals their fight spells and Beast Within from GY. Bloatfly Swarm flies over everything.
 - **vs Dargons/Scion (0-1):** Scion has islandwalk/swampwalk targets in Dimir (irrelevant — Scion flies). Scion's Atarka double strike combo is the primary kill condition — **cannot be stopped by counterspells** (activated ability). Need Stifle effects, instant-speed removal (Go for the Throat Scion before damage), or blockers. Lotus Petal / fast mana enables T3 Scion which is nearly unbeatable without early counters. **Teneb reanimates countered creatures** — exile removal preferred. Betor at 20+ total toughness untaps all creatures = no safe attack window. Earthquake Dragon costs {G} with 3 dragons on board. **Mulligan for early interaction aggressively.**
 - **vs non-U/B decks (no Islands/Swamps):** Wrexial's islandwalk/swampwalk is dead without land-type changers (Urborg, Spreading Seas, etc.). Same for Nemesis of Reason and N'ghathrod — menace alone isn't reliable evasion. Mulligan and early game should prioritize finding land-type enablers or lean on non-combat mill instead.
 - **vs Equipment/Voltron:** HIGH RISK to mill aggressively. Check for Mantle of the Ancients, Open the Vaults, or similar mass recursion before committing. Exile-based removal (Tormod's Crypt, Nihil Spellbomb) is essential.

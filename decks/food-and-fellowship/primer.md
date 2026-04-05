@@ -29,5 +29,21 @@ Commander: Food and Fellowship | Colors: White/Black/Green (Abzan)
 
 **No summoning sickness or major rules mistakes this game.**
 
+### Game 52: Food and Fellowship/Frodo+Sam (Human) vs. Eldrazi/Zhulodok (Claude)
+**Result:** Human wins T12 (12 sides) via lethal combat damage. Human 50, Claude -4. Dominance 3.
+
+**Key plays:**
+- T4: Sam deployed. Food engine online immediately.
+- T8: Pippin → Merry chain. Merry makes Soldiers off artifact ETBs. Board width exploding.
+- T10: Fell the Mighty targeting Sam (power 2) — surgical wipe cleared 7-power Zhulodok while preserving entire board.
+- T12: Motivated Pony (haste) + Food trigger = +3/+3 anthem to all attackers. 7 creatures swung for 32 lethal against 28 life.
+
+**Key observations:**
+- Food engine (Sam) + Merry (Soldiers off artifacts) + Frodo (card draw when 3+ life gained) = snowballing advantage every combat.
+- Motivated Pony is the closer — haste + guaranteed +3/+3 with Sam's Food.
+- Pippin's 4-Food activation (+3/+3 haste to others) was one turn away from being online — would have been +6/+6 with Pony.
+- Ring tempted 3 times by T12: Frodo was unblockable by power >1, looting on attack, and forcing sacs on damage.
+
 ## Matchup Notes
+- **vs. Eldrazi/Zhulodok (1-0):** Eldrazi needs Zhulodok online to function — without cascade the hand is full of uncastable 7+ MV spells. Fell the Mighty is perfect since our creatures are low-power. Go wide fast, Food engine keeps life high and Frodo drawing. Motivated Pony closes. Don't let them reach cascade turns — pressure early and hold Fell the Mighty / removal for Zhulodok.
 - **vs. Fblthp (blue combo):** Fblthp has 3 library removers (Enter the Infinite, Leveler, Mirror of Fate) and 3 empty-library wins (Thassa's Oracle, Laboratory Maniac, Jace Wielder of Mysteries) + backup Triskaidekaphile. Answering one win condition isn't enough — they hold all three post-Enter the Infinite. Need planeswalker removal and artifact removal for mana doublers. Proper Fblthp play is Teferi/Tidal Barracuda BEFORE combo to cut instant-speed interaction.

@@ -56,6 +56,17 @@ BG Aristocrats/Token deck built around Food and Squirrel tokens. The deck genera
 - **Key takeaway:** Against Ayula, do NOT deploy Chatterfang until you can protect it or have removal for Ayula. A naked Chatterfang into a 4/4+ Ayula is just feeding the fight trigger.
 - **Key takeaway:** Tarrian's Journal and Endless Atlas were drawn but never cast — too slow when behind on board. Prioritize creatures and removal over card advantage when under pressure.
 
+### vs. Cats / Mirri (Game 51)
+- **Result: Squirrel Food WIN (T14, commander damage — concession with lethal on board)**
+- Chatterfang forestwalk was the game. Temple Garden = Forest, so Chatterfang was unblockable from deployment onward.
+- Savor + Chatterfang sac ability killed Brimaz T9 (Savor -2/-2 → sac 2 Squirrels for +2/-2 → 0 toughness). Clean removal combo.
+- The Odd Acorn Gang was the closer: Squirrel pump ability (+2/+2 per Squirrel tap) pushed Chatterfang to 6/6 for lethal commander damage. Combat damage draw trigger kept hand fueled.
+- Aura Shards destroyed Sol Ring and Food tokens — hurts the artifact-heavy engine. Prioritize enchantment removal (Spider Food) if drawn.
+- **Error: Chatterfang should have been T2 play** (Forest + Sol Ring = {2}{G}). Deployed Honest Rutstein instead for cost reduction. Lost 2 turns of unblockable pressure. Always deploy forestwalk commander when opponent controls a Forest.
+- **Error: T5 missed attack with Rutstein** (no summoning sickness, free 3 damage).
+- **Error: T7 bad damage assignment** — ordered Brimaz first, left 1/1 Cat alive. Kill what you can kill.
+- Adept Watershaper (indestructible for tapped creatures) protected Mirri when tapped but didn't affect the forestwalk gameplan.
+
 ### vs. Cats / Mirri (Game 16)
 - **Result: Squirrel Food LOSS (T15, lethal combat)**
 - Felidar Retreat is the #1 threat — must remove it ASAP. Every landfall snowballs their board.
@@ -73,6 +84,22 @@ BG Aristocrats/Token deck built around Food and Squirrel tokens. The deck genera
 - **Board wipes needed earlier**: Kindred Dominance and Meathook Massacre are the main wipes but both are expensive. Consider Toxic Deluge ({2}{B}, pay life for -X/-X) — synergizes with Vito (if you gain life afterward).
 
 ## Game History
+
+### Game 51 (piloted by Claude): Squirrel Food/Chatterfang vs. Cats/Mirri (Human)
+**Result:** Claude wins T14 via commander damage (concession with lethal on board). Final life: Claude 34, Human 18.
+
+**Key plays:**
+- T1: Forest + Sol Ring. T3: Swamp + Honest Rutstein (cost reducer). T5: Forest + Camellia + Birds of Paradise.
+- T7: Phyrexian Tower + Pippin + Chatterfang ({1}{G} reduced). Attacked with Rutstein + Camellia for 6 (Rutstein died to Brimaz block).
+- T9: Pippin Food → Chatterfang Squirrel. Savor on Brimaz (-2/-2 → 1/2) + Chatterfang sac 2 Squirrels (+2/-2 → 3/0, dead). Chatterfang + Camellia swung 6 unblockable.
+- T11: Forage pumped Squirrel + Chatterfang. Chatterfang 4/4 forestwalk + Camellia 3/3 menace = 7 unblockable.
+- T13: The Odd Acorn Gang deployed. Squirrel tap pumped Chatterfang to 6/6. 6 commander damage (13 total). Drew Syr Ginger off combat trigger. Concession with lethal next turn.
+
+**Key lessons:**
+- Chatterfang should have been T2 (Forest + Sol Ring). Lost 2 turns of forestwalk pressure.
+- Missed Rutstein attack T5. Don't leave damage on the table.
+- Bad damage assignment T7. Kill the token, not wound the unkillable.
+- Cast Syr Ginger T13 with lethal on board — should hold for wipe recovery and keep 2 mana for forage.
 
 ### Game 36 (piloted by Claude): Squirrel Food/Chatterfang vs. Dargons/Scion (Human)
 **Result:** Claude loses T14 via commander damage (22). Final life: Claude 24, Human 37.

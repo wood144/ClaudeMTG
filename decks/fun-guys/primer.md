@@ -113,9 +113,28 @@ Commander: Ghave, Guru of Spores | Colors: White/Black/Green (Abzan)
 - **Slimefoot alone isn't enough drain.** 1 damage per Sap death is too slow against a board generating 45 power. Need Zulaport/Blood Artist for the infinite loop.
 - **Atla + Palani's Hatcher + Marauding Raptor is a must-disrupt engine.** Each combat auto-flips a free creature with haste. Removing any one piece (especially Atla or Palani's Hatcher) breaks the chain. Prioritize removal on Atla.
 
+### Game 48 (piloted): Fun Guys/Ghave (Claude) vs. Eldrazi/Zhulodok (Human)
+**Result:** Human wins T13 (13 sides) via concession facing lethal board. Claude 1 life, Human 35.
+
+**Key plays:**
+- T2: Skullclamp deployed. T4: Blood Artist deployed.
+- T8: Ghave cast on curve (5 mana). But opponent already had Mystic Forge + Zhulodok online.
+- T9: Opponent cast Kozilek ({10}) — drew 4 first (knew top card was cheap via Mystic Forge), then double cascade hit Sensei's Divining Top + Platinum Angel. Zhulodok attacked, Pallid Mycoderm traded.
+- T10: Ghave deployed but immediately facing Kozilek + Zhulodok + Platinum Angel.
+- T11: Opponent deployed Metalworker + Lightning Greaves + Bane of Bala Ged. Annihilator 4 + exile 2 = 6 permanents gone. Ghave traded with Bane (only removal option through shroud). Took 12 from Kozilek.
+- T13: Cityscape Leveler cast trigger killed Blood Artist, cascade into Scour exiled last land. Full board attack for 31 to 1 life. Concession.
+
+**Key lessons:**
+- **Mystic Forge is must-answer in Eldrazi.** It gives perfect top-deck information, enabling optimal cascade sequencing (draw cheap cards off top first, then cascade into bigger hits). Stroke of Midnight or Aura Shards needed early.
+- **Platinum Angel blanks the entire combo win condition.** Blood Artist / Zulaport drain is useless while Platinum Angel is on the field. Must have removal ready (Swords, Path, Stroke) before attempting combo.
+- **T1 Sol Ring + Mana Vault into 4-drop is backbreaking.** Eldrazi's ramp is 2-3 turns ahead. Need early interaction or aggressive mulligans for ramp.
+- **No white mana until T8.** 3 lands in opener with 2 Swamps + Forest meant Ghave was stranded for 4 turns. Consider mulliganing hands without white access even with 3 lands.
+- **Annihilator + exile effects compound devastatingly.** Bane of Bala Ged's exile (not sacrifice) means tokens can't absorb it. Removing Bane was correct even at the cost of Ghave.
+
 ## Matchup Notes
 - **vs. Dinosaur Eggs/Atla Palani (0-1):** Atla + Palani's Hatcher + Marauding Raptor = self-sustaining engine that flips free hasty creatures every combat. Remove Atla on sight. Damnation is the best answer — resets the entire Dino board. Dictate of Erebos punishes their Egg sacrifices. Parallel Lives needs protection before deploying (Privileged Position). Saproling chump blocks buy time but tramplers (Rampaging Brontodon, Trumpeting Carnosaur) push through regardless.
 - **vs. Scion of the Ur-Dragon:** Scion → Ureni blanks Path to Exile and black removal. Need exile effects that don't target (board wipes, sacrifice effects) or colorless removal.
 - **vs. Dicebots/Mr. House:** Agility Bobblehead + Saddle + Sword of Hours is a must-answer package (unblockable + growing counters = fast clock). Damnation before the pinger engine assembles.
 - **vs. Avatar Allies/Sokka (0-2):** Kill Munda's Vanguard on sight — cohort snowballs permanently. Sokka giving menace to all Allies makes chump blocking difficult (need 2 blockers per attacker). Deploy Privileged Position early to blank targeted removal and ETB damage (Momo). Board wipes are essential; 1/1 saprolings can't keep up with growing Allies. **Katara, Water Tribe's Hope is an independent win condition** — waterbend X sets all creatures to X/X, lethal with any board. Must remove Katara or keep opponent's creature count low. Razor Rings is efficient removal against our big creatures (softens for combat cleanup). Prioritize color fixing in opening hand — Ghave needs WBG and coming down late is often fatal.
+- **vs. Eldrazi/Zhulodok (0-1):** Mystic Forge is the #1 removal target — it gives perfect cascade sequencing. Platinum Angel blanks the entire Blood Artist/Zulaport drain combo; must have removal (Swords, Path, Stroke of Midnight) before committing to combo. Annihilator 4 + Bane of Bala Ged exile triggers compound to strip 6 permanents per attack — wide boards of saprolings help absorb annihilator but not exile. Eldrazi ramp (Sol Ring + Mana Vault + Metalworker) can deploy Zhulodok T5-7; need early interaction or accept being on the back foot. Damnation is premium — resets their expensive board. Aura Shards with saprolings can dismantle their artifact ramp.
 - **vs. Boros Equipment/Kellan:** Aura Shards is the MVP — every saproling made destroys an equipment. Deploy it before Kellan assembles voltron. Expect Birthright Boon T2 tutoring Sword of the Animist. Equipment survives Damnation so prioritize Aura Shards / Stroke of Midnight over board wipes. Kellan's double strike + flying equipment can go over saproling tokens. Darksteel Mutation on Kellan works but beware Skullclamp (kills 0/1 mutated creature, draws 2, commander returns). Foundry Inspector + Bruenor is the explosive engine — disrupt early or they deploy 3+ equipment per turn. Haystack gives repeatable phasing protection — remove it or use removal BEFORE it resolves. Race to combo if they're ramping faster.

@@ -26,13 +26,17 @@ Most importantly take your time.  Magic is a complex game with many variables an
   handle your upkeep triggers and consult you only if a decision is required.
 
 CARD IDENTIFICATION — IMPORTANT:
-  Each card in your hand and on your battlefield is assigned a unique ID [#X]
-  by the tracker (visible in the board state). My hand is hidden, so when you
-  play or reference any card from your hand, you MUST use its ID AND name:
-    Correct:   Casting [#4] Sol Ring ({1}). Any responses?
-    Incorrect: Casting Sol Ring. Any responses?
-  For cards already on the battlefield (visible to both players), the name
-  alone is sufficient. Always include the ID when a card leaves your hand.
+  Each card in your hand is assigned a unique ID [#X] by the tracker.
+  When you play or reference any card FROM HAND, use ONLY the [#N] ID:
+    Correct:   Cast [#4] for {1}. Checking responses — 3 mana open. Response?
+    Correct:   Play [#7].
+    Incorrect: Casting Sol Ring.
+    Incorrect: Casting [#4] Sol Ring.
+    Incorrect: Playing my land, Copperline Gorge.
+  After a spell resolves or a land enters, the card is public — use its name:
+    Correct:   Sol Ring enters. Tap Sol Ring for {2}.
+    Correct:   Tap Copperline Gorge for {G}.
+  The [#N] → name transition happens at resolution, not at announcement.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   GAME SETUP

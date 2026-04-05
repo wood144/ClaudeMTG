@@ -93,8 +93,51 @@ Commander: Zhulodok, Void Gorger | Colors: Colorless
 - Ultima's mana doubling replaced Thran Dynamo's output immediately after it was destroyed — cascade backfilling ramp.
 - Opponent mana-screwed (1 land through T4, 3 lands by T8). Roxanne never cast.
 
+### Game 48: Eldrazi/Zhulodok (Human) vs. Fun Guys/Ghave (Claude)
+**Result:** Human wins T13 (13 sides) via concession. Human 35, Claude 1.
+
+**Key plays:**
+- T1: Snow-Covered Wastes → Sol Ring → Mana Vault → Mystic Forge. Dream opener.
+- T7: Zhulodok deployed.
+- T9: Kozilek ({10}) — drew 4 first (Mystic Forge showed cheap card on top), then cascade cascade hit Sensei's Divining Top + Platinum Angel. Optimal sequencing.
+- T11: Metalworker + Lightning Greaves → Bane of Bala Ged with haste/shroud. Annihilator 4 + exile 2 stripped 6 of Claude's 8 permanents. Ghave traded with Bane in combat.
+- T13: Cityscape Leveler cast trigger killed Blood Artist, cascade into Scour exiled last land. Full board lethal.
+
+**Key observations:**
+- Mystic Forge + Zhulodok cascade is the dream engine — knowing the top card lets you draw/exile cheap cards first, then cascade into bigger hits.
+- Mana Vault T1 is worth the risk even though it doesn't untap — the tempo advantage was decisive.
+- Platinum Angel shut down Claude's entire aristocrat win condition without needing to interact.
+
+### Game 50: Eldrazi/Zhulodok (Human) vs. Quit Hitting Yourself/Wayta (Claude)
+**Result:** Human wins T7 (14 sides) via commander damage (Zhulodok 27/21). Human 44, Claude 16.
+- T8: Metalworker revealed 3 artifacts (6 mana) → Forsaken Monument ({5}). Then Zhulodok + Platinum Angel cascade into Introduction to Annihilation (exiled Wayta) + Lightning Greaves. Zhulodok 9/6 with Greaves, swung for 9 commander damage.
+- T10: Artisan of Kozilek ({9}) cascaded into Platinum Emperion + Thran Dynamo. Life lock (Emperion) + can't lose (Angel).
+- T11: Claude's Blasphemous Act wiped 6 creatures, Spitemare reflected 13 (53→40). Board reset.
+- T12: Tron assembled (Tower+Mine+Power Plant) with Forsaken Monument = 10 mana from 3 lands. Recast Zhulodok (8 with tax) + Burnished Hart. 9 more commander damage (18/21).
+- T13: Kozilek ({8}{C}{C}) cascaded into Zuko's Exile (exiled Claude's Screaming Nemesis blocker) + Unstable Obelisk. Drew to 7. Commander damage lethal next combat.
+- **Key plays:** Forsaken Monument T8 was the turning point — mana advantage never recovered. Tron + Monument made every subsequent turn produce 15+ mana. Cascade consistently hit removal for Claude's blockers.
+- **MVP: Forsaken Monument** — +2/+2, mana bonus, life gain. The engine behind everything.
+
+### Game 52: Eldrazi/Zhulodok (Claude) vs. Food and Fellowship/Frodo+Sam (Human)
+**Result:** Human wins T12 (12 sides) via lethal combat damage. Human 50, Claude -4.
+
+**Key plays:**
+- T5: Zhulodok delayed until T9 due to 2-land opener — needed Hart ramp to get to 6 mana.
+- T9: Zhulodok deployed, tapping out.
+- T10: Fell the Mighty targeting Sam (power 2) destroyed Zhulodok (power 7) while keeping opponent's entire board.
+- T12: Motivated Pony (haste) + Sam Food trigger = all attackers +3/+3 and untap. 7 creatures swung for 32 lethal.
+
+**Key observations:**
+- 2-land opener with no Sol Ring/fast mana meant Zhulodok came down T9 — too slow against a deck that builds board from T3.
+- Tapping out for Zhulodok with no protection is risky against Abzan removal. Fell the Mighty is a clean answer.
+- Never cascaded once. Game over before the engine started.
+- Kozilek and Pathrazer in hand were stranded — needed Zhulodok online first.
+
 ## Matchup Notes
+- **vs. Quit Hitting Yourself/Wayta (1-0):** Wayta's damage reflection plan (Blasphemous Act + Spitemare) is the main threat — one Act wiped 5 creatures and reflected 13. But the deck is too slow to assemble its combo before Eldrazi cascades overwhelm. Commander damage via Zhulodok (9/6 with Monument) is a fast clock — 3 unblocked hits = lethal. Key: cascade removal (Introduction to Annihilation, Zuko's Exile) strips their blockers. Platinum Emperion blanks all damage reflection. Forsaken Monument makes the mana gap insurmountable.
 - **vs. Fblthp (blue combo):** Must hold interaction for combo turn. Race plan alone won't work — need exile/destroy effects for Hullbreaker Horror and removal for combo pieces.
 - **vs. Atla Palani (creature toolbox):** Steal effects are devastating — Atla Palani's sacrifice ability turns against the opponent. Flayer of Loyalties is the MVP.
 - **vs. Meteor Apes/Roxanne (Gruul aggro, 1-1):** Gruul has NO exile effects — indestructible threats are unanswerable. Protect Forsaken Monument (#1 removal target) and Swiftfoot Boots. Uktabi Orangutan / Silverback Elder destroy artifacts on ETB/cast — expect ramp to get picked off. Ultima's mana doubling is excellent cascade backfill if rocks die. Ugin's Labyrinth sequencing (exile a bomb T1, return it when ready to cast) is the deck's strongest opening. If Roxanne never lands, the game is effectively over — ramp past their curve and cascade to victory.
+- **vs. Fun Guys/Ghave (Abzan tokens, 1-0):** Ghave's aristocrat combo (Blood Artist/Zulaport drain) is completely blanked by Platinum Angel. Mystic Forge enables optimal cascade sequencing — protect it. Annihilator strips their token-based board efficiently. Bane of Bala Ged's exile is particularly strong since they have minimal graveyard recursion. Aura Shards is the main threat — every saproling destroys an artifact. Kill Ghave early and repeatedly to prevent token engine from starting.
 - **vs. Bears/Ayula (mono-G aggro):** Bears can pressure early but lack interaction for the cascade engine. Ayula's fight trigger is the main threat to key pieces (killed Platinum Angel). Cicada flash + pump is the primary win condition — each cascade turn creates a massive trample attacker. Zuko's Exile and removal timing on Ayula is critical since she accumulates counters quickly with Kami of Whispered Hopes.
+- **vs. Food and Fellowship/Frodo+Sam (0-1):** Abzan go-wide with Food engine. Sam creates Food every combat → Merry makes Soldiers → Frodo draws cards when 3+ life gained. Motivated Pony is the kill card (+3/+3 anthem with haste when Food entered). Fell the Mighty targeting their low-power creature wipes Zhulodok while keeping their board. Pippin's sac-4-Foods ability ({T}: +3/+3 and haste to all others) threatens massive alpha strikes. Key: must deploy Zhulodok with protection or have cascade online before they go wide. Don't tap out for Zhulodok into open mana — Fell the Mighty is {4}{W}.

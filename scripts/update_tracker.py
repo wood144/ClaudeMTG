@@ -69,13 +69,20 @@ def load_canonical_deck_names():
             # Index all aliases
             for alias in d.get('aliases', []):
                 alias_map[alias.lower()] = cname
-            # Index commander (first card in list) as lookup key
+            # Index all commanders (handles partners) as lookup keys
             decklist = d.get('list', '')
             if decklist:
-                first_line = decklist.strip().split('\n')[0]
-                # Strip leading "1 " quantity prefix
-                cmdr_name = first_line.lstrip('0123456789 ')
-                cmdr_map[cmdr_name.lower()] = cname
+                for line in decklist.strip().split('\n'):
+                    if '*CMDR*' not in line.upper():
+                        # Only first line is commander for non-tagged lists
+                        if line == decklist.strip().split('\n')[0]:
+                            cmdr_n = line.lstrip('0123456789 ')
+                            cmdr_map[cmdr_n.lower()] = cname
+                        break
+                    cmdr_n = line.lstrip('0123456789 ')
+                    # Strip *CMDR* tag
+                    cmdr_n = cmdr_n.replace('*CMDR*', '').replace('*cmdr*', '').strip()
+                    cmdr_map[cmdr_n.lower()] = cname
         return canonical, alias_map, cmdr_map
     except (FileNotFoundError, json.JSONDecodeError):
         return {}, {}, {}
@@ -92,7 +99,18 @@ def normalize_deck_name(name, canonical_names, alias_map=None, cmdr_map=None, cm
 
     # Primary: resolve via commander name (most reliable)
     if cmdr_name:
-        match = cmdr_map.get(cmdr_name.lower().strip())
+        cmdr_low = cmdr_name.lower().strip()
+        match = cmdr_map.get(cmdr_low)
+        if not match:
+            # Try splitting partner commanders (separated by /, +, or " and ")
+            for sep in ['/', '+', ' and ']:
+                if sep in cmdr_low:
+                    for part in cmdr_low.split(sep):
+                        match = cmdr_map.get(part.strip())
+                        if match:
+                            break
+                    if match:
+                        break
         if match:
             if match != name:
                 print(f"  Resolved deck via commander: '{cmdr_name}' -> '{match}'")
@@ -283,6 +301,24 @@ def update_tracker(game_data):
         avg_s = sum(s['sides_list']) / len(s['sides_list'])
         s['avg_sides'] = int(avg_s) if avg_s == int(avg_s) else round(avg_s, 1)
 
+    # ── Strength of Schedule ────────────────────────────────────────
+    # For each deck, average the raw Wilson scores of all opponents faced
+    # Build opponent list per deck from game log
+    deck_opponents = {}  # deck -> list of opponent deck names (one per game)
+    for g in all_games:
+        w, l = g['winner_deck'], g['loser_deck']
+        deck_opponents.setdefault(w, []).append(l)
+        deck_opponents.setdefault(l, []).append(w)
+
+    for deck, s in deck_stats.items():
+        opps = deck_opponents.get(deck, [])
+        if opps:
+            opp_wilsons = [deck_stats[o]['wilson'] for o in opps if o in deck_stats]
+            s['sos'] = round(sum(opp_wilsons) / len(opp_wilsons), 4) if opp_wilsons else 0.0
+        else:
+            s['sos'] = 0.0
+        s['rating'] = round(s['wilson'] * (1 + s['sos']), 4)
+
     # Snapshot old ranks and trends for preservation
     ws_rank = wb['Rankings']
     old_ranks = {}
@@ -292,10 +328,10 @@ def update_tracker(game_data):
             old_ranks[row[2]] = row[0]
             old_trends[row[2]] = row[1] if len(row) > 1 else '-'
 
-    # Sort: Wilson desc → Perf desc
+    # Sort: Rating desc → Perf desc
     sorted_decks = sorted(
         deck_stats.items(),
-        key=lambda x: (x[1]['wilson'], x[1]['perf']),
+        key=lambda x: (x[1]['rating'], x[1]['perf']),
         reverse=True,
     )
     new_ranks = {deck: i + 1 for i, (deck, _) in enumerate(sorted_decks)}
@@ -320,7 +356,7 @@ def update_tracker(game_data):
 
     # Clear old data rows (keep header)
     for r in range(2, ws_rank.max_row + 1):
-        for c in range(1, 12):
+        for c in range(1, 14):
             ws_rank.cell(row=r, column=c).value = None
 
     # Fetch deck values
@@ -330,10 +366,15 @@ def update_tracker(game_data):
         print(f"  Deck values unavailable: {e}")
         deck_values = {}
 
-    # Write sorted rankings
+    # Write headers
     bold = Font(bold=True)
     center = Alignment(horizontal='center')
-    ws_rank.cell(1, 11, value='Value').font = bold
+    rank_headers = ['Rank', 'Trend', 'Deck', 'Commander', 'W', 'L', 'Games',
+                    'Wilson', 'SoS', 'Rating', 'Perf', 'Avg Sides', 'Value']
+    for col_idx, hdr in enumerate(rank_headers, start=1):
+        ws_rank.cell(1, col_idx, value=hdr).font = bold
+
+    # Write sorted rankings
     for i, (deck, s) in enumerate(sorted_decks):
         r = i + 2
         t = trend_arrow(deck)
@@ -348,10 +389,12 @@ def update_tracker(game_data):
         ws_rank.cell(r, 6, value=s['losses'])
         ws_rank.cell(r, 7, value=s['games'])
         ws_rank.cell(r, 8, value=s['wilson'])
-        ws_rank.cell(r, 9, value=s['perf'])
-        ws_rank.cell(r, 10, value=s['avg_sides'])
+        ws_rank.cell(r, 9, value=s['sos'])
+        ws_rank.cell(r, 10, value=s['rating'])
+        ws_rank.cell(r, 11, value=s['perf'])
+        ws_rank.cell(r, 12, value=s['avg_sides'])
         val = deck_values.get(deck, 0.0)
-        ws_rank.cell(r, 11, value=val).number_format = '$#,##0.00'
+        ws_rank.cell(r, 13, value=val).number_format = '$#,##0.00'
 
     print(f"Rankings: {len(sorted_decks)} decks ranked")
 
@@ -475,21 +518,66 @@ if __name__ == '__main__':
             s['perf'] = round(sum(s['perfs']) / len(s['perfs']), 2)
             avg_s = sum(s['sides_list']) / len(s['sides_list'])
             s['avg_sides'] = int(avg_s) if avg_s == int(avg_s) else round(avg_s, 1)
-        sorted_decks = sorted(deck_stats.items(), key=lambda x: (x[1]['wilson'], x[1]['perf']), reverse=True)
+        # SoS for refresh path
+        deck_opponents = {}
+        for g in all_games:
+            w, l = g['winner_deck'], g['loser_deck']
+            deck_opponents.setdefault(w, []).append(l)
+            deck_opponents.setdefault(l, []).append(w)
+        for deck, s in deck_stats.items():
+            opps = deck_opponents.get(deck, [])
+            if opps:
+                opp_wilsons = [deck_stats[o]['wilson'] for o in opps if o in deck_stats]
+                s['sos'] = round(sum(opp_wilsons) / len(opp_wilsons), 4) if opp_wilsons else 0.0
+            else:
+                s['sos'] = 0.0
+            s['rating'] = round(s['wilson'] * (1 + s['sos']), 4)
+        sorted_decks = sorted(deck_stats.items(), key=lambda x: (x[1]['rating'], x[1]['perf']), reverse=True)
         ws_rank = wb['Rankings']
+        # Preserve existing trends keyed by deck name
+        old_trends = {}
+        for row in ws_rank.iter_rows(min_row=2, max_row=ws_rank.max_row, values_only=True):
+            if row[0] is not None and row[2] is not None:
+                old_trends[row[2]] = row[1] if len(row) > 1 else '-'
         try:
             deck_values = get_deck_values()
         except Exception as e:
             print(f"  Deck values unavailable: {e}")
             deck_values = {}
         bold = Font(bold=True)
-        ws_rank.cell(1, 11, value='Value').font = bold
+        center = Alignment(horizontal='center')
+        # Clear old data rows (keep header)
+        for r in range(2, ws_rank.max_row + 1):
+            for c in range(1, 14):
+                ws_rank.cell(row=r, column=c).value = None
+        # Write headers
+        rank_headers = ['Rank', 'Trend', 'Deck', 'Commander', 'W', 'L', 'Games',
+                        'Wilson', 'SoS', 'Rating', 'Perf', 'Avg Sides', 'Value']
+        for col_idx, hdr in enumerate(rank_headers, start=1):
+            ws_rank.cell(1, col_idx, value=hdr).font = bold
+        # Write full rankings, preserving trends
         for i, (deck, s) in enumerate(sorted_decks):
             r = i + 2
+            trend = old_trends.get(deck, '-')
+            ws_rank.cell(r, 1, value=i + 1).font = bold
+            ws_rank.cell(r, 1).alignment = center
+            ws_rank.cell(r, 2, value=trend).alignment = center
+            if trend in ('UP', 'DN', 'NEW'):
+                ws_rank.cell(r, 2).font = bold
+            ws_rank.cell(r, 3, value=deck)
+            ws_rank.cell(r, 4, value=s['cmdr'])
+            ws_rank.cell(r, 5, value=s['wins'])
+            ws_rank.cell(r, 6, value=s['losses'])
+            ws_rank.cell(r, 7, value=s['games'])
+            ws_rank.cell(r, 8, value=s['wilson'])
+            ws_rank.cell(r, 9, value=s['sos'])
+            ws_rank.cell(r, 10, value=s['rating'])
+            ws_rank.cell(r, 11, value=s['perf'])
+            ws_rank.cell(r, 12, value=s['avg_sides'])
             val = deck_values.get(deck, 0.0)
-            ws_rank.cell(r, 11, value=val).number_format = '$#,##0.00'
+            ws_rank.cell(r, 13, value=val).number_format = '$#,##0.00'
         wb.save(TRACKER_PATH)
-        print(f"Refreshed deck values for {len(sorted_decks)} decks.")
+        print(f"Refreshed rankings and deck values for {len(sorted_decks)} decks.")
         sys.exit(0)
 
     if len(sys.argv) < 2:
