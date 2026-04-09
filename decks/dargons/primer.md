@@ -99,6 +99,27 @@ Commander: Scion of the Ur-Dragon | Colors: WUBRG (5-color)
 - **Betor's card draw at 10+ toughness is trivially easy.** Scion + any dragon = 10+. Free card every end step.
 - **Teneb reanimates countered creatures.** Had Earthquake Dragon been needed, Teneb would have brought it back from GY after combat damage.
 
+### Game 56 (piloted by Claude): Dargons/Scion vs Avatar Allies/Sokka (Human)
+**Result:** Human wins T15 (15 sides). Claude life 1→dead, Human life 12. CDMG dealt: 18. Dominance 1.
+
+**Key plays:**
+- T3: Scion cast on curve (WUBRG via Forest, Temple Garden, Mountain, Swamp, Fellwar Stone).
+- T5: Attacked with Scion for 4 CDMG, cast Terror of the Peaks post-combat.
+- T6: Stun counter on Scion from Rowdy Snowballers. Opponent swung for 8 (menace from Sokka).
+- T6: Attacked with Terror for 5, but couldn't cast Scourge (in hand, needed 8 mana, had 7).
+- T7: Opponent swung for 14 (Suki anthem + Katara counters). Claude 28→14.
+- T8: Angel of the Ruins exiled Fellwar Stone — lost only {U} source.
+- T8: Ruinous Path killed Sokka ({1}{B}{B}). **MISPLAY** — should have activated Scion → Drakuseth ({2}) to kill 3 creatures via attack trigger (4+3+3 damage) AND deal 7 CDMG. Cheaper, more targets, advances clock.
+- T9: Opponent swung for 13 (Claude 14→1). 
+- T10: Scion → Ureni (10/10 pro W/B) for 10 CDMG (total 18). Attempted Atarka double strike combo but ruling confirmed: double strike is lost when Scion stops being Atarka.
+- T11: Lethal from opponent's full board at 1 life.
+
+**Lessons:**
+- **Scion activation IS removal.** Drakuseth for {2} > Ruinous Path for {1}{B}{B}. Always evaluate Scion's toolbox before casting removal from hand.
+- **Scourge in hand = dead card for Scion.** Scion searches library, not hand. Drawing key dragons removes them from Scion's toolbox.
+- **Atarka double strike does NOT persist** through a second Scion activation. Choose: 6/4 double strike OR 10/10 body. Can't have both.
+- **Fellwar Stone is fragile.** In 5-color, losing the only {U} source to artifact removal is crippling. Redundant color fixing matters.
+
 ## Matchup Notes
 - **vs. Mill/Steal/Wrexial (1-0):** Dimir mill is too slow to interact with T3-5 Scion. Wrexial needs Scion's instants/sorceries in GY to steal — but Scion puts creatures in GY via activation (useless for Wrexial). Counter suite can't stop Scion's {2} activated ability. Earthquake Dragon at {G} baits counters. Teneb reanimates anything that gets countered. Betor's 10+ toughness draw is free with any 2 dragons. **Risk:** if game goes long, mill strips combo pieces from library. End it fast.
 - **vs. Ghave (Abzan tokens):** Kill The Mycotyrant early before token generation spirals. Scion → Ureni blanks all of Abzan's best removal (Path, Swords, black kill spells).
@@ -106,3 +127,4 @@ Commander: Scion of the Ur-Dragon | Colors: WUBRG (5-color)
 - **vs. Squirrel Food/Chatterfang (Golgari tokens):** Scourge of Kher Ridges is devastating — 2 damage to all non-flyers wipes their token/creature board while Scion flies over. Deck has limited removal for Scion (Bake into a Pie, Go for the Throat). Watch for Chatterfang's forestwalk if you control a Forest — avoid playing Forests unless needed. Earthquake Dragon recursion ({2}{G}, sac a land) can preemptively remove a Forest to turn off forestwalk.
 - **vs. The Claw!/Cruelclaw (Rakdos discard/reanimate, 0-1):** Cruelclaw deploys fast (T3-5) and menace goes uncontested since Scion deck has no early creatures. Every connect flips huge threats for free (Desolation Twin, Stuffy Doll). Need early interaction or blockers — Demonic Tutor for removal instead of mana fixing if Cruelclaw is already on board. Shadowgrange Archfiend is a brutal closer: forces sac of Scion then lethal swing. Prioritize artifact removal for Lightning Greaves and Access Tunnel. Consider holding Scion activation for defensive copy (Hellkite Overlord regenerate) rather than offensive.
 - **vs. Meteor Apes/Roxanne (Gruul extra combats):** Protect mana rocks at all costs — losing color fixers locks Scion out of the game. Roxanne generates massive value with Meteorite tokens (mana + pings) and chains extra combats via Port Razer. Need to land Scion before Roxanne + extra combat pieces come online. Locthwain Scorn is weak into their deep protection suite (Tamiyo's Safekeeping, Heroic Intervention, Collective Resistance, etc.).
+- **vs. Avatar Allies/Sokka (0-1):** Sokka's menace + prowess on all Allies makes their board unblockable with single creatures. Suki's +1/+0 anthem compounds the problem. Katara grows every turn she's tapped (end step +1/+1 counter). Priority: use Scion → Drakuseth attack trigger to wipe their small creatures (4+3+3 damage) rather than casting removal. Angel of the Ruins threatens artifact exile — protect color fixers. Scourge of Kher Ridges ({1}{R}: 2 to all non-flyers) is the best answer to their go-wide plan, but drawing it removes it from Scion's library toolbox. Race with commander damage (Ureni 10/10, pro W/B dodges Angel blocks) before they snowball too wide.

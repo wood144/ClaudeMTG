@@ -47,14 +47,15 @@ BG Aristocrats/Token deck built around Food and Squirrel tokens. The deck genera
 
 ## Matchup Notes
 
-### vs. Bears / Ayula (Game 42)
-- **Result: Squirrel Food LOSS (T12, commander damage 22)**
-- Ayula's fight trigger is the primary problem. Once Ayula hits 4/4+ (just one bear ETB with counters), she one-shots Chatterfang (3 toughness). Every replacement creature met the same fate — Dreyleader fought, Fell Beast fought.
-- Chatterfang's forestwalk was unblockable (mono-green opponent) but only 3 damage per swing — too slow to race Ayula's snowball.
-- Chomping Changeling (Changeling = Bear) destroyed Underworld Connections AND triggered Ayula fight, a devastating two-for-one.
-- Drew zero removal all game (no Go for the Throat, no Bake into a Pie, no Meathook). Must mulligan aggressively for interaction against creature-heavy decks.
-- **Key takeaway:** Against Ayula, do NOT deploy Chatterfang until you can protect it or have removal for Ayula. A naked Chatterfang into a 4/4+ Ayula is just feeding the fight trigger.
-- **Key takeaway:** Tarrian's Journal and Endless Atlas were drawn but never cast — too slow when behind on board. Prioritize creatures and removal over card advantage when under pressure.
+### vs. Bears / Ayula (Games 42, 60)
+- **Results: 0-2. Game 42 LOSS (T12, CDMG 22). Game 60 LOSS (T12, CDMG 22+).**
+- Ayula's fight trigger is the primary problem. Any Bear can fight (not just Ayula) — the second mode is "target Bear you control fights target creature you don't control." Once Ayula has 4+ power, she one-shots Chatterfang (3 toughness). Every replacement creature met the same fate.
+- Game 60: Deployed Chatterfang T5 before Ayula had counters — got 6 CDMG in (good). But T10 triple bear chain (Alpine Grizzly + Ulvenwald Bear Morbid + Bear Cub) wiped entire board through fight triggers. Cookbook play to trade Bear Token for Chatterfang was correct (sac Squirrel for +1/-1, both die) but couldn't stop the avalanche.
+- Chatterfang's forestwalk is unblockable but only 3 damage per swing — too slow to race Ayula's snowball.
+- Spider Food can't hit creatures (only artifacts/enchantments/flyers). Deck desperately needs instant-speed creature removal (Go for the Throat, Bake into a Pie) in the opening hand vs Ayula.
+- **Key takeaway:** Against Ayula, deploy Chatterfang early (before counters stack) OR hold until you have removal. The middle ground (deploy into a 4/4+ Ayula) is death.
+- **Key takeaway:** Cast token/Food generators BEFORE combat so Chatterfang's doubling creates Squirrels for sac ability defense. (Game 60: Rapacious Guest cast post-combat, missed a Food+Squirrel trigger.)
+- **Key takeaway:** Earth King gives Bears repeatable land ramp — expect the deck to accelerate hard in the mid-game.
 
 ### vs. Cats / Mirri (Game 51)
 - **Result: Squirrel Food WIN (T14, commander damage — concession with lethal on board)**
@@ -84,6 +85,39 @@ BG Aristocrats/Token deck built around Food and Squirrel tokens. The deck genera
 - **Board wipes needed earlier**: Kindred Dominance and Meathook Massacre are the main wipes but both are expensive. Consider Toxic Deluge ({2}{B}, pay life for -X/-X) — synergizes with Vito (if you gain life afterward).
 
 ## Game History
+
+### Game 64 (piloted by Claude): Squirrel Food/Chatterfang vs. Dicebots/Mr. House (Human)
+**Result:** Claude loses T14 via lethal combat. Final life: Claude -7, Human 39. Dominance 3.
+
+**Key plays:**
+- T2: Opponent Ragavan, hit T4 for Treasure + exiled Savvy Hunter. T5: Chatterfang deployed, opponent tapped out.
+- T6: Mr. House on curve. Lightfoot Rogue attacked T6 and T8 — every dice roll fed Mr. House for Robots + Treasures.
+- T8: Chaos Dragon (4/4 flying haste) deployed. Lightfoot rolled 14 → Robot + Treasure. Camellia traded with deathtouch Lightfoot.
+- T9: Spider Food killed Chaos Dragon, but Revivify rolled 17 → Dragon returned to battlefield + another Robot + Treasure.
+- T11: Curious Forager foraged for Camellia (Spider Food is sorcery — can't forage for it). Mr. House end-step activation rolled 4,5 → 2 more Robots.
+- T13: Ygra deployed (6/6, all creatures become Food). One turn too late — 6 Robots + Ragavan = 20 damage, lethal at 10 life.
+
+**Key lessons:**
+- **No board wipe = no chance vs. token swarm.** Didn't draw Kindred Dominance, Meathook Massacre, or any sweeper. Mr. House generates 1-3 Robots per turn once online — must wipe before the army is unmanageable.
+- **Ygra needed to come down T11, not T13.** Cultivate T9 → Ygra T11 was the line. Curious Forager T11 (getting back Camellia) didn't stabilize the board. Ramp > recursion when behind.
+- **Revivify punished Spider Food.** Removal that doesn't exile is risky vs. Mardu recursion. Deck needs exile-based removal.
+- **Opening hand had no ramp** (2 Forests, no Sol Ring/Signet/Birds). Fell behind on mana and never caught up. Chatterfang T5 instead of T3.
+
+### Game 60 (piloted by Claude): Squirrel Food/Chatterfang vs. Bears/Ayula (Human)
+**Result:** Claude loses T12 via commander damage (22+). Final life: Claude 28, Human 32. Dominance 3.
+
+**Key plays:**
+- T3: Signet + Cookbook double deploy. T5: Chatterfang deployed before Ayula had counters. Forestwalk online.
+- T7: Chatterfang swung for 3 CDMG. Vito deployed M2. T9: Chatterfang swung for 3 more (6 CDMG total). Rapacious Guest deployed M2 (should have been M1 for combat Food trigger).
+- T10: Opponent's explosive turn. Alpine Grizzly → Bear Token fought Chatterfang (used Cookbook discard + Squirrel sac for +1/-1, traded both — correct play). Ulvenwald Bear Morbid +2 on Ayula (6/6) → Ayula fought Vito. Bear Cub → Ayula fought Guest. Board wiped.
+- T11: Drew Spider Food, deployed Forager + Spider Food on Emerald Medallion. No creatures survived.
+- T12: Werebear → Ayula fought Forager. Titania's Command (2 bears + +2/+2 all) → Ayula to 12/12. Lethal CDMG.
+
+**Key lessons:**
+- Cast Rapacious Guest pre-combat, not post-combat. Guest triggers on ANY creature dealing combat damage — missed a Food+Squirrel from Chatterfang's hit.
+- The Cookbook trade (discard Cultivate → Food+Squirrel → sac Squirrel to kill Bear Token alongside Chatterfang) was the right call. Trading 1-for-1 with the 4/4 token was better than just losing Chatterfang.
+- Ayula's fight mode lets ANY bear fight, not just Ayula. Corrected mid-game by opponent.
+- No instant-speed creature removal drawn all game. Spider Food only hits artifacts/enchantments/flyers.
 
 ### Game 51 (piloted by Claude): Squirrel Food/Chatterfang vs. Cats/Mirri (Human)
 **Result:** Claude wins T14 via commander damage (concession with lethal on board). Final life: Claude 34, Human 18.

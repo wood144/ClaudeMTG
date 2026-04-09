@@ -30,6 +30,19 @@ Bello's animation is **only during your turn**. On the opponent's turn, high-CMC
 
 ## Matchup Notes
 
+### vs. Mill-Steal / Wrexial (Game 66)
+- **Result: Bello LOSS (T10 cycle, 19 sides, concession). Claude 13, Human 17. Dominance 2.**
+- Mulliganed twice (1 land, then 0 lands). Kept a 4-land hand on third try.
+- Bello T5 on curve while opponent tapped out. But T6 Stasis Field locked Bello to 0/2 defender with no abilities for the ENTIRE game. Never drew removal for it.
+- T10: Flood of Mars flood-countered a Forest → Island. Wrexial now permanently unblockable.
+- T13-15: Strong development — Cobra + STE + Baloths + Ghalta on board. Expend 4 pings from Teapot Slinger.
+- T14: Traumatize milled 42 cards. Wrexial stole Cultivate (free ramp) and later Decimate (destroyed Ghalta, Gratuitous Violence, Gruul Signet, Raging Ravine).
+- T16: **Stormtide Leviathan = game over.** All lands become Islands, creatures without flying/islandwalk can't attack. Bello deck has ZERO flyers or islandwalkers. Complete lockout.
+- T18: Grasping Tentacles + Twincast milled 16 more, stole Gilded Lotus + Thran Dynamo from GY. Eluge deployed as massive body.
+- **Key lesson:** Stasis Field on Bello is catastrophic. The deck is dead without Bello's animation. MUST prioritize enchantment removal (Chaos Warp, Beast Within, Abrade won't help here).
+- **Key lesson:** Stormtide Leviathan is an unbeatable lock. Zero flyers in the precon means zero outs once it resolves. Consider adding flying threats or direct damage to the deck.
+- **Key lesson:** Traumatize + Wrexial steal is devastating. Every instant/sorcery in GY becomes a weapon against you. Decimate from own GY was backbreaking.
+
 ### vs. Cats / Mirri (Game 32)
 - **Result: Bello WIN (T16, combat damage — concession during lethal attack)**
 - Sol Ring T2 + Burnished Hart T4 ramp carried early game. Hit every land drop while opponent stalled after T4.
@@ -42,6 +55,34 @@ Bello's animation is **only during your turn**. On the opponent's turn, high-CMC
 - **Key lesson:** Kodama chains are devastating. Cast a 6-drop, free 5-drop from hand. Plan hand sequencing around Kodama triggers.
 
 ## Game History
+
+### Game 62 (piloted by Human): Bello precon vs. Boros Equipment (Claude)
+**Result:** Human wins T7 (13 sides) via Warstorm Surge + Gratuitous Violence lethal ETB. Human 31, Claude -1.
+- Rampant Growth T3 for early ramp. Bello T5 on curve.
+- Starstorm X=2 T7 killed Kellan (2/2) while keeping Bello (3/3) alive — devastating tempo play.
+- Gratuitous Violence T9 doubled all creature damage. Animated as 4/4 indestructible hasty by Bello, swung for 8 (doubled).
+- Warstorm Surge T11 added ETB burn. Combined with GV, any creature ETB dealt double power in damage.
+- T13: Pyreswipe Hawk entered → Surge dealt 4 doubled to 8, lethal against Claude at 7 life.
+- Also had 2 artifact destruction effects in hand + Pyreswipe Hawk steals artifacts. Rough matchup for equipment deck.
+**Lessons:**
+- Bello + Gratuitous Violence + Warstorm Surge is a crushing engine. Double damage on attacks AND ETBs.
+- Starstorm is excellent flexible removal — tune X to kill targets while keeping Bello alive.
+- Pyreswipe Hawk is strong vs artifact decks: flying blocker, haste attacker, steals artifacts on expend 6.
+
+### Game 66 (piloted by Claude): Bello precon vs. Mill-Steal/Wrexial (Human)
+**Result:** Human wins T10 cycle (19 sides) via concession. Claude 13, Human 17. Dominance 2.
+- Mulliganed twice (1 land, 0 lands). Kept 4-land hand third try. Bello T5 on curve.
+- T6: Stasis Field locked Bello for the entire game. Never found enchantment removal.
+- T10: Flood of Mars flood-countered Forest → islandwalk permanently live for Wrexial.
+- T13-15: Cobra → STE → Ghalta chain. 27 power on board but no removal for Stormtide.
+- T14: Traumatize milled 42. Wrexial stole Cultivate, then Decimate (killed Ghalta, GV, Signet, Ravine).
+- T16: Stormtide Leviathan locked all ground attackers. 16 unblockable damage per turn.
+- T18: Grasping Tentacles x2 stole Gilded Lotus + Thran Dynamo. Eluge + Magic Mirror deployed.
+- T19: Concession. No outs.
+**Lessons:**
+- Stasis Field on Bello = deck offline. Must mulligan for or prioritize enchantment removal.
+- Stormtide Leviathan is unbeatable for this deck. Zero flyers in precon.
+- Own instants/sorceries in GY are weapons for Wrexial. Decimate stolen was game-ending.
 
 ### Game 32 (piloted by Claude): Bello precon vs. Cats/Mirri (Human)
 **Result:** Claude wins T16 via lethal combat damage (concession).

@@ -1,17 +1,17 @@
-# Game — [Deck A] vs [Deck B]
+# Game Current — Blank Template
 
 ## Deck Info
 - **My deck:**
 - **Opponent:**
 
 ## Key Threats to Watch
+-
 
 ## My Gameplan
+-
 
-## Hand Assessment (T1)
+## Hand Assessment
+-
 
-## Turn Plan (updated TX)
-- **This turn:**
-- **Next opponent turn:**
-- **My next turn:**
-- **Watch for:**
+## Turn Plan
+-

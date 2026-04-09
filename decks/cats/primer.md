@@ -54,6 +54,15 @@ GW Cat tribal go-wide/go-tall deck. Mirri provides combat control — limits opp
 - **Key lesson:** Don't tap out for development when opponent has cheap interaction. Holding {G}{W} for Bronzehide indestructible or mana for Clever Concealment is critical.
 - **Deck suggestion:** More instant-speed interaction (e.g., Heroic Intervention) would help against the blowout turn pattern of bounce + removal + alpha strike.
 
+### vs. Every Shrine Ever / Go-Shintai (Games 39, 61)
+- **Record: 1-1.** Game 39 LOSS (T16, shrine drain engine). Game 61 WIN (T14, lethal combat).
+- Farewell choosing "exile enchantments" is the silver bullet. Exile prevents commander recursion of shrines. Time it when shrine count is highest.
+- Arahbo + King of the Pride double lord stack turns tokens into 4/3s. Combined with Mirri's single-blocker restriction, this overwhelms even large blockers.
+- Hold Heroic Intervention when committing to the board — shrine deck may have instant-speed answers.
+- Feline Sovereign is key but gets Pathed immediately (Game 39). Consider baiting removal first before deploying Sovereign.
+- Shrine deck's weakness: slow early game. Aggressive Cat curves (Arahbo T4, Mirri T6) pressure before the engine comes online.
+- Watch for Sanctum of Tranquil Light — at 5+ shrines, costs {W} to tap a creature. Greaves shroud blocks it. Keep Greaves on Mirri.
+
 ### vs. Squirrel Food / Chatterfang (Game 51)
 - **Result: Cats LOSS (T14, commander damage — concession with lethal on board)**
 - Chatterfang forestwalk was unblockable the entire game (Temple Garden = Forest). No answer drawn.
@@ -123,6 +132,16 @@ GW Cat tribal go-wide/go-tall deck. Mirri provides combat control — limits opp
 - T11: Mirri deployed + Shield of the Oversoul = 7/5 flying indestructible first strike. Dealt 7 commander damage.
 - T12: Honest Work neutered Feline Sovereign into a 1/1 mana dork. Lost lord effect and enchantment removal.
 - T14: Opponent's devastating turn — Boomerang Basics bounced Mirri (Shield to graveyard), Sokka's Charge gave all Allies double strike + lifelink, Path to Exile removed King of the Pride + Bronzehide Lion Aura. Three noncreature spells = 3 prowess triggers + 3 Ally tokens + 3 Whirlwind draws. Lethal alpha strike with 44 total damage.
+
+### Game 61 (piloted by Human): Cats/Mirri vs. Every Shrine Ever/Go-Shintai (Claude)
+**Result:** Human wins T7 cycle (sides 14) by lethal combat. Claude 0, Human 25. Dominance 3.
+- T6: Arahbo + Lightning Greaves deployed. Cat token from ETB.
+- T10: Farewell (exile enchantments) wiped Claude's entire shrine engine — 9/9 Vigor, Ancient Wars dealing 5/turn, Shared Purpose, commander, token. All exiled permanently.
+- T12: Mirri cast with Greaves swap (haste+shroud). King of the Pride deployed. Double lord stack (Arahbo +1/+1, King +2/+1) turned tokens into 4/3s. Attacked for 14.
+- T14: Signet + Darksteel Plate. Full attack for 25 power with Mirri restricting blocks to 1. Lethal through commander blocker.
+- **Rating:** 3 — Cats humming. Farewell perfectly timed at peak shrine momentum. Heroic Intervention held in reserve.
+- **Key lesson:** Farewell choosing "exile enchantments" is the ultimate answer to shrine decks — exile prevents graveyard recursion. Time it when shrine count is highest for maximum impact.
+- **Key lesson:** Double lord (Arahbo + King) + Mirri's single-blocker restriction is lethal even against large blockers. 25 power minus 1 block = guaranteed kill from 18+.
 
 ### Game 39 (piloted by Human): Cats/Mirri vs. Every Shrine Ever/Go-Shintai (Claude)
 **Result:** Claude wins T16 (sides 31) by concession. Shrine drain engine (Stone Fangs draining 7+/turn).

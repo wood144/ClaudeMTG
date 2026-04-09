@@ -47,6 +47,15 @@ Commander: Atla Palani, Nest Tender | Colors: Red/Green/White (Naya)
 - Opponent's best outs: Damnation (board wipe resets the Dino army), Dictate of Erebos (forces sacs on creature death), Glare of Subdual (tap down attackers), Eldrazi Monument (indestructible + flying blocks everything).
 - Temple Altisaur is critical — it makes the Dino army nearly unkillable in combat. Opponent correctly targeted it with Ghave block.
 
+### vs. Every Shrine Ever/Go-Shintai (Game 55)
+- Shrine deck's enchantress engine (Verduran Enchantress + Sythis + Spirit Oasis) draws 4+ cards per shrine cast. Snowballs fast once online T9+.
+- Hidden Cruelty is the shrine deck's main removal — scales with shrine count. Kill it before it reaches 5+ shrines or it picks off your best creatures at end step.
+- Sanctum of Stone Fangs drains X life per turn (X = shrines). At 9+ shrines, that's a 2-3 turn clock even without combat.
+- Southern Air Temple is a lethal finisher — +X/+X counters on everything at high shrine count. Must be countered or the board is instantly lethal.
+- Savage Stomp + Ram Through are good removal for shrine creatures but check opponent's graveyard for instants first — Swords to Plowshares in response to Savage Stomp exiled Zetalpa AND fizzled the fight.
+- Wakening Sun's Avatar (destroy all non-Dinosaurs) is the best answer to a developed shrine board. Prioritize finding it or Atla-flipping into it.
+- Xenagos resolved but too late to matter without enough combat steps. Deploy the force multiplier earlier.
+
 ### vs. Cats/Mirri (Game 34)
 - Mirri's first strike makes her a strong blocker against damaged creatures (Raptor's 2 damage on ETB matters).
 - Regal Caracal is the force multiplier — lifelink + lord effect. Removing it early collapses the board.

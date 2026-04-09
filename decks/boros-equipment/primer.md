@@ -78,6 +78,20 @@ Commander: Kellan, the Fae-Blooded // Birthright Boon | Colors: Red/White (Boros
 - Without Sword of the Animist ramp, the deck falls behind on mana and can't rebuild after a board wipe.
 - Against Omniscience + Rhystic Study, every recast is punishing. Need enchantment removal (Disenchant, Wear // Tear) to answer those engines.
 
+### Game 62 (pilot): Boros Equipment (Claude) vs. Bello precon (Human)
+**Result:** Human wins T7 (13 sides). Human 31, Claude -1. Dominance 3.
+- Birthright Boon T4 tutored Sword of the Animist (default line).
+- T7: Starstorm X=2 killed Kellan (2/2) but kept Bello (3/3) — lost commander and the entire ramp plan.
+- T9: Gratuitous Violence doubled all creature damage. Animated by Bello as 4/4 indestructible hasty, swung for 8.
+- T11: Warstorm Surge + GV meant any creature ETB dealt double power as burn.
+- T12: Kirin equipped with Sword + Short Sword, swung for 5 flying. But only 1 attack wasn't enough.
+- T13: Pyreswipe Hawk ETB → Surge trigger 4 × 2 = 8 lethal. Opponent also had 2 artifact destruction effects in hand and Hawk steals artifacts on expend 6.
+**Lessons:**
+- Kellan at 2/2 is extremely fragile to X-damage sweepers that spare 3+ toughness creatures. Consider holding Kellan if opponent has red mana open for Starstorm/similar.
+- Without Kellan, the deck has no double strike clock and falls behind fast. Need backup creatures.
+- Cloudsteel Kirin as creature does NOT grant "can't lose" — only when reconfigured as equipment. Don't count on it for survival.
+- Bello matchup is rough: Gruul animates enchantments as indestructible creatures, and Pyreswipe Hawk + artifact destruction punish equipment-heavy strategy.
+
 ## Matchup Notes
 - **vs Mill decks:** Mantle of the Ancients turns mill into a win condition. Hold Mantle and let them fill your GY. Cloudsteel Kirin prevents mill-out loss.
 - **vs Dimir (U/B):** Sword of Once and Future grants protection from both their colors. Near-total lockout on the equipped creature.
@@ -85,3 +99,4 @@ Commander: Kellan, the Fae-Blooded // Birthright Boon | Colors: Red/White (Boros
 - **vs Rakdos (The Claw!):** Opponent lacks artifact removal. Damnation hurts but doesn't touch equipment. Rebuild with Kellan + Sword and voltron up. Commander damage is the fastest kill — double strike makes it 2-3 swings.
 - **vs Fblthp (Mono-U combo):** Kellan's early pressure is the best weapon — double strike + equipment stacks commander damage fast. Sword of the Animist is critical for ramp; without it, can't rebuild after board wipes. Protection from blue (Sword of Once and Future) is unreliable — overloaded Rift bypasses targeting, and bounce spells catch Kellan before equip resolves. Need to close the game before Omniscience or One with the Multiverse comes online. Hold Disenchant/Wear effects for enchantment-based engines.
 - **vs Fun Guys/Ghave (Abzan tokens/combo):** AURA SHARDS is the #1 threat — every creature/token ETB destroys an artifact or enchantment. If Aura Shards resolves with Ghave online, all equipment dies. Hold Disenchant/Deconstruction Hammer for it. Darksteel Mutation shuts down Kellan. Flying goes over saproling tokens. Equipment survives Damnation — rebuild faster. Race the infinite combo (Ghave + Parallel Lives + Ashnod's Altar + Zulaport). Be aggressive.
+- **vs Bello precon (Gruul animate):** Bad matchup. Bello animates CMC 4+ enchantments as 4/4 indestructible hasty creatures that draw on hit. Gratuitous Violence doubles ALL creature damage including Warstorm Surge ETB triggers. Pyreswipe Hawk flies, has haste, and steals artifacts on expend 6. StP Bello is the best answer but they recast from CZ easily. Need enchantment removal for GV/Surge — equipment answers don't help. Race in the air before the damage engine comes online.

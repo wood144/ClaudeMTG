@@ -113,9 +113,66 @@ Commander: Wrexial, the Risen Deep ({3}{U}{U}{B}) | Colors: Blue/Black (Dimir)
 - **Narset's Reversal on your own spells is premium value.** Copy the kicked Cacophony, return original to hand for later. Two half-library mills from one card.
 - **Wrexial GY steal forces awkward blocks.** Claude had to sacrifice Werebear, Pest token, Kami, and Ayula just to prevent Beast Within being cast from their own GY.
 
+### Game 54 (Claude): Mill-Steal/Wrexial (Claude) vs. Every Shrine Ever/Go-Shintai (Human)
+**Result:** Human wins T8 cycle (sides 15) by concession. Final life: Human 47, Claude 6. Dominance 2.
+
+**Key plays:**
+- T3: Glimpse the Unthinkable milled 10 — all lands, creatures, enchantments. Zero instants/sorceries for Wrexial.
+- T9: Archmage Emeritus deployed for card draw engine alongside Mocking Sprite cost reducer.
+- T11: Mind Funeral milled 10 more — again zero instants/sorceries.
+- T12: Sink into Stupor bounced Boundless Vigor (erased +11/+11 counters). Best play of the game — bought a full turn.
+- T13: Wrexial deployed but opponent already at 6 life with lethal on board.
+- T15: Fractured Sanity milled 14 — still no instants/sorceries. Concession.
+
+**Lessons:**
+- **Shrine decks run almost no instants/sorceries.** Wrexial's combat trigger is completely dead in this matchup. Mill fills their GY with enchantment recursion targets instead.
+- **Mill is actively harmful here.** Every milled shrine is a future recursion target for Go-Shintai of Life's Origin's WUBRG ability. Consider NOT milling and focusing on board control instead.
+- **Bounce is the best interaction.** Sink into Stupor erasing Vigor's counters was more impactful than all mill combined. Prioritize bounce/removal over mill spells.
+- **Northern Air Temple drain bypasses blockers.** Even with Wrexial as a 5/8 wall, NAT drained 7+ life over the game.
+
+### Game 63 (Claude): Mill-Steal/Wrexial (Claude) vs. Fblthp (Human)
+**Result:** Human wins T8 cycle (sides 17) by concession. Final life: Human 20, Claude 40. Dominance 2.
+
+**Key plays:**
+- T5: Radroach deployed. Attempted to attack T5 and T7 (summoning sickness errors both times).
+- T7: Opponent bounced Radroach with Unsummon. Failed to recast in Main 2 despite having mana — critical tempo loss.
+- T9: Recast Radroach. Used Drown in the Loch to counter Boomerang (T11), saving Radroach but burning only interaction.
+- T11-T12: Opponent deployed Sapphire Medallion, Insight Engine, Urza, Teferi, Gilded Lotus. Massive ramp into combo shell.
+- T12: Teferi resolved unopposed — locked Claude to sorcery speed permanently. No counterspell available.
+- T13: Dream Harvest stole Magus of the Future. Cast from exile for free. Good value but too late.
+- T15: Grasping Tentacles milled 8 (hit Capsize, Rain of Revelation, Spirit Water Revival). Stole Misleading Signpost. Yue flashed in (via Teferi) to kill Radroach.
+- T16: Opponent deployed The Endstone (draw engine, life→20 each end step) + Crystal Skull. Drew heavily.
+- T17: Wrexial finally deployed — 6 turns after having enough mana. Opponent had Teferi + Jace + Omniscience lines available. Concession.
+
+**Lessons:**
+- **DEPLOY WREXIAL EARLY.** Had 6 mana by T11, opponent had Islands since T2. Wrexial was unblockable the entire game with Brainstorm in GY as a steal target. Instead prioritized incremental plays (Radroach, Dream Harvest) while opponent assembled combo.
+- **Summoning sickness — check every time.** Two identical errors in one game (T5 and T7). Gate 4 must be automatic.
+- **Don't skip Main 2 recast after bounce.** T7 Radroach bounced in combat, had 5 untapped lands, did nothing in Main 2. Two-turn tempo loss.
+- **Drown in the Loch on Boomerang was questionable.** Saved Radroach for one attack (2 damage + 2 rad), but burned the only answer to Oracle/combo pieces. Radroach is easily recast; Drown is not replaceable.
+- **Teferi is the must-counter threat.** Against Fblthp, Teferi removes all instant-speed interaction. MUST be countered above all else. If Teferi resolves, the game is effectively over.
+
+### Game 66 (Human): Mill-Steal/Wrexial (Human) vs. Bello precon (Claude)
+**Result:** Human wins T10 cycle (19 sides) via concession. Human 17, Claude 13. Dominance 2.
+**Key plays:**
+- T2: Waterlogged Teachings (as land) tutored an instant. T4: Dimir Signet. T6: Stasis Field on Bello — shut down commander's animation ability for the entire game. Best play of the game.
+- T8: Flood of Mars deployed. T10: Attacked, flood-countered Claude's Forest → permanent islandwalk for all attackers.
+- T12: Wrexial cast. T14: Traumatize milled 42 cards. Wrexial attacked and stole Cultivate for free ramp.
+- T15: Claude had a big turn (Cobra + STE + Ghalta = 27 power), but no removal for Stormtide.
+- T16: Stormtide Leviathan locked all of Claude's ground creatures out of combat. Wrexial + Flood swung for 8 unblockable. Wrexial stole Big Score (draw 2 + 2 Treasures).
+- T18: Eluge deployed (P/T = Islands controlled, all lands are Islands). Grasping Tentacles + Twincast milled 16 more, stole Gilded Lotus + Thran Dynamo. Wrexial stole Decimate — destroyed Ghalta, Gratuitous Violence, Gruul Signet, and Raging Ravine. Devastating.
+- T19: Claude concedes. No outs against Stormtide lock.
+**Lessons:**
+- **Stasis Field on the opposing commander is premium.** Bello without abilities = the entire deck is offline. No animation, no indestructible, no card draw.
+- **Flood of Mars → Stormtide is the combo lock.** Flood enables islandwalk early, Stormtide locks non-flyers permanently.
+- **Traumatize + Wrexial is the dream.** 42 cards milled = buffet of instants/sorceries. Decimate stolen from opponent's GY was the best possible steal — 4-for-1.
+- **Grasping Tentacles + Twincast steals two artifacts.** Gilded Lotus + Thran Dynamo = +6 mana per turn from opponent's own cards.
+
 ## Matchup Notes
+- **vs Bello precon (1-0):** Stasis Field on Bello shuts down the deck completely. Bello deck has ZERO flyers — Stormtide Leviathan is an unbeatable lock. Mill is excellent here: Bello runs many strong instants/sorceries (Decimate, Chaos Warp, Beast Within, Blasphemous Act) that Wrexial can weaponize. Flood of Mars enables islandwalk early since Gruul has no Islands. Eluge grows huge with Stormtide (all lands = Islands). Priority: Stasis Field on Bello > Flood of Mars > ramp > Stormtide for the kill.
 - **vs Bears/Ayula (1-0):** Mono-G has no counterspells and limited removal. Counter Ayula aggressively — each recast adds +{2} tax, quickly becomes uncastable. Stasis Field / Witness Protection are better than killing her (no command zone redirect, no tax increase, permanent lockout). Stormtide Leviathan is game-ending — bears have no flying or islandwalk. Mill is safe here — bears have minimal GY recursion (only Mother Bear). Wrexial steals their fight spells and Beast Within from GY. Bloatfly Swarm flies over everything.
 - **vs Dargons/Scion (0-1):** Scion has islandwalk/swampwalk targets in Dimir (irrelevant — Scion flies). Scion's Atarka double strike combo is the primary kill condition — **cannot be stopped by counterspells** (activated ability). Need Stifle effects, instant-speed removal (Go for the Throat Scion before damage), or blockers. Lotus Petal / fast mana enables T3 Scion which is nearly unbeatable without early counters. **Teneb reanimates countered creatures** — exile removal preferred. Betor at 20+ total toughness untaps all creatures = no safe attack window. Earthquake Dragon costs {G} with 3 dragons on board. **Mulligan for early interaction aggressively.**
+- **vs Every Shrine Ever/Go-Shintai (0-1):** WORST MATCHUP. Deck runs almost zero instants/sorceries — Wrexial's trigger is dead. Mill fills their GY with enchantment recursion targets (shrines, Hondens, Sterling Grove). Do NOT aggressively mill. Instead: counter key shrines (Sanctum of All, Northern Air Temple), bounce Boundless Vigor to erase counters, deploy Stormtide Leviathan to lock down attacks. Wrexial has swampwalk via Godless Shrine. Their drain engine (NAT) bypasses blockers. Dimir has no enchantment removal — shrines are permanent once resolved.
+- **vs Fblthp (0-1):** Fblthp is a combo deck — 3 library removers + 3 win cons. **Teferi/Barracuda is the must-counter threat** — once it resolves, all instant-speed interaction is gone and combo is unstoppable. Mulligan for early counters (Drown, Counterspell, Arcane Denial). Deploy Wrexial ASAP — opponent runs all Islands, islandwalk is always live. Brainstorm and bounce spells in GY are easy Wrexial steals. Don't waste counters on cantrips or bounce; save them for Teferi and combo pieces. Radroach rad counters mill combo pieces and fuel Drown. Insight Engine snowballs if left unchecked (draws 1, then 2, then 3...). Urza turns all artifacts into {U} sources — massive mana acceleration.
 - **vs non-U/B decks (no Islands/Swamps):** Wrexial's islandwalk/swampwalk is dead without land-type changers (Urborg, Spreading Seas, etc.). Same for Nemesis of Reason and N'ghathrod — menace alone isn't reliable evasion. Mulligan and early game should prioritize finding land-type enablers or lean on non-combat mill instead.
 - **vs Equipment/Voltron:** HIGH RISK to mill aggressively. Check for Mantle of the Ancients, Open the Vaults, or similar mass recursion before committing. Exile-based removal (Tormod's Crypt, Nihil Spellbomb) is essential.
 - **vs Boros Equipment specifically:** Sword of Once and Future grants pro U/B, making the creature untouchable. Prioritize removing equipment enablers (Puresteel Paladin, Sigarda's Aid) before they snowball.
