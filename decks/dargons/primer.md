@@ -120,6 +120,38 @@ Commander: Scion of the Ur-Dragon | Colors: WUBRG (5-color)
 - **Atarka double strike does NOT persist** through a second Scion activation. Choose: 6/4 double strike OR 10/10 body. Can't have both.
 - **Fellwar Stone is fragile.** In 5-color, losing the only {U} source to artifact removal is crippling. Redundant color fixing matters.
 
+### Game 78: Dargons/Scion (Claude) vs. Boros Equipment/Kellan (Human)
+**Result:** Human wins T5 (9 sides) via commander damage (22). Final life: Claude 26, Human 40. Dominance 3.
+
+**Key plays:**
+- First hand: 4 basics (no Island), 2 dead reanimation spells (empty GY), uncastable 8-drop. Mulligan.
+- Free mull to 7: 3 basics, Path of Ancestry, Crux of Fate, Lathliss, Rith. Kept.
+- T2: Path of Ancestry (ETB tapped). T4: Forest. T6: Swamp. T8: Mountain. Never reached 5 lands before lethal.
+- T9 (their T5): Wrecking Ball Arm + equip Kellan (legendary {3}) → 8/8 double strike with Sword. 16 CDMG one-shot, total 22 lethal.
+
+**Lessons:**
+- **No instant interaction = freebie for voltron commanders.** Dargons has zero counter/removal at instant speed; if opponent has a clean equipment line (Kellan + Sword + WBA), nothing in hand stops it.
+- **Path of Ancestry T1 is a tempo loss without backup ramp.** ETB tapped costs a full turn of mana. With no Sol Ring/Signet/Lotus Petal in hand, Crux of Fate ({3}{B}{B}) doesn't come online until T10 — too late vs. Kellan + double-equip.
+- **Wrecking Ball Arm threat assessment.** WBA at {2} + equip legendary {3} = 5 mana total to turn Kellan into an 8/8 double strike. This is a 2-attack CDMG kill (16 + 6 = 22). Crux at T9 would have answered but 5 lands wasn't online.
+- **Mulligan calc: 4-land hand without ramp is a mull even with multiple spells.** Dargons needs lands AND fixing AND ramp. Pure-basics hands are slow.
+
+### Game 79: Dargons/Scion (Claude) vs. Every Shrine Ever/Go-Shintai of Life's Origin (Human)
+**Result:** Human wins T6 cycle (11 sides) via lethal combat. Claude 31→0, Human 33. Dominance 2.
+
+**Key plays:**
+- T2-T6: Mulled to 7 (1-land hand). Kept 3-land hand with Fellwar Stone + Birds + Prismatic Omen line. T6: Cataracts + Omen + Scion of Draco for {2} (domain) — 4/4 flyer + WUBRG-identity buff to commander.
+- T8: Scion of Ur-Dragon cast on curve via Omen-fixed lands. Attacked Scion of Draco for 4. Opp at 36, CDMG 4.
+- T9 (opp): Crescent Island Temple cascaded into Northern Air Temple via Wildsear's enchantment-cascade. NAT chain drained 5 + Crescent chain drained 2 = 7 to me. Opp deployed Hidden Cruelty next, killed Scion of Draco at EOT (4 toughness ≤ 8 shrines).
+- T10: Scion → Atarka activation, attacked for 12 CDMG (double strike). PtE'd Hidden Cruelty (correct removal target — saved Scion from EOT chain). Opp life 31, CDMG 12.
+- T11 (opp): Maelstrom Nexus cast → Mesa Enchantress cascade. Lost Wisdom cast → Sol Ring cascade. 3 prowess triggers (+3/+3) made 9 Monks into 4/4s. Total board attack: 54+ damage. I activated Scion → Hellkite Overlord in response to absorb Wildsear, but couldn't stop the Monk swarm. Lethal.
+
+**Lessons:**
+- **MISPLAY T10: Activated Scion → Atarka instead of Scourge of Kher Ridges.** Atarka is a FINISHER — only activate when the attack closes the game. With opp at 43 life and a wide board (Wildsear + Hidden Cruelty + 4 Shrine Tokens + 9 Monks), 12 CDMG isn't lethal and leaves the swarm intact.
+- **Right play T10:** Scion → Scourge of Kher Ridges {2}, activate Scourge's wipe {1}{R} (2 damage to each non-flying creature) for 4 mana total. Kills Hidden Cruelty + 9 Monks + 4 Shrine Tokens (14 creatures). Leaves only Wildsear and Go-Shintai. Fifth mana on PtE Wildsear. Then Scion as Scourge attacks for 6 CDMG flying. Opp's board reduced to Go-Shintai alone — they can't kill me T11. T12 Atarka activation closes via CDMG.
+- **Atarka is the closer, not the default Scion target.** Match the dragon to the situation: wide board = Scourge, big single threat = Drakuseth attack trigger, defensive block = Hellkite, hard-removal protection = Ureni (Song Unending), finishing CDMG = Atarka.
+- **Wildsear, Scouring Maw is a must-answer card.** Enchantment-cast cascade lets Shrine deck chain spells exponentially.
+- **Monk tokens with prowess scale with noncreature spells.** 3 noncreature casts in one turn = +3/+3 per Monk. With 9+ Monks, prowess pump dwarfs raw damage from shrines — that's why a wipe is mandatory before they accumulate.
+
 ## Matchup Notes
 - **vs. Mill/Steal/Wrexial (1-0):** Dimir mill is too slow to interact with T3-5 Scion. Wrexial needs Scion's instants/sorceries in GY to steal — but Scion puts creatures in GY via activation (useless for Wrexial). Counter suite can't stop Scion's {2} activated ability. Earthquake Dragon at {G} baits counters. Teneb reanimates anything that gets countered. Betor's 10+ toughness draw is free with any 2 dragons. **Risk:** if game goes long, mill strips combo pieces from library. End it fast.
 - **vs. Ghave (Abzan tokens):** Kill The Mycotyrant early before token generation spirals. Scion → Ureni blanks all of Abzan's best removal (Path, Swords, black kill spells).

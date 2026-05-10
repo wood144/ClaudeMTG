@@ -30,6 +30,61 @@ Bello's animation is **only during your turn**. On the opponent's turn, high-CMC
 
 ## Matchup Notes
 
+### vs. Food and Fellowship LotR / Frodo+Sam (Game 83)
+- **Result: Bello LOSS (T9 cycle, 17 sides, lethal). Claude 0, Human 77. Dominance 2.**
+- Bello T7 on curve. Wildsear deployed. T9: Battle of Bywater board wipe — Wildsear dead, Bello to CZ. Massive tempo loss.
+- T12: Path of Discovery cast for {3}{G} → Bello-animated 4/4 indestructible haste w/ combat-damage-draw. Swung 4, Samwise chumped and died.
+- T14: Tranquil Thicket land drop + Harmonize → drew Outpost Siege, Evolving Wilds, Teapot Slinger. Path swing blocked by Hobbit (chump, no face dmg).
+- T15: Feasting Hobbit ETB devoured 6 Foods → 20/20 unblockable (power-restriction). Hobbit + Frodo (Ring L4) swung for 24. Me 33→9.
+- T16: Hamsphere ({7}) cast → Bello-animated 5/5 indestructible (Path explore +1 counter). Attack: 3 Hamster tokens + 3 ping killed Frodo. 3 Hamster ETBs triggered Path explore: +Forest, +Gruul Turf, +1/+1 counter. Pippin + Halfling token chumped.
+- T17: Frying Pan equipped to BoP. 7 Food sacs for +21 life → Pan triggered 7x → BoP 21/22 flying. BoP + Hobbit double unblockable lethal at 9 life.
+- **Key lesson: Bello has no answer to 20+ power Feasting Hobbit.** Devour Food + 6 Foods is a 1-turn finisher; Bello-animated bodies cap at 4/4. Need exile/destroy removal in hand BEFORE Hobbit lands (Beast Within, Chaos Warp).
+- **Key lesson: Frying Pan + Foods + flyer = uninteractable lethal.** Once Pan is on a flyer (BoP, Goose), every {1}+sac Food triggers +3/+3. With Sam discount + 7 stockpiled Foods, lethal in one main phase.
+- **Key lesson: Don't count Mossfire Valley as a free 2-mana land.** It's {1},{T} → {R}{G} = NET +1 mana. Cost the ramp into Hamsphere correctly: 5 simple lands + MV (+1 net) + Loamspeaker = 7 mana exact.
+- **Key lesson: Hamsphere + Path of Discovery is a real explore engine.** 3 Hamster ETBs = 3 free explores. But T16 was too late vs T15 Hobbit pre-lethal. Need this earlier.
+
+### vs. Fun Guys / Ghave (Game 82)
+- **Result: Bello LOSS (T10 cycle, 20 sides, concession at 37 life vs ~210 incoming). Claude 37, Human 36. Dominance 2.**
+- Opening hand kept: 2 lands (Karp, Gruul Turf) + Bandit + Tendershoot + Explore + Harmonize + Kodama. Slow but workable with Explore for ramp/draw.
+- T3 Bello on curve via Sol Ring topdeck — but no animation targets in hand (Unnatural Growth needed GGGG, only had 2G sources).
+- T6 BIG SWING: Kodama + Tendershoot cast → Kodama trigger pulled UG free → UG animated 4/4 indestructible hasty + combat doubling. Bello 6/6, Bandit 4/4 FS, Lotus 8/8, UG 8/8. Ghave blocked Bandit (Bandit dies), Bello + UG through for 14 dmg + 3 cmdr. Opp 37 → 23.
+- T7 followup: Lotus tapped for mana — couldn't attack with it. Fewer attackers than expected. UG doubling still triggered, but reduced pressure.
+- T8 follow-up attack: Brightcap chained Thran Dynamo via Kodama for free animated 4/4. Fungus Frolic for 2 saps (mine, no Mondrak/DS doubling for me). Attacked with 6 creatures. Opp's Thallid Devourer pumped via 2 sap sacs killed Brightcap. 0 dmg through.
+- T9 attack walled: opp had 9 saps via Ghave activations. Single-blocked everything; Brightcap dead from prior. Tendershoot eaten by sap-pumped Thallid.
+- T10+ stall: opp deployed Doubling Season + Vorinclex (counter doubling). I had no removal. Held Bello back to preserve animation.
+- T17 opp sacked 4 saps to Deathspore Thallid for -4/-4 → killed UG (0 toughness, indestructible doesn't save).
+- T18 opp Skullclamp → +2 cards/sap death + Moldervine +1 card +1 life/death. Drew through deck.
+- T20 opp Beseech the Mirror bargained → free Pallid Mycoderm. 12 Ghave saps + 4 Deathspore saps + 6 blocked saps to Pallid = +22/+22 stacking. 9 attackers at 23/23 = 207 lethal.
+- **Key lesson: Trample matters vs token decks.** Bello has no innate trample on its big animated bodies. Garruk's Uprising IS in the deck — drawing it (or Rampaging Baloths' trample tokens) before opp's combo assembles is the difference between pushing past chumps and stalling.
+- **Key lesson: Doubling Season + Mondrak + Vorinclex stack quadruples opp's tokens AND counters.** Opp's combo accelerates exponentially. Without removal in colors (RG has Beast Within, Chaos Warp, Krosan Grip), Bello deck has no answers to opp's enchantments/artifacts on opp's turn.
+- **Key lesson: Moldervine Reclamation makes attacking into chumps actively bad.** Each opp creature death = +1 card, +1 life. Wide attacks feed opp's combo dig.
+- **Key lesson: Skullclamp on 1/1 saprolings = 2 cards per sac for 1 mana.** Combined with Mondrak/DS token doubling, infinite card draw if opp finds Ashnod's Altar.
+
+### vs. The Claw! / Cruelclaw (Game 76)
+- **Result: Bello WIN (T6 cycle, 12 sides, concession at 1 life). Claude 26, Human 1. Dominance 2.**
+- Opening hand: 4 lands + Farseek + Wandertale + Kodama. Keep, curve out. Bello on T3 via Karp + Wandertale + Forest (0 damage).
+- T4 Esika's Chariot animated by Bello → 4/4 indestructible haste + 2 Cat tokens. Full swing T4 for 10 (no blockers). Unopposed board led the game.
+- Opp played Trailblazer's Boots T4 → Cruelclaw T5, equipped by T6, unblockable via nonbasic landwalk. Took 3 CDMG per connect.
+- Cruelclaw's first trigger hit Sol Ring (effectively a whiff for opp — just a ramp piece, not a big threat). Second trigger hit Drakuseth, discarded Desolation Twin for free 7/7 flyer.
+- Cruelclaw's Heist (gift) exiled Kodama from my hand → primary chain engine gone. Didn't matter — Chariot + Cats carried offense.
+- T9 big turn: STE + Farseek ramp triggered Wandertale expend 4 → 4/4 Wandertale. Full attack 17 damage unblocked (Cruelclaw tapped). Opp 30 → 13.
+- T10 Shadowgrange Archfiend ETB forced Wandertale sac (only 4-power creature on my side). 4 life gained for opp.
+- **T11 clutch turn:** Pyreswipe Hawk cast ({3}{R}{R}, 5 mana), then Abrade ({1}{R}, 2 mana). 6th mana expended → Pyreswipe expend 6 triggered → stole Lightning Greaves. Abrade destroyed Trailblazer's Boots same turn. Cruelclaw lock completely broken in ONE turn (lost shroud + unblockable). M2 moved Greaves to Pyreswipe for permanent protection. Full attack 16 damage (Bello blocked by Archfiend to CZ, Chariot blocked by Drakuseth mutual tank). Opp 17 → 1.
+- T12 opp Drakuseth trigger killed 3 Cats to delay lethal. Took 10 face damage but conceded at 1 life knowing Pyreswipe flies over next turn unopposed (no flyers or reach on opp side).
+- **Key lesson:** Pyreswipe Hawk's expend 6 is a full-disruption tool against artifact-dependent decks. Greaves/Boots/Signets are all priority steal targets. Costs 5 + any 2-drop = 7 mana for combo steal.
+- **Key lesson:** Chariot is a perfect Bello target — 4 MV, animates to 4/4 indestructible haste + Cat tokens + copy trigger on attack = overwhelming wide board.
+- **Key lesson:** Expend 4 on Wandertale is real value when you ramp. Each STE/Farseek is a free counter. Stacks over turns.
+- **Key lesson:** Cruelclaw's trigger depends on library top luck. Sol Ring whiff (free mana but no threat) gave Claude a full extra turn to stabilize.
+
+### vs. Every Shrine Ever / Go-Shintai (Game 74)
+- **Result: Bello WIN (T6 cycle, 12 sides, concession). Human 40, Claude 5. Dominance 3.**
+- Sol Ring T1 + Burnished Hart ramp gave massive mana advantage. Bello T7 on curve.
+- Rolling Hamsphere T9 was the star — animated 7/7 indestructible, attack trigger killed shrine token + dealt 7 combat. Ghalta for {G}{G} in M2.
+- Opponent killed Bello via Hidden Cruelty end step (3 shrines ≥ 3 toughness). Recast Bello T11 + Unnatural Growth for lethal doubled board.
+- **Key lesson:** Shrine deck's main interaction is Hidden Cruelty (end step, toughness-based). Bello at 3 toughness is vulnerable at 3+ shrines. Pump Bello or add hexproof to dodge.
+- **Key lesson:** Unnatural Growth + Bello is the nut draw. Growth animates as 8/8 indestructible AND doubles everything. Prioritize this combo.
+- **Key lesson:** Shrine deck is slow. Ramp advantage + early Bello overwhelms before shrine engine comes online.
+
 ### vs. Mill-Steal / Wrexial (Game 66)
 - **Result: Bello LOSS (T10 cycle, 19 sides, concession). Claude 13, Human 17. Dominance 2.**
 - Mulliganed twice (1 land, then 0 lands). Kept a 4-land hand on third try.
@@ -83,6 +138,40 @@ Bello's animation is **only during your turn**. On the opponent's turn, high-CMC
 - Stasis Field on Bello = deck offline. Must mulligan for or prioritize enchantment removal.
 - Stormtide Leviathan is unbeatable for this deck. Zero flyers in precon.
 - Own instants/sorceries in GY are weapons for Wrexial. Decimate stolen was game-ending.
+
+### Game 74 (piloted by Human): Bello precon vs. Every Shrine Ever (Claude)
+**Result:** Human wins T6 cycle (12 sides) by concession. Human 40, Claude 5. Dominance 3.
+- Sol Ring T1, Burnished Hart T3 sacced for 2 basics. 7+ mana by T7.
+- Bello T7. Rolling Hamsphere T9 — animated 7/7 indestructible, attacked with Hamster generation + 6 damage trigger killing shrine token. Ghalta for {G}{G} post-combat.
+- Claude killed Bello T10 via Hidden Cruelty (3 shrines ≥ 3 toughness). Optimal blocking T9 survived at 31.
+- T11: Bello recast + Unnatural Growth. Full swing with doubled board: Ghalta 24/24 trample, Hamsphere 17/17 indestructible, UG 8/8 indestructible. 28 damage through blocks, Claude at 5.
+- T12: No board wipe drawn. Concession.
+**Lessons:**
+- Rolling Hamsphere is a top-tier Bello payoff. 4/4 indestructible hasty, generates Hamsters on attack, deals scaling damage, and grows from Hamster count.
+- Unnatural Growth + Bello creates 50+ power boards. Growth animates itself as 8/8 indestructible.
+- Hidden Cruelty killed Bello but recast with trivial commander tax. Need exile-based removal to permanently answer Bello.
+- Deck dominated shrine engine despite opponent killing Bello once. Ramp advantage too large.
+
+### Game 87 (piloted by Claude): Bello precon vs. Dinosaur Eggs/Atla Palani (Human)
+**Result:** Human wins T12 cycle (23 sides) via Zacama+Zetalpa lethal swing. Human 8, Claude -6. Dominance 2. Comeback.
+- Slow opener: 5 lands, no ramp. Bello T6 on curve via Mountain → Sheltered Thicket → Reliquary Tower.
+- T7-T11: Took 13 face from Velociraptor + Pantlaza prowl-cheat chain (Brontodon, Hulking Raptor, Atla all hit BF cheap).
+- T12: Hamsphere {7} cast → Bello-animated 4/4 ind+haste. Attack trigger 3 dmg killed Atla (CZ). Combat sweep Pantlaza+Velociraptor died. 14 face dmg (12 cmdr from Bello DS) — opp 33→8 wait correction: 22 (face dmg landed across combat, plus T16 attack added DS).
+- T13: Brontodon attack-then-sac trick destroyed Hamsphere mid-combat. Lost 7-mana payoff. Brontodon also gone.
+- T14: Talisman + Thickest target Bello → 6/6 with +3/+3 counters. Attack 11 face. Drew 3 cards via Thickest end-step trigger.
+- T16: Berserkers' Onslaught + Ghalta {1}{G}{G} (15-power discount). DS engine online. 10 face dmg.
+- **T18 LETHAL ATTEMPT FIZZLED:** Cast Tendershoot (city's blessing instant from 17+ permanents) + Pyreswipe Hawk + attacked all 6 (33 power × DS = 66 face). **Opp Teferi's Protection** phased out their entire board, life can't change → 0 face dmg. Catastrophic tempo loss with everything tapped.
+- T19 H: Opp Vortex+discover cascade chain (Silverclad → Ravenous → Forerunner → Atla flips Ghalta → Bonehoard → Zetalpa). Massive board assembled in one turn.
+- T20: Greater Good + Gratuitous Violence cast. Attack with all 7 (40 power × DS+GV = 4× damage = 160 potential). Pyreswipe expend 6 stole Sol Ring. Opp blocked 6 of 7 + Greater Good sacced 4 blockers (32 cards drawn) + Swords to Plowshares on Ghalta (gave me 12 life, me 22→34). Total face: 0.
+- T21 H: Zacama Primal Calamity {6}{R}{G}{W} cast → untap all opp lands ETB → 9 mana to {2}{G}-destroy 3 of my 4 enchantments (Onslaught, GG, GV gone; Thickest spared). Engine wiped.
+- T22: Recast Bello + Sunbird's Invocation. Sunbird's didn't trigger on Bello (Bello is from CZ, not hand). Opp Ram Through targeting Zacama on Bello → Bello dies + 6 trample face. Me 26→20.
+- T23 H: Skullspore Nexus {2}{T} doubled Zacama (9→18 power). Zacama+Zetalpa swing 26 face (18 trample + 8 DS), 0 blockers (Bello CZ, enchantments not creatures off-turn). Me 20→-6. Dead.
+- **MVP loser: Berserkers' Onslaught + Gratuitous Violence + Bello = 4× damage engine.** Got opp from 40 to 8 across T14+T16+T18. Plus Hamsphere T12 cleared their first board.
+- **Key lesson: Atla Palani precon (Naya RGW) packs Teferi's Protection.** Always anticipate this when going for a lethal swing in white-color matchups. Hold back 1+ untapped sources for response if possible. Don't commit everything to a single combat without protection (Heroic Intervention) or split the attack across 2 turns.
+- **Key lesson: Greater Good is the engine card on opp's side.** Each sac = draw cards = power. With Atla's Egg→flip + Bonehoard exile-2 + Vortex discover, opp builds resource advantage faster than removal can keep up. Bello deck has Beast Within / Chaos Warp but needs to draw them in time.
+- **Key lesson: Zacama is the cleanup card.** Untap-all-lands ETB + repeatable {2}{G}-destroy chain wipes my non-Bello enchantment suite (Onslaught/GG/GV). Without enchantment-grant-indestructible (none in deck), I can't protect them.
+- **Key lesson: Sunbird's Invocation requires casts FROM HAND.** Bello (CZ casts) doesn't trigger Sunbird's. Plan to cast 2+ hand spells the turn Sunbird's enters to chain free reveals.
+- **Key lesson: Bello cmdr lethal needs trample or evasion.** Reached 18 cmdr but Bello (3 power, no trample) was always blocked by indestructible Zetalpa or 12-toughness Zacama. Garruk's Uprising would've granted trample to power-4+ creatures (not Bello at 3), so even GU doesn't directly enable Bello cmdr lethal — need a +1/+1 source on Bello.
 
 ### Game 32 (piloted by Claude): Bello precon vs. Cats/Mirri (Human)
 **Result:** Claude wins T16 via lethal combat damage (concession).

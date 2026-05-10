@@ -21,6 +21,38 @@ Commander: Wrexial, the Risen Deep ({3}{U}{U}{B}) | Colors: Blue/Black (Dimir)
 
 ## Game History
 
+### Game 89 (Human): Mill-Steal/Wrexial (Human) vs Avatar Allies/Sokka (Claude)
+**Result: Human wins T26 (sides 26) by Claude concession. Final: Human 16, Claude 16. Dominance 1.**
+
+**Key plays:**
+- T7: Sapphire Medallion T7 — discount engine online early.
+- T9: Witness Protection on Sokka right after Claude's T8 Sokka deploy. Neutralized commander immediately.
+- T10: Claude bounced WP via Boomerang Basics; recast Hakoda. Forced to recast WP on T11 in response to Claude's Go for the Throat counter (Hakoda sac saved Grand Abolisher).
+- T13-14: Wrexial cast T13. Path to Exile sent Wrexial → CZ T14 (recast cost 7 with Sapphire, only delayed 2 turns).
+- T15: Bloatfly Swarm deployed, traded down to 2/2 in T16 block exchange.
+- T17: Nemesis of Reason deployed for the mill engine.
+- T19: Wrexial recast T19 sick.
+- T21: Bloatfly + Nemesis attacked. Mill 10 from Nemesis trigger hit key answers (Mind Stone, Cunning Maneuver, Swift Response, Munda's Vanguard).
+- T23: **King Narfi's Betrayal** — milled 4 each, exiled Grand Abolisher (Claude's) + Consuming Aberration (mine). Chapter II/III lets me cast both from exile under MY control. **Stealing Grand Abolisher was huge** — turned Claude's own lock piece into a shield for my counters on Claude's turns.
+- T23: **Grasping Tentacles + Twincast** — milled 16 to Claude, stole Mind Stone + Commander's Sphere. Mana acceleration jumped from 7 to 9 sources.
+- T23: Wrexial-stolen Swords to Plowshares exiled Sokka → CZ at +6 tax (10 mana recast).
+- T24: Negate countered Claude's Standstill at 1 mana (Sapphire discount on blue). Claude lost the only card-draw lifeline.
+- T25: Cast Aberration via KN chapter II — entered as 33+/33+ based on Claude's bloated GY.
+- T25: Wrexial-stolen StP exiled Sokka again → CZ at +8 tax. Compounding tax made Sokka uncastable for Claude.
+- T26: Claude conceded — Aberration active T27 = unblockable lethal.
+
+**Key lessons (Mill-Steal pilot):**
+- **King Narfi is a sleeper bomb vs commander decks.** Exile their commander from GY (after a removal cycle) and cast it under your control. Free permanent steal of their engine. Plus the mill 4 each fuels Aberration.
+- **Wrexial-stolen StP/Path on the opp's commander is the dream loop.** Each hit + steal = +2 commander tax for them. Sokka went from 4 mana to 10 mana recast over 3 hits.
+- **Sapphire Medallion + Negate = 1-mana counter all game.** Tap any single Island after opp commits to a key spell. Held off Claude's Standstill effortlessly.
+- **Grasping Tentacles + Twincast** is the artifact-steal blowout. Mind Stone + Commander's Sphere from Claude's GY = +3 mana per turn for me, denied to them.
+- **Aberration via King Narfi exile** sidesteps the cost issue. Casting from exile uses any color. 5 mana + KN = a 33+/33+ creature without paying for double black.
+
+**Claude piloting errors that helped:**
+- Claude attacked with Grand Abolisher into Nemesis T18 — sent the lock piece into combat for chip damage. Removed their counter-protection for free.
+- Claude attacked with Sokka T22 for chip — Sokka is the engine, not the beatdown. Got Wrexial-stolen Swift Response punishment.
+- Claude held Counterspell-class It'll Quench Ya for too long — never used it against my key spells (KN, Tentacles, Twincast). Wasted in hand.
+
 ### Game 8 (opponent): Mill/Steal (Human) vs. Boros Equipment (Claude)
 **Result:** Claude wins T12. Kicked Maddening Cacophony milled 40 cards — but 19 were equipment, enabling Mantle of the Ancients to create a 61/52 unblockable Gingerbrute with protection from U/B. Backfire loss.
 **Lessons:**
@@ -167,12 +199,45 @@ Commander: Wrexial, the Risen Deep ({3}{U}{U}{B}) | Colors: Blue/Black (Dimir)
 - **Traumatize + Wrexial is the dream.** 42 cards milled = buffet of instants/sorceries. Decimate stolen from opponent's GY was the best possible steal — 4-for-1.
 - **Grasping Tentacles + Twincast steals two artifacts.** Gilded Lotus + Thran Dynamo = +6 mana per turn from opponent's own cards.
 
+### Game 72 (Human): Mill-Steal/Wrexial (Human) vs. Fun Guys/Ghave (Claude)
+**Result:** Human wins T10 cycle (19 sides) via concession. Human 13, Claude 37. Dominance 2.
+**Key plays:**
+- T4: Hedron Crab milled key pieces all game (Privileged Position T4, Vorinclex T6, Stroke of Midnight T10).
+- T11: Arcane Denial countered Saproling Symbiosis (opponent's board-wide pump).
+- T14: Traumatize milled 35 cards. Imprisoned in the Moon locked down Ghave permanently. Game-deciding turn.
+- T16: Breach the Multiverse stole Vorinclex + deployed Mirelurk Queen. Vorinclex doubled MQ counters (4/4→6/6→8/8 in 2 turns). 4 rad counters on Claude.
+- T17: Claude played Swamp — gave Wrexial permanent swampwalk. Nacatl War-Pride attack dealt 10 and killed Hedron Crab.
+- T18: Wrexial stole Demonic Tutor → Mind Funeral milled 10 more. Nemesis of Reason deployed. Library at 16. Concession.
+**Lessons:**
+- **Imprisoned in the Moon on Ghave is premium.** Unlike creature removal, Ghave can't redirect to command zone. The entire Fun Guys engine shuts down — no token generation, no sac outlet, no counter manipulation.
+- **Breach the Multiverse is the ultimate payoff after Traumatize.** Stealing the opponent's best creature (Vorinclex) while deploying Mirelurk Queen creates an exponential advantage engine.
+- **Opponent played a Swamp — free swampwalk.** Fun Guys runs Swamps in the mana base. Wrexial becomes unblockable for free without needing Flood of Mars or other enablers.
+- **Only 1 counterspell drawn (Arcane Denial).** Deck needs more draw to find interaction consistently. Despite winning, the mid-game was held together by mill pressure alone.
+
+### Game 84 (Human): Mill-Steal/Wrexial (Human) vs Faeries/Tegwyll (Claude)
+**Result: Claude wins T9 cycle (sides 9) by concession. Final: Claude 40, Human 15. Dominance 1.**
+
+**Key plays:**
+- T1-T8: Mana-stuck on lands. Dropped Terramorphic, Evolving Wilds, then Swamps and Islands. Never cast a single spell. Reached 4 lands by T8 but didn't deploy any threats or interaction.
+- T5: Claude played Tegwyll → Messenger became 2/4. Combat damage T5 + T7 chipped Human 40 → 31.
+- T7: Claude cast Talion the Kindly Lord with chosen number 2. With opp casting nothing, the tax engine was idle but the body (6/7 with Liege) was a finisher.
+- T9: Claude double-deployed Glen Elendra Liege + Bitterblossom. Lords stacked: Tegwyll 4/5, Talion 6/7, Messenger 6/8. 16 lethal flying, conceded.
+
+**Key lessons:**
+- **Mana flood/screw on a control deck = auto-loss vs aggro flyers.** No interaction means no answers to Faerie lord-stack snowball. By the time enough mana came online, Claude was already at lethal.
+- **Faerie lord-stack is brutal in mill-steal matchup.** Wrexial deck has no flying blockers and limited removal at low mana counts. Without early Drown or Go for the Throat, the air force runs over the board.
+- **Talion's Messenger snowball is hard to interact with retroactively.** Each attack adds a counter. By T9 Messenger was 6/8 — burning a Murder/GFTT on it was 1-for-1 at best, and the lord chain still wins.
+- **Hidden info note:** Claude's discards off Messenger trigger were creatures/Divert Disaster (least Wrexial-weaponizable). Mill-steal piloting note: when ahead, mill aggressively to fill GY for Wrexial; when behind (this game), there was no Wrexial.
+
 ## Matchup Notes
+- **vs Faeries/Tegwyll (0-1):** Faerie tribal with stacked lords is a worst-case matchup if mana stumbles. Need early counters (Drown, Counterspell) to hit Tegwyll on curve T4. Once Tegwyll lands and resolves, Liege follow-up creates an unanswerable air force. Stasis Field on Tegwyll would be premium (no command zone redirect, locks the engine). Bojuka Bog is questionable here — Faeries don't run heavy GY recursion. Stormtide Leviathan does NOT lock Faeries (everything flies). Mill is nearly useless — Faeries' main "graveyard cards" are usually instants/sorceries, but only by accident, not by design. Don't deploy Wrexial until you can protect him — Faerie deathtouch (Tegwyll) blocks profitably. Talion's number-2 trigger taxes every common spell in the deck; play around it by holding cheaper spells until you can chain through the life loss.
+- **vs Avatar Allies/Sokka (1-0):** Witness Protection on Sokka is the immediate priority — Sokka is the deck's engine (lord + token gen + prowess fuel), not its beatdown. Witness him on sight, even if they have bounce. Force them to spend cards keeping him active. **King Narfi steal of Grand Abolisher is a backbreaker** — Claude often sees GA as a permanent fixture; turning it into MY counter shield ends the matchup. Wrexial-stolen Path to Exile or Swords to Plowshares targeting their commander chains tax snowball fast (+2 per CZ trip). Mill is decent here — Avatar runs creatures and combat tricks, so milling them puts pieces in GY for Wrexial (instant/sorcery tricks). Bloatfly Swarm and Nemesis of Reason both attack into a deck with limited flying defense. The main risk is Sokka's prowess scaling — if they keep him alive and chain noncreature spells, Sokka can quickly reach lethal commander damage AND swarm with menace tokens. Counter the noncreature chain pieces (Standstill, ETAS, combat tricks) at instant speed. Negate at 1 mana via Sapphire Medallion is the perfect tax.
 - **vs Bello precon (1-0):** Stasis Field on Bello shuts down the deck completely. Bello deck has ZERO flyers — Stormtide Leviathan is an unbeatable lock. Mill is excellent here: Bello runs many strong instants/sorceries (Decimate, Chaos Warp, Beast Within, Blasphemous Act) that Wrexial can weaponize. Flood of Mars enables islandwalk early since Gruul has no Islands. Eluge grows huge with Stormtide (all lands = Islands). Priority: Stasis Field on Bello > Flood of Mars > ramp > Stormtide for the kill.
 - **vs Bears/Ayula (1-0):** Mono-G has no counterspells and limited removal. Counter Ayula aggressively — each recast adds +{2} tax, quickly becomes uncastable. Stasis Field / Witness Protection are better than killing her (no command zone redirect, no tax increase, permanent lockout). Stormtide Leviathan is game-ending — bears have no flying or islandwalk. Mill is safe here — bears have minimal GY recursion (only Mother Bear). Wrexial steals their fight spells and Beast Within from GY. Bloatfly Swarm flies over everything.
 - **vs Dargons/Scion (0-1):** Scion has islandwalk/swampwalk targets in Dimir (irrelevant — Scion flies). Scion's Atarka double strike combo is the primary kill condition — **cannot be stopped by counterspells** (activated ability). Need Stifle effects, instant-speed removal (Go for the Throat Scion before damage), or blockers. Lotus Petal / fast mana enables T3 Scion which is nearly unbeatable without early counters. **Teneb reanimates countered creatures** — exile removal preferred. Betor at 20+ total toughness untaps all creatures = no safe attack window. Earthquake Dragon costs {G} with 3 dragons on board. **Mulligan for early interaction aggressively.**
 - **vs Every Shrine Ever/Go-Shintai (0-1):** WORST MATCHUP. Deck runs almost zero instants/sorceries — Wrexial's trigger is dead. Mill fills their GY with enchantment recursion targets (shrines, Hondens, Sterling Grove). Do NOT aggressively mill. Instead: counter key shrines (Sanctum of All, Northern Air Temple), bounce Boundless Vigor to erase counters, deploy Stormtide Leviathan to lock down attacks. Wrexial has swampwalk via Godless Shrine. Their drain engine (NAT) bypasses blockers. Dimir has no enchantment removal — shrines are permanent once resolved.
 - **vs Fblthp (0-1):** Fblthp is a combo deck — 3 library removers + 3 win cons. **Teferi/Barracuda is the must-counter threat** — once it resolves, all instant-speed interaction is gone and combo is unstoppable. Mulligan for early counters (Drown, Counterspell, Arcane Denial). Deploy Wrexial ASAP — opponent runs all Islands, islandwalk is always live. Brainstorm and bounce spells in GY are easy Wrexial steals. Don't waste counters on cantrips or bounce; save them for Teferi and combo pieces. Radroach rad counters mill combo pieces and fuel Drown. Insight Engine snowballs if left unchecked (draws 1, then 2, then 3...). Urza turns all artifacts into {U} sources — massive mana acceleration.
+- **vs Fun Guys/Ghave (1-0):** Imprisoned in the Moon on Ghave is the #1 play — completely shuts down the engine with no command zone redirect. Mill is EXCELLENT here — Ghave combo pieces (Blood Artist, Ashnod's Altar, Parallel Lives, Doubling Season) go to GY and become inaccessible. Traumatize + Breach the Multiverse is the dream combo — steal Vorinclex to double your counters. Fun Guys runs Swamps in the mana base — Wrexial gets free swampwalk without enablers. Mirelurk Queen grows exponentially with Vorinclex doubling. Nemesis of Reason is the finisher — mills 10 on attack, library runs out fast after Traumatize. Watch for Aura Shards (destroys all your artifacts) and Nacatl War-Pride (forces blocks, pushes damage through).
 - **vs non-U/B decks (no Islands/Swamps):** Wrexial's islandwalk/swampwalk is dead without land-type changers (Urborg, Spreading Seas, etc.). Same for Nemesis of Reason and N'ghathrod — menace alone isn't reliable evasion. Mulligan and early game should prioritize finding land-type enablers or lean on non-combat mill instead.
 - **vs Equipment/Voltron:** HIGH RISK to mill aggressively. Check for Mantle of the Ancients, Open the Vaults, or similar mass recursion before committing. Exile-based removal (Tormod's Crypt, Nihil Spellbomb) is essential.
 - **vs Boros Equipment specifically:** Sword of Once and Future grants pro U/B, making the creature untouchable. Prioritize removing equipment enablers (Puresteel Paladin, Sigarda's Aid) before they snowball.

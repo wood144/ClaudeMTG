@@ -89,4 +89,20 @@ Commander: Zinnia, Valley's Voice | Colors: Blue/Red (Izzet)
 ## Matchup Notes Updates
 - **vs. Every Shrine Ever (0-2):** Hidden Cruelty hard-counters Zinnia (3 toughness, always in range). Shield Broker steal is temporary — Honden of Infinite Rage pops the shield counter. Must find enchantment removal (Heliod's Intervention, Austere Command) or lose to trigger damage. Ancient Wars + Honden = 12+ damage/turn once online. Kill Starnheim Courser early to slow shrine deployment. Don't recast Zinnia into active Hidden Cruelty without protection.
 - **vs. Food and Fellowship (1-0):** Food deck's weakness is flying — no flying/reach blockers means Zinnia's CDMG clock is almost unstoppable. Shield Broker stealing Merry shuts down their Soldier engine. Feasting Hobbit with devoured Foods is their best threat — hold instant removal (Rapid Hybridization, bounce). Sun Titan + Selfless Spirit loop closes games. Even through multiple Zinnia removals, the offspring engine rebuilds fast.
-- **vs. Dicebots/Mr. House (1-0):** Dicebots has no flying defense — Zinnia flies over Robots freely for CDMG. Devilish Valet + offspring creatures is the kill engine. Jacked Rabbit + Valet is a combo finish (6 Rabbit tokens = 64x Valet power). Even if opponent removes Zinnia, recast with tax is affordable. Mr. House generates Robots but they're ground-only blockers. Keep deploying offspring creatures to feed Valet and Zinnia's +X/+0.
+- **vs. Dicebots/Mr. House (1-1):** Two faces of this matchup. When Dicebots stays purely ground+robots, Zinnia flies over for free CDMG. When they draw Kambal Profiteering Mayor + Warleader's Call + Impact Tremors, the offspring/token plan is HARD COUNTERED — every token I make becomes a free body for them PLUS drains me 2-3 life per ETB. Bounce/wipe Kambal IMMEDIATELY (he's not their commander, just goes to hand at base mana to recast). Time Wipe is a strict swing card vs this matchup. Earth-Cult Elemental on a high d20 roll is a blowout (forced sacs + token loss + 4-life pings from WC/IT). Don't pay offspring while ANY of {Kambal, Warleader's Call, Impact Tremors} are on board — each token entry is -2 to -3 life. Skyclave Apparition is a key sideboard target if customizable (exile WC or Kambal).
+
+### Game 90: Zinnia Precon (Claude) vs. Dicebots/Mr. House (Human)
+**Result:** Claude concedes T20 (sides 20). Claude life 14, Human life 35. CDMG 5. Dominance 2.
+
+**Loss path:**
+- Mana-screwed early (2 lands T6, no land draws T8). Fortune Teller's Talent T8 was the only play.
+- Kambal T7 + Warleader's Call T9 + Mr. House T9 hard-locked the offspring plan. Each of my tokens = -2 life and a tapped copy for human.
+- Time Wipe T14 was a 4-card swing (Kambal+Mr. House+Ancient Gold Dragon all wiped). Bought 4 turns of recovery.
+- T17 Impact Tremors stacked on top of Warleader's Call → 2x life loss per opp creature ETB. T19 Earth-Cult Elemental rolled nat 20 → forced 2 sacs (lost both Spirit tokens, dropping Zinnia from 5/3 to 1/3) + Mr. House Robot trigger from the d20.
+- T19 attack: HO+LR+Robot, 2 more Robots from attack triggers, -8 life including blocks. 14 life going into T20.
+
+**Lessons:**
+- **Kambal+Warleader's Call+Impact Tremors triple-threat:** Every token made is -2 to -3 life. Refuse to pay offspring or play token-makers until the lock is broken. Aether Channeler bounce (no offspring, choose bounce mode) is the cheapest answer.
+- **Color screw on UU effects:** Pull from Tomorrow needs 2 U sources. Glacial Fortress + Island (or basics) are both required. Without Evolving Wilds → Island, Pull is uncastable for the entire game.
+- **Don't grind lost positions:** When 14 life vs 8-attacker alpha is unanswerable, concede. Saved tokens for blocking didn't matter — Zinnia clock was 4+ turns away from lethal CDMG, opp kills me in 1.
+- **HE+offspring needs Tetsuko first:** I cast HE+offspring T18 without Tetsuko, so the 4 base-power-1 creatures became chumps instead of unblockable threats. Tetsuko before HE+offspring would have made the swarm unblockable AND grown Zinnia.

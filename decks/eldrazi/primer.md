@@ -118,6 +118,26 @@ Commander: Zhulodok, Void Gorger | Colors: Colorless
 - **Key plays:** Forsaken Monument T8 was the turning point — mana advantage never recovered. Tron + Monument made every subsequent turn produce 15+ mana. Cascade consistently hit removal for Claude's blockers.
 - **MVP: Forsaken Monument** — +2/+2, mana bonus, life gain. The engine behind everything.
 
+### Game 71: Eldrazi/Zhulodok (Claude) vs. Squirrel Food/Chatterfang (Human)
+**Result:** Human wins T19 (19 sides) via lethal combat damage. Human 40, Claude 2. Dominance 3.
+
+**Key plays:**
+- T6: Warped Anticausal Vestige ({4}) for early draw. Drew Metalworker off leave trigger, but opponent Spider Food'd it immediately.
+- T10: Dreamstone Hedron online after land-flood opening (4 lands in first 7 cards, no fast mana).
+- T12: Zhulodok deployed. Opponent responded with Attrition ({1}{B}{B}) + Honored Dreyleader (entered as 8/8 from Squirrels/Food). Zhulodok killed by Attrition (sac 1 Squirrel + {B}).
+- T14: Breaker of Creation ({6}{C}{C}) — hexproof from colors made it immune to Attrition AND Chatterfang sac. Cast trigger gained 9 life (23→32). Sanctum of Ugin tutored Cityscape Leveler.
+- T16: Ultima ({5}) → boosted mana → Cityscape Leveler ({8}) cast trigger destroyed Attrition. Opponent killed Ultima with Attrition in response. Both Attrition and Ultima died.
+- T17: Kindred Dominance choosing Squirrel — wiped Breaker + Cityscape while keeping Chatterfang + Dreyleader (13/13) + all Squirrels. Attacked for 18 (32→2 after Breaker life gain buffer).
+- T18: Top into Ugin the Ineffable. -3 destroyed Dreyleader. Burnished Hart for {1} (Ugin discount). But only 1 blocker vs Chatterfang + 3 Squirrels = lethal.
+
+**Key observations:**
+- No Sol Ring/Mana Vault/fast mana in opener meant Zhulodok didn't land until T12 — 3 turns too late against a deck that curves out T3-5.
+- **Metalworker dying before untapping was the turning point.** Spider Food on Metalworker T7 (before it could activate) collapsed the entire ramp timeline. Protect Metalworker and Forsaken Monument at all costs — they're the #1 and #2 removal targets for any opponent.
+- Attrition is devastating against colorless creatures. Only hexproof-from-colors (Breaker) and indestructible survive it. Must prioritize removing Attrition before deploying the cascade engine.
+- Breaker of Creation is the MVP in this matchup — immune to all their targeted removal.
+- Kindred Dominance is a near-unbeatable blowout. The deck has no counterspells and no way to protect non-hexproof creatures from a one-sided wipe.
+- Ugin the Ineffable is strong vs Golgari — -3 kills any colored permanent, static reduces colorless spell costs by {2}.
+
 ### Game 52: Eldrazi/Zhulodok (Claude) vs. Food and Fellowship/Frodo+Sam (Human)
 **Result:** Human wins T12 (12 sides) via lethal combat damage. Human 50, Claude -4.
 
@@ -141,3 +161,4 @@ Commander: Zhulodok, Void Gorger | Colors: Colorless
 - **vs. Fun Guys/Ghave (Abzan tokens, 1-0):** Ghave's aristocrat combo (Blood Artist/Zulaport drain) is completely blanked by Platinum Angel. Mystic Forge enables optimal cascade sequencing — protect it. Annihilator strips their token-based board efficiently. Bane of Bala Ged's exile is particularly strong since they have minimal graveyard recursion. Aura Shards is the main threat — every saproling destroys an artifact. Kill Ghave early and repeatedly to prevent token engine from starting.
 - **vs. Bears/Ayula (mono-G aggro):** Bears can pressure early but lack interaction for the cascade engine. Ayula's fight trigger is the main threat to key pieces (killed Platinum Angel). Cicada flash + pump is the primary win condition — each cascade turn creates a massive trample attacker. Zuko's Exile and removal timing on Ayula is critical since she accumulates counters quickly with Kami of Whispered Hopes.
 - **vs. Food and Fellowship/Frodo+Sam (0-1):** Abzan go-wide with Food engine. Sam creates Food every combat → Merry makes Soldiers → Frodo draws cards when 3+ life gained. Motivated Pony is the kill card (+3/+3 anthem with haste when Food entered). Fell the Mighty targeting their low-power creature wipes Zhulodok while keeping their board. Pippin's sac-4-Foods ability ({T}: +3/+3 and haste to all others) threatens massive alpha strikes. Key: must deploy Zhulodok with protection or have cascade online before they go wide. Don't tap out for Zhulodok into open mana — Fell the Mighty is {4}{W}.
+- **vs. Squirrel Food/Chatterfang (0-1):** Golgari token/aristocrats. Attrition ({1}{B}{B}) + Squirrel tokens = repeatable creature removal for {B} per kill. Destroyed Zhulodok immediately. Breaker of Creation (hexproof from colors) is immune to Attrition AND Chatterfang's {B} sac ability — the deck's best creature in this matchup. Honored Dreyleader snowballs fast (13/13 trample by T17 from Food/Squirrel entering). Kindred Dominance choosing Squirrel is a one-sided wipe that keeps their entire board. Key: must remove Attrition before deploying non-hexproof creatures. Cityscape Leveler ETB destroys it even if Leveler is killed in response (cast trigger). Spider Food hits artifacts — Dreamstone Hedron and mana rocks are targets. Prioritize All Is Dust or Ugin the Ineffable (-3 kills all colored permanents/creatures) to reset their board. Without fast mana (Sol Ring, Mana Vault), the deck is too slow to establish cascade before Chatterfang builds an army.

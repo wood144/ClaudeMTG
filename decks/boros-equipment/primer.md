@@ -92,6 +92,20 @@ Commander: Kellan, the Fae-Blooded // Birthright Boon | Colors: Red/White (Boros
 - Cloudsteel Kirin as creature does NOT grant "can't lose" — only when reconfigured as equipment. Don't count on it for survival.
 - Bello matchup is rough: Gruul animates enchantments as indestructible creatures, and Pyreswipe Hawk + artifact destruction punish equipment-heavy strategy.
 
+### Game 78 (pilot): Boros Equipment (Human) vs. Dargons/Scion (Claude)
+**Result:** Human wins T5 (9 sides) via commander damage (22). Human 40, Claude 26. Dominance 3.
+
+**Key plays:**
+- T3: Birthright Boon ({1}{W}) → tutored Sword of the Animist (default line).
+- T5: cast Kellan from exile ({2}{R}).
+- T7: cast Sword ({2}) + equip Kellan ({2}). Attack for 6 CDMG (3/3 double strike) + ramp Plains.
+- T9: cast Wrecking Ball Arm ({2}) + equip Kellan ({3} legendary) → Kellan now 8/8 double strike (7/7 base from WBA + 1/+1 from Sword). Attack for 16 CDMG. Sword ramp Mountain. Total CDMG 22, lethal.
+
+**Lessons:**
+- **Wrecking Ball Arm is the new finisher line.** {2} cast + {3} legendary equip = 5 mana on the same turn. Sword's +1/+1 stacks on top of WBA's "base 7/7" set (Layer 7c after 7b), so Kellan ends at 8/8 double strike. Two attacks = 22 CDMG.
+- **Birthright Boon → Sword default line is reliable.** Sword's ramp made T9 castable on schedule even with no other rocks.
+- **vs. Dargons specifically: race before T10.** Crux of Fate ({3}{B}{B}) is their only realistic answer to Kellan at sorcery speed; if you have lethal lined up by T9 they can't stop it. They have zero instant interaction.
+
 ## Matchup Notes
 - **vs Mill decks:** Mantle of the Ancients turns mill into a win condition. Hold Mantle and let them fill your GY. Cloudsteel Kirin prevents mill-out loss.
 - **vs Dimir (U/B):** Sword of Once and Future grants protection from both their colors. Near-total lockout on the equipped creature.

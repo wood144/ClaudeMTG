@@ -14,6 +14,24 @@ Commander: Ghave, Guru of Spores | Colors: White/Black/Green (Abzan)
 
 ## Game History
 
+### Game 82 (as opponent — Human piloted): Bello precon (Claude) vs. Fun Guys/Ghave (Human)
+**Result:** Human wins T10 cycle (20 sides) via 207 sap lethal threat. Claude 37, Human 36. Dominance 2.
+- Slow start: Human kept 4 land + 5-6 drops. Claude's Bello came down T3 via Sol Ring (Claude played first, found ramp).
+- T6: Claude's BIG SWING — Kodama + Tendershoot chained UG free via Kodama trigger. UG combat doubled creatures. Bello + UG + Lotus through 14 dmg + 3 cmdr. Human 37 → 23. **Looked grim — Human nearly didn't stabilize.**
+- T8 stabilizer: Mondrak (token doubler). Slowed Claude's wide attacks (saps as profitable chumps).
+- T10 lifeline: Doubling Season landed (counter + token doubling on top of Mondrak).
+- T11 dodged tempo loss: Claude's T11 attack (no UG doubling because Lotus tapped) only got 4 dmg through. Human kept all key pieces (Mondrak, Ghave alive).
+- T14: Vorinclex resolved → quadruple counter placement (DS + Vorinclex) on top of double tokens. Combo engine fully online.
+- T15+ value engine: Moldervine Reclamation + Skullclamp on saproling tokens = +2 cards per equip + 1 card/life per Moldervine. Dug through deck.
+- T17 cleared engine: 4 sap sacs to Deathspore Thallid → -4/-4 on UG. UG dies (indestructible doesn't save 0 tox). Claude's combat doubling engine GONE.
+- T18 grindy turn: Skullclamp + Moldervine + Deathspore continued digging.
+- T20 LETHAL: Beseech the Mirror bargained for free Pallid Mycoderm (4 MV ≤ 4). Pre-combat: Ghave 3x activations (12 saps doubled, sac to Pallid for +12/+12). Deathspore Thallid spore counter activation (4 saps doubled, sac to Pallid for +4/+4). Saps now 17/17. Attack with 15. Block 6. Sac 6 blocked saps to Pallid for +6/+6. 9 attackers at 23/23 = 207 lethal. Concession.
+- **Key lesson: Stack effect insurance.** Doubling Season + Mondrak + Vorinclex creates 4x token, 4x counter, 4x token effects. Each new piece exponentially scales the others. Stack ASAP regardless of board pressure.
+- **Key lesson: Moldervine Reclamation is the enabler card.** Without it, Skullclamp + Pallid sacs would just be value. With it, every sap death is +1 card +1 life — combo finds itself.
+- **Key lesson: Beseech the Mirror tutoring 4 MV creatures = free Pallid/Disciple of Bolas/etc. via bargain (sac sap for token, bargain works on tokens).**
+- **Key lesson: Deathspore Thallid -1/-1 + Pallid +1/+1 are flexible sac sinks.** Choose based on board: -1/-1 to remove blockers vs +1/+1 to power through. D=1, P=3 split was optimal in this game (would have been 210 dmg vs 207).
+- **Key lesson: Pallid Mycoderm is the missing finisher.** Cheap 4 MV, instant-speed sac for stacking +1/+1 to all fungi/saps. Without Pallid (or Slimefoot for drain), saps are 1/1 chumps. With Pallid, they scale exponentially.
+
 ### Game 5 (as opponent): Dargons/Scion (Claude) vs. Fun Guys/Ghave (Human)
 **Result:** Claude (Scion) wins T16 via commander damage.
 - The Mycotyrant was killed T6 before generating tokens — protect key pieces.
@@ -145,6 +163,26 @@ Commander: Ghave, Guru of Spores | Colors: White/Black/Green (Abzan)
 - **Path to Exile on Fblthp is a trap.** Shuffle trigger means Path fizzles — opponent loses nothing and you lose a removal spell. Better to save Path for Magus of the Future or other non-shuffle creatures.
 - **Need artifact/enchantment removal for OwtM.** Aura Shards or Stroke of Midnight on One with the Multiverse before the free cast would have stopped the combo.
 
+### Game 72 (piloted): Fun Guys/Ghave (Claude) vs. Mill-Steal/Wrexial (Human)
+**Result:** Human wins T10 cycle (19 sides) via concession (mill-out imminent). Claude 37 life, Human 13. Dominance 2.
+
+**Key plays:**
+- T5: Nemata deployed on curve while opponent tapped out. Swung for 3 each turn until T13.
+- T9: Deathspore Thallid + The Mycotyrant deployed (2 spells to strain counterspell). Arcane Denial countered Saproling Symbiosis T11.
+- T13: Ghave deployed while opponent tapped out for Wrexial + Jet Medallion. Made 1 Saproling, attacked with Nemata + Mycotyrant. Opponent blocked Nemata with Wrexial — Nemata died.
+- T14: Traumatize milled 35 cards (half library). Imprisoned in the Moon locked Ghave permanently. Combo plan dead.
+- T16: Breach the Multiverse stole Vorinclex from Claude's GY + deployed Mirelurk Queen. Vorinclex doubled MQ's counters. 4 rad counters on Claude.
+- T17: **Critical error — played Swamp, giving Wrexial swampwalk (unblockable).** Nacatl War-Pride attack dealt 10 damage and killed Hedron Crab, but Nacatl died to MQ block.
+- T18: Wrexial stole Demonic Tutor from GY → tutored Mind Funeral → milled 10 more. Nemesis of Reason deployed. Library at 16. Concession.
+
+**Key lessons:**
+- **NEVER play typed lands (Swamp/Island) against Wrexial.** Wrexial has islandwalk AND swampwalk. Playing a Swamp gave it permanent evasion. Use only non-basic duals without basic land types, or Forests/Plains.
+- **Imprisoned in the Moon is game-ending on Ghave.** Unlike Darksteel Mutation, there's no way to sacrifice the imprisoned permanent for value. The deck has almost no enchantment removal (Aura Shards, Stroke of Midnight — both milled). Need more answers: consider adding Nature's Claim or Krosan Grip.
+- **Traumatize + Wrexial GY steal is devastating.** Half the library in GY = buffet of instants/sorceries for Wrexial. Key spells stolen: Demonic Tutor. Combo pieces (Blood Artist, Ashnod's Altar, Doubling Season, Anointed Procession) all milled and inaccessible.
+- **Breach the Multiverse stealing your own creatures is backbreaking.** Vorinclex under opponent's control doubled their counter gains and halved ours. MQ grew from 4/4 to 8/8 in 2 turns.
+- **Nacatl War-Pride is excellent against creature-light boards.** T17 attack forced blocks, killed Hedron Crab, dealt 10. But it dies to any 4+ power blocker and tokens are exiled at end step.
+- **Mycotyrant needs descend triggers.** Without a sac outlet (Ghave imprisoned, Ashnod's in GY), descend count was low most turns. Token generation was minimal.
+
 ## Matchup Notes
 - **vs. Dinosaur Eggs/Atla Palani (0-1):** Atla + Palani's Hatcher + Marauding Raptor = self-sustaining engine that flips free hasty creatures every combat. Remove Atla on sight. Damnation is the best answer — resets the entire Dino board. Dictate of Erebos punishes their Egg sacrifices. Parallel Lives needs protection before deploying (Privileged Position). Saproling chump blocks buy time but tramplers (Rampaging Brontodon, Trumpeting Carnosaur) push through regardless.
 - **vs. Scion of the Ur-Dragon:** Scion → Ureni blanks Path to Exile and black removal. Need exile effects that don't target (board wipes, sacrifice effects) or colorless removal.
@@ -152,4 +190,5 @@ Commander: Ghave, Guru of Spores | Colors: White/Black/Green (Abzan)
 - **vs. Avatar Allies/Sokka (0-2):** Kill Munda's Vanguard on sight — cohort snowballs permanently. Sokka giving menace to all Allies makes chump blocking difficult (need 2 blockers per attacker). Deploy Privileged Position early to blank targeted removal and ETB damage (Momo). Board wipes are essential; 1/1 saprolings can't keep up with growing Allies. **Katara, Water Tribe's Hope is an independent win condition** — waterbend X sets all creatures to X/X, lethal with any board. Must remove Katara or keep opponent's creature count low. Razor Rings is efficient removal against our big creatures (softens for combat cleanup). Prioritize color fixing in opening hand — Ghave needs WBG and coming down late is often fatal.
 - **vs. Eldrazi/Zhulodok (0-1):** Mystic Forge is the #1 removal target — it gives perfect cascade sequencing. Platinum Angel blanks the entire Blood Artist/Zulaport drain combo; must have removal (Swords, Path, Stroke of Midnight) before committing to combo. Annihilator 4 + Bane of Bala Ged exile triggers compound to strip 6 permanents per attack — wide boards of saprolings help absorb annihilator but not exile. Eldrazi ramp (Sol Ring + Mana Vault + Metalworker) can deploy Zhulodok T5-7; need early interaction or accept being on the back foot. Damnation is premium — resets their expensive board. Aura Shards with saprolings can dismantle their artifact ramp.
 - **vs. Fblthp (0-2):** Fblthp's combo doesn't need to interact with your board — Privileged Position is wasted here. Path to Exile on Fblthp is a trap (shuffle trigger fizzles Path). Save removal for Magus of the Future and One with the Multiverse — those are the engines that enable free-cast ETI. Aura Shards is the best answer if you can get it out before their artifact/enchantment engine comes online. Ghave's infinite drain combo is faster than Fblthp if it assembles, but Fblthp's consistency is the problem — they have 9 combo pairings and multiple cheat-into-play paths.
+- **vs. Mill-Steal/Wrexial (0-1):** NEVER play Swamps or Islands — Wrexial has both landwalk types. Use non-basic duals without basic land types. Imprisoned in the Moon on Ghave is game-ending; need enchantment removal (Nature's Claim, Krosan Grip — consider adding). Traumatize + Wrexial GY steal = opponent casts your best instants/sorceries for free. Breach the Multiverse steals your own creatures — Vorinclex under their control is devastating. Prioritize: deploy threats while opponent is tapped out (Wrexial costs 6), hold enchantment removal for Imprisoned/Stasis Field, race to combo before mill-out. Nemesis of Reason mills 10 on ATTACK declaration (blocking doesn't prevent it). Mirelurk Queen + Vorinclex = exponential growth. Aura Shards destroys their artifacts (Sapphire/Jet Medallion, signets).
 - **vs. Boros Equipment/Kellan:** Aura Shards is the MVP — every saproling made destroys an equipment. Deploy it before Kellan assembles voltron. Expect Birthright Boon T2 tutoring Sword of the Animist. Equipment survives Damnation so prioritize Aura Shards / Stroke of Midnight over board wipes. Kellan's double strike + flying equipment can go over saproling tokens. Darksteel Mutation on Kellan works but beware Skullclamp (kills 0/1 mutated creature, draws 2, commander returns). Foundry Inspector + Bruenor is the explosive engine — disrupt early or they deploy 3+ equipment per turn. Haystack gives repeatable phasing protection — remove it or use removal BEFORE it resolves. Race to combo if they're ramping faster.

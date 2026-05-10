@@ -26,6 +26,21 @@ Commander: The Infamous Cruelclaw | Colors: Black/Red (Rakdos)
 
 ## Game History
 
+### Game 76 (opponent): The Claw!/Cruelclaw vs. Bello precon (Claude)
+**Result:** Claude wins T6 cycle (12 sides, concession at 1 life). Claude 26, Human 1. Dominance 2.
+- Boots T4, Cruelclaw T5, equipped T6 — classic unblockable setup executed on curve.
+- Cruelclaw's first connect trigger hit Sol Ring. A whiff on tempo — free mana but no threat, didn't generate pressure. Second connect hit Drakuseth (7/7 flyer, discarded Desolation Twin to cast free).
+- Cruelclaw's Heist (gift) exiled opp's Kodama of the East Tree from hand — cost opp their chain engine but they had other payoffs.
+- Shadowgrange Archfiend T10 ETB forced sac of Wandertale (4-power highest). 4 life gain bought a turn.
+- **The backbreaker:** Pyreswipe Hawk T11 was the exact counter-play. Its expend 6 let Bello pilot gain control of Lightning Greaves, while Abrade destroyed Trailblazer's Boots same turn. In ONE turn Cruelclaw lost both shroud AND unblockable. Pyreswipe then equipped Greaves itself (shroud + haste). Full-board swing for 16 put opp to 1.
+- T12 Drakuseth attack trigger could kill 3 Cats but nothing stopped Pyreswipe (shroud-protected flyer, no reach on opp side). Conceded at 1.
+
+**Lessons:**
+- Pyreswipe Hawk is a DISASTER MATCHUP for this deck. It single-handedly undid both equipment pieces (steal Greaves, destroy Boots) in a 7-mana turn. Against artifact-sensitive removal, consider running duplicate enablers (Access Tunnel, Rogues' Passage, Trailblazer's Boots, Whispersilk Cloak) for redundancy.
+- Sol Ring off Cruelclaw was the worst possible hit — pure ramp, no board pressure. Library sequencing luck matters. Tutoring or scry effects could help aim Cruelclaw's trigger at real threats.
+- Bello's Chariot + Cat token engine creates a wide board faster than menace/1v1 removal can handle. Needed an earlier sweeper (Damnation, Blasphemous Act) before the wide board came online. Shadowgrange's sac-highest-power only removes one creature — useless against many small bodies.
+- Against wide/value decks, Cruelclaw's 3 damage clock is too slow. The deck relies on connecting 4-6 times for big-CMC flips, but wide opp boards race and outpace that.
+
 ### Game 4 (opponent): The Claw/Cruelclaw vs. Every Shrine Ever (Claude)
 **Result:** Cruelclaw wins ~T15. Trigger engine snowballed out of control.
 - Cruelclaw + Access Tunnel + Lightning Greaves came online and couldn't be answered — shroud prevented targeted removal, unblockable prevented chump blocking.

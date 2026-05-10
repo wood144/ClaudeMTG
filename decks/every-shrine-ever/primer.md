@@ -120,6 +120,41 @@ Commander: Go-Shintai of Life's Origin | Colors: WUBRG (5-color)
 - **Hidden Cruelty shuts down Zinnia completely.** Zinnia's 3 toughness is always in range once shrine count hits 3+.
 - **Starnheim Courser is a high-value accelerant.** Reducing shrine costs by {1} compounds across multiple shrine deploys.
 
+### Game 74: Every Shrine Ever (Claude) vs. Bello precon (Human)
+**Result:** Human wins T6 cycle (12 sides) by concession. Human 40, Claude 5. Dominance 3.
+
+**Key plays:**
+- Sol Ring T1 into Burnished Hart T3 → sacced for 2 basics. Bello T7 on curve with 7+ mana.
+- Claude T8: Commander deployed. T10: Jukai Naturalist + Hidden Cruelty (discounted). End step killed Bello (3 shrines ≥ 3 toughness).
+- T9: Rolling Hamsphere animated by Bello — 7/7 indestructible, attack trigger killed shrine token + dealt 7. Ghalta for {G}{G} post-combat.
+- T11: Bello recast + Unnatural Growth. Doubled combat: Ghalta 24/24 trample, Hamsphere 17/17 indestructible, UG 8/8 indestructible. Hamsphere trigger killed Hidden Cruelty. 28 damage through optimal blocks, survived at 5.
+- T12: Drew land off Abundant Growth cantrip. No board wipe = concession.
+
+**Lessons:**
+- **Rolling Hamsphere + Bello is devastating.** Animated as 4/4 indestructible hasty, attack trigger creates 3 Hamsters + deals X damage. Grows itself with +1/+1 per Hamster. Must be answered before it attacks.
+- **Unnatural Growth doubles EVERYTHING at beginning of each combat.** Combined with Bello's animation, creates 50+ power boards. Bello also animates Growth itself as 8/8 indestructible.
+- **Hidden Cruelty killed Bello but opponent just recast it.** Commander tax (+{2}) is trivial with their ramp. Need repeatable removal or exile-based answers.
+- **Shrine deck too slow vs Gruul ramp + Bello.** Engine came online T10 but opponent already had Ghalta + Hamsphere. Need Farewell or Cyclonic Rift in opener against this deck.
+- **Block non-tramplers to absorb maximum damage.** Blocking Hamsphere (no trample, 17/17) with commander saved 17 damage. Always check for trample before assigning blocks.
+
+### Game 79: Every Shrine Ever (Human) vs. Dargons/Scion (Claude)
+**Result:** Human wins T6 cycle (11 sides) via lethal combat. Final life: Human 33, Claude 0. Dominance 2.
+
+**Key plays:**
+- T1-T7: Curve out Forest+Fertile Ground T3, Great Hall T3, Swamp T5, Go-Shintai of Life's Origin T5, Leyline Immersion T7 (5-mana ramp on Go-Shintai), Wildsear, Scouring Maw T7.
+- T8: Claude's Scion of Draco entered (4/4 flyer for {2} via domain). Hit for 4.
+- T9: Cast Crescent Island Temple → Wildsear's cascade into Northern Air Temple. NAT chain drained 5 (Go-Shintai trigger Shrine Token + NAT ETB at X=4 shrines). Crescent ETB created 6+1 Monks. Cast Hidden Cruelty (cascade into Abundant Growth → 1 free draw + Great Hall any-color). Hidden Cruelty EOT killed Scion of Draco.
+- T10 (Claude): Scion → Atarka, 12 CDMG. PtE'd Hidden Cruelty.
+- T11: WIN TURN. Cast Enchantress's Presence → Wildsear cascade into Weaver of Harmony (+1/+1 to enchantment creatures, copy-trigger ability). Cast Maelstrom Nexus → cascade into Mesa Enchantress. Cast Lost Wisdom → cascade into Sol Ring. 3 noncreature spells = +3/+3 prowess per Monk = 11 Monks at 4/4. Plus Weaver buffed Shrine Tokens to 2/2. Attack with everything (54+ power) for lethal.
+
+**Lessons:**
+- **Wildsear, Scouring Maw + Maelstrom Nexus is the engine.** Wildsear gives cascade to enchantment spells from hand. Maelstrom Nexus gives cascade to first spell each turn. Stacking cascade triggers chains free spells exponentially.
+- **Monk tokens from Crescent Island Temple are the win condition vs. control/midrange.** Each shrine entering = +1 Monk via Crescent. Each noncreature spell = +1/+1 to all Monks via prowess. Goes lethal in one turn from a 4-shrine board.
+- **Weaver of Harmony as cascade target is great.** Buffs Shrine Tokens from 1/1 to 2/2 + has copy-trigger ability for double-resolving NAT drains or Crescent Monks.
+- **Mesa Enchantress + Enchantress's Presence is the card-draw engine.** Each enchantment cast = draw 2. Off Maelstrom Nexus's any-spell cascade, this finds combo pieces fast.
+- **Claude's misplay was Atarka over Scourge.** With opp at 43 life and 14 small creatures on the wide board, the right Scion target was Scourge of Kher Ridges + activate {1}{R} wipe to clear Hidden Cruelty, Monks, and Shrine Tokens. Atarka's 12 CDMG looked decisive but didn't end the game and left the prowess swarm intact for T11 lethal.
+- **vs. Dargons:** Scion of Draco's hexproof+lifelink+first-strike static makes Scion of Ur-Dragon hard to kill. Hidden Cruelty MUST kill Scion of Draco first to remove the static, then target Scion. Once both fall, Atarka activation pressure stops.
+
 ## Matchup Notes
 - **vs. Zinnia Precon (2-0):** Hidden Cruelty hard-counters Zinnia (3 toughness). Deploy Cruelty ASAP and kill Zinnia on sight. Honden of Infinite Rage can pop shield counters on stolen creatures — flexible removal + face damage. Starnheim Courser accelerates the shrine engine. Shield Broker is the main threat — steal enchantment creatures. Hull Breach or Honden damage answers the shield counter cleanly. Ancient Wars + Honden = 12+ damage/turn once engine is online.
 - **vs. Mill/Steal/Wrexial (1-0):** Mill is largely harmless — deck runs very few instants/sorceries so Wrexial's combat trigger finds nothing. Mill actually helps by stocking GY with shrine recursion targets for commander ability. Wrexial has swampwalk via Godless Shrine — unblockable 5/turn. Race is favorable: NAT drain bypasses blockers, Vigor grows exponentially. Main threat: Sink into Stupor / Cyclonic Rift bouncing Vigor erases all +1/+1 counters. Consider spreading counters or holding protection. Archmage Emeritus + Mocking Sprite is their card draw engine — kill Emeritus with Hidden Cruelty if possible. DO NOT play Prismatic Omen — turns all lands into Islands/Swamps for Wrexial.
@@ -127,4 +162,5 @@ Commander: Go-Shintai of Life's Origin | Colors: WUBRG (5-color)
 - **vs. Zinnia Precon:** Zinnia's offspring engine creates tons of base-power-1 tokens, pumping Zinnia into a massive flyer. Curiosity Crafter + tokens = card draw engine. Shield Broker (cheated in via Arthur) steals enchantment creatures with shield counters. Hull Breach is the answer — destroy your own stolen enchantment creature, shield counter absorbs it, control reverts. Farewell (exile creatures + artifacts, NOT enchantments) is the ideal wipe since Honden engines survive. Honden of Night's Reach shreds their hand post-wipe.
 - **vs. Cruelclaw:** Cruelclaw + Access Tunnel + Lightning Greaves is a must-answer package. Lightning Greaves gives shroud (can't target with Sanctum) AND haste. Access Tunnel makes it unblockable. Priority: destroy Lightning Greaves with Hull Breach ASAP. Butcher of Malakir + any board wipe = forced sacrifice — killing opponent's creatures triggers Butcher, costing you a creature too. Dread Defiler's drain ability has no tap cost — can activate multiple times per turn at instant speed.
 - **vs. Dicebots/Mr. House:** Explosive ramp (Sol Ring + Bobbleheads) means Mr. House comes down fast and generates Robots/Treasures immediately. Hull Breach answers Mr. House (artifact creature) but commander tax is cheap with their mana. Ancient Copper Dragon connecting = game over (d20 Treasures with Wyll boost). Agility Bobblehead makes creatures unblockable — must be destroyed. Farewell is the critical card; mulligan aggressively for it or early tutors. Hidden Cruelty can snipe the Dragon if shrine count ≥ 5.
+- **vs. Bello precon (0-1):** Rolling Hamsphere + Bello = 7/7+ indestructible hasty that generates Hamsters and deals scaling damage on attack. Unnatural Growth doubles everything at combat start — Bello animates Growth itself as 8/8 indestructible. Hidden Cruelty kills Bello (3 toughness) but recast is cheap with Gruul ramp. Need Farewell or Cyclonic Rift — mulligan for board wipes. Shrine engine too slow to race without early wipe. Block non-tramplers (Hamsphere, animated enchantments) to absorb maximum damage. Ghalta comes down for {G}{G} with Bello's board — trample is the real killer.
 - **vs. Dinosaur Eggs/Atla Palani (1-0):** Atla + Palani's Hatcher is the engine — Hatcher auto-sacs Eggs at beginning of combat, Atla flips creatures from library. Kill Atla or Hatcher with Hidden Cruelty (prioritize Hatcher — it's not a commander and permanently gone). Descendants' Path gives free creatures on upkeep. Xenagos doubles power + haste — force multiplier. Zetalpa is indestructible — MUST have exile removal (Swords, Path to Exile, Farewell exile mode). Hidden Cruelty can't touch it. Wakening Sun's Avatar (destroy all non-Dinosaurs) is their best answer to a developed shrine board — race before they find it. Stone Fangs drain + SAT counters wins the race if shrine count hits 10+.

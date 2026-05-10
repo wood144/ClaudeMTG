@@ -60,6 +60,9 @@ The deck wants to play reactively — cast flash creatures on opponent's end ste
 - **Glen Elendra's Answer** ({2}{U}{U}) — Uncounterable. Counter ALL opponent spells and abilities on stack. Create Faerie tokens equal to countered.
 - **Divert Disaster** ({1}{U}) — Counter unless pay 2; if they pay, you get a Lander token.
 
+### Soft Lock / Tempo
+- **Procrastinate** ({X}{U}) — Tap target creature. Put 2X stun counters on it (each stun replaces one untap). At X=2 (3 mana), target locked tapped for 4 turns. **Use on commander-dependent decks (Wayta, etc.) to disable activated abilities.** Excellent vs ability-based combo where counters are dead.
+
 ### Removal
 - **Cyclonic Rift** ({1}{U} / {6}{U} overload) — Bounce one or bounce ALL opponents' nonlands.
 - **Go for the Throat** ({1}{B}) — Destroy nonartifact creature.
@@ -173,7 +176,72 @@ Stack lords (Tegwyll + Scion + Glen Elendra Liege) to make 1/1 tokens into 4/4 o
 - **Alela's goad forced Shinen to attack alone** — pulled it into a lethal block situation, removing Claude's only lure creature.
 - **1 card in hand by end of game** — flash deployment drains the hand fast. Need draw engines (Tegwyll death triggers, Nymris, Deepfathom Skulker) to sustain.
 
+### Game 84 (Claude): Faeries/Tegwyll (Claude) vs Mill-Steal/Wrexial (Human)
+**Result: Claude wins T9 (sides 9) by concession. Final: Claude 40, Human 15. Dominance 1.**
+
+**Key plays:**
+- Mulligan to 6 (1 land + all U-needing spells, swamp couldn't cast them). Second hand: Command Tower, Sol Ring, Divert Disaster, Talion's Messenger, Talion the Kindly Lord, High Fae Trickster, Glen Elendra's Answer.
+- T1: Command Tower → Sol Ring. Bottomed Talion the Kindly Lord (replaceable 4-drop).
+- T3: Drew Swamp → Talion's Messenger ({2}{U}, 1/3 flying, attack-trigger draw/discard/+1+1).
+- T5: Drew Path of Ancestry → Tegwyll on curve ({1}{U}{B}, 4 mana). Messenger now 2/4.
+- T7: Drew Nymris (later discarded). Cast Talion the Kindly Lord (chose 2 — broadest tax vs Hedron Crab tough/Cacophony MV/Glimpse MV/counterspells). Path scry kept Glen Elendra Liege on top. Attack Tegwyll + Messenger for 5; Messenger snowball started.
+- T9: 6 mana double-deploy — Glen Elendra Liege + Bitterblossom. Lords stacked: Tegwyll 4/5, Talion 6/7, Messenger 6/8 (after 3rd counter from attack trigger). 16 flying lethal-on-board → concession.
+
+**Key lessons:**
+- **Tegwyll + Liege double-lord chain is devastating.** Tegwyll +1/+1, Liege +2/+2 to UB Faeries / +1/+1 to mono-blue. Messenger snowball (1/3 base → 6/8 in 4 turns) is the deck's hidden finisher.
+- **Path of Ancestry scry on every Faerie cast** — kept Liege on top exactly when needed. Tegwyll's Faerie type makes most of the deck eligible.
+- **Number choice 2 was correct vs Mill-Steal** — hits Hedron Crab toughness, Cacophony MV, Glimpse MV, Drown MV, most counterspells MV. Broadest possible.
+- **Discarding off Messenger trigger:** prefer non-instant/sorcery (creatures) to deny Wrexial steal targets. Discarded High Fae Trickster (T5), Nymris (T7), Divert Disaster (T9 — least impactful counter).
+- **Opp mana-stuck:** never cast a spell, just dropped fetches/lands. Aggressive mid-game commitment was correct — no need to hold up counters when there's no pressure to counter.
+
+### Game 85 (piloted): Faeries/Tegwyll (Claude) vs Dinosaur Eggs/Atla Palani (Human)
+**Result: Faeries lose T9 (sides 18) by concession to lethal Gishath+Zacama+Etali swing. Final life: Human 40, Claude 23. Dominance 2.**
+
+**Key plays:**
+- T7: Lofty Denial on Generous Gift (opp tapped out → clean counter, kept Signet).
+- T8: Bonehoard Dracosaur (5/5 flying first strike) resolved — only Lofty Denial in hand earlier was already used; Flare of Denial too expensive (3 mana with 2 effective).
+- T10 opp: Cast Ram Through targeting Tegwyll. Offer countered (Treasures to opp). Then Contest of Claws same turn — let through (saved Flare). Tegwyll died, discover 2 hit Sol Ring (free cast). Atla cast off freed mana.
+- T11: Drew Snap. Bounced Bonehoard, recast Tegwyll (+2 tax = 5 mana).
+- T12: Tegwyll sac'd to Flare of Denial countering Zetalpa, Primal Dawn (4/8 flying double strike vigilance trample indestructible — game-ending threat). Tax → +4.
+- T13: Arcane Denial on Marauding Raptor (denied Atla's auto-Egg-killer).
+- T15: Tegwyll's Scouring at 6 mana wiped Atla. Got 3 Faerie tokens.
+- **T16 (game-losing turn):** Opp activated Atla in response to Scouring (Egg created), then PASSED PRIORITY — did not sac in response. Wipe destroyed Atla + Egg simultaneously. Atla's "Egg dies" trigger fired via look-back rule (Atla was on BF when Egg died), went on stack POST-Scouring resolution. Resolved → flipped Etali, Primal Storm. Etali entered AFTER Scouring resolved → survived the wipe.
+- T16 opp continued: Zacama (9/9 reach trample vigilance, ETB untaps lands) + Regisaur Alpha (3/3 trample token + haste to other Dinos). Combat: 18 face. Etali trigger exiled Flitterwing Nuisance (mine) + Cultivate, cast both free. Sac'd Flitterwing to Ashnod's Altar → Forerunner of the Empire → tutored Gishath top of library.
+- T17 mine: Tegwyll re-cast for 7 mana ({5}{U}{B} +4 tax). Only blocker.
+- T18 opp: Drew Gishath, cast for 8 mana. Swung 29 power (Gishath 7 + Zacama 9 + Etali 6 + Regisaur 4 + 3/3 token 3). Concession at 23 life.
+
+**Key lessons:**
+- **Wipe-into-Atla is a trap if opp can activate Atla at instant speed.** The look-back rule lets the post-wipe Egg-death trigger flip a creature that enters AFTER the wipe and survives. Counter Atla BEFORE wiping, or wipe only when opp is tapped out / Atla can't activate.
+- **Counter sequencing:** Burned all 4 counters on midgame (Generous Gift, Ram Through, Zetalpa, Raptor). Left nothing for Zacama (T16) and Gishath (T18). The Ram Through counter was probably wrong — should have let Tegwyll die that turn (he died next turn anyway to Contest of Claws) and saved Offer for Atla or another noncreature wincon.
+- **Snap on Atla > Snap on Bonehoard?** Snap T11 was used on Bonehoard (5/turn flying engine) but Atla had just resolved untouched. Bouncing Atla = +2 tax + delays Egg engine. Hard call — Bonehoard was tangible damage, Atla was potential.
+- **No removal drawn for Etali post-wipe.** Faeries lacks instant-speed creature removal beyond Sower (steal) and bounce (Snap, Cyclonic Rift). Once Etali resolved through and Snap was in GY, no answer.
+- **Ringsight was a brick most of the game** — Tegwyll kept dying / staying in CZ. Tutor never went online when needed.
+
+### Game 86 (piloted): Faeries/Tegwyll (Claude) vs Quit Hitting Yourself/Wayta (Human)
+**Result: Human wins T18 (sides 18) via Wayta-fight reflection chain. Final life: Human 34, Claude -1. Dominance 1.**
+
+**Key plays:**
+- T1-T2: Standard ramp openings. Opp shocks Temple Garden + Sol Ring + Arcane Signet.
+- T3-T4: Opp deploys Spiteful Sliver, then Screaming Nemesis. Claude held counter (correct — both were cheap reflectors, neither lethal alone).
+- T5: Opp Pain for All on Nemesis (Nemesis ETB-3 killed Tegwyll on entry) + Timely Ward on Sliver (indestructible). Claude tapped out from T9 Tegwyll cast — could not counter Pain for All, the key amp.
+- T6 (Claude T11): Murder on Wayta + Cyclonic Rift on Spiteful Sliver. Used both removal pieces. Wayta to CZ (+2 tax), Sliver bounced + Timely Ward consumed.
+- T7-T8: Opp Wayta recast 5 mana. Wayta-fight on Talion's Messenger via Nemesis — Pain for All + Nemesis own + Wayta amp = 4 dmg + Nemesis no-life-gain rider. Lost Messenger.
+- **T9 (CRITICAL ERROR):** Cast Archmage of Echoes (5 mana, tapped out) with Drain + Denial in hand. Held no counter mana for opp T16.
+- T10: Opp Sliver recast + Shaman en-Kor cast. Claude could not counter — 0 mana up.
+- **T11+ (lethal chain):** End of Claude T17 + opp upkeep T18: Wayta-fight Sliver vs Nemesis ({G}, T). en-Kor {1}{W} redirects Sliver-incoming damage to itself, then en-Kor {0} redistributes 1 to Sliver / 1 to Wayta / 1 stays on en-Kor. Triggers: Sliver own (1 + amp = 2), Pain for All on Nemesis (2 + amp = 4), Nemesis own (2 + amp = 4) = 10 dmg per cycle. Two cycles killed me (19 → 9 → -1).
+
+**Key lessons:**
+- **Counter Pain for All on cast.** Pain for All on Nemesis is the cheapest amplifier — turns Nemesis into a "deals damage to each opp" reflector. T10 was the cleanest counter window.
+- **Counters are dead vs activated abilities.** Wayta-fight and en-Kor abilities are not spells. Arcane Denial / Mana Drain / Ice Out can't counter them. Faeries needs **removal** (Murder, Cyclonic Rift, Snap, Go for the Throat) for this matchup, not counters.
+- **T15 Archmage tap-out was the critical error.** With Drain + Denial in hand, holding mana would have countered Sliver-recast OR en-Kor on T16. Once en-Kor came down with Sliver, the lock was unbreakable.
+- **Talion at 4 mana with no protection is fragile.** Cast T9 with no counter mana, ate Swords T10, fed opp 3 life via Swords lifegain.
+- **Wayta-fight + en-Kor + 2 reflectors = 10 dmg/turn, repeatable.** Once assembled, race is over. Disrupt before en-Kor lands.
+- **Procrastinate sat dead all 18 turns** — not in card_data.json after deck edits. Card cache refresh required after deck list changes.
+
 ## Matchup Notes
 - **vs. Meteor Apes/Roxanne (1-0):** Roxanne's Meteorite ETB (2 damage) threatens Faerie tokens but with Tegwyll lord they survive at 2/2. **Eaten by Piranhas is the #1 answer** — strips Roxanne's abilities entirely. Flash in threats on end steps to dodge sorcery-speed interaction. Snaremaster Sprite locks down Roxanne for 2 turns. Gruul has very limited flying/reach blockers — air force is nearly unblockable. Watch for Starstorm/Magmaquake/Rolling Earthquake as board wipes. Silverback Elder destroys enchantments on creature cast trigger — remove it or bounce it before Elder can trigger.
 - **vs. Fblthp (0-1):** Fblthp combo is fast and resilient. Lab Maniac, Thassa's Oracle, and Jace are three independent win conditions — removing one isn't enough. Leyline of Anticipation enables instant-speed combo deployment. Priority targets to counter: Leveler/Mirror of Fate (library exile) > mana doublers > card draw. Faeries' dense counter suite is the primary defense but depletes quickly without draw engines online.
 - **vs. The Claw!/Cruelclaw (1-0):** Cruelclaw is helpless without evasion enablers. Flash creatures tap it down repeatedly. Talion choosing 3 taxes every Cruelclaw cast. Dense counter suite handles any hardcast threats. Deepfathom Skulker is the MVP draw engine. Monarch effects from opponent are free card advantage — flyers steal it trivially.
+- **vs. Mill-Steal/Wrexial (1-0):** Talion the Kindly Lord choosing 2 punishes the entire mill suite (Cacophony, Glimpse, Drown, most counters all MV2). Tegwyll + Liege lord stack turns Talion's Messenger into a one-card win condition (snowball +1/+1 every attack). Discard preferentially non-instant/sorcery cards off Messenger trigger to deny Wrexial steal targets. Bitterblossom is safe to deploy aggressively — even if Drown counters it, the rest of the lord chain wins anyway. Apply pressure early; opp's deck is slow and reactive without combat.
+- **vs. Dinosaur Eggs/Atla Palani (0-1):** Atla is the engine — must counter on cast OR remove before she can activate. With Ashnod's Altar, opp doesn't even need Marauding Raptor to enable the Egg flip combo. **DO NOT WIPE while Atla is on board with mana up** — the look-back rule lets opp activate Atla in response, let the wipe destroy both, then the Egg-death trigger flips a creature post-wipe that survives. Etali, Primal Storm is the worst single card to flip into vs Faeries — exiles top of each library on attack and casts free, drains my counter suite via my own deck. Bonehoard Dracosaur (5/5 flying first strike) is high priority if it lands — Faerie tokens lose to first strike, hard to race in air. Save Cyclonic Rift overload as the panic button — Naya can't easily recast 3+ creatures in one turn. Snap is critical bounce — use on Atla (tax + reset) before Bonehoard.
+- **vs. Quit Hitting Yourself/Wayta (0-1):** Wayta+en-Kor+reflectors is an **ability-based combo, not spell-based**. Counter package (Drain/Denial/Ice Out/Counterspell etc.) is dead vs Wayta-fight and en-Kor redirects. Faeries needs **removal** (Murder, Cyclonic Rift, Snap, Go for the Throat, Recoil) to disrupt. Priority targets: (1) Pain for All on cast — counter or bounce immediately; it's the cheapest Nemesis amp. (2) Shaman en-Kor — the keystone redirector that funnels damage to one reflector. Without en-Kor, fight chains can't stack. (3) Spiteful Sliver / Screaming Nemesis (post Pain for All) — bounce/kill before chain assembles. (4) Wayta itself — Murder or Cyclonic Rift on cast forces +2 tax recast. (5) Save Cyclonic Rift overload as panic button — bounces all opp nonlands, breaks the assembled lock. **Do not tap out for big threats while opp has cards in hand and partial combo on board.** With limited removal, holding mana for ability-source removal beats holding for counter.

@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
 """
 Post-game tracker updater for MTG Commander.
-Updates Game Log, Rankings, Head-to-Head, and Instructions sheets.
+Updates Game Log, Rankings, Rankings - Human, Rankings - Claude,
+Head-to-Head, and Instructions sheets.
+
+Per-pilot ranking sheets isolate each pilot's W/L with each deck so
+deck-quality and pilot-skill variance can be read separately. SoS in
+the per-pilot sheets uses the *opposing* pilot's Wilson scores
+(opponents in your games were piloted by the other player).
 
 Usage (from mtg-commander/):
     python scripts/update_tracker.py '<JSON game data>'
@@ -207,11 +213,217 @@ def calc_loser_perf(sides):
     return round(min(1.5, max(0, (2 / 30) * (sides - 10))), 2)
 
 
+# ── Rankings helpers (used for overall + per-pilot sheets) ──────────
+
+def aggregate_deck_stats(all_games, pilot=None):
+    """
+    Build per-deck stats dict. pilot=None for overall (each game contributes
+    winner+loser); pilot='human' or 'claude' for per-pilot view (each game
+    contributes only the deck that pilot was sleeving).
+    """
+    deck_stats = {}
+    for g in all_games:
+        won_by = (g['won_by'] or '').strip().lower()
+        if pilot is None:
+            entries = [
+                (g['winner_deck'], g['winner_cmdr'], True),
+                (g['loser_deck'], g['loser_cmdr'], False),
+            ]
+        elif pilot == 'human':
+            if won_by == 'human':
+                entries = [(g['winner_deck'], g['winner_cmdr'], True)]
+            elif won_by == 'claude':
+                entries = [(g['loser_deck'], g['loser_cmdr'], False)]
+            else:
+                continue
+        elif pilot == 'claude':
+            if won_by == 'claude':
+                entries = [(g['winner_deck'], g['winner_cmdr'], True)]
+            elif won_by == 'human':
+                entries = [(g['loser_deck'], g['loser_cmdr'], False)]
+            else:
+                continue
+        else:
+            raise ValueError(f"Unknown pilot: {pilot}")
+
+        sides = g['sides'] if g['sides'] is not None else 16
+        for deck, cmdr, is_winner in entries:
+            if deck not in deck_stats:
+                deck_stats[deck] = {'cmdr': cmdr, 'wins': 0, 'losses': 0,
+                                    'games': 0, 'perfs': [], 'sides_list': []}
+            s = deck_stats[deck]
+            s['games'] += 1
+            if is_winner:
+                s['wins'] += 1
+                s['perfs'].append(calc_winner_perf(sides, g.get('dominance', 2)))
+            else:
+                s['losses'] += 1
+                s['perfs'].append(calc_loser_perf(sides))
+            s['sides_list'].append(sides)
+    return deck_stats
+
+
+def compute_wilson_perf(deck_stats):
+    """Compute wilson, perf, avg_sides on each deck stat (in place)."""
+    for s in deck_stats.values():
+        s['wilson'] = wilson_lower(s['wins'], s['games'])
+        s['perf'] = round(sum(s['perfs']) / len(s['perfs']), 2)
+        avg_s = sum(s['sides_list']) / len(s['sides_list'])
+        s['avg_sides'] = int(avg_s) if avg_s == int(avg_s) else round(avg_s, 1)
+
+
+def compute_sos_rating(deck_stats, opponent_stats, all_games, pilot=None):
+    """
+    Compute SoS and Rating for each deck (in place).
+    SoS = avg Wilson of decks faced, looked up in `opponent_stats` (the
+    deck_stats dict from the opposing pilot's perspective, or overall stats
+    for the overall sheet).
+    """
+    deck_opponents = {}
+    for g in all_games:
+        won_by = (g['won_by'] or '').strip().lower()
+        w, l = g['winner_deck'], g['loser_deck']
+        if pilot is None:
+            deck_opponents.setdefault(w, []).append(l)
+            deck_opponents.setdefault(l, []).append(w)
+        elif pilot == 'human':
+            if won_by == 'human':
+                deck_opponents.setdefault(w, []).append(l)
+            elif won_by == 'claude':
+                deck_opponents.setdefault(l, []).append(w)
+        elif pilot == 'claude':
+            if won_by == 'claude':
+                deck_opponents.setdefault(w, []).append(l)
+            elif won_by == 'human':
+                deck_opponents.setdefault(l, []).append(w)
+
+    for deck, s in deck_stats.items():
+        opps = deck_opponents.get(deck, [])
+        opp_wilsons = [opponent_stats[o]['wilson'] for o in opps if o in opponent_stats]
+        s['sos'] = round(sum(opp_wilsons) / len(opp_wilsons), 4) if opp_wilsons else 0.0
+        s['rating'] = round(s['wilson'] * (1 + s['sos']), 4)
+
+
+def write_rankings_sheet(wb, sheet_name, deck_stats, latest_decks, deck_values):
+    """Write a Rankings sheet (overall or per-pilot). Creates sheet if missing.
+    Preserves existing trend arrows for decks not in latest_decks."""
+    if sheet_name not in wb.sheetnames:
+        wb.create_sheet(sheet_name)
+    ws = wb[sheet_name]
+
+    # Snapshot prior ranks/trends
+    old_ranks = {}
+    old_trends = {}
+    for row in ws.iter_rows(min_row=2, max_row=ws.max_row, values_only=True):
+        if row and row[0] is not None and len(row) > 2 and row[2] is not None:
+            old_ranks[row[2]] = row[0]
+            old_trends[row[2]] = row[1] if len(row) > 1 else '-'
+
+    sorted_decks = sorted(
+        deck_stats.items(),
+        key=lambda x: (x[1]['rating'], x[1]['perf']),
+        reverse=True,
+    )
+    new_ranks = {deck: i + 1 for i, (deck, _) in enumerate(sorted_decks)}
+
+    def trend_arrow(deck):
+        if deck not in latest_decks:
+            return old_trends.get(deck, '-')
+        old = old_ranks.get(deck)
+        if old is None:
+            return 'NEW'
+        new = new_ranks[deck]
+        if new < old:
+            return 'UP'
+        elif new > old:
+            return 'DN'
+        return '-'
+
+    # Clear all existing data rows
+    for r in range(2, ws.max_row + 1):
+        for c in range(1, 14):
+            ws.cell(row=r, column=c).value = None
+
+    bold = Font(bold=True)
+    center = Alignment(horizontal='center')
+    rank_headers = ['Rank', 'Trend', 'Deck', 'Commander', 'W', 'L', 'Games',
+                    'Wilson', 'SoS', 'Rating', 'Perf', 'Avg Sides', 'Value']
+    for col_idx, hdr in enumerate(rank_headers, start=1):
+        ws.cell(1, col_idx, value=hdr).font = bold
+
+    for i, (deck, s) in enumerate(sorted_decks):
+        r = i + 2
+        t = trend_arrow(deck)
+        ws.cell(r, 1, value=i + 1).font = bold
+        ws.cell(r, 1).alignment = center
+        ws.cell(r, 2, value=t).alignment = center
+        if t in ('UP', 'DN', 'NEW'):
+            ws.cell(r, 2).font = bold
+        ws.cell(r, 3, value=deck)
+        ws.cell(r, 4, value=s['cmdr'])
+        ws.cell(r, 5, value=s['wins'])
+        ws.cell(r, 6, value=s['losses'])
+        ws.cell(r, 7, value=s['games'])
+        ws.cell(r, 8, value=s['wilson'])
+        ws.cell(r, 9, value=s['sos'])
+        ws.cell(r, 10, value=s['rating'])
+        ws.cell(r, 11, value=s['perf'])
+        ws.cell(r, 12, value=s['avg_sides'])
+        val = deck_values.get(deck, 0.0)
+        ws.cell(r, 13, value=val).number_format = '$#,##0.00'
+
+    return len(sorted_decks)
+
+
+def latest_decks_for_pilot(latest_game, pilot):
+    """Return the set of decks that count as 'just played' for a pilot's sheet."""
+    if not latest_game:
+        return set()
+    won_by = (latest_game['won_by'] or '').strip().lower()
+    if pilot is None:
+        return {latest_game['winner_deck'], latest_game['loser_deck']}
+    if pilot == 'human':
+        return {latest_game['winner_deck'] if won_by == 'human' else latest_game['loser_deck']}
+    if pilot == 'claude':
+        return {latest_game['winner_deck'] if won_by == 'claude' else latest_game['loser_deck']}
+    return set()
+
+
+def build_all_rankings(wb, all_games, deck_values):
+    """Build/update the three Rankings sheets: overall, Human, Claude.
+    Returns (count_overall, count_human, count_claude)."""
+    overall_stats = aggregate_deck_stats(all_games, pilot=None)
+    human_stats = aggregate_deck_stats(all_games, pilot='human')
+    claude_stats = aggregate_deck_stats(all_games, pilot='claude')
+
+    compute_wilson_perf(overall_stats)
+    compute_wilson_perf(human_stats)
+    compute_wilson_perf(claude_stats)
+
+    # SoS: overall uses itself; per-pilot uses the *other* pilot's wilsons
+    # (opponents in your games were piloted by the other player).
+    compute_sos_rating(overall_stats, overall_stats, all_games, pilot=None)
+    compute_sos_rating(human_stats, claude_stats, all_games, pilot='human')
+    compute_sos_rating(claude_stats, human_stats, all_games, pilot='claude')
+
+    latest = all_games[-1] if all_games else None
+
+    n_o = write_rankings_sheet(wb, 'Rankings', overall_stats,
+                               latest_decks_for_pilot(latest, None), deck_values)
+    n_h = write_rankings_sheet(wb, 'Rankings - Human', human_stats,
+                               latest_decks_for_pilot(latest, 'human'), deck_values)
+    n_c = write_rankings_sheet(wb, 'Rankings - Claude', claude_stats,
+                               latest_decks_for_pilot(latest, 'claude'), deck_values)
+    return n_o, n_h, n_c
+
+
 # ── Main update logic ───────────────────────────────────────────────
 
 def update_tracker(game_data):
     wb = openpyxl.load_workbook(TRACKER_PATH)
     canonical, alias_map, cmdr_map = load_canonical_deck_names()
+    bold = Font(bold=True)
+    center = Alignment(horizontal='center')
 
     # Normalize deck names — primarily via commander, fallback to deck name
     game_data['winner_deck'] = normalize_deck_name(
@@ -272,131 +484,23 @@ def update_tracker(game_data):
             'dominance': row[16] if len(row) > 16 and row[16] is not None else 2,
         })
 
-    # Aggregate per-deck stats
-    deck_stats = {}
-    for g in all_games:
-        for deck, cmdr, is_winner in [
-            (g['winner_deck'], g['winner_cmdr'], True),
-            (g['loser_deck'], g['loser_cmdr'], False),
-        ]:
-            if deck not in deck_stats:
-                deck_stats[deck] = {
-                    'cmdr': cmdr, 'wins': 0, 'losses': 0,
-                    'games': 0, 'perfs': [], 'sides_list': [],
-                }
-            s = deck_stats[deck]
-            s['games'] += 1
-            sides = g['sides'] if g['sides'] is not None else 16  # fallback
-            if is_winner:
-                s['wins'] += 1
-                s['perfs'].append(calc_winner_perf(sides, g.get('dominance', 2)))
-            else:
-                s['losses'] += 1
-                s['perfs'].append(calc_loser_perf(sides))
-            s['sides_list'].append(sides)
-
-    for s in deck_stats.values():
-        s['wilson'] = wilson_lower(s['wins'], s['games'])
-        s['perf'] = round(sum(s['perfs']) / len(s['perfs']), 2)
-        avg_s = sum(s['sides_list']) / len(s['sides_list'])
-        s['avg_sides'] = int(avg_s) if avg_s == int(avg_s) else round(avg_s, 1)
-
-    # ── Strength of Schedule ────────────────────────────────────────
-    # For each deck, average the raw Wilson scores of all opponents faced
-    # Build opponent list per deck from game log
-    deck_opponents = {}  # deck -> list of opponent deck names (one per game)
-    for g in all_games:
-        w, l = g['winner_deck'], g['loser_deck']
-        deck_opponents.setdefault(w, []).append(l)
-        deck_opponents.setdefault(l, []).append(w)
-
-    for deck, s in deck_stats.items():
-        opps = deck_opponents.get(deck, [])
-        if opps:
-            opp_wilsons = [deck_stats[o]['wilson'] for o in opps if o in deck_stats]
-            s['sos'] = round(sum(opp_wilsons) / len(opp_wilsons), 4) if opp_wilsons else 0.0
-        else:
-            s['sos'] = 0.0
-        s['rating'] = round(s['wilson'] * (1 + s['sos']), 4)
-
-    # Snapshot old ranks and trends for preservation
-    ws_rank = wb['Rankings']
-    old_ranks = {}
-    old_trends = {}
-    for row in ws_rank.iter_rows(min_row=2, max_row=ws_rank.max_row, values_only=True):
-        if row[0] is not None and row[2] is not None:
-            old_ranks[row[2]] = row[0]
-            old_trends[row[2]] = row[1] if len(row) > 1 else '-'
-
-    # Sort: Rating desc → Perf desc
-    sorted_decks = sorted(
-        deck_stats.items(),
-        key=lambda x: (x[1]['rating'], x[1]['perf']),
-        reverse=True,
-    )
-    new_ranks = {deck: i + 1 for i, (deck, _) in enumerate(sorted_decks)}
-
-    # Trend: only decks in the latest game get arrows
-    latest = all_games[-1]
-    latest_decks = {latest['winner_deck'], latest['loser_deck']}
-
-    def trend_arrow(deck):
-        if deck not in latest_decks:
-            # Preserve existing trend for decks that didn't play
-            return old_trends.get(deck, '-')
-        old = old_ranks.get(deck)
-        if old is None:
-            return 'NEW'
-        new = new_ranks[deck]
-        if new < old:
-            return 'UP'
-        elif new > old:
-            return 'DN'
-        return '-'
-
-    # Clear old data rows (keep header)
-    for r in range(2, ws_rank.max_row + 1):
-        for c in range(1, 14):
-            ws_rank.cell(row=r, column=c).value = None
-
-    # Fetch deck values
+    # Fetch deck values once for all three sheets
     try:
         deck_values = get_deck_values()
     except Exception as e:
         print(f"  Deck values unavailable: {e}")
         deck_values = {}
 
-    # Write headers
-    bold = Font(bold=True)
-    center = Alignment(horizontal='center')
-    rank_headers = ['Rank', 'Trend', 'Deck', 'Commander', 'W', 'L', 'Games',
-                    'Wilson', 'SoS', 'Rating', 'Perf', 'Avg Sides', 'Value']
-    for col_idx, hdr in enumerate(rank_headers, start=1):
-        ws_rank.cell(1, col_idx, value=hdr).font = bold
+    n_o, n_h, n_c = build_all_rankings(wb, all_games, deck_values)
+    print(f"Rankings: {n_o} decks ranked")
+    print(f"Rankings - Human: {n_h} decks ranked")
+    print(f"Rankings - Claude: {n_c} decks ranked")
 
-    # Write sorted rankings
-    for i, (deck, s) in enumerate(sorted_decks):
-        r = i + 2
-        t = trend_arrow(deck)
-        ws_rank.cell(r, 1, value=i + 1).font = bold
-        ws_rank.cell(r, 1).alignment = center
-        ws_rank.cell(r, 2, value=t).alignment = center
-        if t in ('UP', 'DN', 'NEW'):
-            ws_rank.cell(r, 2).font = bold
-        ws_rank.cell(r, 3, value=deck)
-        ws_rank.cell(r, 4, value=s['cmdr'])
-        ws_rank.cell(r, 5, value=s['wins'])
-        ws_rank.cell(r, 6, value=s['losses'])
-        ws_rank.cell(r, 7, value=s['games'])
-        ws_rank.cell(r, 8, value=s['wilson'])
-        ws_rank.cell(r, 9, value=s['sos'])
-        ws_rank.cell(r, 10, value=s['rating'])
-        ws_rank.cell(r, 11, value=s['perf'])
-        ws_rank.cell(r, 12, value=s['avg_sides'])
-        val = deck_values.get(deck, 0.0)
-        ws_rank.cell(r, 13, value=val).number_format = '$#,##0.00'
-
-    print(f"Rankings: {len(sorted_decks)} decks ranked")
+    # `deck_stats` from the overall view is needed for downstream sheets (H2H,
+    # Instructions debuted-deck count). Rebuild a thin reference here.
+    deck_stats = aggregate_deck_stats(all_games, pilot=None)
+    compute_wilson_perf(deck_stats)
+    compute_sos_rating(deck_stats, deck_stats, all_games, pilot=None)
 
     # ── 3. HEAD-TO-HEAD ─────────────────────────────────────────────
     ws_h2h = wb['Head-to-Head']
@@ -478,7 +582,8 @@ def update_tracker(game_data):
 
 if __name__ == '__main__':
     if len(sys.argv) >= 2 and sys.argv[1] == '--refresh-values':
-        # Rebuild rankings (with fresh deck values) without adding a game
+        # Rebuild all 3 ranking sheets (with fresh deck values) without adding a game.
+        # Note: trend arrows are preserved as-is (no game played, nothing to compare).
         wb = openpyxl.load_workbook(TRACKER_PATH)
         canonical, alias_map, cmdr_map = load_canonical_deck_names()
         ws_log = wb['Game Log']
@@ -494,90 +599,26 @@ if __name__ == '__main__':
                 'sides': row[9],
                 'dominance': row[16] if len(row) > 16 and row[16] is not None else 2,
             })
-        # Rebuild deck_stats and rankings (reuse logic from update_tracker)
-        deck_stats = {}
-        for g in all_games:
-            for deck, cmdr, is_winner in [
-                (g['winner_deck'], g['winner_cmdr'], True),
-                (g['loser_deck'], g['loser_cmdr'], False),
-            ]:
-                if deck not in deck_stats:
-                    deck_stats[deck] = {'cmdr': cmdr, 'wins': 0, 'losses': 0, 'games': 0, 'perfs': [], 'sides_list': []}
-                s = deck_stats[deck]
-                s['games'] += 1
-                sides = g['sides'] if g['sides'] is not None else 16
-                if is_winner:
-                    s['wins'] += 1
-                    s['perfs'].append(calc_winner_perf(sides, g.get('dominance', 2)))
-                else:
-                    s['losses'] += 1
-                    s['perfs'].append(calc_loser_perf(sides))
-                s['sides_list'].append(sides)
-        for s in deck_stats.values():
-            s['wilson'] = wilson_lower(s['wins'], s['games'])
-            s['perf'] = round(sum(s['perfs']) / len(s['perfs']), 2)
-            avg_s = sum(s['sides_list']) / len(s['sides_list'])
-            s['avg_sides'] = int(avg_s) if avg_s == int(avg_s) else round(avg_s, 1)
-        # SoS for refresh path
-        deck_opponents = {}
-        for g in all_games:
-            w, l = g['winner_deck'], g['loser_deck']
-            deck_opponents.setdefault(w, []).append(l)
-            deck_opponents.setdefault(l, []).append(w)
-        for deck, s in deck_stats.items():
-            opps = deck_opponents.get(deck, [])
-            if opps:
-                opp_wilsons = [deck_stats[o]['wilson'] for o in opps if o in deck_stats]
-                s['sos'] = round(sum(opp_wilsons) / len(opp_wilsons), 4) if opp_wilsons else 0.0
-            else:
-                s['sos'] = 0.0
-            s['rating'] = round(s['wilson'] * (1 + s['sos']), 4)
-        sorted_decks = sorted(deck_stats.items(), key=lambda x: (x[1]['rating'], x[1]['perf']), reverse=True)
-        ws_rank = wb['Rankings']
-        # Preserve existing trends keyed by deck name
-        old_trends = {}
-        for row in ws_rank.iter_rows(min_row=2, max_row=ws_rank.max_row, values_only=True):
-            if row[0] is not None and row[2] is not None:
-                old_trends[row[2]] = row[1] if len(row) > 1 else '-'
         try:
             deck_values = get_deck_values()
         except Exception as e:
             print(f"  Deck values unavailable: {e}")
             deck_values = {}
-        bold = Font(bold=True)
-        center = Alignment(horizontal='center')
-        # Clear old data rows (keep header)
-        for r in range(2, ws_rank.max_row + 1):
-            for c in range(1, 14):
-                ws_rank.cell(row=r, column=c).value = None
-        # Write headers
-        rank_headers = ['Rank', 'Trend', 'Deck', 'Commander', 'W', 'L', 'Games',
-                        'Wilson', 'SoS', 'Rating', 'Perf', 'Avg Sides', 'Value']
-        for col_idx, hdr in enumerate(rank_headers, start=1):
-            ws_rank.cell(1, col_idx, value=hdr).font = bold
-        # Write full rankings, preserving trends
-        for i, (deck, s) in enumerate(sorted_decks):
-            r = i + 2
-            trend = old_trends.get(deck, '-')
-            ws_rank.cell(r, 1, value=i + 1).font = bold
-            ws_rank.cell(r, 1).alignment = center
-            ws_rank.cell(r, 2, value=trend).alignment = center
-            if trend in ('UP', 'DN', 'NEW'):
-                ws_rank.cell(r, 2).font = bold
-            ws_rank.cell(r, 3, value=deck)
-            ws_rank.cell(r, 4, value=s['cmdr'])
-            ws_rank.cell(r, 5, value=s['wins'])
-            ws_rank.cell(r, 6, value=s['losses'])
-            ws_rank.cell(r, 7, value=s['games'])
-            ws_rank.cell(r, 8, value=s['wilson'])
-            ws_rank.cell(r, 9, value=s['sos'])
-            ws_rank.cell(r, 10, value=s['rating'])
-            ws_rank.cell(r, 11, value=s['perf'])
-            ws_rank.cell(r, 12, value=s['avg_sides'])
-            val = deck_values.get(deck, 0.0)
-            ws_rank.cell(r, 13, value=val).number_format = '$#,##0.00'
+        # Build with empty latest_decks → no trend arrows updated, existing trends preserved
+        # (trick: pass an empty all_games tail by calling helpers directly).
+        overall_stats = aggregate_deck_stats(all_games, pilot=None)
+        human_stats = aggregate_deck_stats(all_games, pilot='human')
+        claude_stats = aggregate_deck_stats(all_games, pilot='claude')
+        for ds in (overall_stats, human_stats, claude_stats):
+            compute_wilson_perf(ds)
+        compute_sos_rating(overall_stats, overall_stats, all_games, pilot=None)
+        compute_sos_rating(human_stats, claude_stats, all_games, pilot='human')
+        compute_sos_rating(claude_stats, human_stats, all_games, pilot='claude')
+        n_o = write_rankings_sheet(wb, 'Rankings', overall_stats, set(), deck_values)
+        n_h = write_rankings_sheet(wb, 'Rankings - Human', human_stats, set(), deck_values)
+        n_c = write_rankings_sheet(wb, 'Rankings - Claude', claude_stats, set(), deck_values)
         wb.save(TRACKER_PATH)
-        print(f"Refreshed rankings and deck values for {len(sorted_decks)} decks.")
+        print(f"Refreshed: Rankings ({n_o}), Rankings - Human ({n_h}), Rankings - Claude ({n_c}).")
         sys.exit(0)
 
     if len(sys.argv) < 2:
