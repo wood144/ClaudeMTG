@@ -81,6 +81,8 @@
     'renderOppHand',
     'renderZoneCounts',
     'renderPhase',
+    'showToast',  // catches shuffle (shuffleLibrary toasts but never renders) and other
+                  // render-less mutations; debounce makes redundant/error toasts harmless
   ];
 
   hooks.forEach(function (name) {
