@@ -1,4 +1,5 @@
 # Quit Hitting Yourself / Wayta — Deck Primer
+<!-- summary reconciled 2026-06-21 -->
 > **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
 
 Commander: Wayta, Trainer Prodigy | Colors: Red/Green/White (Naya)
@@ -14,22 +15,24 @@ Commander: Wayta, Trainer Prodigy | Colors: Red/Green/White (Naya)
 - **Wrathful Raptors / Wrathful Red Dragon:** When a Dinosaur/Dragon you control is dealt damage, it deals that much to any target. Not many Dinosaurs/Dragons in deck besides these.
 
 ## Key Combos
-- **Guilty Conscience + Boros Reckoner (or any reflector):** Infinite damage loop. Reflector is dealt damage → deals that much to any target → Guilty Conscience deals that damage back to it → repeat infinitely.
-- **Pariah/Pariah's Shield + Indestructible creature:** All damage to you redirected to indestructible creature. Combined with a reflector, opponent's attacks damage themselves.
-- **Blasphemous Act + Brash Taunter:** 13 damage to Taunter → 13 damage to opponent. With en-Kor redirection, can funnel multiple creatures' 13 damage into one reflector.
-- **Wayta fight + own reflector:** Reflector takes damage, prevents it via Wayta, deals it to any target. The other creature takes real damage unless also protected.
+- **Guilty Conscience + Boros Reckoner (or any reflector):** Infinite damage loop. Reflector is dealt damage → deals that much to any target → Guilty Conscience deals that damage back to it → repeat infinitely. Sequence protection (Heroic Intervention for hexproof+indestructible) BEFORE Guilty Conscience, or the loop kills your own reflector.
+- **Wheel of Misfortune + Gideon's Sacrifice + Boros Reckoner:** 4-mana kill on the trigger turn (Reckoner deployed earlier). GS redirects your Wheel damage to Reckoner → reflection → you pick "one million," opp is forced to pick low and can't outpick. Live as early as T5 with ramp. Only out: kill Reckoner before Wheel resolves — assume opp has 2+ mana of removal.
+- **Wayta-fight + en-Kor + 2 reflectors (e.g. Spiteful Sliver + Screaming Nemesis):** Repeatable chain kill, ~10 dmg/cycle for ~3 mana. en-Kor's {0} redirect funnels fight damage onto one reflector then redistributes 1 dmg to keep every creature alive. **en-Kor is the keystone** — without it the reflector dies to fight damage and the chain stops. Activated abilities aren't spells → counterspell decks can't stop it.
+- **Blasphemous Act + Donna Noble (soulbonded to Wayta):** Mass-damage spell → 4× reflection (Donna fires + Wayta amp doubles, on BOTH Wayta and Donna). 13 dmg → 52. Earthquake / Star of Extinction / Pyrohemia scale identically. Without paired Donna, Blasphemous Act deals 0 to opp. Donna re-pairs on ANY creature ETB (rule 702.93c) — Wayta recast from CZ re-triggers the pair. Opp must NEVER double-block a Donna-paired Wayta (2 damage events × amp = 4× trigger).
+- **Pariah / Pariah's Shield + Darksteel Plate on Wayta:** Triple lock — all damage to you redirected to indestructible Wayta; double redundancy means exiling Wayta is the only clean answer. It's a replacement effect: combat damage is never "dealt to a player," so "deals combat damage to a player" triggers (Cruelclaw, Scytheclaw) never fire. Finish through the lock with Star of Extinction + Blazing Sunsteel (Wayta-doubled reflection = one-shot).
+- **Blasphemous Act + Brash Taunter:** 13 to Taunter → 13 to opp; with en-Kor, funnel multiple creatures' 13 into one reflector. Brash is a high-priority removal target — give it redundant indestructible (Darksteel Plate), not just Wayta.
+- **Pain for All (cheapest amp, {2}{R}):** Cast on Screaming Nemesis ASAP. Adds a "deals damage to each opp" reflection trigger per damage event; Wayta amp doubles it. With Donna paired = 4× reflection on a fight.
+- **Wayta fight as finisher:** Once the engine is online, fight opponent's own big creatures into your reflector — all damage reflected back, amplified. Wayta's ability doubles every reflection trigger.
 
 ## Weaknesses
 - Relies on creatures sticking around — removal before board wipes disrupts the plan
 - Exile-based removal (Path to Exile, Swords to Plowshares) bypasses indestructible
 - Enchantment/artifact removal hits the protection pieces (Darksteel Plate, Shielded by Faith, Pariah)
-- Without a reflector, board wipes hurt the Wayta player too
+- **No reflector in hand = no deck.** Without the combo engine, Wayta is just a 1/5 blocker that dies to fight triggers; board wipes hurt the Wayta player too. (Lost Games 50, 73 this way.)
 - Slow setup — needs both a reflector AND protection before pulling the trigger
-
-## Key Combos (Updated)
-- **Pariah + Darksteel Plate + Pariah's Shield on Wayta:** Triple lock — all damage to you redirected to indestructible Wayta. Double redundancy means exiling Wayta is the only clean answer.
-- **Pain for All + Donna Noble (soulbonded to Wayta):** Each creates a damage reflection trigger when Wayta is dealt damage. Wayta's ability doubles both. Result: 4x damage reflection. Fighting Wayta into a 7-power creature = 28 damage to opponent.
-- **Wayta fight as finisher:** Once the reflection engine is online, use Wayta's fight ability to force opponent's own big creatures to damage Wayta, reflecting it all back amplified.
+- **Sacrifice effects bypass the lock.** Force-sac-greatest-power (Shadowgrange Archfiend) and edicts go around indestructible and break the Pariah lock — race to the kill once assembled.
+- **Damage reflection is dodged by:** commander-damage clocks (Zhulodok), protection-from-each-color finishers (Akroma's Will both modes makes multicolored Wayta useless as a blocker), and damage-prevention walls (Platinum Emperion). Fast-ramp decks also simply outrace the setup.
+- **Opponent-side reflectors backfire:** enemy Wrathful Raptors turns your Star of Extinction wipe into massive damage to YOU — neutralize before any board wipe.
 
 ## Game History
 
@@ -145,7 +148,24 @@ Commander: Wayta, Trainer Prodigy | Colors: Red/Green/White (Naya)
 - **Faeries' counters are dead vs the chain.** Activated abilities aren't spells. Drain/Denial/Ice Out useless. Claude needed bounce/removal on en-Kor.
 - **Timely Ward bait.** Used on Sliver T5, got Cyclonic Rift'd off T6. Worth casting anyway — bought 4 turns of indestructibility and forced opp to commit removal.
 
+### Game 92 (piloted by Claude): Quit Hitting Yourself/Wayta vs Cats/Mirri (Human)
+**Result: Claude wins T13 (sides 25) via Blasphemous Act + Donna Noble reflection. Final life: Claude 38, Human -28. Dominance 2.**
+- Opener: KEEP 3 lands (Forest, Plains, Stomp), Donna Noble, Chromatic Lantern, Shaman en-Kor, Neyith. Strong color fix for Wayta T5.
+- T3: Plains + Shaman en-Kor ({1}{W}) — keystone deployed early.
+- T5: Stomping Ground shock (38), Wayta on curve. Attacked en-Kor + Wayta for 2 unblocked (opp tapped, Lion Sash artifact mode).
+- T7: Mountain + Donna Noble ({3}{R}), soulbond paired with Wayta on ETB. Attack Wayta — opp let through for 1 (Donna+amp = 6 reflect would've fired on block).
+- T9: Jetmir's Garden tapped + Birthright Boon adventure ({1}{W}) tutored Shielded by Faith. Wayta attack 1 CDMG unblocked again.
+- T9 combat: Opp double-blocked Wayta with Mirri+JT. Wayta died, but two damage events × Donna paired × Wayta amp = 12 dmg to opp (37→25). Wayta to CZ.
+- T11: Mountain + Spectator Seating (tapped) + Wayta recast at 5 mana (+2 tax). **Donna soulbond RE-PAIRED with new Wayta** (rule 702.93c — soulbond fires when ANY creature enters under your control while soulbond creature is unpaired). Opp disputed, looked up rule, accepted; retracted double-block, took 1 CDMG instead.
+- T13: Drew Blasphemous Act. 6 creatures on board (Wayta, Donna, en-Kor, Mirri, JT, Warleader) reduced cost to {2}{R} = 3 mana. **Wayta + Donna paired = 13 dmg to Wayta (Donna fires + amp = 2× 13) + 13 dmg to Donna (Donna fires own + amp = 2× 13) = 4 triggers × 13 = 52 dmg lethal from 24.**
+- **MVP: Donna Noble** — without paired Donna, Blasphemous Act is 0 damage to opp. Soulbond on Wayta + Wayta amp = quadruple reflection on every damage event.
+- **Key lesson — Blasphemous Act + Donna+Wayta = 4× quadrupled reflection.** Every creature-damage spell becomes 4× lethal multiplier. Earthquake / Star of Extinction / Pyrohemia all scale the same way.
+- **Key lesson — Donna soulbond re-pairs on any creature ETB.** Rule 702.93c: when an unpaired creature enters under your control, you may pair it with an unpaired soulbond creature you control. Wayta recast from CZ triggers re-pair. Cite rules to opp if disputed.
+- **Key lesson — Wayta double-block ALSO triggers 2 damage events × amp = 4× total.** Opp double-blocking Wayta to kill him deals 2 separate damage events, each amp'd, = 4× Donna trigger. Major lesson for opp: NEVER double-block a Wayta paired with Donna.
+- **Key lesson — Birthright Boon (Kellan adventure) is a 2-mana tutor for any aura/equipment.** Strong utility for the deck — tutors Shielded by Faith, Darksteel Plate, Pariah, Pariah's Shield, Blazing Sunsteel, Fiendlash. Worth running multiple tutors.
+
 ## Matchup Notes
+- **vs. Cats/Mirri:** 1-0. Cats' threat is incremental — Mirri 3/2 FS as restrictor commander, JT 3/3 vig/trample, Warleader 4/4 with cat tokens. None individually scary, but combined alpha strikes hurt. Key tactics: (1) Wayta has 5 toughness — survives single Mirri/JT block via Donna reflection. (2) Donna paired = trades damage taken for opp life. EVERY block on Wayta becomes 6 dmg to opp (3 + amp 3). Opp's best play is NOT BLOCKING. (3) Aura Shards on opp's side is dangerous — destroys my artifact/enchantment every time opp deploys a creature. Don't deploy Shielded/Darksteel Plate when Aura Shards is live unless Blasphemous Act is in hand. (4) Blasphemous Act with Donna paired = instant lethal at 3 mana once 6+ creatures on board (52 dmg). Mass damage spells are the kill button. (5) Cats deck has Path/Swords but uses them sparingly; Treasure tokens enable instant-speed removal but opp must spend the treasure. Don't bait removal pointlessly. (6) Mirri's "1 blocker" restriction on her attack isn't relevant if I'm not blocking — only matters if I'm forced to defend.
 - **vs. Squirrel Food/Chatterfang:** 1-0. The deck doesn't have early instant-speed creature removal in most opening hands, which gives Reckoner time to live. Wheel of Misfortune + Gideon's Sacrifice on Reckoner is a 4-mana kill once Reckoner is live — Reckoner online by T3-T4 with BoP ramp makes the combo achievable T5-T6. Watch for: Feed the Cycle ({1}{B} forage, instant) and Bake into a Pie ({2}{B}{B}) — both kill Reckoner cleanly. Spider Food doesn't hit creatures. Chatterfang's forestwalk through Temple Garden is unblockable but a 3/3 commander is slow vs the combo clock. Priority: deploy Reckoner ASAP, threaten Wheel + GS as the finisher.
 - **vs. Eldrazi/Zhulodok:** 0-1. Eldrazi outramps this deck badly. Forsaken Monument + Tron = 10+ mana from 3 lands. Cascade into removal (Introduction to Annihilation, Zuko's Exile) strips key pieces. Platinum Emperion blocks all damage-based win conditions until removed. Priority: (1) Keep a blocker for Zhulodok at all times — commander damage is the real clock. (2) Don't tap out for creatures when Boros Fury-Shield in hand — the shield buys a full turn. (3) Blasphemous Act is the best answer but needs a reflector to profit. (4) Kozilek's discard-to-counter shuts down most answers — bait it or play around MV matching.
 - **vs. The Claw/Cruelclaw:** 1-0. Cruelclaw's menace requires TWO blockers — Eladamri's Call or early creature deployment is essential to stop the trigger engine. Lightning Greaves gives shroud, so removal must target Cruelclaw when Greaves moves to another creature (opponent will move Greaves for equip — that's the window). Pariah's Shield + Darksteel Plate on Wayta completely shuts down the deck: (1) combat damage never reaches player, so Cruelclaw's trigger never fires, (2) Scytheclaw's "loses half their life" also requires combat damage to a player. Without the trigger engine, The Claw has no card advantage and grinds to a halt. Star of Extinction + Blazing Sunsteel is the finisher through the lock. Key danger: sacrifice effects (Shadowgrange Archfiend, Flare of Malice) bypass indestructible and break the lock — race to the kill once lock is assembled.

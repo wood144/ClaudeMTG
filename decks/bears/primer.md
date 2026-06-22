@@ -1,4 +1,5 @@
 # Bears / Ayula — Deck Primer
+<!-- summary reconciled 2026-06-21 -->
 > **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
 
 Commander: Ayula, Queen Among Bears | Colors: Green (Mono-G)
@@ -6,12 +7,18 @@ Commander: Ayula, Queen Among Bears | Colors: Green (Mono-G)
 ## Strategy Overview
 Mono-green Bear tribal deck built around Ayula's triggered ability. Every Bear ETB gives a choice: +2 counters on a Bear OR Ayula fights a non-Bear creature. The deck wants to deploy Ayula early, chain bear plays for counter accumulation, and use the fight mode as removal for key threats.
 
+**Win path:** Snowball Ayula with counters and swing for 21 commander damage. The triple-bear turn — deploy bears, fight down the board, then alpha strike — is the dream line (the fight mode is also the deck's main removal, devastating vs decks that lean on a single key creature/blocker).
+**Core weakness:** Ayula's counters reset every time she's removed or bounced, and mono-G has almost no interaction (no answers for artifacts/enchantments, counterspells, or board wipes). She's too fragile as the sole engine — race aggressively and close before the opponent reaches wipe/lock mana (Crux of Fate, Savage Twister, Stormtide Leviathan), and lean on redundant non-Ayula threats (Surrak and Goreclaw, Ruxa, Wilson). When the commander is bounced, return her to HAND, not the command zone, to avoid the tax spiral.
+
 ## Key Synergies
 - **Ayula + any Bear**: Each Bear ETB is either +2 counters (growing threats) or a fight-based removal spell.
 - **Kami of Whispered Hopes + Ayula counters**: Kami adds +1 to any counter placement (2 becomes 3). Also taps for mana equal to its power — grows into a massive mana dork if counters land on it.
 - **Roaming Throne (Bear type) + Ayula**: Throne IS the chosen type, so it triggers Ayula on ETB AND doubles all future Ayula triggers. One bear = two triggers.
 - **Goreclaw, Terror of Qal Sisma**: 4/3 Bear that reduces power 4+ creature costs by {2} and gives trample + pump on attack. Enables Roaming Throne for {2}.
 - **Rishkar's Expertise**: Draw cards equal to greatest power (Ayula with counters draws a lot) + free cast MV 5 or less.
+- **Earth King + power-4+ bears**: Each power-4+ attacker fetches a Forest — repeatable ramp that thins the deck and powers full-hand deployment. The deck's real ramp engine (MVP across multiple games).
+- **Birthing Boughs + Ayula**: {4} per turn = a guaranteed Bear ETB = an Ayula trigger every turn. THE repeatable trigger engine.
+- **Ozolith / Hardened Scales + Ayula counters**: Ozolith catches counters when Ayula dies and returns them after recast (counter insurance vs removal); Hardened Scales turns every Ayula trigger into +4.
 
 ## Key Cards
 - **Ayula** (2/2, {1}{G}): Engine commander — every bear is either a pump or removal
@@ -21,6 +28,12 @@ Mono-green Bear tribal deck built around Ayula's triggered ability. Every Bear E
 - **Dragon-Scarred Bear** ({2}{G}, 3/2): Bear with formidable regenerate
 - **Werebear** ({1}{G}): Bear mana dork, threshold makes it 4/4
 - **Rishkar's Expertise** ({4}{G}{G}): Card draw + free cast based on creature power
+- **Earth King**: 4/4 Bear token on ETB + repeatable Forest fetch on power-4+ attacks — the deck's ramp engine
+- **Birthing Boughs**: {4}/turn for a Bear token = guaranteed Ayula trigger every turn — best repeatable engine
+- **Wilson, Refined Grizzly**: Vigilance, reach, trample, ward 2, uncounterable — best-in-class sticky Bear; deploy early as protection
+- **Surrak and Goreclaw**: Redundant non-Ayula threat — gives team trample/haste/counters, survives wipes at 1 toughness
+- **Ozolith**: Catches Ayula's counters when she dies, returns them after recast — counter insurance vs removal
+- **Grizzly Fate** (threshold): Two Bear tokens (4 with threshold) = multiple Ayula triggers in one turn; game-ending
 
 ## Game History
 
@@ -122,10 +135,29 @@ Mono-green Bear tribal deck built around Ayula's triggered ability. Every Bear E
 - **Key lesson (commander combat):** Don't attack with a small-body engine commander (Ayula 2/2) into abundant blockers for marginal damage. Lost engine for 0 CDMG. Send the tramplers, keep commander back as trigger fuel.
 - **Key lesson (hold back for lethal):** Don't trade tramplers into blockers prematurely. Goreclaw's attack trigger (trample + pump on power 4+) was the win condition — one turn of patience = lethal. Attacking prematurely threw away the finishing threats.
 
+### Game 98 (piloted by Human): Bears/Ayula vs. Dargons/Scion (Claude)
+**Result:** Human loses T20 via concession (faced Crux + Kindred Dominance double-wipe with dragon swarm on board).
+- Hardened Scales + Ozolith deployed T1/T5. Ayula T3. Every Ayula trigger = +4 counters (not +2). Snowballed Ayula to 10/10 by T15.
+- T9: Killed Claude's Scion via Vivien's Grizzly ETB → Ayula fight (Ayula 6/6 vs Scion 4/4).
+- T13: Killed Scion AGAIN via Birthing Boughs token → Ayula fight. Tax spiraled to +4 (next recast 9 mana).
+- T15: Pumped Ayula to 10/10 via Goreclaw ETB. Held back from attacking — playing around Frog's deathtouch activation ({2}: deathtouch UEOT would kill Ayula even at 10/10).
+- T16: Claude's **Crux of Fate (mode 2)** wiped Ayula + entire bear board. Only Birthing Boughs Shapeshifter Token (changeling = Dragon) survived. Ayula to CZ.
+- T17: Recasted Ayula (+2 tax = 4 mana). Tapped out.
+- T19: Cast Wilson, Refined Grizzly (uncounterable Bear, ward 2). Ayula pump trigger → +4 counters (6/6).
+- T20: Claude played Will of the Abzan reanimating Scavenger Regent + Earthquake Dragon for {5}{G}. Three flying dragons (Betor 5/7 + Regent 4/4 + EQ Dragon 10/10) + Kindred Dominance in hand. Conceded.
+
+**Key lessons:**
+- **Crux of Fate (mode 2) is unbeatable** for mono-G Bears. No counterspells, no flash interaction. Loses entire creature base + Ayula in one card. Need to win BEFORE T6-T8 mana threshold of board wipes from opponents with B/W/R access.
+- **Wilson, Refined Grizzly should have come down earlier.** Sat in hand while Ayula was the only blocker. Wilson's vigilance + reach + trample + ward 2 + uncounterable is best-in-class Bear protection.
+- **Birthing Boughs is THE engine** for Ayula triggers. Each {4} activation = guaranteed bear ETB = Ayula trigger every turn. But too slow to set up before Crux landed.
+- **Playing around Frog deathtouch was correct** T15 — saved Ayula from a 1-for-1 trade. But the alternative (attacking with 10/10 for lethal CDMG) was nearly there; concede math may have favored swinging.
+- **Killing Scion twice did not win the game.** Tax to 9 mana slowed but didn't stop the recast. Claude's deeper threat package (Betor, EQ Dragon, Crux, Kindred Dominance) didn't need Scion to close.
+
 ## Matchup Notes
-- **vs. Mill-Steal/Wrexial:** Wrexial has islandwalk/swampwalk — irrelevant against mono-G unless Stormtide makes all lands Islands. THAT is the real threat. Stormtide + Wrexial = permanent unblockable lock + bears can't attack. Must destroy Stormtide before it sticks (Beast Within, fight trigger if Ayula is big enough). Mill fuels Wrexial's GY steal — Beast Within and Snakeskin Veil in GY get weaponized against you. Deploy Ayula early before counter mana is online. Sapphire Medallion makes all counters cheaper — destroy it if possible. Boseiju channels can't hit creatures (doesn't answer Stormtide). Chomping Changeling ETB only hits artifacts/enchantments. Need creature-based removal or fight triggers for the Leviathan.
+- **vs. Dargons/Scion (0-1):** Scion is a dragon — Ayula fight kills it at 4/4 base (Ayula 6/6 wins). Pressure Scion EVERY recast with Boughs/bear-cast → fight trigger. **Crux of Fate is the unanswerable threat** — wipes ENTIRE bear board including Ayula. No way to interact. Must win before opp hits 5 mana with BB available. Heroic Intervention / Tyvar's Stand can protect creatures from Crux (but not Ayula's redirect to CZ). Wilson + Surrak as backup uncounterable threats. Betor, EQ Dragon, Ureni are the post-Scion dragons — flying defense matters but Bears has none. Race aggressively with pumped Ayula; don't slow-play.
+- **vs. Mill-Steal/Wrexial (0-1):** Wrexial has islandwalk/swampwalk — irrelevant against mono-G unless Stormtide makes all lands Islands. THAT is the real threat. Stormtide + Wrexial = permanent unblockable lock + bears can't attack. Must destroy Stormtide before it sticks (Beast Within, fight trigger if Ayula is big enough). Mill fuels Wrexial's GY steal — Beast Within and Snakeskin Veil in GY get weaponized against you. Deploy Ayula early before counter mana is online. Sapphire Medallion makes all counters cheaper — destroy it if possible. Boseiju channels can't hit creatures (doesn't answer Stormtide). Chomping Changeling ETB only hits artifacts/enchantments. Need creature-based removal or fight triggers for the Leviathan.
 - **vs. Squirrel Food/Chatterfang (2-0):** Ayula's fight trigger hard-counters Chatterfang (3 toughness dies to 4+ power Ayula). Keep stacking counters — each bear ETB is either more pump or creature removal. Changeling bears with utility ETBs (Chomping Changeling) are all-stars. Chatterfang's forestwalk is unblockable but only 3 damage per swing — race favors bears if Ayula gets 2+ counter triggers before Chatterfang attacks. Earth King is excellent in this matchup — repeatable land search thins the deck and the 4/4 Bear token immediately enables Ayula fight triggers. Chain bears to clear the board in one turn, then alpha strike.
-- **vs. Eldrazi/Zhulodok:** Must pressure aggressively before T10. Once Zhulodok cascades, the board state snowballs beyond what bears can handle. Ayula's fight trigger can remove key pieces (killed Platinum Angel) but requires setup. Cicada flash + pump makes even the combat step dangerous. Removal for Cicada is high priority — it enables flash AND becomes the primary damage threat.
+- **vs. Eldrazi/Zhulodok (0-1):** Must pressure aggressively before T10. Once Zhulodok cascades, the board state snowballs beyond what bears can handle. Ayula's fight trigger can remove key pieces (killed Platinum Angel) but requires setup. Cicada flash + pump makes even the combat step dangerous. Removal for Cicada is high priority — it enables flash AND becomes the primary damage threat.
 - **vs. Quit Hitting Yourself/Wayta (1-0):** Ayula's fight trigger is the key — use it to kill Wayta before the reflection engine comes online. S&G + bears gives the board trample to punch through Wayta's 1/5 body. Earth King enables full hand deployment via repeatable land ramp. Banishing Light on Ayula is the main threat — resets counters and removes the engine. Have enchantment removal ready (Boseiju, Chomping Changeling, Beast Within). Wayta's 5 toughness survives X=4 Savage Twister — but not a fight with S&G (6/5). Use fight triggers on Wayta whenever possible to remove the blocker/engine.
 - **vs. Avatar Allies/Sokka (0-2):** Hakoda, Selfless Commander is the nightmare — sac gives all opp creatures +0/+5 indestructible (needed fight/pump to connect). Bonds of Mortality strips indestructible but not +5 tough. Suki anthem makes Avatar and tokens grow fast; kill Suki ASAP via fight. Menace on entire board (Sokka static) turns defensive play painful — 2-blocker requirement means I can only absorb 1 menace attacker per turn. Acrobatic Leap can untap + flying + pump Avatar for a finishing swing that evades my non-flier wall. **Critical:** Preserve Ayula. Opp runs Swift Response (destroy tapped) + Boomerang Basics (bounce) + StP — 3+ pieces of commander removal. Default bounce to HAND, not CZ. Don't attack with Ayula unless lethal/safe.
 - **vs. Meteor Apes/Roxanne (1-0):** Roxanne's Meteorite pings (2 damage) threaten Ayula at base 2/2 — get a +1/+1 counter on Ayula ASAP (Gaea's Gift, first bear trigger) so she survives pings. Kogla ETB fight kills Ayula cleanly (7 vs 2-3) — have protection or accept the recast tax. Kogla's attack trigger destroys artifacts (Ozolith, Signet) — sequence Ozolith counter transfers before it dies. Earth aftermath ({X}{R}{R} from GY) hits all non-flyers — Evolution Charm's flying mode dodges it. Roxanne + Meteorites snowball mana fast (doubling). Kill Roxanne with fight triggers to shut down the engine. Ward on Roaming Throne matters — opponent often taps out for big plays and can't pay. When opponent's board is tapped from attacking, fight the untapped blockers, not the tapped threats.

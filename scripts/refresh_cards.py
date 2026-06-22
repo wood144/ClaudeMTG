@@ -5,8 +5,9 @@ Scrapes slowly (~100ms between requests) to stay well under rate limits.
 Run monthly or after adding new decks.
 
 Usage (from mtg-commander/):
-    python scripts/refresh_cards.py           # update all decks
+    python scripts/refresh_cards.py           # fetch only missing cards (fast)
     python scripts/refresh_cards.py --check   # just report what's missing
+    python scripts/refresh_cards.py --all     # re-fetch every card (refresh art)
 """
 
 import json
@@ -134,22 +135,23 @@ def extract_card_data(scryfall):
 
 def main():
     check_only = '--check' in sys.argv
+    refresh_all = '--all' in sys.argv
     cache = load_cache()
     all_names = get_all_card_names()
 
-    # Find cards missing image_uris or not in cache at all
-    needs_update = []
-    for name in all_names:
-        entry = cache.get(name)
-        if not entry or 'image_uris' not in entry:
-            # Also check if it's a DFC without card_faces images
-            if entry and entry.get('layout') in ('transform', 'modal_dfc') and 'card_faces' in entry:
-                continue  # DFC with face data, might be fine
-            needs_update.append(name)
-
-    # Always refresh all cards to get latest art
-    if not check_only:
+    if refresh_all:
+        # Full re-fetch (e.g. to refresh art for every card)
         needs_update = all_names
+    else:
+        # Default: only cards not in cache or missing image_uris
+        needs_update = []
+        for name in all_names:
+            entry = cache.get(name)
+            if not entry or 'image_uris' not in entry:
+                # DFC with face image data is fine even without top-level image_uris
+                if entry and entry.get('layout') in ('transform', 'modal_dfc') and 'card_faces' in entry:
+                    continue
+                needs_update.append(name)
 
     print(f"Decks: {len(all_names)} unique cards")
     print(f"Cached: {len(cache)} cards")

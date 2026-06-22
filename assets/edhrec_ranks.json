@@ -1,0 +1,107 @@
+{
+  "timestamp": "2026-05-27T14:13:29.645430",
+  "source": "edhrec-json-commanders",
+  "deck_count": 20,
+  "ranks": {
+    "Eldrazi": {
+      "rank": 50,
+      "num_decks": 20768,
+      "slug": "zhulodok-void-gorger"
+    },
+    "Boros equipment": {
+      "rank": 879,
+      "num_decks": 2614,
+      "slug": "kellan-the-fae-blooded"
+    },
+    "meteor apes": {
+      "rank": 239,
+      "num_decks": 9205,
+      "slug": "roxanne-starfall-savant"
+    },
+    "quit hitting yourself": {
+      "rank": 427,
+      "num_decks": 6124,
+      "slug": "wayta-trainer-prodigy"
+    },
+    "Avatar Allies": {
+      "rank": 243,
+      "num_decks": 9097,
+      "slug": "sokka-tenacious-tactician"
+    },
+    "cats": {
+      "rank": 1044,
+      "num_decks": 2021,
+      "slug": "mirri-weatherlight-duelist"
+    },
+    "Fun Guys": {
+      "rank": 310,
+      "num_decks": 7752,
+      "slug": "ghave-guru-of-spores"
+    },
+    "Bello precon": {
+      "rank": 28,
+      "num_decks": 25282,
+      "slug": "bello-bard-of-the-brambles"
+    },
+    "dinosaur eggs": {
+      "rank": 62,
+      "num_decks": 19402,
+      "slug": "atla-palani-nest-tender"
+    },
+    "Zinnia precon": {
+      "rank": 72,
+      "num_decks": 18070,
+      "slug": "zinnia-valleys-voice"
+    },
+    "The Claw!": {
+      "rank": 203,
+      "num_decks": 10345,
+      "slug": "the-infamous-cruelclaw"
+    },
+    "Food and fellowship LotR upgraded": {
+      "rank": 38,
+      "num_decks": 23315,
+      "slug": "frodo-adventurous-hobbit-sam-loyal-attendant"
+    },
+    "Dicebots": {
+      "rank": 46,
+      "num_decks": 21406,
+      "slug": "mr-house-president-and-ceo"
+    },
+    "squirrel food": {
+      "rank": 26,
+      "num_decks": 25641,
+      "slug": "chatterfang-squirrel-general"
+    },
+    "Dargons": {
+      "rank": 551,
+      "num_decks": 4819,
+      "slug": "scion-of-the-ur-dragon"
+    },
+    "Da Bears": {
+      "rank": 388,
+      "num_decks": 6556,
+      "slug": "ayula-queen-among-bears"
+    },
+    "faeries": {
+      "rank": 778,
+      "num_decks": 3026,
+      "slug": "tegwyll-duke-of-splendor"
+    },
+    "Every Shrine Ever": {
+      "rank": 58,
+      "num_decks": 19770,
+      "slug": "go-shintai-of-lifes-origin"
+    },
+    "Fblthp": {
+      "rank": 1736,
+      "num_decks": 737,
+      "slug": "fblthp-the-lost"
+    },
+    "mill/steal": {
+      "rank": 1857,
+      "num_decks": 607,
+      "slug": "wrexial-the-risen-deep"
+    }
+  }
+}

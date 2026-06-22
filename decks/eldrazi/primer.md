@@ -1,13 +1,26 @@
 # Eldrazi / Zhulodok — Deck Primer
+<!-- summary reconciled 2026-06-21 -->
 > **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
 
 Commander: Zhulodok, Void Gorger | Colors: Colorless
 
 ## Strategy & Combo Lines
 - **Zhulodok cascade engine:** Cast colorless spells with MV 7+ to double cascade into free permanents.
+- **Two win paths:** (1) commander damage — Zhulodok + Boots/Greaves is a fast 21 clock (3 unblocked hits); (2) Skittering Cicada beatdown — Cicada is the recurring MVP: a flash enabler (deploy threats on the opponent's turn) that grows with EVERY colorless cast into a massive trample attacker (22/22 in Game 38).
+- **Mystic Forge + Zhulodok cascade is the dream engine:** seeing the top card lets you draw/exile cheap cards first, then cascade into the big hits. Protect the Forge.
 - **Flayer of Loyalties cast trigger + Swiftfoot Boots** = immediate 10/10 attacker with haste, trample, annihilator 2 on the same turn.
+- **Ugin's Labyrinth is the best land / strongest opener:** T1 exile a bomb for {C}{C}, then return the exiled bomb the turn you're ready to cast it.
+- **Ugin (Spirit Dragon / the Ineffable) and All Is Dust are the nut answers vs multicolor decks:** every Eldrazi/colorless permanent is immune, so −X / All Is Dust is a one-sided wipe and Ugin doubles as a repeatable removal engine. Dig hard for one vs 3+ color value decks. (Colorless tokens survive −X.)
+- **Hexproof-from-colors (Breaker of Creation)** dodges all colored targeted removal and sac effects — the go-to threat into removal-heavy matchups (Attrition, Chatterfang, Fell the Mighty).
+- **Platinum Angel / Platinum Emperion** passively blank aristocrat drain and damage-reflection combos without interaction.
 - **Sensei's Divining Top + Bonders' Enclave combo:** Set up top of library, then draw the best card.
-- **Forsaken Monument life gain** (2 life per colorless spell) offsets Ancient Tomb's damage.
+- **Forsaken Monument** is the engine MVP: +2/+2, {C} mana bonus, and 2 life per colorless spell offsets Ancient Tomb/Mana Vault damage. Tron + Monument produces 15+ mana a turn.
+
+## Vulnerabilities (how to beat this deck / what to protect)
+- **Protect Forsaken Monument (#1 target) and Metalworker (#2):** killing either before it pays off collapses the ramp timeline (Metalworker dying pre-untap and Monument blown up are repeated game-losers). Don't deploy them into open removal mana.
+- **Fast-mana dependent:** with no Sol Ring / Mana Vault, Zhulodok lands T9+ and is too slow vs decks that curve out T3-5. Mulligan toward fast mana.
+- **Don't tap out for a naked Zhulodok into open mana:** Fell the Mighty and cheap targeted removal cleanly answer an unprotected commander. Use Boots/Greaves or have cascade online first.
+- **No counterspells, can't protect non-hexproof creatures from a one-sided wipe** (Kindred Dominance): race or pre-empt with hexproof-from-colors threats.
 
 ## Key Rulings
 - **Forsaken Monument does NOT double multi-{C} sources:** "Whenever you tap a permanent for {C}, add an additional {C}" adds one flat {C} per tap. Ancient Tomb ({C}{C}) → {3}, not {4}. Thran Dynamo ({C}{C}{C}) → {4}, not {6}. Only single-{C} sources are truly doubled.
@@ -15,6 +28,15 @@ Commander: Zhulodok, Void Gorger | Colors: Colorless
 - **Platinum Emperion + Commander Damage:** Prevents life loss but does NOT prevent commander damage accumulation. Damage is still "dealt" even if life total doesn't change (CR 903.14).
 
 ## Game History
+
+### Game 116: Eldrazi/Zhulodok (Human) vs. Cats/Mirri (Claude)
+**Result:** Human wins T18 via combat damage (Claude conceded to lethal). Human 16, Claude 40 → dead.
+- Slow durdle opener: utility lands + Shrine + Urza's Tower + Expedition Map/Ugin's Labyrinth, no creatures until T16. Claude built a dominant Cat lord board + 24-life lead — but played for value instead of racing, buying time to assemble.
+- Swiftfoot Boots on Zhulodok = hexproof kept the commander/cascade engine untargetable all game (blanked Claude's Generous Gift, which went to Deceiver of Form). **Protecting the engine with Boots was the MVP enabler.**
+- T18 nut turn: Platinum Emperion (Zhulodok double-cascade → Ugin the Ineffable + Mystic Forge), Ugin −3 killed Mirri, returned + recast Metalwork Colossus cheaply (Ugin −2 + ~8 MV noncreature artifacts), Colossus double-cascaded into Ulamog the Defiler + Void Winnower.
+- Six colorless casts that turn pumped Skittering Cicada +48/+48 → **50/50 trample**. Void Winnower locked opp's even-MV blockers; opp's board was tapped from attacking. Cicada + Zhulodok 7/4 = 57 unblockable into 40. Lethal.
+- **Key win pattern:** Zhulodok double-cascade + Skittering Cicada = one-turn kill — every colorless spell in the chain pumps Cicada. Platinum Emperion (life can't change) + Void Winnower (even-MV can't block) neutralize a faster opponent's race AND blockers. Survive to the explosion turn even from a losing board.
+- **Rating: 3** — textbook nut draw, deck ceiling realized.
 
 ### Game 1: Eldrazi/Zhulodok (Claude) vs. Fblthp (Human)
 **Result:** Fblthp wins via Thassa's Oracle + Enter the Infinite.
@@ -153,7 +175,21 @@ Commander: Zhulodok, Void Gorger | Colors: Colorless
 - Never cascaded once. Game over before the engine started.
 - Kozilek and Pathrazer in hand were stranded — needed Zhulodok online first.
 
+### Game 110: Eldrazi/Zhulodok (Claude) vs. Every Shrine Ever/Go-Shintai (Human)
+**Result:** Claude wins T6 (11 sides) by concession. Claude 40, Human 33. Dominance 3.
+
+**Key plays:**
+- Clean ramp curve: T1 Tower, T2 Shrine, T3 land + Worn Powerstone, T4 Zhulodok (6 mana on the play).
+- T5: Coveted Jewel ({6}) for draw-3 + 3-mana rock — kept Zhulodok + a freshly-cast Burnished Hart back as blockers so the Jewel couldn't be stolen.
+- T6: **Ugin, the Spirit Dragon ({8})** cast from hand → Zhulodok double cascade into Thran Dynamo + Unstable Obelisk (both free). Then **Ugin −4 exiled the entire colored board** (Sythis, Go-Shintai→CZ, Weaver of Harmony, Sanctum of Tranquil Light, Crescent Island Temple, 6 Monk tokens, Great Divide Guide), Ugin survived at 3. Zhulodok hit for 7. Opponent conceded.
+
+**Key observations:**
+- **Ugin is the nut answer vs any multicolor deck.** Every Eldrazi/colorless permanent is immune to −X, so it's a guaranteed one-sided wipe AND survives as a removal engine + double-cascades on the way in. Mulligan toward / dig hard for Ugin or All Is Dust vs 3+ color value decks.
+- Their Shrine Tokens are **colorless** (Go-Shintai makes 1/1 colorless tokens) — Ugin −X does NOT hit them. Crescent's Monk tokens are red, so they die. −4 was the exact X to catch all colored permanents (max MV 4: Go-Shintai, Crescent).
+- Coveted Jewel is safe to cast once you have ≥2 untapped blockers — don't cast it into an open board.
+
 ## Matchup Notes
+- **vs. Every Shrine Ever/Go-Shintai (1-0):** 5-color enchantment value engine — Sythis draws, Crescent Island Temple floods red prowess Monks, Sanctum of Tranquil Light becomes a {W} repeatable tap-lock at 5 shrines, Hidden Cruelty kills toughness≤shrines (Zhulodok 7/**4** dies at 4 shrines). Their whole board is colored, mine is entirely colorless → **Ugin the Spirit Dragon (or All Is Dust) is a total one-sided wipe.** Race their engine: it's slow early, so ramp into Zhulodok by T4-5 and have a cascade bomb (Ugin/Kozilek/Flayer) ready before they hit 6 shrines (Sanctum of All doubles everything). Don't over-commit a fragile board into a possible Farewell/Hidden Cruelty; one Ugin breaks them regardless.
 - **vs. Quit Hitting Yourself/Wayta (1-0):** Wayta's damage reflection plan (Blasphemous Act + Spitemare) is the main threat — one Act wiped 5 creatures and reflected 13. But the deck is too slow to assemble its combo before Eldrazi cascades overwhelm. Commander damage via Zhulodok (9/6 with Monument) is a fast clock — 3 unblocked hits = lethal. Key: cascade removal (Introduction to Annihilation, Zuko's Exile) strips their blockers. Platinum Emperion blanks all damage reflection. Forsaken Monument makes the mana gap insurmountable.
 - **vs. Fblthp (blue combo):** Must hold interaction for combo turn. Race plan alone won't work — need exile/destroy effects for Hullbreaker Horror and removal for combo pieces.
 - **vs. Atla Palani (creature toolbox):** Steal effects are devastating — Atla Palani's sacrifice ability turns against the opponent. Flayer of Loyalties is the MVP.

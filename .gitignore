@@ -8,6 +8,10 @@ Thumbs.db
 # Node (if tooling ever added)
 node_modules/
 
+# Python
+__pycache__/
+*.pyc
+
 # Personal tracker (not for repo)
 assets/mtg_commander_tracker.xlsx
 

@@ -1,10 +1,13 @@
 # Bello precon / Bello, Bard of the Brambles — Deck Primer
+<!-- summary reconciled 2026-06-21 -->
 > **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
 
 Commander: Bello, Bard of the Brambles | Colors: Red/Green (Gruul)
 
 ## Strategy Overview
 Gruul ramp-into-value deck. Bello (1RG, 3/3) animates non-Equipment artifacts and non-Aura enchantments with CMC 4+ into 4/4 Elemental creatures with indestructible, haste, and "draw a card on combat damage to a player" — but only during your turn. The deck ramps hard, slams expensive artifacts/enchantments, and swings with an army of indestructible hasty threats that replace themselves on hit.
+
+**Win path:** Ramp → Bello → animate noncreature payoffs, but games are actually closed by **damage multipliers** (Gratuitous Violence, Berserkers' Onslaught, Warstorm Surge), not raw bodies — animated threats cap at 4/4 and get chump-blocked. The deck has **no innate trample, no evasion, and zero flyers**; this is its core weakness (see Key Weaknesses).
 
 ## Key Synergies
 - **Bello + high-CMC enchantments/artifacts**: Warstorm Surge, Primeval Bounty, Sunbird's Invocation, Outpost Siege, etc. become 4/4 indestructible hasty creatures that draw cards AND keep their normal abilities.
@@ -21,6 +24,12 @@ Gruul ramp-into-value deck. Bello (1RG, 3/3) animates non-Equipment artifacts an
 - **Rampaging Baloths** (6/6 trample): Landfall 4/4 Beast tokens.
 - **Primeval Bounty**: Creature spells make 3/3 Beasts, noncreature spells give 3 counters, lands gain 3 life. Becomes 4/4 with Bello.
 - **Burnished Hart**: Early ramp + color fixing. Sacrifice for 2 basics.
+- **Gratuitous Violence / Berserkers' Onslaught**: Damage multipliers and the deck's real closing engine. Stack with Warstorm Surge for up to 4× damage (proven crushing in G62, G87). Both animate to 4/4 via Bello but are vulnerable to off-turn / repeatable enchantment removal (Zacama, Generous Gift) — protect them or win fast.
+- **Rolling Hamsphere**: Top-tier Bello payoff. Animates 4/4+ ind+haste, makes Hamster tokens + scaling damage on attack, and fuels Path of Discovery explore engine. Sac-vulnerable mid-combat (Brontodon trick, G87).
+- **Unnatural Growth**: Nut combo with Bello — animates 8/8 indestructible AND doubles all power (50+ boards). Needs GGGG; mana-screw can strand it.
+- **Pyreswipe Hawk**: Flying body + expend 6 steals an artifact. Premier tool vs artifact/equipment decks (steal Greaves/Boots/Signets — broke Cruelclaw lock G76).
+- **Esika's Chariot**: Ideal Bello target — 4 MV → 4/4 ind+haste + 2 Cats + attack-copy trigger.
+- **Bello cmdr damage caveat**: Bello at 3 power gets walled; reaching 18+ CDMG (G87) still whiffed. CDMG lethal needs a **+1/+1 source on Bello**, not just trample.
 
 ## Grothama Risk Assessment
 Grothama gives ALL other creatures "Whenever this creature attacks, you may have it fight Grothama." Opponents can pile attackers into Grothama on their turn. If Grothama dies, each player draws cards equal to damage they dealt to it. Monitor opponent's total power — if they can reach 8+ damage across attackers, Grothama dying feeds them cards. Consider keeping Grothama back as a blocker rather than exposing it on attacks.
@@ -28,7 +37,22 @@ Grothama gives ALL other creatures "Whenever this creature attacks, you may have
 ## Bello Timing
 Bello's animation is **only during your turn**. On the opponent's turn, high-CMC enchantments/artifacts lose indestructible and creature status — they're vulnerable to removal. Generous Gift, Beast Within, etc. can destroy them normally.
 
+## Key Weaknesses
+- **No evasion / no trample / no flyers.** Animated bodies cap at 4/4 and get chump-blocked or walled by token armies (G82 Ghave saps, G87 Zetalpa/Zacama). Garruk's Uprising / Rampaging Baloths trample is the out — draw it before opp assembles a wall.
+- **Stormtide Leviathan = unbeatable lock.** Zero flyers/islandwalkers means zero outs once it resolves (G66).
+- **Enchantment locks are catastrophic.** Stasis Field shuts Bello off for the whole game (G66). The deck is Bello-dependent — mulligan toward / prioritize enchantment removal (Chaos Warp, Beast Within, Krosan Grip).
+- **Off-turn removal answers the engine.** Multipliers/payoffs lose indestructible + creature status on opp's turn; repeatable {2}{G}-destroy (Zacama) or Generous Gift wipes the enchantment suite. No indestructible-grant for enchantments in deck — close before opp's turn.
+- **Lethal-swing traps in white matchups.** Teferi's Protection (Atla precon, G87) and Heroic Intervention fizzle all-in alphas. Name the threat, split attacks across 2 turns, or hold protection before committing everything.
+- **Only exile permanently answers Bello.** Hidden Cruelty / bounce-and-wipe just delay it — recast tax is trivial.
+
 ## Matchup Notes
+
+### vs. Dinosaur Eggs / Atla Palani (Game 87)
+- **Result: Bello LOSS (T12 cycle, 23 sides). Human 8, Claude -6. Dominance 2. Comeback by opp.**
+- Naya RGW. Multiplier engine (Berserkers' Onslaught + Gratuitous Violence + Bello = 4×) got opp 40→8, but every lethal swing fizzled.
+- **Teferi's Protection** phased out their board mid-lethal (T18). Anticipate it in white matchups — don't commit everything to one combat; split or hold protection.
+- Greater Good (sac→draw) + Atla egg-flips + Vortex cascade out-resourced removal faster than Beast Within/Chaos Warp could keep up. Zacama untapped lands + repeat {2}{G}-destroy wiped the enchantment suite.
+- Bello hit 18 cmdr dmg but at 3 power was always walled (Zetalpa/Zacama) — CDMG lethal needs a +1/+1 source, not trample.
 
 ### vs. Food and Fellowship LotR / Frodo+Sam (Game 83)
 - **Result: Bello LOSS (T9 cycle, 17 sides, lethal). Claude 0, Human 77. Dominance 2.**
@@ -97,6 +121,12 @@ Bello's animation is **only during your turn**. On the opponent's turn, high-CMC
 - **Key lesson:** Stasis Field on Bello is catastrophic. The deck is dead without Bello's animation. MUST prioritize enchantment removal (Chaos Warp, Beast Within, Abrade won't help here).
 - **Key lesson:** Stormtide Leviathan is an unbeatable lock. Zero flyers in the precon means zero outs once it resolves. Consider adding flying threats or direct damage to the deck.
 - **Key lesson:** Traumatize + Wrexial steal is devastating. Every instant/sorcery in GY becomes a weapon against you. Decimate from own GY was backbreaking.
+
+### vs. Boros Equipment (Game 62)
+- **Result: Bello WIN T7 (13 sides, Human-piloted). Human 31, Claude -1.**
+- Bello + Gratuitous Violence + Warstorm Surge = double damage on attacks AND ETBs. Crushing engine vs a low-toughness equipment deck.
+- Starstorm = flexible removal — tune X to kill their creatures while keeping Bello (3/3) alive.
+- Pyreswipe Hawk shines here: flying blocker/attacker + steals artifacts on expend 6. Favorable matchup vs equipment.
 
 ### vs. Cats / Mirri (Game 32)
 - **Result: Bello WIN (T16, combat damage — concession during lethal attack)**

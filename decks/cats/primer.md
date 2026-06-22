@@ -1,10 +1,15 @@
 # Cats / Mirri — Deck Primer
+<!-- summary reconciled 2026-06-21 -->
 > **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
 
 Commander: Mirri, Weatherlight Duelist | Colors: Green/White (Selesnya)
 
 ## Strategy Overview
 GW Cat tribal go-wide/go-tall deck. Mirri provides combat control — limits opponent blocking to 1 creature when attacking, and limits opponent attacks to 1 creature while Mirri is tapped. The deck uses Cat lords, +1/+1 counter synergies (especially Felidar Retreat), and efficient Cat creatures to overwhelm opponents.
+
+**Win path (proven):** Mirri's single-blocker restriction makes a wide/tall board lethal even through big blockers. Two routes: double-lord stack (Arahbo + King of the Pride → 4/3 tokens, Game 61 win, 25 power) OR Felidar Retreat + Skyknight Squire counter snowball (Game 16 win, 10/10 flyer). Lords/token-generators (Arahbo, Leonin Warleader) stay BACK as engines — don't attack them into blockers (Game 35 loss: Arahbo died attacking, cost lethal).
+
+**Critical weakness — removal drought:** Nearly every loss = drew zero instant-speed exile removal for a key opposing engine/evasion commander (Games 34, 51, 92, and 35). Path to Exile / Swords to Plowshares on the right target wins (Game 16: Path on Chatterfang). Mirri's combat lock does NOT stop landwalk/unblockable damage — hold/tutor for exile removal, don't rely on blocker math. Treasure tokens (Jewel Thief) enable an instant W — hold them for the engine piece, not for cards.
 
 ## Key Synergies
 - **Felidar Retreat + any land drop**: Either creates a 2/2 Cat Beast OR puts +1/+1 counters on all creatures + vigilance. Counter mode snowballs fast with multiple creatures.
@@ -13,6 +18,8 @@ GW Cat tribal go-wide/go-tall deck. Mirri provides combat control — limits opp
 - **Feline Sovereign + combat damage**: Destroys target artifact/enchantment whenever Cats deal combat damage. Lord effect (+1/+1 to Cats) is also strong.
 - **Leonin Warleader**: Creates 2 lifelink Cat tokens on attack, each triggering Skyknight Squire.
 - **Mirri + vigilance**: Vigilance from Retreat lets Mirri attack (restricting opponent blocks) while staying tapped to restrict opponent attacks on their turn.
+- **Arahbo + King of the Pride (double lord) + Mirri**: Stacks +1/+1 and +2/+1 onto tokens (4/3s); Mirri's single-blocker restriction makes the swing lethal even into large blockers (Game 61 win, 25 power).
+- **Lightning Greaves on Mirri**: Shroud protects her from tap effects / targeted removal (Sanctum of Tranquil Light vs shrines). Note shroud also blocks your own Rogue's Passage — Swiftfoot Boots if you need both.
 
 ## Key Cards
 - **Mirri** (3/2 first strike): Combat lockdown commander
@@ -22,8 +29,32 @@ GW Cat tribal go-wide/go-tall deck. Mirri provides combat control — limits opp
 - **Feline Sovereign**: Lord + artifact/enchantment removal
 - **Trouble in Pairs**: Card advantage vs opponents who double-spell, multi-attack, or extra-draw
 - **For the Ancestors**: Instant-speed dig for Cats, with flashback
+- **Arahbo / King of the Pride**: Double-lord engine; stay BACK, don't attack the token generators
+- **Path to Exile / Swords to Plowshares**: The deck's most important answers — exile the key opposing engine/evasion commander early. Repeatedly the missing piece in losses; tutor toward them.
+- **Farewell (exile enchantments)**: Silver bullet vs shrine/enchantment decks — exile prevents recursion. Time at peak enemy count.
 
 ## Matchup Notes
+
+### vs. Eldrazi / Zhulodok, Void Gorger (Game 116)
+- **Result: Cats LOSS (T18 / side 18, combat damage — conceded to unavoidable lethal).** Piloted by Claude.
+- This is a RACE against a one-turn explosion. I was dominant the whole game (opp durdled on lands, zero creatures until T16; I had a wide lord board and 40 life vs their 16) and STILL lost to the Zhulodok cascade nut. Being ahead on board/life means nothing if you don't close before they assemble 7+ mana + a fat colorless spell.
+- **Key lesson — CLOSE FAST, don't durdle.** I ramped (Arcane Signet) and chipped (single-attacker pokes T15/T17) while opp was creatureless T13–T15. That passivity gave them the turns they needed. With a dominant board vs an empty board, alpha every turn and push commander damage — don't play for "value."
+- **Key lesson — Zhulodok + Swiftfoot Boots = hexproof, untargetable engine.** Generous Gift / Path / Swords can't touch Zhulodok once Boots is on. Strip the Boots FIRST (Qasali Slingers / Undergrowth Leopard sac / Aura Shards) or Gift Zhulodok in response to the equip. I wasted Slingers on Thran Dynamo and Gift on Deceiver of Form (8/8) — never answered the actual engine.
+- **Key lesson — their colorless payoffs blank our plan:** Platinum Emperion (their life can't change → our life-damage race is dead; must win via Mirri COMMANDER damage), Ugin the Ineffable −3 (one-sided destroy of our colored commander — killed Mirri), Void Winnower (our even-MV creatures can't block — Wilt-Leaf MV4 and tokens MV0 locked out, only odd-MV like Kutzil MV3 can block). Skittering Cicada balloons +X/+X per colorless cast (hit 50/50 trample off one cascade chain).
+- **Key lesson — don't tap out the whole board attacking the turn before they can go off.** T17 I swung with Mirri+Kutzil+Wilt-Leaf (all tapped), leaving only an even-MV Ox; on the combo turn I had no legal untapped blocker. Against a deck that can deal 50+ in one turn, leave blockers (odd-MV, untapped) up once they have 6+ mana and a big colorless threat in range.
+- **Deck note:** the nut draw (Emperion + Ugin + Forge + Colossus → Ulamog + Void Winnower in one Zhulodok double-cascade) may simply be unbeatable from behind — but the Cats deck's edge is speed, and I squandered a huge early lead by playing for value instead of racing.
+
+### vs. Quit Hitting Yourself / Wayta (Game 92)
+- **Result: Cats LOSS (T13, direct damage — Blasphemous Act + Donna Noble lethal from 24 life)**
+- Smooth ramp: Lion Sash T4, Jewel Thief T6 (Treasure ETB), Mirri T8, Leonin Warleader T10, Rampant Growth + Aura Shards T12.
+- T9: Double-blocked Wayta with Mirri+JT to kill engine commander. Two damage events × Donna paired × Wayta amp = 12 dmg backlash. Trade was worth it (forced Wayta to CZ +2 tax) but hindsight: not blocking would have lost only 1 CDMG vs 12 face damage.
+- T11: Claude recast Wayta at 5 mana. Disputed Donna soulbond re-pair (thought new instance = no re-bond). Wrong per rule 702.93c — soulbond fires when ANY unpaired creature enters under your control while soulbond creature unpaired. Retracted double-block, took 1 CDMG.
+- T13 (CATASTROPHE): Claude drew Blasphemous Act. Cost reduced to {2}{R} by 6 creatures. 13 dmg to each creature triggered Donna 4 times (Wayta dmg event with amp = 2 + Donna dmg event with amp = 2) × 13 dmg each = 52 dmg from 24. Lethal.
+- **Key lesson:** Wayta + Donna paired = NEVER deal damage to Wayta or Donna. Any combat damage triggers 2 Donna firings via Wayta amp. Pathing/exile is the ONLY safe answer.
+- **Key lesson:** Mass damage spells (Blasphemous Act, Earthquake, Star of Extinction) with paired Donna = 4× quadrupled reflection. ANY creature-damage spell is instant lethal once Wayta+Donna+pair is set.
+- **Key lesson:** Cats deck needs to land Path to Exile or Swords to Plowshares ON Wayta/Donna early. Treasure tokens are 1 mana of any color — perfectly enables instant W. Hold the W treasure for the engine pieces, don't waste on cards.
+- **Key lesson:** Aura Shards landed T12, never triggered (no opp creature ETB'd after). Should have prioritized creature pressure to leverage Aura Shards' trigger.
+- **Deck suggestion:** More instant-speed exile removal (Generous Gift, Pongify-style) to answer indestructible/protected commanders. Cats has the colors for it.
 
 ### vs. mill/steal / Wrexial (Game 35)
 - **Result: Cats LOSS (T22, combat damage — 17 unblockable via islandwalk + flying)**
@@ -93,6 +124,17 @@ GW Cat tribal go-wide/go-tall deck. Mirri provides combat control — limits opp
 - **Rating:** 2 — Cats mana screwed (one land drop after T4) prevented the deck from executing its game plan.
 
 ## Game History
+
+### Game 116 (piloted by Claude): Cats/Mirri vs. Eldrazi/Zhulodok (Human)
+**Result:** Human wins T18 (side 18) via combat damage — Claude conceded to unavoidable lethal.
+- Smooth-ish keep (3 lands, Bestiary engine, Wilt-Leaf, Slingers, Plate). Land-light mid-game (stuck at 5 mana, Bestiary scry dug a Forest).
+- T9: Qasali Slingers ETB killed Thran Dynamo (good — set opp's ramp back). T10: opp Introduction to Annihilation exiled Slingers (traded their removal + ramp for it).
+- T11–T15: built a lord stack (Wilt-Leaf, Kutzil, Spider-Ham) + Mirri vs a creatureless opp. Chipped only 4–16/turn; opp durdled to 16 life with 7 lands.
+- T16: opp Deceiver of Form (cascaded Skittering Cicada + Transmogrifying Wand). Wand killed Leopard.
+- T17: Generous Gift on Deceiver, alpha for 16 (opp→16). **Mistake: tapped out the whole board attacking; cast Plate but couldn't equip Mirri.**
+- T18 (combo turn): opp Platinum Emperion (cascade → Ugin the Ineffable + Mystic Forge). Ugin −3 destroyed Mirri (Plate never equipped). Returned + cast Metalwork Colossus (cascade → Ulamog the Defiler + Void Winnower). Six colorless casts → Skittering Cicada 50/50 trample; Void Winnower locked Claude's even-MV blockers. Cicada + Zhulodok = 57 into 40, no untapped legal blocker. Concede.
+- **Rating (for winner): 3** — Eldrazi nut draw executed perfectly from a losing board.
+- **Biggest takeaway:** Cats had a dominant board + 24-life lead for most of the game and lost by being too passive. RACE and push commander damage to close before the cascade explosion. Also: strip Swiftfoot Boots to make Zhulodok answerable.
 
 ### Game 35 (piloted by Claude): Cats/Mirri vs. mill-steal/Wrexial (Human)
 **Result:** Human wins T22 via 17 unblockable combat damage (Wrexial islandwalk + Bloatfly Swarm flying).

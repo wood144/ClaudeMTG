@@ -1,16 +1,28 @@
 # Squirrel Food / Chatterfang — Deck Primer
+<!-- summary reconciled 2026-06-21 -->
 > **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
 
 Commander: Chatterfang, Squirrel General | Colors: Black/Green (Golgari)
 
 ## Strategy Overview
-BG Aristocrats/Token deck built around Food and Squirrel tokens. The deck generates massive token value through Chatterfang's doubling (any token creation also makes Squirrel tokens), Food synergies for life/mana, and sacrifice outlets for aristocrat drains. Wins through infinite combos or overwhelming board presence.
+BG Aristocrats/Token deck built around Food and Squirrel tokens. The deck generates massive token value through Chatterfang's doubling (any token creation also makes Squirrel tokens), Food synergies for life/mana, and sacrifice outlets for aristocrat drains.
+
+**Win paths (in practice):**
+1. **Vito-lifelink + fat attacker** — activate Vito ({3}{B}{B}, all creatures gain lifelink), swing a big body (Ygra) into any chump → opp gains huge life → Vito drains opp for it = one-board-card kill. Most reliable closer.
+2. **Infinite drain combo** — Exquisite Blood + Sanguine Bond/Vito (realistic by ~T17 off Night of Sweets' Revenge Food-mana + land flood).
+3. **Chatterfang CDMG / forestwalk** — unblockable when opp controls a Forest; pump via The Odd Acorn Gang. Slow (3/swing) — a backup clock, not the main plan vs snowball decks.
+
+**KNOWN WEAKNESS — flying (documented across Games 16, 24, 36, 103, 108):** the board is all-ground with effectively zero air defense. Repeated, deck-losing hole. Only real air answers are **The Odd Acorn Gang (reach)** and **Voracious Fell Beast (4/4 flyer + edict)** — both must be mulliganed/dug for vs any flying deck. **Secondary weaknesses:** Chatterfang dies to ETB exile (Skyclave Apparition) / Path to Exile — don't deploy into an untapped opp who can answer it; and Chatterfang's {B} sac removal is dead without an early black source — prioritize Swamp/BG-dual drops over a 4th–5th Forest.
 
 ## Key Combo Lines
 
 ### Infinite Life Drain
 - **Exquisite Blood + Sanguine Bond** (or **Vito, Thorn of the Dusk Rose**): Any life gain triggers opponent life loss, which triggers life gain → infinite loop. Any Food sacrifice or combat damage starts it.
 - Exquisite Blood ({4}{B}) + Sanguine Bond ({3}{B}{B}) = 9 mana total. Vito ({2}{B}) is cheaper substitute for Sanguine Bond.
+
+### Vito Lifelink Kill (one card on board)
+- **Vito activation + fat attacker (Ygra)**: Vito's {3}{B}{B} grants ALL your creatures lifelink UEOT — not just a passive drain. Swing a huge body (Ygra, grown from Food deaths) into ANY chump (no trample needed): opp gains 20–30+ life from lifelink → Vito triggers → opp loses that life = lethal regardless of opp's life total. ACTIVATE VITO when you have a fat attacker and a chump opp; the activation is the win, not the passive trigger.
+- Caveat: Vito's drain targets the opponent — player-hexproof (Crystal Barricade) fizzles it. Remove the hexproof source first.
 
 ### Infinite Tokens/Mana (Aristocrat Engine)
 - **Chatterfang + Pitiless Plunderer + Ashnod's Altar**: Sac a Squirrel to Altar ({C}{C}) → Plunderer makes Treasure → Chatterfang makes a Squirrel (token was created) → sac new Squirrel → repeat. Infinite colorless mana + infinite death triggers. Add Meathook Massacre or any drain payoff to win.
@@ -31,7 +43,10 @@ BG Aristocrats/Token deck built around Food and Squirrel tokens. The deck genera
 - Gilded Goose, Bumbleflower's Sharepot, Experimental Confectioner, Pippin, Provisions Merchant, Cache Grab, many Food-creating spells
 
 ### Payoffs
-- Meathook Massacre (drain on death), Vito/Sanguine Bond/Exquisite Blood (life drain loops), Honored Dreyleader (grows with Squirrels/Food), Syr Ginger (grows with artifact deaths)
+- Meathook Massacre (drain on death), Vito/Sanguine Bond/Exquisite Blood (life drain loops — Vito also the lifelink kill button, see Combo Lines), Honored Dreyleader (grows with Squirrels/Food — snowballs to 13/13 trample in ~4 turns, MVP vs slow/removal-light decks), Syr Ginger (grows with artifact deaths), The Odd Acorn Gang (Squirrel-tap pump on Chatterfang for CDMG + combat-damage draw to refuel)
+
+### Air Answers (SCARCE — only two)
+- The Odd Acorn Gang (reach), Voracious Fell Beast (4/4 flyer + edict). These are the ONLY air defense in the deck and the flying loss-pattern is documented repeatedly — dig/mulligan for them vs any flyer deck.
 
 ### Removal
 - Kindred Dominance (one-sided wipe choosing Squirrel), Spider Food (artifact/enchantment/flier removal), Bake into a Pie (creature removal + Food), The Meathook Massacre (X-based wipe)
@@ -104,6 +119,27 @@ BG Aristocrats/Token deck built around Food and Squirrel tokens. The deck genera
 - Breaker of Creation (hexproof from colors) is the one card Attrition/Chatterfang can't answer. Need Kindred Dominance, Meathook Massacre, or combat to deal with it.
 - Eldrazi without fast mana is very slow. Zhulodok didn't land until T12. Pressure early with Chatterfang beats + grow Dreyleader before cascade engine starts.
 
+### vs. Dargons / Scion (Game 36)
+- **Result: 0-1. LOSS (T14, CDMG 22).**
+- Scion is a tutor-toolbox engine that fetches fliers (Earthquake Dragon 10/10, Atarka, Scourge of Kher Ridges) — flies over the all-ground board.
+- **Scourge of Kher Ridges = repeatable 2-damage sweep** that kills the token strategy. Non-creature artifacts (Nuka-Cola, Atlas) survive — deploy those first into a repeated sweeper, and don't recast Chatterfang into a guaranteed wipe (tax spiral {4}{G}→{6}{G}).
+- Need instant removal in hand (Bake into a Pie / Go for the Throat) for Scion's threats; flying defense again the core problem.
+
+### vs. Fblthp (Game 24)
+- **Result: 0-1. LOSS (T12, Enter the Infinite → Thassa's Oracle combo).**
+- A blue combo/control deck that wins out of nowhere — race it, don't grind. Malcolm (2/1 flyer building acorn counters) was the real threat and the deck had no flying answer (Odd Acorn Gang bounced).
+- No artifact/enchantment removal meant Extraplanar Lens + One with the Multiverse went unanswered. Hold up interaction; tapping out every turn lost the game.
+
+### vs. Zinnia Precon (Game 103)
+- **Result: 0-1. LOSS (T10, concession).**
+- Zinnia is **100% air, zero ground game** — the all-ground Squirrel board does literally nothing back. Must mulligan for an air answer (Odd Acorn Gang) or fast removal.
+- Skyclave Apparition exiled Chatterfang on cast — do NOT deploy Chatterfang while opp can ETB-exile it. All-Forest draws left the {B} sac removal dead; take Swamp drops early.
+
+### vs. I Call Him Big Booty / Doran (Game 108)
+- **Result: 0-1. LOSS (T14, lethal air alpha).**
+- Doran fields a stacked air clock (Wojek + Betor + Zetalpa) the ground board can't touch — the flying hole again. Both air answers (Odd Acorn Gang + Voracious Fell Beast) performed but got blanked together by **Morningtide's Light** (temp-exile all my creatures before combat).
+- When stabilizing purely with blockers, don't tap fully out — assume the alpha can still come through (temp-exile / Fog tech). Vito was dead all game to Crystal Barricade's player-hexproof — remove the hexproof source before deploying Vito.
+
 ### Deck Improvement Suggestions
 - **Lack of flying blockers/reach**: 3 games now lost to flying damage with zero answers. Consider Ishkanah, Grafwidow (reach + spider tokens), Silklash Spider, or Hornet Queen (flying deathtouch tokens + Chatterfang doubles).
 - **Instant removal is thin**: Bake into a Pie ({2}{B}{B}) and Go for the Throat are the main creature removal. Against must-answer threats like Scion, drawing one of two cards isn't reliable. Consider Beast Within ({2}{G}, hits any permanent), Deadly Rollick (free with commander), or Assassin's Trophy ({B}{G}).
@@ -120,6 +156,39 @@ BG Aristocrats/Token deck built around Food and Squirrel tokens. The deck genera
 - **Key takeaway:** ACTIVATE VITO when you have a fat attacker and a chump opponent. The activation is the win, not the passive trigger.
 
 ## Game History
+
+### Game 108 (piloted by Claude): Squirrel Food/Chatterfang vs. I Call Him Big Booty/Doran (Human)
+**Result:** Human wins T14 via lethal air alpha (concession). Final life: Claude 19, Human 31. CDMG to Human 9. Dominance 3.
+
+**Loss path:**
+- Mull to 6: kept a 1-lander (Forest) leaning on Birds + Signet + Return from the Wilds. **Birds StP'd T2** (opp burned premium removal on a 0/1 — fine trade, but cost a ramp piece and a turn).
+- Ground out ramp: Restless Cottage, Signet, Yavimaya. Chatterfang T7 into a tapped-out opp (correct safe window). Forestwalk live (opp ran Forests + my Yavimaya) → 9 CDMG over the game.
+- Opp curved Sol Ring T4 → Doran Besieged T6 → Wojek → **Betor, Kin to All** (5/7 flyer engine: end-step draw + untap-all at 20 toughness) → **Zetalpa, Primal Dawn** (4/8 indestr double strike, swings 8/12 = 16 under Doran). Three flyers vs my zero air defense.
+- **Dug out of near-death T13**: held 8 mana, swung Chatterfang to trigger an Odd Acorn Gang draw → hit **Voracious Fell Beast** (4/4 flyer + edict). Two air blockers (OAG reach + VFB) finally stabilized the sky. Edict made opp sac Crystal Barricade.
+- T14 opp answered with **Morningtide's Light** ({3}{W}: exile any number of target creatures until end step, return tapped) — blanked BOTH my flyer-walls, swung Zetalpa+Betor+Wojek into an empty board for 27+. I was tapped out, no response. Concede.
+
+**Key lessons:**
+- **The flying problem, AGAIN (5th+ game).** Wojek + Betor + Zetalpa = an all-air clock the ground Squirrel board can't touch. Odd Acorn Gang (reach) and Voracious Fell Beast (4/4 flyer) are the deck's only real air answers — both performed, both got exiled at once. **Maindeck more reach/flyers (Ishkanah, Hornet Queen, Silklash Spider) — this is now a documented, repeated, deck-losing hole.**
+- **Vito was dead the entire game to Crystal Barricade's player-hexproof** — Vito's drain targets the opponent, hexproof on the *player* fizzles it. Don't deploy Vito into a hexproof-granting permanent; remove the permanent first. (VFB's edict eventually forced the sac, but too late.)
+- **Morningtide's Light is tech to respect:** a blocker-reliant stabilization can be undone by a temp-exile-all-my-creatures effect right before combat. When stabilizing purely with blockers and tapped out, assume the alpha can still come through — hold up instant interaction (Chatterfang sac mana) or a Fog/lifegain if possible rather than tapping fully out on the stabilization turn.
+- **Voracious Fell Beast is excellent here** — 4/4 flyer (air block + air clock) AND an edict that strips a key piece (forced the Crystal Barricade sac). Strong vs Doran's air. The Odd-Acorn-Gang-draw-off-Chatterfang dig found it; that combat-damage draw is a real resource when behind.
+- Opp's Betor toughness counter hit 28 — watch the **40-toughness half-life kicker**. Removing/bouncing a big butt (Zetalpa = 8) keeps it under threshold.
+
+### Game 103 (piloted by Human): Squirrel Food/Chatterfang vs. Zinnia Precon (Claude)
+**Result:** Human wins T10 via concession. Final life: Claude 39, Human 23. CDMG to Human: 2. Dominance 3 (for Claude).
+
+**Loss path:**
+- T5: Chatterfang on curve ({2}{G}, 3 forests). T6: Forager + Chatterfang on board, no engine drawn.
+- T7: Nuka-Cola Vending Machine deployed. Food/Treasure engine begins but no Chatterfang doubling synergy played yet.
+- T8 (Claude): Arthur + Apparition cheat exiled Chatterfang. Lost commander mid-combat (redirected to CZ, +2 tax). Took 6 face damage from Arthur+Golem+Zinnia.
+- T9: Cast Nut Collector for {5}{G} (5 forests + Forager forage = 6 mana). 1/1 with upkeep token, but threshold not active and no flyers to defend.
+- T10 (Claude): Skyclave Apparition recast, exiled Nuka-Cola permanently. Concession — no answer to Zinnia/Arthur/Apparition flying clock, no black for Chatterfang sac removal.
+
+**Key lessons:**
+- **Zinnia precon has zero ground game and 100% air.** Squirrel Food's all-ground board (Chatterfang, Forager, Nut Collector, Squirrel tokens) does nothing vs Zinnia flying + offspring tokens. Must mulligan for Spider Food (flyer answer) or Ishkanah/reach.
+- **Without black mana early, Chatterfang's sac removal is dead.** All 5 lands were Forests this game. Should have prioritized Swamp drops over a 5th Forest. Mana base needs more BG duals (Overgrown Tomb, Path of Ancestry) so removal stays live.
+- **Cast Chatterfang into ETB removal at your own risk.** Skyclave Apparition (MV 3, exiles MV ≤4) hits Chatterfang directly. With no countermagic in mono-BG, the only defense is to NOT cast Chatterfang when opp can deploy Apparition. Save Chatterfang until opp taps out.
+- **Nut Collector is too slow without threshold.** {5}{G} for a 1/1 with upkeep tokens is bad tempo when behind. Threshold (7 cards in GY) takes too long without self-mill. Cut for Hornet Queen or another impactful 6-drop.
 
 ### Game 80 (piloted by Claude): Squirrel Food/Chatterfang vs. Quit Hitting Yourself/Wayta (Human)
 **Result:** Human wins T6 via lethal reflection. Final life: Claude 0, Human 37. Dominance 1.

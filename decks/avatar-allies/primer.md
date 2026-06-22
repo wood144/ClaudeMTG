@@ -1,15 +1,18 @@
 # Avatar Allies / Sokka — Deck Primer
+<!-- summary reconciled 2026-06-21 -->
 > **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
 
 Commander: Sokka, Tenacious Tactician | Colors: Blue/Red/White (Jeskai)
 
 ## Strategy & Key Mechanics
-- **Sokka** (3/3 menace, prowess) gives all other Allies menace + prowess. Every noncreature spell creates a 1/1 Ally token.
-- **Gameplan:** Cast noncreature spells to generate Ally tokens, then pump the board with prowess triggers and permanent counters via Munda's Vanguard cohort.
+- **Sokka** (3/3 menace, prowess) gives all other Allies menace + prowess. Every noncreature spell creates a 1/1 Ally token. **He is the engine, NOT a beater — keep him back.** Fragile at 3/3 (a single 3-dmg trigger like Inferno Titan kills him) and every removal sends him to CZ at +2 tax — the deck loses to commander-tax snowball faster than to combat. Never swing him for chip damage.
+- **Gameplan / win path:** Go wide with Ally tokens off noncreature spells, then win through **menace** (tall decks with 1–2 big blockers can't block a wide menace board). Proven closers: **Sokka's Charge** (DS+LL — see below), **Katara waterbend X** (whole board base X/X; waterbend ~9 = lethal), **Acrobatic Leap** (flying + pump + untap on the biggest Ally), and **Munda's Vanguard** cohort (+1/+1 to ALL creatures every turn). Triple-spell turns compound tokens + prowess + draws explosively.
 - **Waterbend** is a recurring mechanic — tap creatures/artifacts to help pay costs. Enables big plays with a wide board.
 - **Katara, Water Tribe's Hope** — vigilance, ETB creates Ally, Waterbend X gives all creatures base P/T X/X. Major combat trick.
 - **Munda's Vanguard** — cohort (tap + Ally) puts +1/+1 counter on ALL creatures. Snowballs fast.
 - **Momo, Rambunctious Rascal** — 1/1 flying Ally, ETB deals 4 to tapped creature. Evasion threat with menace from Sokka.
+- **Sokka's Charge** — game-defining enchantment and the deck's best win-con. Each opp turn all Allies gain double strike + lifelink → on a menace board this is an unraceable lifegain pump and a one-card lock vs any deck WITHOUT enchantment removal. Hold until Sokka + a sustainable board is online.
+- **Hakoda + Suki** — the combat-deck breaker. Hakoda sac = board-wide +0/+5 indestructible; Suki = Ally anthem (+1/+0). Together they wall fight triggers (Ayula) and combat decks with unkillable blockers. EKP sac (indestructible to one creature) similarly protects Sokka from fight removal.
 
 ## Key Interactions
 - Noncreature spells trigger BOTH Sokka's token generation AND prowess on all Allies simultaneously.
@@ -135,6 +138,27 @@ Commander: Sokka, Tenacious Tactician | Colors: Blue/Red/White (Jeskai)
 - **Key lesson:** Hakoda + Suki is the combo that breaks combat-based decks. Hakoda's +0/+5 indestructible defense + Suki's anthem creates unkillable blockers. Ayula fight triggers can't break through.
 - **Key lesson:** Acrobatic Leap as combat trick = devastating. Flying + pump + untap turns biggest ally into unblockable threat AND available defender.
 
+### Game 104 (piloted by Claude): Avatar Allies vs. Eldrazi/Zhulodok (Human)
+**Result:** Human wins T16 via concession. Human 25, Claude 16. Dominance 3 — opp's Monolith + Calamity engine was unstoppable with no artifact removal in hand.
+- T1-T5: Slow opener — Cascade Bluffs T3, Plains T5. Consider cantrip + Boomerang Basics held for high-value target. Sokka delayed to T9 (4-land threshold for {1}{U}{R}{W}).
+- T7: **Boomerang Basics on Chimil, the Inner Sun** — bought 2 turns by forcing 6-mana recast. Right call: discover 5 every end step is unanswerable long-term. Cast Momo same turn (3 mana spare).
+- T9: Sokka cast + Flawless Maneuver for free (commander on BF). Sokka triggers gave +1/+1 prowess + 1/1 Ally token. Momo attacked for 2 (flying menace, opp had only Plague Myr ground).
+- T11: **Strong combat turn.** Yip Yip on Sokka (+2/+2 flying) THEN Combustion Technique on Zhulodok (4 dmg = 2 + 2 Lessons in GY: Boomerang + Yip Yip). Killed/exiled Zhulodok. Sokka 7/7 flying menace + Momo 3/3 flying menace + Ally Token 3/3 menace attacked through empty board. 13 damage + 7 commander damage. Opp 38→25.
+- T12 (opp): **Game-defining turn.** Darksteel Monolith ({8}) deployed — once-per-turn free colorless cast from hand. Then Calamity of the Titans ({4}{C}{C}) cast for FREE via Monolith, revealing Kozilek (MV 10). Exiled every creature with MV<10 — wiped Sokka (CZ redirect, +2 tax), Momo (exile), all Ally tokens (cease to exist). Plague Myr also self-wiped. My entire board gone in one card.
+- T13: Drew Mountain, played + Munda's Vanguard ({4}{W}). 3/3 body. No way to remove Monolith (indestructible artifact, no enchantment/artifact removal in hand).
+- T14 (opp): **Kozilek cast for FREE via Monolith**, drew 4 cards on cast trigger. Lightning Greaves equipped for {0} = haste + shroud. Kozilek attacked T14 with annihilator 4 — sacced Munda + 3 lands. Took 12 (40→28).
+- T15: Drew Razor Rings. Only 2 lands left (Command Tower + Plains). No mana for Avatar's Wrath (4 mana). Razor Rings useless on shrouded Kozilek. Empty turn.
+- T16: Conceded with 2 lands vs Kozilek + Monolith + free cast engine. Game unrecoverable.
+- **Key plays:** (1) T7 Boomerang on Chimil was correct — delayed a 1-card engine for 2 turns. (2) T11 Yip Yip + Combustion sequencing was clean — putting Yip Yip in GY before Combustion gave +1 Lesson count for lethal damage to Zhulodok. (3) Flawless Maneuver for free off Sokka was great value (free token + prowess pump).
+- **Critical lessons:**
+  - **Darksteel Monolith is the silver bullet card.** Once it landed with no artifact removal in my hand, every colorless spell in opp's hand became free. Should have prioritized drawing toward artifact removal earlier OR raced harder before T12.
+  - **Avatar's Wrath was useless in this matchup** — Wrath only hits creatures, not artifacts. Monolith couldn't be answered. Plus Wrath's "can't cast from non-hand" doesn't stop Monolith free-casts (cast is still FROM hand).
+  - **Calamity of the Titans is a one-card wipe vs token decks.** Tokens MV 0, every Ally MV <10 — entire board exiled. Need wide hate / hexproof / indestructible team if Eldrazi has 8+ mana online.
+  - **Tapped out T9 for Sokka + Flawless then T11 for the big attack** — left no interaction for opp's T12 wipe. Should have held back Yip Yip / Combustion to disrupt Monolith cast itself (instant-speed). Specifically: Combustion Technique can target the Construct token Saga makes; with Monolith in play, target Monolith via... actually Combustion is creature-only. Doesn't hit artifacts.
+  - **Deck lacks artifact/enchantment removal** (only Boomerang Basics, which is one-shot bounce). vs Eldrazi: Monolith, Top, Greaves, Mana Vault, World Map are all critical artifacts I couldn't touch. Boomerang spent on Chimil T7 was correct, but afterward I had zero answers.
+- **Deck suggestion:** Add 2-3 artifact/enchantment removal pieces. Wear // Tear, Disenchant, Return to Dust, Generous Gift. The deck consistently loses to indestructible/hexproof artifacts (Monolith here, Pariah's Shield in Game 10, Mortify-immune enchantments in Game 81). One slot for instant-speed artifact removal would have changed this game decisively.
+- **Matchup lesson (vs Eldrazi):** The clock is the only path. Boomerang Chimil, Combustion/StP big Eldrazi, race before Monolith comes online. If Monolith resolves AND opp has Kozilek/Ulamog/Chimil in hand, the game is effectively over — every turn opp gets a free 10+ MV spell. Mulligan toward fast mana + multiple cheap noncreatures to chain Sokka triggers. Critical: do NOT tap out when Eldrazi has 8+ mana floating — Calamity wipes everything.
+
 ### Game 81 (piloted by Human): Avatar Allies vs. Food and Fellowship/Frodo+Sam (Claude)
 **Result:** Human wins T16 (16 sides) via Sokka's Charge DS+LL lethal swing. Human 40, Claude 0. Dominance 2.
 - Early game: Sokka deployed T10 with Iroh + Wartime Protestors anthem combo already pressuring. Claude Mortified Sokka T11 (to CZ). Iroh+Protestors continued the clock at 8/turn.
@@ -145,6 +169,12 @@ Commander: Sokka, Tenacious Tactician | Colors: Blue/Red/White (Jeskai)
 - T16: Suki cast (Ally anthem +1/+0). Three Allies attacked: Protestors (with Acrobatic Leap +1/+3 flying = 6/7 DS+LL), Suki (3/5 DS+LL), Momo (3/2 DS+LL flying). Total 24 dmg first strike alone. Claude's blockers tapped from T15 attack, no defense.
 - **Clutch play:** Sokka's Charge — locked the race window. Acrobatic Leap was insurance but unnecessary.
 - **Key lesson (Avatar pilot):** Sokka's Charge is a one-card lock against any deck without enchantment removal in hand. Combined with Wartime Protestors' counter+haste trigger and Suki's anthem, the deck snowballs into unkillable lifegain. Hold the enchantment until you have a sustainable creature board.
+
+## Weaknesses (play around these)
+- **No artifact/enchantment removal** is the deck's defining hole — only Boomerang Basics (one-shot bounce). It loses repeatedly to sticky/indestructible/hexproof permanents it can't answer: Darksteel Monolith (G104), Pariah + Darksteel Plate / Pariah's Shield (G10), Murmuration (G58), reflection equipment (Wayta G28/G10). If a lock piece resolves and Boomerang is spent, there is usually no out — race before it lands, and spend Boomerang on the single highest-value engine.
+- **Sokka is the soft spot.** 3/3 dies to incidental damage (Inferno Titan 3-dmg trigger) and every removal taxes him +2 → out of reach fast. Protect him (EKP/Hakoda indestructible), don't expose him.
+- **Standstill is a trap when behind** — an opp who's already winning won't cast, and the deck must break it itself. Don't expect it to stabilize a losing board; spend the mana on threats instead.
+- **Reflection / damage-redirect decks** turn the alpha strike into a loss (Gideon's Sacrifice, Fiendlash deals POWER per trigger). Count triggers before committing; strip the equipment or don't swing wide into open {W}.
 
 ## Matchup Notes
 - **vs. Cats/Mirri:** Mirri's combat lockdown (1 blocker when attacking, 1 attacker while tapped) is the main threat. Shield of the Oversoul makes her nearly unkillable — bounce spells (Boomerang Basics) are the best answer since the Aura goes to graveyard permanently. Honest Work shuts down Feline Sovereign's lord effect AND combat-trigger enchantment removal for just {U}. Priority: neutralize Feline Sovereign early (Honest Work, bounce, exile) to protect Whirlwind of Thought and Sokka's Charge. The deck's weakness is aura/equipment dependency — strip the buffs and the creatures are small. Sokka's Charge + prowess stacking creates devastating alpha strikes once the Cat board is weakened.

@@ -1,4 +1,5 @@
 # Meteor Apes / Roxanne, Starfall Savant — Deck Primer
+<!-- summary reconciled 2026-06-21 -->
 > **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
 
 Commander: Roxanne, Starfall Savant ({3}{R}{G}) | Colors: R/G (Gruul)
@@ -7,30 +8,40 @@ Commander: Roxanne, Starfall Savant ({3}{R}{G}) | Colors: R/G (Gruul)
 - **Core gameplan:** Ramp into Roxanne, generate Meteorite tokens for mana + 2-damage pings, then chain extra combat steps to overwhelm the opponent.
 - **Roxanne + Aggravated Assault ({3}{R}{R} to activate):** Each attack creates a Meteorite token (tapped, so available next turn for mana). With enough Meteorites, Aggravated Assault goes infinite — each combat Roxanne attacks → new Meteorite → more mana → more combats. Need ~5 artifact mana sources to loop.
 - **Port Razer:** Deals combat damage → untap all creatures + extra combat. In 1v1 only gets one extra combat (can't attack same player twice), but still strong with Roxanne generating tokens each swing.
-- **Anzrag, the Quake-Mole (8/4):** When blocked → untap all creatures + extra combat. Pairs with Lure/Roar of Challenge to force blocks and guarantee the trigger.
+- **Kibo + Banana asymmetric wipe (aspirational, never landed yet):** Kibo generates Banana artifact tokens. Deck packs many "destroy artifact" effects that, when aimed at your own Bananas, buff your monkeys. Combined with X-damage-to-all-creatures sweepers (Magmaquake, Rolling Earthquake, Savage Twister, Starstorm), your buffed creatures survive while opp's battlecruiser bombs die — one-sided wipe + tempo lead. Setup needs Kibo + multiple bananas + buff-via-destroy + sweeper, in the right sequence. Works best against new players' battlecruiser piles.
+- **Anzrag, the Quake-Mole (8/4) — THE PRIMARY WINCON LINE:** When blocked → untap all creatures + extra combat. **Most consistent line: Anzrag + Lure + indestructible Anzrag.** All opp creatures forced to block Anzrag; Anzrag survives (indestructible); blockers die; Anzrag becomes blocked → extra combat phase triggers. Repeats once per "becomes blocked" event = N combats where N is opp's blocker count, killing them all then attacking unblocked next combat. **If opp has any indestructible/regenerating/recurring blocker, the loop is INFINITE combats.** This is the deck's actual win path, not Roxanne chip damage. Pieces: Anzrag + Lure/Roar of Challenge + indestructible enabler (Tyvar's Stand, Withstand Death, Mortal's Resolve, Heroic Intervention).
 - **Lure effects + big creatures:** Lure, Roar of Challenge, Shinen of Life's Roar, Tempting Licid — force all blockers onto one creature, letting others through unblocked.
 - **Savage Beating:** Combat-only instant. Double strike OR extra combat. Devastating with Roxanne or Port Razer.
 - **Great Train Heist:** Instant-speed extra combat + haste for {3}{R}. Surprise lethal potential.
+- **PROVEN WIN PATHS (from recorded games):** (1) **Port Razer + Roxanne double combat** = ~16 dmg per turn cycle — won Games 1 & 37. (2) **Heroic Intervention + X-sweeper** (Savage Twister / Starstorm) = one-sided wipe into lethal alpha — won Game 3. (3) **Recast Roxanne post-combat** to snipe damaged blockers with the Meteorite ETB ping (combat dmg + 2) — repeated strong line (Games 3, 37). The Anzrag+Lure infinite above is theoretically best but has **never actually landed** in a game (countered by Arcane Denial in Game 3) — always cast Anzrag with protection/backup in hand.
 
 ## Key Cards by Role
 - **Ramp:** Sol Ring, Arcane Signet, Commander's Sphere, Gruul Signet/Cluestone/Keyrune/Locket, Endurance Bobblehead, Roxanne's Meteorite tokens
 - **Extra Combats:** Aggravated Assault, Port Razer, Relentless Assault, Savage Beating, Great Train Heist, Anzrag
 - **Forced Blocks:** Lure, Roar of Challenge, Shinen of Life's Roar, Tempting Licid, The Masamune, Bloodscent
-- **Protection:** Heroic Intervention, Collective Resistance, Tamiyo's Safekeeping, Mortal's Resolve, Withstand Death, Tyvar's Stand, Gaea's Gift
+- **Protection:** Heroic Intervention (**MVP** — saves Roxanne/Port Razer AND enables the one-sided sweeper wipe; surveil/tutor to keep it available), Collective Resistance, Tamiyo's Safekeeping (hexproof > indestructible vs -X/-X removal), Mortal's Resolve, Withstand Death, Tyvar's Stand, Gaea's Gift
 - **Tutors:** Worldly Tutor, Gamble, Time of Need, Primal Command
-- **Removal:** Klauth's Will, Vandalblast, Magmaquake, Rolling Earthquake, Savage Twister, Starstorm, Kogla (fights on ETB/attacks)
+- **Removal:** Klauth's Will (**both modes w/ commander = best comeback + answer to Imprisoned/artifact locks**), Vandalblast, Magmaquake, Rolling Earthquake, Savage Twister, Starstorm, Kogla (fights on ETB/attacks — best answer to Mirko Vosk / Ayula)
 
 ## Mulligan Guide
 - Need 2+ lands (at least one green source for ramp, one red source for Roxanne).
 - Sol Ring or any 2-mana rock is premium — enables T3 Roxanne.
 - Keep hands with early ramp into Roxanne. Mulligan hands with no ramp and no early plays.
 - Lure effects without creatures are dead — don't keep all-Lure hands.
+- **Best keep: ramp + Anzrag + Lure + indestructible enabler.** That's the win condition; assemble it over hardcasting Roxanne lines.
 
 ## Key Rulings
 - Roxanne's Meteorite tokens enter TAPPED. They can't tap for mana the turn they're created.
 - Port Razer in 1v1: gets ONE extra combat (can't attack the same player it already hit). Still untaps all your creatures.
 - Aggravated Assault is sorcery-speed activation only.
 - Anzrag's extra combat triggers when it becomes blocked, not when damage is dealt.
+
+## Weaknesses / How to Beat (durable, from games)
+- **Flying = #1 weakness.** Zero flying/reach blockers; an evasive air force races unblocked (lost Game 43). Only out is a damage sweeper (Starstorm/Magmaquake/Rolling Earthquake) drawn early.
+- **No exile, no answer to indestructible.** All removal is destroy/damage-based — indestructible threats (Ulamog) are unbeatable once resolved (lost Game 2). Must race or stop pre-resolution.
+- **Aura/enchantment lockdown on Roxanne** (Eaten by Piranhas, Imprisoned in the Moon) takes the Meteorite engine offline (cost Game 43, nearly Game 37). Few answers: Klauth's Will (both modes), Collective Resistance, Silverback Elder engine — don't tap out for Roxanne into open mana without protection held up.
+- **Mill** strips the extra-combat package (one Glimpse milled Aggravated Assault + Savage Beating + Relentless Assault) — guts the combo finish.
+- **Counter/removal on Anzrag** breaks the would-be infinite (Arcane Denial, Game 3) — it's fragile, never cast it bare.
 
 ## Game History
 

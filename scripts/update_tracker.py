@@ -48,8 +48,10 @@ from openpyxl.styles import Font, PatternFill, Alignment
 TRACKER_PATH = 'assets/mtg_commander_tracker.xlsx'
 DECKS_PATH = 'assets/decks.json'
 PRICES_CACHE_PATH = 'assets/card_prices.json'
+EDHREC_CACHE_PATH = 'assets/edhrec_ranks.json'
 Z = 1.645  # 90% CI for Wilson Score
 PRICE_CACHE_MAX_AGE = 30  # days — run refresh_prices.py monthly
+EDHREC_CACHE_MAX_AGE = 30  # days — run refresh_edhrec.py monthly
 
 
 # ── Deck name normalization ──────────────────────────────────────────
@@ -92,6 +94,22 @@ def load_canonical_deck_names():
         return canonical, alias_map, cmdr_map
     except (FileNotFoundError, json.JSONDecodeError):
         return {}, {}, {}
+
+
+def load_retired_decks():
+    """Return {canonical_name: retired_date_str} for decks flagged retired in
+    decks.json. A retired deck is physically disassembled: it keeps its full
+    Game Log / Head-to-Head history (and still contributes to opponents' SoS),
+    but is shown below a divider in the Rankings rather than ranked as active."""
+    try:
+        with open(DECKS_PATH) as f:
+            decks = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+    if not isinstance(decks, list):
+        return {}
+    return {d['name']: d['retired'] for d in decks
+            if d.get('name') and d.get('retired')}
 
 
 def normalize_deck_name(name, canonical_names, alias_map=None, cmdr_map=None, cmdr_name=None):
@@ -184,6 +202,31 @@ def get_deck_values():
         deck_values[d['name']] = round(total, 2)
 
     return deck_values
+
+
+def get_edhrec_ranks():
+    """Return {deck_name: edhrec_rank} from cached EDHrec data.
+    Cache is built by scripts/refresh_edhrec.py (run monthly)."""
+    try:
+        with open(EDHREC_CACHE_PATH) as f:
+            cache = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        print("  No EDHrec cache found. Run: python scripts/refresh_edhrec.py")
+        return {}
+
+    ranks = cache.get('ranks', {})
+    ts = cache.get('timestamp', 'unknown')
+
+    try:
+        age_days = (datetime.now() - datetime.fromisoformat(ts)).days
+        if age_days > EDHREC_CACHE_MAX_AGE:
+            print(f"  WARNING: EDHrec cache is {age_days} days old. Run: python scripts/refresh_edhrec.py")
+        else:
+            print(f"  Using cached EDHrec ranks ({len(ranks)} decks, {age_days}d old)")
+    except (ValueError, TypeError):
+        print(f"  Using cached EDHrec ranks ({len(ranks)} decks, age unknown)")
+
+    return {name: data.get('rank') for name, data in ranks.items()}
 
 
 # ── Scoring formulas (from Instructions sheet) ──────────────────────
@@ -304,9 +347,13 @@ def compute_sos_rating(deck_stats, opponent_stats, all_games, pilot=None):
         s['rating'] = round(s['wilson'] * (1 + s['sos']), 4)
 
 
-def write_rankings_sheet(wb, sheet_name, deck_stats, latest_decks, deck_values):
+def write_rankings_sheet(wb, sheet_name, deck_stats, latest_decks, deck_values,
+                         edhrec_ranks=None, retired_decks=None):
     """Write a Rankings sheet (overall or per-pilot). Creates sheet if missing.
-    Preserves existing trend arrows for decks not in latest_decks."""
+    Preserves existing trend arrows for decks not in latest_decks.
+    Retired decks (in retired_decks) are listed below a '— RETIRED —' divider
+    with frozen final stats, no rank number, and no trend arrow."""
+    retired_decks = retired_decks or {}
     if sheet_name not in wb.sheetnames:
         wb.create_sheet(sheet_name)
     ws = wb[sheet_name]
@@ -324,7 +371,10 @@ def write_rankings_sheet(wb, sheet_name, deck_stats, latest_decks, deck_values):
         key=lambda x: (x[1]['rating'], x[1]['perf']),
         reverse=True,
     )
-    new_ranks = {deck: i + 1 for i, (deck, _) in enumerate(sorted_decks)}
+    active_sorted = [(d, s) for d, s in sorted_decks if d not in retired_decks]
+    retired_sorted = [(d, s) for d, s in sorted_decks if d in retired_decks]
+    # Only active decks get a rank number; trend is computed against active ranks.
+    new_ranks = {deck: i + 1 for i, (deck, _) in enumerate(active_sorted)}
 
     def trend_arrow(deck):
         if deck not in latest_decks:
@@ -339,27 +389,28 @@ def write_rankings_sheet(wb, sheet_name, deck_stats, latest_decks, deck_values):
             return 'DN'
         return '-'
 
+    edhrec_ranks = edhrec_ranks or {}
+
     # Clear all existing data rows
     for r in range(2, ws.max_row + 1):
-        for c in range(1, 14):
+        for c in range(1, 15):
             ws.cell(row=r, column=c).value = None
 
     bold = Font(bold=True)
     center = Alignment(horizontal='center')
     rank_headers = ['Rank', 'Trend', 'Deck', 'Commander', 'W', 'L', 'Games',
-                    'Wilson', 'SoS', 'Rating', 'Perf', 'Avg Sides', 'Value']
+                    'Wilson', 'SoS', 'Rating', 'Perf', 'Avg Sides', 'Value', 'EDHrec']
     for col_idx, hdr in enumerate(rank_headers, start=1):
         ws.cell(1, col_idx, value=hdr).font = bold
 
-    for i, (deck, s) in enumerate(sorted_decks):
-        r = i + 2
-        t = trend_arrow(deck)
-        ws.cell(r, 1, value=i + 1).font = bold
-        ws.cell(r, 1).alignment = center
-        ws.cell(r, 2, value=t).alignment = center
-        if t in ('UP', 'DN', 'NEW'):
+    def write_deck_row(r, rank, deck, s, trend, label=None):
+        if rank is not None:
+            ws.cell(r, 1, value=rank).font = bold
+            ws.cell(r, 1).alignment = center
+        ws.cell(r, 2, value=trend).alignment = center
+        if trend in ('UP', 'DN', 'NEW'):
             ws.cell(r, 2).font = bold
-        ws.cell(r, 3, value=deck)
+        ws.cell(r, 3, value=label or deck)
         ws.cell(r, 4, value=s['cmdr'])
         ws.cell(r, 5, value=s['wins'])
         ws.cell(r, 6, value=s['losses'])
@@ -371,8 +422,27 @@ def write_rankings_sheet(wb, sheet_name, deck_stats, latest_decks, deck_values):
         ws.cell(r, 12, value=s['avg_sides'])
         val = deck_values.get(deck, 0.0)
         ws.cell(r, 13, value=val).number_format = '$#,##0.00'
+        edhrec_rank = edhrec_ranks.get(deck)
+        if edhrec_rank is not None:
+            ws.cell(r, 14, value=edhrec_rank).alignment = center
 
-    return len(sorted_decks)
+    r = 2
+    for i, (deck, s) in enumerate(active_sorted):
+        write_deck_row(r, i + 1, deck, s, trend_arrow(deck))
+        r += 1
+
+    if retired_sorted:
+        # Divider, then retired decks with frozen stats, no rank, no trend arrow.
+        muted = Font(italic=True, color='888888')
+        ws.cell(r, 3, value='— RETIRED —').font = Font(bold=True, color='888888')
+        r += 1
+        for deck, s in retired_sorted:
+            label = f'{deck}  (retired {retired_decks[deck]})'
+            write_deck_row(r, None, deck, s, '-', label=label)
+            ws.cell(r, 3).font = muted
+            r += 1
+
+    return len(active_sorted)
 
 
 def latest_decks_for_pilot(latest_game, pilot):
@@ -389,9 +459,12 @@ def latest_decks_for_pilot(latest_game, pilot):
     return set()
 
 
-def build_all_rankings(wb, all_games, deck_values):
+def build_all_rankings(wb, all_games, deck_values, edhrec_ranks=None, retired_decks=None):
     """Build/update the three Rankings sheets: overall, Human, Claude.
-    Returns (count_overall, count_human, count_claude)."""
+    Returns (count_overall, count_human, count_claude) of *active* decks.
+    Retired decks still aggregate (so opponents' SoS stays accurate) but render
+    below a divider."""
+    retired_decks = retired_decks or {}
     overall_stats = aggregate_deck_stats(all_games, pilot=None)
     human_stats = aggregate_deck_stats(all_games, pilot='human')
     claude_stats = aggregate_deck_stats(all_games, pilot='claude')
@@ -409,11 +482,11 @@ def build_all_rankings(wb, all_games, deck_values):
     latest = all_games[-1] if all_games else None
 
     n_o = write_rankings_sheet(wb, 'Rankings', overall_stats,
-                               latest_decks_for_pilot(latest, None), deck_values)
+                               latest_decks_for_pilot(latest, None), deck_values, edhrec_ranks, retired_decks)
     n_h = write_rankings_sheet(wb, 'Rankings - Human', human_stats,
-                               latest_decks_for_pilot(latest, 'human'), deck_values)
+                               latest_decks_for_pilot(latest, 'human'), deck_values, edhrec_ranks, retired_decks)
     n_c = write_rankings_sheet(wb, 'Rankings - Claude', claude_stats,
-                               latest_decks_for_pilot(latest, 'claude'), deck_values)
+                               latest_decks_for_pilot(latest, 'claude'), deck_values, edhrec_ranks, retired_decks)
     return n_o, n_h, n_c
 
 
@@ -422,6 +495,7 @@ def build_all_rankings(wb, all_games, deck_values):
 def update_tracker(game_data):
     wb = openpyxl.load_workbook(TRACKER_PATH)
     canonical, alias_map, cmdr_map = load_canonical_deck_names()
+    retired_decks = load_retired_decks()
     bold = Font(bold=True)
     center = Alignment(horizontal='center')
 
@@ -491,8 +565,14 @@ def update_tracker(game_data):
         print(f"  Deck values unavailable: {e}")
         deck_values = {}
 
-    n_o, n_h, n_c = build_all_rankings(wb, all_games, deck_values)
-    print(f"Rankings: {n_o} decks ranked")
+    try:
+        edhrec_ranks = get_edhrec_ranks()
+    except Exception as e:
+        print(f"  EDHrec ranks unavailable: {e}")
+        edhrec_ranks = {}
+
+    n_o, n_h, n_c = build_all_rankings(wb, all_games, deck_values, edhrec_ranks, retired_decks)
+    print(f"Rankings: {n_o} active decks ranked")
     print(f"Rankings - Human: {n_h} decks ranked")
     print(f"Rankings - Claude: {n_c} decks ranked")
 
@@ -567,7 +647,11 @@ def update_tracker(game_data):
     else:
         undebuted_part = f'Undebuted: (check decks.json).'
 
-    ws_inst.cell(14, 1, value=f'Total decks: 20. Debuted: {debuted}. {undebuted_part}')
+    retired_debuted = sorted(d for d in retired_decks if d in deck_stats)
+    active_debuted = debuted - len(retired_debuted)
+    retired_note = f' Retired: {", ".join(retired_debuted)}.' if retired_debuted else ''
+    ws_inst.cell(14, 1, value=f'Decks debuted: {debuted} (active {active_debuted}, '
+                              f'retired {len(retired_debuted)}).{retired_note} {undebuted_part}')
     ws_inst.cell(15, 1, value=f'Series: Claude {claude_w}, Human {human_w}. Games: {total}.')
     ws_inst.cell(17, 1, value='Trend arrows: Only updated for decks that played. Non-playing decks preserve their existing trend.')
 
@@ -586,6 +670,7 @@ if __name__ == '__main__':
         # Note: trend arrows are preserved as-is (no game played, nothing to compare).
         wb = openpyxl.load_workbook(TRACKER_PATH)
         canonical, alias_map, cmdr_map = load_canonical_deck_names()
+        retired_decks = load_retired_decks()
         ws_log = wb['Game Log']
         all_games = []
         for row in ws_log.iter_rows(min_row=2, max_row=ws_log.max_row, values_only=True):
@@ -604,6 +689,11 @@ if __name__ == '__main__':
         except Exception as e:
             print(f"  Deck values unavailable: {e}")
             deck_values = {}
+        try:
+            edhrec_ranks = get_edhrec_ranks()
+        except Exception as e:
+            print(f"  EDHrec ranks unavailable: {e}")
+            edhrec_ranks = {}
         # Build with empty latest_decks → no trend arrows updated, existing trends preserved
         # (trick: pass an empty all_games tail by calling helpers directly).
         overall_stats = aggregate_deck_stats(all_games, pilot=None)
@@ -614,9 +704,9 @@ if __name__ == '__main__':
         compute_sos_rating(overall_stats, overall_stats, all_games, pilot=None)
         compute_sos_rating(human_stats, claude_stats, all_games, pilot='human')
         compute_sos_rating(claude_stats, human_stats, all_games, pilot='claude')
-        n_o = write_rankings_sheet(wb, 'Rankings', overall_stats, set(), deck_values)
-        n_h = write_rankings_sheet(wb, 'Rankings - Human', human_stats, set(), deck_values)
-        n_c = write_rankings_sheet(wb, 'Rankings - Claude', claude_stats, set(), deck_values)
+        n_o = write_rankings_sheet(wb, 'Rankings', overall_stats, set(), deck_values, edhrec_ranks, retired_decks)
+        n_h = write_rankings_sheet(wb, 'Rankings - Human', human_stats, set(), deck_values, edhrec_ranks, retired_decks)
+        n_c = write_rankings_sheet(wb, 'Rankings - Claude', claude_stats, set(), deck_values, edhrec_ranks, retired_decks)
         wb.save(TRACKER_PATH)
         print(f"Refreshed: Rankings ({n_o}), Rankings - Human ({n_h}), Rankings - Claude ({n_c}).")
         sys.exit(0)

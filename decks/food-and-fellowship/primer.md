@@ -1,15 +1,31 @@
 # Food and Fellowship — Deck Primer
+<!-- summary reconciled 2026-06-21 -->
 > **PATH OF ANCESTRY CHECK:** Before using Path of Ancestry mana to cast a creature, verify the creature shares a creature type with your commander. No shared type = no scry.
 
 Commander: Food and Fellowship | Colors: White/Black/Green (Abzan)
 
 ## Strategy & Combo Lines
-- Abzan midrange/value deck with removal suite including Path to Exile, Mortify, and potentially Beast Within / Anguished Unmaking.
-- Food token generation for life gain and card advantage.
+Abzan (W/B/G) Frodo + Sam Food/Hobbit value deck. Core engine: Sam makes Food on combat → life gain → Frodo draws on 3+ life gained → snowballs every combat. Pippin doubles tokens (2 Foods/combat).
+
+**Win paths (nut lines):**
+- **Frying Pan + flyer + Food chain** — equip Field-Tested Frying Pan to a flyer (BoP/Goose), stockpile Foods, sac-chain in M1/M2 = 21+ flying lethal. Single-card autowin once Pan + flyer coexist. Don't sac Foods early — hoard for the finisher turn.
+- **Feasting Hobbit devour** — devour Foods on ETB to exceed opp's max blocker power → unblockable. 1-shot finisher vs low-power boards (20/20 vs Bello-tier). Cast when Foods are abundant AND top blocker power is known.
+- **Go-wide + anthem** — Merry makes Soldiers off artifact ETBs; Motivated Pony (haste) + Food = +3/+3 to all attackers = alpha closer.
+
+**Key cards:** Sam (Food engine + {1} Food discount while out), Frodo (draw on lifegain, Ring ladder), Merry (Soldiers — protect/recover if stolen), Pippin (token doubling), Feasting Hobbit (finisher), Field-Tested Frying Pan + flyer (nut win), Motivated Pony (closer).
+
+**Survival engine:** Sam-from-CZ + Food at {1} discount ≈ 3 life/mana. The stabilizer in grindy games — deploy Sam ASAP; without it the deck folds to chip damage in 2-3 turns.
+
+## Deck Weaknesses (how it loses)
+- **Thin enchantment removal** — Mortify is the only piece. Fatal vs game-ending enchantments (Sokka's Charge lifelink lock). Want redundant answers (Generous Gift / Anguished Unmaking / Beast Within).
+- **No board wipe** — single-target removal can't answer 2-card lethal combos (Vito + Ygra, Fblthp's triple win-con). Want a wipe (Toxic Deluge / Damnation / Hour of Reckoning) and/or planeswalker + artifact removal.
+- **Finisher is fragile** — Feasting Hobbit dies to instant-speed removal (Rapid Hybridization). The clock is meaningless without protection or a backup threat.
+- **Soft to lifelink and CDMG** — don't attack into active lifelink at low life (tempo loss, not a clock). Flying/forestwalk CDMG (Zinnia, Chatterfang) needs flying/reach blockers or early instant removal.
 
 ## Key Rulings
 - **Mortify can't hit artifacts** — need dedicated artifact removal for mana doublers like Extraplanar Lens.
 - **Path to Exile** shuffles the creature into the library — useful for disrupting graveyard-based combos but gives opponent a land.
+- **Feasting Hobbit unblockability is power-based** — only blockers with power ≥ Hobbit's can block. Devour enough Foods to exceed opp's max blocker power.
 
 ## Game History
 
@@ -137,4 +153,5 @@ Commander: Food and Fellowship | Colors: White/Black/Green (Abzan)
 - **vs. Zinnia Precon (0-1):** Zinnia's flying CDMG is the main threat — must hold instant removal for her. Offspring doubles everything; killing Thopter Engineer removes haste from artifact tokens. Shield Broker stealing Merry shuts down the Soldier engine — prioritize removing the shield counter (any damage source works). Sun Titan + Selfless Spirit is a near-unbeatable loop — need enchantment/artifact removal or exile effects. Feasting Hobbit with 3+ Foods is the best clock but needs instant-speed protection.
 - **vs. Eldrazi/Zhulodok (1-0):** Eldrazi needs Zhulodok online to function — without cascade the hand is full of uncastable 7+ MV spells. Fell the Mighty is perfect since our creatures are low-power. Go wide fast, Food engine keeps life high and Frodo drawing. Motivated Pony closes. Don't let them reach cascade turns — pressure early and hold Fell the Mighty / removal for Zhulodok.
 - **vs. Avatar Allies/Sokka (0-1):** Sokka's Charge is the killer — gives Allies DS+LL on opp's turn, turning combat into unbeatable lifegain stall. Mortify is the only enchantment answer in deck; saving it for Sokka's Charge (over Sokka itself) may be correct since Sokka can be answered by combat blocks but Sokka's Charge cannot. Iroh anthem (+1/+1 to attackers when Iroh attacks) + Wartime Protestors counter+haste trigger means each Ally entering buffs the next swing. Hobbit 8/8+ devour is meaningless if Sokka's Charge resolves — opponent regains all damage as life. **Critical:** Don't attack into lifelink when behind on life, even with unblockable threats. Need to hold blockers and wait for enchantment removal. Deck currently lacks redundant enchantment removal — consider Generous Gift / Anguished Unmaking add.
+- **vs. Bello precon (1-0):** Low-power board (max ~4/4) — both finishers shine: Feasting Hobbit devour 6 Foods → 20/20 unblockable, and Frying Pan + flyer Food-chain = 21 flying lethal. Battle of Bywater is a clutch creature-only wipe (Bello-animated permanents are creatures during their controller's turn). Frodo Ring L3-L4 grinds value (force discard / +3 life loss on connect). Stockpile Foods for the finisher turn rather than racing the animated bombs.
 - **vs. Fblthp (blue combo):** Fblthp has 3 library removers (Enter the Infinite, Leveler, Mirror of Fate) and 3 empty-library wins (Thassa's Oracle, Laboratory Maniac, Jace Wielder of Mysteries) + backup Triskaidekaphile. Answering one win condition isn't enough — they hold all three post-Enter the Infinite. Need planeswalker removal and artifact removal for mana doublers. Proper Fblthp play is Teferi/Tidal Barracuda BEFORE combo to cut instant-speed interaction.
