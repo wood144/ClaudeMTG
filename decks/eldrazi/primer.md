@@ -14,6 +14,7 @@ Commander: Zhulodok, Void Gorger | Colors: Colorless
 - **Hexproof-from-colors (Breaker of Creation)** dodges all colored targeted removal and sac effects — the go-to threat into removal-heavy matchups (Attrition, Chatterfang, Fell the Mighty).
 - **Platinum Angel / Platinum Emperion** passively blank aristocrat drain and damage-reflection combos without interaction.
 - **Sensei's Divining Top + Bonders' Enclave combo:** Set up top of library, then draw the best card.
+- **Plague Myr + Eldrazi Conscription = one-shot poison kill:** 11/11 infect with trample + annihilator 2 — one connection is 11 poison (10 = loss). Intentional joke line; Plague Myr stays in the deck for this.
 - **Forsaken Monument** is the engine MVP: +2/+2, {C} mana bonus, and 2 life per colorless spell offsets Ancient Tomb/Mana Vault damage. Tron + Monument produces 15+ mana a turn.
 
 ## Vulnerabilities (how to beat this deck / what to protect)

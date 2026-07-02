@@ -23246,5 +23246,23 @@
       "normal": "https://cards.scryfall.io/normal/front/f/b/fb8fc509-cff6-470f-abf6-b07f6c3f94e1.jpg?1767956948",
       "large": "https://cards.scryfall.io/large/front/f/b/fb8fc509-cff6-470f-abf6-b07f6c3f94e1.jpg?1767956948"
     }
+  },
+  "Kozilek, the Broken Reality": {
+    "name": "Kozilek, the Broken Reality",
+    "mana_cost": "{9}",
+    "cmc": 9.0,
+    "type": "Legendary Creature — Eldrazi",
+    "oracle": "When you cast this spell, up to two target players each manifest two cards from their hands. For each card manifested this way, you draw a card. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)\nOther colorless creatures you control get +3/+2.",
+    "power": "9",
+    "toughness": "9",
+    "keywords": [
+      "Manifest"
+    ],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/0/4/04066abb-44d2-4730-9cc3-2584bc4c7d8c.jpg?1782691400",
+      "normal": "https://cards.scryfall.io/normal/front/0/4/04066abb-44d2-4730-9cc3-2584bc4c7d8c.jpg?1782691400",
+      "large": "https://cards.scryfall.io/large/front/0/4/04066abb-44d2-4730-9cc3-2584bc4c7d8c.jpg?1782691400"
+    }
   }
 }

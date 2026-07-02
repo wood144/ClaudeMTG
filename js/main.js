@@ -591,6 +591,146 @@ function deleteDeck(i) {
   renderDecks();
 }
 
+// ─── DECK EDITOR ─────────────────────────────────────────────────────────────
+let editorDeckIdx = null;
+let editorLines = [];  // working copy: [{qty, name, cmdr}] — state untouched until Save
+
+function parseDeckLines(list) {
+  const lines = [];
+  for (const raw of list.split('\n')) {
+    const trimmed = raw.trim();
+    if (!trimmed) continue;
+    const cmdr = /\*CMDR\*/i.test(trimmed);
+    const clean = trimmed.replace(/\s*\*CMDR\*\s*/gi, ' ').trim();
+    const m = clean.match(/^(\d+)[x ]?\s+(.+)$/);
+    if (m) lines.push({ qty: parseInt(m[1]), name: m[2].trim(), cmdr });
+    else lines.push({ qty: 1, name: clean, cmdr });
+  }
+  return lines;
+}
+
+function openDeckEditor(i) {
+  editorDeckIdx = i;
+  editorLines = parseDeckLines(state.decks[i].list);
+  // No explicit *CMDR* tag → loader treats the first line as commander; make that explicit
+  // so alphabetical inserts can't push a new card above it and steal the commander slot.
+  if (editorLines.length && !editorLines.some(l => l.cmdr)) editorLines[0].cmdr = true;
+  const safeName = state.decks[i].name.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+  openModal(`
+    <h2>Edit Deck</h2>
+    <input type="text" id="editor-name" value="${safeName}" style="margin-bottom:8px;">
+    <div style="display:flex;gap:6px;margin-bottom:6px;">
+      <input type="text" id="editor-add" placeholder="Add a card — fuzzy names OK ('kozilek broken')" style="flex:1;"
+             onkeydown="if(event.key==='Enter'){event.preventDefault();editorAddCard();}">
+      <button class="btn-primary" onclick="editorAddCard()">＋ Add</button>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">
+      <span id="editor-status" style="font-size:12px;min-height:16px;font-family:'Cinzel',serif;color:var(--muted);"></span>
+      <span id="editor-count" style="font-size:11px;font-family:'Cinzel',serif;letter-spacing:0.08em;"></span>
+    </div>
+    <div id="editor-rows" class="editor-rows"></div>
+    <div class="modal-btns">
+      <button class="btn-secondary" onclick="editorReloadFromRepo()" title="Replace with the version committed in assets/decks.json">↻ Reload from Repo</button>
+      <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+      <button class="btn-primary" onclick="editorSave()">Save</button>
+    </div>
+  `);
+  renderEditorRows();
+  setTimeout(() => document.getElementById('editor-add')?.focus(), 100);
+}
+
+function renderEditorRows() {
+  const rows = document.getElementById('editor-rows');
+  if (!rows) return;
+  rows.innerHTML = editorLines.map((l, idx) => `
+    <div class="editor-row${l.cmdr ? ' cmdr' : ''}">
+      <button class="editor-qty-btn" onclick="editorQty(${idx},-1)" title="Remove one">−</button>
+      <span class="editor-qty">${l.qty}</span>
+      <button class="editor-qty-btn" onclick="editorQty(${idx},1)" title="Add one">+</button>
+      <span class="editor-row-name">${l.name}${l.cmdr ? '<span class="cmdr-badge">CMDR</span>' : ''}</span>
+      <button class="editor-row-del" onclick="editorRemoveLine(${idx})" title="Remove card">✕</button>
+    </div>
+  `).join('');
+  const total = editorLines.reduce((s, l) => s + l.qty, 0);
+  const countEl = document.getElementById('editor-count');
+  countEl.textContent = `${total} CARDS`;
+  countEl.style.color = total === 100 ? 'var(--accent)' : 'var(--red)';
+}
+
+function editorQty(idx, delta) {
+  editorLines[idx].qty += delta;
+  if (editorLines[idx].qty <= 0) editorLines.splice(idx, 1);
+  renderEditorRows();
+}
+
+function editorRemoveLine(idx) {
+  editorLines.splice(idx, 1);
+  renderEditorRows();
+}
+
+function editorStatus(msg, ok) {
+  const el = document.getElementById('editor-status');
+  if (!el) return;
+  el.textContent = msg;
+  el.style.color = ok ? 'var(--accent)' : 'var(--red)';
+}
+
+async function editorAddCard() {
+  const inp = document.getElementById('editor-add');
+  const q = inp.value.trim();
+  if (!q) return;
+  editorStatus('Looking up…', true);
+  const data = await fetchCard(q);
+  if (!data) { editorStatus(`No card found for "${q}"`, false); return; }
+  const name = data.name;  // canonical Scryfall name
+  const existing = editorLines.find(l => l.name.toLowerCase() === name.toLowerCase());
+  if (existing) {
+    existing.qty++;
+    editorStatus(`${name} — now x${existing.qty}`, true);
+  } else {
+    // Insert alphabetically among non-commander lines (commanders stay on top)
+    let at = editorLines.length;
+    for (let i = 0; i < editorLines.length; i++) {
+      if (editorLines[i].cmdr) continue;
+      if (editorLines[i].name.localeCompare(name) > 0) { at = i; break; }
+    }
+    editorLines.splice(at, 0, { qty: 1, name, cmdr: false });
+    editorStatus(`Added ${name}`, true);
+  }
+  inp.value = '';
+  inp.focus();
+  renderEditorRows();
+}
+
+async function editorReloadFromRepo() {
+  editorStatus('Fetching assets/decks.json…', true);
+  try {
+    const res = await fetch('./assets/decks.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const decks = await res.json();
+    const name = state.decks[editorDeckIdx].name;
+    const repo = decks.find(d => d.name === name);
+    if (!repo) { editorStatus(`No deck named "${name}" in the repo file.`, false); return; }
+    editorLines = parseDeckLines(repo.list);
+    renderEditorRows();
+    editorStatus('Repo version loaded — click Save to keep it.', true);
+  } catch (e) {
+    editorStatus(`Reload failed: ${e.message}`, false);
+  }
+}
+
+function editorSave() {
+  const nameEl = document.getElementById('editor-name');
+  const name = (nameEl?.value || '').trim() || state.decks[editorDeckIdx].name;
+  const list = editorLines.map(l => `${l.qty} ${l.name}${l.cmdr ? ' *CMDR*' : ''}`).join('\n');
+  state.decks[editorDeckIdx] = { name, list };
+  saveDecks();
+  closeModal();
+  renderDecks();
+  const total = editorLines.reduce((s, l) => s + l.qty, 0);
+  showToast(`Saved "${name}" (${total} cards). Export Decks → commit to persist to repo.`, 'success');
+}
+
 function openImportMoxfield() {
   openModal(`
     <h2>Import from URL</h2>

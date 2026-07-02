@@ -650,6 +650,68 @@
   }
   .deck-item:hover .deck-item-del { opacity: 1; }
   .deck-item-del:hover { color: var(--red); }
+  .deck-item-edit {
+    color: var(--muted);
+    font-size: 13px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.15s;
+    background: none;
+    border: none;
+    padding: 0 2px;
+  }
+  .deck-item:hover .deck-item-edit { opacity: 1; }
+  .deck-item-edit:hover { color: var(--accent); }
+
+  /* Deck editor modal */
+  .editor-rows {
+    max-height: 320px;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    margin-bottom: 10px;
+  }
+  .editor-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 8px;
+    font-size: 12.5px;
+    border-bottom: 1px solid var(--border);
+  }
+  .editor-row:last-child { border-bottom: none; }
+  .editor-row.cmdr { background: var(--surface2); }
+  .editor-row-name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .editor-qty-btn {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 3px;
+    width: 20px; height: 20px;
+    line-height: 1;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  .editor-qty-btn:hover { border-color: var(--accent); }
+  .editor-qty { min-width: 18px; text-align: center; font-family: 'Cinzel', serif; font-size: 12px; }
+  .editor-row-del {
+    background: none; border: none;
+    color: var(--muted); cursor: pointer;
+    font-size: 13px; padding: 0 2px;
+  }
+  .editor-row-del:hover { color: var(--red); }
+  .cmdr-badge {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+    padding: 0 4px;
+    margin-left: 6px;
+    vertical-align: 1px;
+  }
 
   .deck-actions {
     padding: 8px;

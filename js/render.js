@@ -306,10 +306,11 @@ function renderDecks() {
     item.className = 'deck-item' + (state.selectedDeck === i ? ' active' : '');
     item.innerHTML = `
       <span class="deck-item-name" title="${deck.name}">${deck.name}</span>
+      <button class="deck-item-edit" onclick="openDeckEditor(${i})" title="Edit deck">✎</button>
       <button class="deck-item-del" onclick="deleteDeck(${i})" title="Delete">✕</button>
     `;
     item.addEventListener('click', e => {
-      if (!e.target.classList.contains('deck-item-del')) {
+      if (e.target.tagName !== 'BUTTON') {
         state.selectedDeck = i;
         renderDecks();
       }

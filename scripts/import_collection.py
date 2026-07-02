@@ -11,9 +11,14 @@ Usage:
     python scripts/import_collection.py assets/rare_mythic.csv --no-enrich
     python scripts/import_collection.py a.csv b.csv          # merge several exports
     python scripts/import_collection.py assets/rare_mythic.csv --refresh-scryfall
+    python scripts/import_collection.py assets/new_batch.csv --add   # append only
 
-Each run rebuilds the table from the listed CSVs (idempotent). The Scryfall bulk
-file is cached in the system temp dir and reused unless --refresh-scryfall is set.
+Without --add, each run rebuilds the table from the listed CSVs (idempotent).
+With --add, new rows are appended to the existing DB; rows whose printing
+(ManaBox ID, or name|set|collector|foil) is already present are skipped and
+reported — so re-uploading an overlapping export can't double-count. The
+Scryfall bulk file is cached in the system temp dir and reused unless
+--refresh-scryfall is set.
 
 Query examples (sqlite3 assets/collection.db):
     SELECT name,set_code,price FROM cards
@@ -142,18 +147,39 @@ COLUMNS = [
 ]
 
 
-def build_db(rows, attrs):
-    if os.path.exists(DB_PATH):
+def row_key(r):
+    """Identity of one physical printing+finish: ManaBox ID when present,
+    else name|set|collector|foil (Dragon Shield exports have no ManaBox ID)."""
+    return r.get("manabox_id") or (
+        f"{r.get('name')}|{r.get('set_code')}|{r.get('collector_number')}|{r.get('foil')}"
+    )
+
+
+def build_db(rows, attrs, add=False):
+    adding = add and os.path.exists(DB_PATH)
+    if not adding and os.path.exists(DB_PATH):
         os.remove(DB_PATH)
     con = sqlite3.connect(DB_PATH)
     cur = con.cursor()
-    cur.execute(f"""CREATE TABLE cards (
-        name TEXT, set_code TEXT, set_name TEXT, collector_number TEXT,
-        foil TEXT, rarity TEXT, quantity INTEGER, manabox_id TEXT,
-        scryfall_id TEXT, price REAL, condition TEXT, language TEXT, added TEXT,
-        colors TEXT, color_identity TEXT, type TEXT, cmc REAL,
-        power TEXT, toughness TEXT, keywords TEXT, oracle TEXT
-    )""")
+    if not adding:
+        cur.execute("""CREATE TABLE cards (
+            name TEXT, set_code TEXT, set_name TEXT, collector_number TEXT,
+            foil TEXT, rarity TEXT, quantity INTEGER, manabox_id TEXT,
+            scryfall_id TEXT, price REAL, condition TEXT, language TEXT, added TEXT,
+            colors TEXT, color_identity TEXT, type TEXT, cmc REAL,
+            power TEXT, toughness TEXT, keywords TEXT, oracle TEXT
+        )""")
+
+    skipped = []
+    if adding:
+        existing = set()
+        for mid, name, sc, cn, foil in cur.execute(
+                "SELECT manabox_id, name, set_code, collector_number, foil FROM cards"):
+            existing.add(mid or f"{name}|{sc}|{cn}|{foil}")
+        fresh = []
+        for r in rows:
+            (skipped if row_key(r) in existing else fresh).append(r)
+        rows = fresh
 
     unmatched = set()
     payload = []
@@ -171,15 +197,17 @@ def build_db(rows, attrs):
         f"INSERT INTO cards ({','.join(COLUMNS)}) VALUES ({','.join('?' * len(COLUMNS))})",
         payload,
     )
-    for col in ("name", "set_code", "rarity", "colors", "color_identity", "price"):
-        cur.execute(f"CREATE INDEX idx_{col} ON cards({col})")
+    if not adding:
+        for col in ("name", "set_code", "rarity", "colors", "color_identity", "price"):
+            cur.execute(f"CREATE INDEX idx_{col} ON cards({col})")
     con.commit()
 
     total_rows = cur.execute("SELECT COUNT(*) FROM cards").fetchone()[0]
     total_qty = cur.execute("SELECT SUM(quantity) FROM cards").fetchone()[0]
     distinct = cur.execute("SELECT COUNT(DISTINCT name) FROM cards").fetchone()[0]
     con.close()
-    return total_rows, total_qty, distinct, unmatched
+    n_unmatched = sum(1 for r in rows if r["name"] in unmatched)
+    return total_rows, total_qty, distinct, unmatched, len(payload), n_unmatched, skipped
 
 
 def main():
@@ -187,6 +215,8 @@ def main():
     ap.add_argument("csv", nargs="+", help="collection export CSV(s)")
     ap.add_argument("--no-enrich", action="store_true", help="skip Scryfall enrichment")
     ap.add_argument("--refresh-scryfall", action="store_true", help="re-download bulk file")
+    ap.add_argument("--add", action="store_true",
+                    help="append new rows to the existing DB instead of rebuilding it")
     args = ap.parse_args()
 
     rows = []
@@ -196,20 +226,25 @@ def main():
 
     attrs = None if args.no_enrich else fetch_scryfall_oracle(args.refresh_scryfall)
 
-    total_rows, total_qty, distinct, unmatched = build_db(rows, attrs)
-    print(f"\nWrote {DB_PATH}")
+    total_rows, total_qty, distinct, unmatched, inserted, n_unmatched, skipped = \
+        build_db(rows, attrs, add=args.add)
+    print(f"\nWrote {DB_PATH}" + (" (incremental add)" if args.add else " (full rebuild)"))
+    print(f"  inserted:         {inserted} rows")
+    if skipped:
+        print(f"  skipped dupes:    {len(skipped)} rows already in DB:")
+        for r in skipped[:15]:
+            foil = " foil" if r["foil"] == "true" else ""
+            print(f"    {r['name']} [{r['set_code']} #{r['collector_number']}{foil}] x{r['quantity']}")
+        if len(skipped) > 15:
+            print(f"    ... and {len(skipped) - 15} more")
     print(f"  rows (printings): {total_rows}")
     print(f"  total quantity:   {total_qty}")
     print(f"  distinct names:   {distinct}")
     if attrs is not None:
-        print(f"  enriched:         {total_rows - len(unmatched_rows(rows, unmatched))}/{total_rows} rows matched Scryfall")
+        print(f"  enriched:         {inserted - n_unmatched}/{inserted} inserted rows matched Scryfall")
         if unmatched:
             print(f"  UNMATCHED names ({len(unmatched)}): " +
                   ", ".join(sorted(unmatched)[:15]) + (" ..." if len(unmatched) > 15 else ""))
-
-
-def unmatched_rows(rows, unmatched):
-    return [r for r in rows if r["name"] in unmatched]
 
 
 if __name__ == "__main__":
