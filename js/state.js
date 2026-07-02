@@ -33,7 +33,15 @@ const PHASES = ['UNTAP','UPKEEP','DRAW','MAIN 1','COMBAT','MAIN 2','END'];
 
 // ─── DECK PERSISTENCE ────────────────────────────────────────────────────────
 function saveDecks() {
-  localStorage.setItem('mtg-decks', JSON.stringify(state.decks.map(d => ({ name: d.name, list: d.list }))));
+  // Spread keeps extra fields like "retired" intact (they round-trip to decks.json)
+  localStorage.setItem('mtg-decks', JSON.stringify(state.decks.map(d => ({ ...d }))));
+  // Mirror to assets/decks.json on disk when the live bridge is connected.
+  // Returns true if synced, so callers can report which persistence happened.
+  try {
+    return typeof window.liveBridgeSendDecks === 'function' && window.liveBridgeSendDecks();
+  } catch (e) {
+    return false;
+  }
 }
 
 // ─── GAME STATE PERSISTENCE ─────────────────────────────────────────────────

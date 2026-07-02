@@ -723,12 +723,14 @@ function editorSave() {
   const nameEl = document.getElementById('editor-name');
   const name = (nameEl?.value || '').trim() || state.decks[editorDeckIdx].name;
   const list = editorLines.map(l => `${l.qty} ${l.name}${l.cmdr ? ' *CMDR*' : ''}`).join('\n');
-  state.decks[editorDeckIdx] = { name, list };
-  saveDecks();
+  state.decks[editorDeckIdx] = { ...state.decks[editorDeckIdx], name, list };
+  const synced = saveDecks();
   closeModal();
   renderDecks();
   const total = editorLines.reduce((s, l) => s + l.qty, 0);
-  showToast(`Saved "${name}" (${total} cards). Export Decks → commit to persist to repo.`, 'success');
+  showToast(synced
+    ? `Saved "${name}" (${total} cards) — synced to assets/decks.json.`
+    : `Saved "${name}" (${total} cards). Bridge offline — Export Decks to persist.`, 'success');
 }
 
 function openImportMoxfield() {
@@ -1245,7 +1247,7 @@ async function seedDecksFromFile() {
 
 function exportDecks() {
   if (state.decks.length === 0) { showToast('No decks to export.'); return; }
-  const data = JSON.stringify(state.decks.map(d => ({ name: d.name, list: d.list })), null, 2);
+  const data = JSON.stringify(state.decks.map(d => ({ ...d })), null, 2);  // keep "retired" etc.
   const blob = new Blob([data], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');

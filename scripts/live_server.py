@@ -24,6 +24,7 @@ except ImportError:
 
 OUTPUT = os.path.join(os.path.dirname(__file__), '..', 'game_live.txt')
 LIBRARY_OUT = os.path.join(os.path.dirname(__file__), '..', 'claude_library.json')
+DECKS_OUT = os.path.join(os.path.dirname(__file__), '..', 'assets', 'decks.json')
 PORT = 8765
 
 
@@ -58,12 +59,35 @@ def extract_library(message):
     return '\n'.join(clean)
 
 
+def handle_decks_sync(message, timestamp):
+    """If message is a standalone [[DECKS|json]] payload, write assets/decks.json.
+    Returns True when the message was a decks sync (valid or not)."""
+    m = re.match(r'^\[\[DECKS\|(.+)\]\]$', message, re.S)
+    if not m:
+        return False
+    try:
+        decks = json.loads(m.group(1))
+        if not (isinstance(decks, list) and decks and all(
+                isinstance(d, dict)
+                and isinstance(d.get('name'), str)
+                and isinstance(d.get('list'), str)
+                for d in decks)):
+            raise ValueError('not a list of {name, list} decks')
+        write_atomic(DECKS_OUT, json.dumps(decks, indent=1))
+        print(f"[{timestamp}] Decks synced -> assets/decks.json ({len(decks)} decks)")
+    except (json.JSONDecodeError, ValueError, TypeError) as e:
+        print(f"[{timestamp}] Bad DECKS payload ignored ({e})")
+    return True
+
+
 async def handler(websocket):
     remote = websocket.remote_address
     print(f"[{datetime.now():%H:%M:%S}] Client connected from {remote}")
     try:
         async for message in websocket:
             timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            if handle_decks_sync(message, timestamp):
+                continue
             stripped = extract_library(message)
             content = f"[LIVE UPDATE: {timestamp}]\n{stripped}"
             write_atomic(OUTPUT, content)

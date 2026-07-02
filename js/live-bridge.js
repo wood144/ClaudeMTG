@@ -70,6 +70,20 @@
     }
   }
 
+  // ── Deck sync ───────────────────────────────────────────────────────
+  // Mirrors state.decks to assets/decks.json on disk via the bridge server.
+  // Called from saveDecks(); returns true if the payload was sent.
+  window.liveBridgeSendDecks = function () {
+    if (!ws || ws.readyState !== WebSocket.OPEN) return false;
+    try {
+      const decks = state.decks.map(d => ({ ...d }));  // keep "retired" etc.
+      ws.send('[[DECKS|' + JSON.stringify(decks) + ']]');
+      return true;
+    } catch (e) {
+      return false;
+    }
+  };
+
   // ── Hook render functions ───────────────────────────────────────────
   // Every meaningful state change ends with a render call.
   // Wrap them all; debounce collapses bursts into one send.
