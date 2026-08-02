@@ -1271,12 +1271,14 @@ async function newGame() {
   state.turn = 1; state.phaseIdx = 0; state.actionLog = [];
   render();
 
-  const numDecks = state.decks.length;
+  // Retired decks are kept in the list for history but never rolled
+  const activeIdx = state.decks.map((d, i) => d.retired ? -1 : i).filter(i => i >= 0);
+  const numDecks = activeIdx.length;
   if (numDecks === 0) return;
 
   // Roll for Claude's deck
   const rollClaude = Math.floor(Math.random() * 20) + 1;
-  const claudeIdx = rollClaude % numDecks;
+  const claudeIdx = activeIdx[rollClaude % numDecks];
   state.selectedDeck = claudeIdx;
   document.getElementById('dice-result').textContent = `Claude: d20 → ${rollClaude} → ${state.decks[claudeIdx].name}`;
   renderDecks();
@@ -1286,7 +1288,7 @@ async function newGame() {
   let rollHuman, humanIdx;
   do {
     rollHuman = Math.floor(Math.random() * 20) + 1;
-    humanIdx = rollHuman % numDecks;
+    humanIdx = activeIdx[rollHuman % numDecks];
   } while (humanIdx === claudeIdx && numDecks > 1);
   state.selectedDeck = humanIdx;
   document.getElementById('dice-result').textContent = `You: d20 → ${rollHuman} → ${state.decks[humanIdx].name}`;

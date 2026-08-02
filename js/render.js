@@ -301,16 +301,22 @@ function renderPhase() {
 function renderDecks() {
   const list = document.getElementById('deck-list');
   list.innerHTML = '';
-  state.decks.forEach((deck, i) => {
+  // Active decks first, retired greyed out at the bottom (kept for history;
+  // not selectable, never rolled by New Game)
+  const order = state.decks.map((_, i) => i)
+    .sort((a, b) => (state.decks[a].retired ? 1 : 0) - (state.decks[b].retired ? 1 : 0));
+  order.forEach(i => {
+    const deck = state.decks[i];
     const item = document.createElement('div');
-    item.className = 'deck-item' + (state.selectedDeck === i ? ' active' : '');
+    item.className = 'deck-item' + (state.selectedDeck === i ? ' active' : '') + (deck.retired ? ' retired' : '');
     item.innerHTML = `
-      <span class="deck-item-name" title="${deck.name}">${deck.name}</span>
+      <span class="deck-item-name" title="${deck.name}${deck.retired ? ' (retired ' + deck.retired + ')' : ''}">${deck.name}${deck.retired ? ' <span class="retired-badge">RETIRED</span>' : ''}</span>
       <button class="deck-item-edit" onclick="openDeckEditor(${i})" title="Edit deck">✎</button>
       <button class="deck-item-del" onclick="deleteDeck(${i})" title="Delete">✕</button>
     `;
     item.addEventListener('click', e => {
       if (e.target.tagName !== 'BUTTON') {
+        if (deck.retired) { showToast(`${deck.name} is retired.`); return; }
         state.selectedDeck = i;
         renderDecks();
       }
