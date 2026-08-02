@@ -39,6 +39,10 @@
       doSend();
     };
 
+    ws.onmessage = function (event) {
+      handleDecksPush(event.data);
+    };
+
     ws.onclose = function () {
       updateStatus(false);
       ws = null;
@@ -68,6 +72,30 @@
     } catch (e) {
       // Silent fail — don't break the tracker
     }
+  }
+
+  // ── Deck push (disk → browser) ──────────────────────────────────────
+  // On connect the server sends assets/decks.json ([[DECKS_PUSH|...]]).
+  // The disk copy wins for every deck it knows (Claude edits that file
+  // directly — retired flags, list swaps). Browser-only decks are new
+  // imports made while offline: keep them and echo the merged set back
+  // so the file picks them up. This is what stops a stale localStorage
+  // copy from clobbering decks.json.
+  function handleDecksPush(data) {
+    if (typeof data !== 'string') return;
+    const m = data.match(/^\[\[DECKS_PUSH\|([\s\S]+)\]\]$/);
+    if (!m) return;
+    let diskDecks;
+    try {
+      diskDecks = JSON.parse(m[1]);
+    } catch (e) { return; }
+    if (!Array.isArray(diskDecks) || diskDecks.length === 0) return;
+    const diskNames = new Set(diskDecks.map(d => d.name));
+    const browserOnly = state.decks.filter(d => !diskNames.has(d.name));
+    state.decks = diskDecks.concat(browserOnly);
+    localStorage.setItem('mtg-decks', JSON.stringify(state.decks.map(d => ({ ...d }))));
+    if (typeof renderDecks === 'function') renderDecks();
+    if (browserOnly.length > 0) window.liveBridgeSendDecks();
   }
 
   // ── Deck sync ───────────────────────────────────────────────────────

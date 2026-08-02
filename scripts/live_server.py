@@ -59,6 +59,16 @@ def extract_library(message):
     return '\n'.join(clean)
 
 
+def read_decks_file():
+    """Return the current decks.json contents as a list, or None."""
+    try:
+        with open(DECKS_OUT, encoding='utf-8') as f:
+            decks = json.load(f)
+        return decks if isinstance(decks, list) else None
+    except (OSError, json.JSONDecodeError):
+        return None
+
+
 def handle_decks_sync(message, timestamp):
     """If message is a standalone [[DECKS|json]] payload, write assets/decks.json.
     Returns True when the message was a decks sync (valid or not)."""
@@ -73,6 +83,16 @@ def handle_decks_sync(message, timestamp):
                 and isinstance(d.get('list'), str)
                 for d in decks)):
             raise ValueError('not a list of {name, list} decks')
+        existing = read_decks_file()
+        if existing:
+            # One-deep backup so a bad sync is always recoverable
+            write_atomic(DECKS_OUT + '.bak', json.dumps(existing, indent=1))
+            incoming = {d['name'] for d in decks}
+            dropped = [d.get('name') for d in existing if d.get('name') not in incoming]
+            if dropped:
+                print(f"[{timestamp}] WARNING: sync removed {len(dropped)} deck(s) "
+                      f"from decks.json: {', '.join(dropped)}")
+                print(f"           Previous version saved to decks.json.bak")
         write_atomic(DECKS_OUT, json.dumps(decks, indent=1))
         print(f"[{timestamp}] Decks synced -> assets/decks.json ({len(decks)} decks)")
     except (json.JSONDecodeError, ValueError, TypeError) as e:
@@ -83,6 +103,15 @@ def handle_decks_sync(message, timestamp):
 async def handler(websocket):
     remote = websocket.remote_address
     print(f"[{datetime.now():%H:%M:%S}] Client connected from {remote}")
+    # Push the on-disk deck list so the tracker can't overwrite it with a
+    # stale localStorage copy (disk is the source of truth for known decks).
+    decks = read_decks_file()
+    if decks:
+        try:
+            await websocket.send('[[DECKS_PUSH|' + json.dumps(decks) + ']]')
+            print(f"[{datetime.now():%H:%M:%S}] Pushed {len(decks)} decks to tracker")
+        except websockets.ConnectionClosed:
+            return
     try:
         async for message in websocket:
             timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')

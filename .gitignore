@@ -19,3 +19,6 @@ assets/mtg_commander_tracker.xlsx
 game_current.md
 game_live.txt
 claude_library.json
+
+# Runtime backup written by live_server.py before each deck sync
+assets/decks.json.bak
