@@ -22,3 +22,6 @@ claude_library.json
 
 # Runtime backup written by live_server.py before each deck sync
 assets/decks.json.bak
+
+# Safety backups written by claude scripts before destructive edits
+assets/*.bak

@@ -23,6 +23,8 @@ Commander: Wayta, Trainer Prodigy | Colors: Red/Green/White (Naya)
 - **Blasphemous Act + Brash Taunter:** 13 to Taunter → 13 to opp; with en-Kor, funnel multiple creatures' 13 into one reflector. Brash is a high-priority removal target — give it redundant indestructible (Darksteel Plate), not just Wayta.
 - **Pain for All (cheapest amp, {2}{R}):** Cast on Screaming Nemesis ASAP. Adds a "deals damage to each opp" reflection trigger per damage event; Wayta amp doubles it. With Donna paired = 4× reflection on a fight.
 - **Wayta fight as finisher:** Once the engine is online, fight opponent's own big creatures into your reflector — all damage reflected back, amplified. Wayta's ability doubles every reflection trigger.
+- **Arcbond (instant, {2}{R}):** Target creature's damage this turn is dealt to EACH other creature and EACH player. On indestructible Brash Taunter/Stuffy Doll before a wipe = table-wide reflection; on an opposing attacker mid-combat = their own swing wipes their board. (Arcbond's trigger comes from the spell, not a permanent — Wayta's amp does NOT double it.)
+- **Angelic Overseer is the fight-partner, not a miser's flyer:** Wayta (Human) makes it hexproof + indestructible — it eats Wayta-fight damage from huge opposing creatures (Wrathful Raptors etc.) without dying. Don't cut it.
 
 ## Weaknesses
 - Relies on creatures sticking around — removal before board wipes disrupts the plan

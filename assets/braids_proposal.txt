@@ -1,0 +1,107 @@
+# "The Nightly Toll" — Braids, Arisen Nightmare (mono-B sacrifice value / drain control)
+# Built 2026-08-01 from collection.db only. Designed for CLAUDE to pilot, based on
+# Game Log analysis (35 wins / 117 games): Claude wins with engines, asymmetric
+# destruction, and inevitability — not combat math. Claude's best decks: Fblthp
+# (value), Shrines (drain engine), Eldrazi (haymakers), Atla (rebuilds thru wipes).
+#
+# Plan: Braids sacs a recursive body every end step — opponent bleeds a real
+# permanent or Claude draws. Skeletons/Bloodghast come back; opponent's cards
+# don't. Drain payoffs (Blood Artist, Vraan, Ayara, Zulaport) turn every death
+# into reach. Edicts + minus-X wipes clear the board asymmetrically (fodder
+# rebuys, Shirei mass-rebuys). Close with Gray Merchant, Kokusho, Exsanguinate
+# (doubled by Nirkana), Ormendahl, or Rise of the Dark Realms after the grind.
+# No combat math required. No tutors. No Marvel cards.
+
+1 Braids, Arisen Nightmare *CMDR*
+
+# Death drain (7)
+1 Blood Artist
+1 Zulaport Cutthroat
+1 Vraan, Executioner Thane
+1 Ayara, First of Locthwain
+1 Falkenrath Noble
+1 Etched Familiar
+1 Marauding Blight-Priest
+
+# Recursive fodder (9)
+1 Reassembling Skeleton
+1 Persistent Specimen
+1 Cult Conscript
+1 Fleshless Gladiator
+1 Haunt of the Dead Marshes
+1 Bloodghast
+1 Silversmote Ghoul
+1 Doomed Dissenter
+1 Headless Rider
+
+# Sac outlets & value (9)
+1 Yahenni, Undying Partisan
+1 Ashnod's Altar
+1 Vampiric Rites
+1 Ravenous Amulet
+1 Village Rites
+1 Corrupted Conviction
+1 Plumb the Forbidden
+1 Smothering Abomination
+1 Fell Stinger
+
+# Removal (10)
+1 Sheoldred's Edict
+1 Sudden Edict
+1 Vraska's Fall
+1 Flare of Malice
+1 Tergrid's Shadow
+1 Bone Shards
+1 Go for the Throat
+1 Infernal Grasp
+1 Hero's Downfall
+1 Feed the Swarm
+
+# Board wipes (4)
+1 Black Sun's Zenith
+1 Yahenni's Expertise
+1 Massacre Girl
+1 Nightmare Unmaking
+
+# Recursion (6)
+1 Reanimate
+1 Victimize
+1 Dread Return
+1 Chthonian Nightmare
+1 Sidisi, Regent of the Mire
+1 Shirei, Shizo's Caretaker
+
+# Card draw (4)
+1 Phyrexian Arena
+1 Necrodominance
+1 Phyrexian Rager
+1 Harvester of Souls
+
+# Finishers (5)
+1 Exsanguinate
+1 Gray Merchant of Asphodel
+1 Kokusho, the Evening Star
+1 Nirkana Revenant
+1 Rise of the Dark Realms
+
+# Ramp (9)
+1 Sol Ring
+1 Arcane Signet
+1 Charcoal Diamond
+1 Mind Stone
+1 Fellwar Stone
+1 Thought Vessel
+1 Commander's Sphere
+1 Wayfarer's Bauble
+1 Solemn Simulacrum
+
+# Lands (36)
+1 Westvale Abbey // Ormendahl, Profane Prince
+1 Witch's Cottage
+1 Myriad Landscape
+1 Reliquary Tower
+1 Rogue's Passage
+1 High Market
+1 Lazotep Quarry
+1 Voldaren Estate
+28 Swamp

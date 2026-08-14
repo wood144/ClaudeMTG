@@ -1,107 +1,122 @@
 {
-  "timestamp": "2026-05-27T14:13:29.645430",
+  "timestamp": "2026-08-06T16:09:52.041663",
   "source": "edhrec-json-commanders",
-  "deck_count": 20,
+  "deck_count": 23,
   "ranks": {
     "Eldrazi": {
-      "rank": 50,
-      "num_decks": 20768,
+      "rank": 55,
+      "num_decks": 20826,
       "slug": "zhulodok-void-gorger"
     },
     "Boros equipment": {
-      "rank": 879,
-      "num_decks": 2614,
+      "rank": 913,
+      "num_decks": 2620,
       "slug": "kellan-the-fae-blooded"
     },
     "meteor apes": {
-      "rank": 239,
-      "num_decks": 9205,
+      "rank": 253,
+      "num_decks": 9302,
       "slug": "roxanne-starfall-savant"
     },
     "quit hitting yourself": {
-      "rank": 427,
-      "num_decks": 6124,
+      "rank": 418,
+      "num_decks": 6536,
       "slug": "wayta-trainer-prodigy"
     },
     "Avatar Allies": {
-      "rank": 243,
-      "num_decks": 9097,
+      "rank": 215,
+      "num_decks": 10508,
       "slug": "sokka-tenacious-tactician"
     },
     "cats": {
-      "rank": 1044,
-      "num_decks": 2021,
+      "rank": 1042,
+      "num_decks": 2158,
       "slug": "mirri-weatherlight-duelist"
     },
     "Fun Guys": {
-      "rank": 310,
-      "num_decks": 7752,
+      "rank": 319,
+      "num_decks": 7955,
       "slug": "ghave-guru-of-spores"
     },
     "Bello precon": {
-      "rank": 28,
-      "num_decks": 25282,
+      "rank": 31,
+      "num_decks": 26595,
       "slug": "bello-bard-of-the-brambles"
     },
     "dinosaur eggs": {
-      "rank": 62,
-      "num_decks": 19402,
+      "rank": 63,
+      "num_decks": 20344,
       "slug": "atla-palani-nest-tender"
     },
-    "Zinnia precon": {
-      "rank": 72,
-      "num_decks": 18070,
-      "slug": "zinnia-valleys-voice"
-    },
     "The Claw!": {
-      "rank": 203,
-      "num_decks": 10345,
+      "rank": 233,
+      "num_decks": 9799,
       "slug": "the-infamous-cruelclaw"
     },
     "Food and fellowship LotR upgraded": {
-      "rank": 38,
-      "num_decks": 23315,
+      "rank": 34,
+      "num_decks": 24689,
       "slug": "frodo-adventurous-hobbit-sam-loyal-attendant"
     },
     "Dicebots": {
-      "rank": 46,
-      "num_decks": 21406,
+      "rank": 45,
+      "num_decks": 22219,
       "slug": "mr-house-president-and-ceo"
     },
     "squirrel food": {
-      "rank": 26,
-      "num_decks": 25641,
+      "rank": 29,
+      "num_decks": 27459,
       "slug": "chatterfang-squirrel-general"
     },
     "Dargons": {
-      "rank": 551,
-      "num_decks": 4819,
+      "rank": 523,
+      "num_decks": 5353,
       "slug": "scion-of-the-ur-dragon"
     },
     "Da Bears": {
-      "rank": 388,
-      "num_decks": 6556,
+      "rank": 386,
+      "num_decks": 6891,
       "slug": "ayula-queen-among-bears"
     },
     "faeries": {
-      "rank": 778,
-      "num_decks": 3026,
+      "rank": 825,
+      "num_decks": 3024,
       "slug": "tegwyll-duke-of-splendor"
     },
     "Every Shrine Ever": {
-      "rank": 58,
-      "num_decks": 19770,
+      "rank": 62,
+      "num_decks": 20348,
       "slug": "go-shintai-of-lifes-origin"
     },
     "Fblthp": {
-      "rank": 1736,
-      "num_decks": 737,
+      "rank": 1778,
+      "num_decks": 778,
       "slug": "fblthp-the-lost"
     },
     "mill/steal": {
-      "rank": 1857,
-      "num_decks": 607,
+      "rank": 1902,
+      "num_decks": 639,
       "slug": "wrexial-the-risen-deep"
+    },
+    "I call him big booty": {
+      "rank": 184,
+      "num_decks": 11893,
+      "slug": "doran-besieged-by-time"
+    },
+    "Everything Must Go": {
+      "rank": 1135,
+      "num_decks": 1875,
+      "slug": "mahadi-emporium-master"
+    },
+    "The Nightly Toll": {
+      "rank": 310,
+      "num_decks": 8360,
+      "slug": "braids-arisen-nightmare"
+    },
+    "Zinnia precon": {
+      "rank": 80,
+      "num_decks": 18622,
+      "slug": "zinnia-valleys-voice"
     }
   }
 }

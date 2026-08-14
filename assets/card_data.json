@@ -23264,5 +23264,910 @@
       "normal": "https://cards.scryfall.io/normal/front/0/4/04066abb-44d2-4730-9cc3-2584bc4c7d8c.jpg?1782691400",
       "large": "https://cards.scryfall.io/large/front/0/4/04066abb-44d2-4730-9cc3-2584bc4c7d8c.jpg?1782691400"
     }
+  },
+  "Arcbond": {
+    "name": "Arcbond",
+    "mana_cost": "{2}{R}",
+    "cmc": 3.0,
+    "type": "Instant",
+    "oracle": "Choose target creature. Whenever that creature is dealt damage this turn, it deals that much damage to each other creature and each player.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/9/b/9bc397d1-50a8-46cd-98b2-7104f2241420.jpg?1782712819",
+      "normal": "https://cards.scryfall.io/normal/front/9/b/9bc397d1-50a8-46cd-98b2-7104f2241420.jpg?1782712819",
+      "large": "https://cards.scryfall.io/large/front/9/b/9bc397d1-50a8-46cd-98b2-7104f2241420.jpg?1782712819"
+    }
+  },
+  "Ayara, First of Locthwain": {
+    "name": "Ayara, First of Locthwain",
+    "mana_cost": "{B}{B}{B}",
+    "cmc": 3.0,
+    "type": "Legendary Creature — Elf Noble",
+    "oracle": "Whenever Ayara or another black creature you control enters, each opponent loses 1 life and you gain 1 life.\n{T}, Sacrifice another black creature: Draw a card.",
+    "power": "2",
+    "toughness": "3",
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/e/d/ed0ace28-9a33-4f0d-b8c8-f5517f20ccf1.jpg?1783932644",
+      "normal": "https://cards.scryfall.io/normal/front/e/d/ed0ace28-9a33-4f0d-b8c8-f5517f20ccf1.jpg?1783932644",
+      "large": "https://cards.scryfall.io/large/front/e/d/ed0ace28-9a33-4f0d-b8c8-f5517f20ccf1.jpg?1783932644"
+    }
+  },
+  "Black Sun's Zenith": {
+    "name": "Black Sun's Zenith",
+    "mana_cost": "{X}{B}{B}",
+    "cmc": 2.0,
+    "type": "Sorcery",
+    "oracle": "Put X -1/-1 counters on each creature. Shuffle Black Sun's Zenith into its owner's library.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/e/d/eda98f51-a918-4ef7-a123-7d4200c79620.jpg?1783904562",
+      "normal": "https://cards.scryfall.io/normal/front/e/d/eda98f51-a918-4ef7-a123-7d4200c79620.jpg?1783904562",
+      "large": "https://cards.scryfall.io/large/front/e/d/eda98f51-a918-4ef7-a123-7d4200c79620.jpg?1783904562"
+    }
+  },
+  "Bloodghast": {
+    "name": "Bloodghast",
+    "mana_cost": "{B}{B}",
+    "cmc": 2.0,
+    "type": "Creature — Vampire Spirit",
+    "oracle": "This creature can't block.\nThis creature has haste as long as an opponent has 10 or less life.\nLandfall — Whenever a land you control enters, you may return this card from your graveyard to the battlefield.",
+    "power": "2",
+    "toughness": "1",
+    "keywords": [
+      "Landfall"
+    ],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/c/e/cee85485-598f-4dfc-aa0b-7b1de86c7788.jpg?1783903786",
+      "normal": "https://cards.scryfall.io/normal/front/c/e/cee85485-598f-4dfc-aa0b-7b1de86c7788.jpg?1783903786",
+      "large": "https://cards.scryfall.io/large/front/c/e/cee85485-598f-4dfc-aa0b-7b1de86c7788.jpg?1783903786"
+    }
+  },
+  "Bone Shards": {
+    "name": "Bone Shards",
+    "mana_cost": "{B}",
+    "cmc": 1.0,
+    "type": "Sorcery",
+    "oracle": "As an additional cost to cast this spell, sacrifice a creature or discard a card.\nDestroy target creature or planeswalker.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/1/e/1ee98955-4c47-4d45-9377-608dfa755337.jpg?1783926865",
+      "normal": "https://cards.scryfall.io/normal/front/1/e/1ee98955-4c47-4d45-9377-608dfa755337.jpg?1783926865",
+      "large": "https://cards.scryfall.io/large/front/1/e/1ee98955-4c47-4d45-9377-608dfa755337.jpg?1783926865"
+    }
+  },
+  "Braids, Arisen Nightmare": {
+    "name": "Braids, Arisen Nightmare",
+    "mana_cost": "{1}{B}{B}",
+    "cmc": 3.0,
+    "type": "Legendary Creature — Nightmare",
+    "oracle": "At the beginning of your end step, you may sacrifice an artifact, creature, enchantment, land, or planeswalker. If you do, each opponent may sacrifice a permanent of their choice that shares a card type with it. For each opponent who doesn't, that player loses 2 life and you draw a card.",
+    "power": "3",
+    "toughness": "3",
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/f/9/f96223d0-04c4-40c2-87a9-0c6bc74adddb.jpg?1783906041",
+      "normal": "https://cards.scryfall.io/normal/front/f/9/f96223d0-04c4-40c2-87a9-0c6bc74adddb.jpg?1783906041",
+      "large": "https://cards.scryfall.io/large/front/f/9/f96223d0-04c4-40c2-87a9-0c6bc74adddb.jpg?1783906041"
+    }
+  },
+  "Chthonian Nightmare": {
+    "name": "Chthonian Nightmare",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type": "Enchantment",
+    "oracle": "When this enchantment enters, you get {E}{E}{E} (three energy counters).\nPay X {E}, Sacrifice a creature, Return this enchantment to its owner's hand: Return target creature card with mana value X from your graveyard to the battlefield. Activate only as a sorcery.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/c/e/ce5dd2c1-b6e0-4914-b5c9-7dd451c29e22.jpg?1783911283",
+      "normal": "https://cards.scryfall.io/normal/front/c/e/ce5dd2c1-b6e0-4914-b5c9-7dd451c29e22.jpg?1783911283",
+      "large": "https://cards.scryfall.io/large/front/c/e/ce5dd2c1-b6e0-4914-b5c9-7dd451c29e22.jpg?1783911283"
+    }
+  },
+  "Corrupted Conviction": {
+    "name": "Corrupted Conviction",
+    "mana_cost": "{B}",
+    "cmc": 1.0,
+    "type": "Instant",
+    "oracle": "As an additional cost to cast this spell, sacrifice a creature.\nDraw two cards.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/8/0/8046f892-3317-4ef7-9cf7-97b9060540c8.jpg?1783911834",
+      "normal": "https://cards.scryfall.io/normal/front/8/0/8046f892-3317-4ef7-9cf7-97b9060540c8.jpg?1783911834",
+      "large": "https://cards.scryfall.io/large/front/8/0/8046f892-3317-4ef7-9cf7-97b9060540c8.jpg?1783911834"
+    }
+  },
+  "Cult Conscript": {
+    "name": "Cult Conscript",
+    "mana_cost": "{B}",
+    "cmc": 1.0,
+    "type": "Creature — Skeleton Warrior",
+    "oracle": "This creature enters tapped.\n{1}{B}: Return this card from your graveyard to the battlefield. Activate only if a non-Skeleton creature died under your control this turn.",
+    "power": "2",
+    "toughness": "1",
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/f/e/fed77513-94ab-44e2-b9a1-30ba927cd6ee.jpg?1783921335",
+      "normal": "https://cards.scryfall.io/normal/front/f/e/fed77513-94ab-44e2-b9a1-30ba927cd6ee.jpg?1783921335",
+      "large": "https://cards.scryfall.io/large/front/f/e/fed77513-94ab-44e2-b9a1-30ba927cd6ee.jpg?1783921335"
+    }
+  },
+  "Doomed Dissenter": {
+    "name": "Doomed Dissenter",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type": "Creature — Human",
+    "oracle": "When this creature dies, create a 2/2 black Zombie creature token.",
+    "power": "1",
+    "toughness": "1",
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/f/7/f7c0cf16-81ea-45e3-99cc-4424d59bb44b.jpg?1783924866",
+      "normal": "https://cards.scryfall.io/normal/front/f/7/f7c0cf16-81ea-45e3-99cc-4424d59bb44b.jpg?1783924866",
+      "large": "https://cards.scryfall.io/large/front/f/7/f7c0cf16-81ea-45e3-99cc-4424d59bb44b.jpg?1783924866"
+    }
+  },
+  "Etched Familiar": {
+    "name": "Etched Familiar",
+    "mana_cost": "{2}{B}",
+    "cmc": 3.0,
+    "type": "Artifact Creature — Phyrexian Fox",
+    "oracle": "When this creature dies, each opponent loses 2 life and you gain 2 life.",
+    "power": "3",
+    "toughness": "2",
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/4/6/4616a548-269b-4530-97e8-c690ccc138f3.jpg?1783917013",
+      "normal": "https://cards.scryfall.io/normal/front/4/6/4616a548-269b-4530-97e8-c690ccc138f3.jpg?1783917013",
+      "large": "https://cards.scryfall.io/large/front/4/6/4616a548-269b-4530-97e8-c690ccc138f3.jpg?1783917013"
+    }
+  },
+  "Exsanguinate": {
+    "name": "Exsanguinate",
+    "mana_cost": "{X}{B}{B}",
+    "cmc": 2.0,
+    "type": "Sorcery",
+    "oracle": "Each opponent loses X life. You gain life equal to the life lost this way.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/f/1/f11d7311-4066-4a5d-ba28-9857fa707a0b.jpg?1783909073",
+      "normal": "https://cards.scryfall.io/normal/front/f/1/f11d7311-4066-4a5d-ba28-9857fa707a0b.jpg?1783909073",
+      "large": "https://cards.scryfall.io/large/front/f/1/f11d7311-4066-4a5d-ba28-9857fa707a0b.jpg?1783909073"
+    }
+  },
+  "Falkenrath Noble": {
+    "name": "Falkenrath Noble",
+    "mana_cost": "{3}{B}",
+    "cmc": 4.0,
+    "type": "Creature — Vampire Noble",
+    "oracle": "Flying\nWhenever this creature or another creature dies, target player loses 1 life and you gain 1 life.",
+    "power": "2",
+    "toughness": "2",
+    "keywords": [
+      "Flying"
+    ],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/f/3/f38eac93-3a0e-40e0-84f8-3670fd84ca00.jpg?1783909618",
+      "normal": "https://cards.scryfall.io/normal/front/f/3/f38eac93-3a0e-40e0-84f8-3670fd84ca00.jpg?1783909618",
+      "large": "https://cards.scryfall.io/large/front/f/3/f38eac93-3a0e-40e0-84f8-3670fd84ca00.jpg?1783909618"
+    }
+  },
+  "Feed the Swarm": {
+    "name": "Feed the Swarm",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type": "Sorcery",
+    "oracle": "Destroy target creature or enchantment an opponent controls. You lose life equal to that permanent's mana value.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/2/2/2246c098-1071-4cc3-a60a-802406e2827b.jpg?1783904770",
+      "normal": "https://cards.scryfall.io/normal/front/2/2/2246c098-1071-4cc3-a60a-802406e2827b.jpg?1783904770",
+      "large": "https://cards.scryfall.io/large/front/2/2/2246c098-1071-4cc3-a60a-802406e2827b.jpg?1783904770"
+    }
+  },
+  "Fell Stinger": {
+    "name": "Fell Stinger",
+    "mana_cost": "{2}{B}",
+    "cmc": 3.0,
+    "type": "Creature — Zombie Scorpion",
+    "oracle": "Deathtouch\nExploit (When this creature enters, you may sacrifice a creature.)\nWhen this creature exploits a creature, target player draws two cards and loses 2 life.",
+    "power": "3",
+    "toughness": "2",
+    "keywords": [
+      "Exploit",
+      "Deathtouch"
+    ],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/2/7/27347849-6c07-42c0-bee4-74f93d7ad511.jpg?1783924861",
+      "normal": "https://cards.scryfall.io/normal/front/2/7/27347849-6c07-42c0-bee4-74f93d7ad511.jpg?1783924861",
+      "large": "https://cards.scryfall.io/large/front/2/7/27347849-6c07-42c0-bee4-74f93d7ad511.jpg?1783924861"
+    }
+  },
+  "Fleshless Gladiator": {
+    "name": "Fleshless Gladiator",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type": "Creature — Phyrexian Skeleton",
+    "oracle": "Corrupted — {2}{B}: Return this card from your graveyard to the battlefield tapped. You lose 1 life. Activate only if an opponent has three or more poison counters.",
+    "power": "2",
+    "toughness": "2",
+    "keywords": [
+      "Corrupted"
+    ],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/0/b/0b2a32c9-f0ae-4ae4-a5c5-72bea05018fb.jpg?1783918046",
+      "normal": "https://cards.scryfall.io/normal/front/0/b/0b2a32c9-f0ae-4ae4-a5c5-72bea05018fb.jpg?1783918046",
+      "large": "https://cards.scryfall.io/large/front/0/b/0b2a32c9-f0ae-4ae4-a5c5-72bea05018fb.jpg?1783918046"
+    }
+  },
+  "Gray Merchant of Asphodel": {
+    "name": "Gray Merchant of Asphodel",
+    "mana_cost": "{3}{B}{B}",
+    "cmc": 5.0,
+    "type": "Creature — Zombie",
+    "oracle": "When this creature enters, each opponent loses X life, where X is your devotion to black. You gain life equal to the life lost this way. (Each {B} in the mana costs of permanents you control counts toward your devotion to black.)",
+    "power": "2",
+    "toughness": "4",
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/0/0/00d001d0-fd29-4b7c-9d0e-9131b995f910.jpg?1783909617",
+      "normal": "https://cards.scryfall.io/normal/front/0/0/00d001d0-fd29-4b7c-9d0e-9131b995f910.jpg?1783909617",
+      "large": "https://cards.scryfall.io/large/front/0/0/00d001d0-fd29-4b7c-9d0e-9131b995f910.jpg?1783909617"
+    }
+  },
+  "Haunt of the Dead Marshes": {
+    "name": "Haunt of the Dead Marshes",
+    "mana_cost": "{B}",
+    "cmc": 1.0,
+    "type": "Creature — Nightmare Elf",
+    "oracle": "When this creature enters, scry 1.\n{2}{B}: Return this card from your graveyard to the battlefield tapped. Activate only if you control a legendary creature.",
+    "power": "1",
+    "toughness": "1",
+    "keywords": [
+      "Scry"
+    ],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/3/7/37a12935-c927-4d25-a7e5-17a0b6229c60.jpg?1785497501",
+      "normal": "https://cards.scryfall.io/normal/front/3/7/37a12935-c927-4d25-a7e5-17a0b6229c60.jpg?1785497501",
+      "large": "https://cards.scryfall.io/large/front/3/7/37a12935-c927-4d25-a7e5-17a0b6229c60.jpg?1785497501"
+    }
+  },
+  "Headless Rider": {
+    "name": "Headless Rider",
+    "mana_cost": "{2}{B}",
+    "cmc": 3.0,
+    "type": "Creature — Zombie",
+    "oracle": "Whenever this creature or another nontoken Zombie you control dies, create a 2/2 black Zombie creature token.",
+    "power": "3",
+    "toughness": "1",
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/c/2/c24018e8-b8f1-44a5-9355-8b79f363569d.jpg?1783924858",
+      "normal": "https://cards.scryfall.io/normal/front/c/2/c24018e8-b8f1-44a5-9355-8b79f363569d.jpg?1783924858",
+      "large": "https://cards.scryfall.io/large/front/c/2/c24018e8-b8f1-44a5-9355-8b79f363569d.jpg?1783924858"
+    }
+  },
+  "Hero's Downfall": {
+    "name": "Hero's Downfall",
+    "mana_cost": "{1}{B}{B}",
+    "cmc": 3.0,
+    "type": "Instant",
+    "oracle": "Destroy target creature or planeswalker.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/a/d/ad2c01d9-8f54-46c0-9dc9-d4d4764ce1c9.jpg?1783909074",
+      "normal": "https://cards.scryfall.io/normal/front/a/d/ad2c01d9-8f54-46c0-9dc9-d4d4764ce1c9.jpg?1783909074",
+      "large": "https://cards.scryfall.io/large/front/a/d/ad2c01d9-8f54-46c0-9dc9-d4d4764ce1c9.jpg?1783909074"
+    }
+  },
+  "High Market": {
+    "name": "High Market",
+    "mana_cost": "",
+    "cmc": 0.0,
+    "type": "Land",
+    "oracle": "{T}: Add {C}.\n{T}, Sacrifice a creature: You gain 1 life.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/8/9/894aa6b6-0d08-4c43-8734-9cb7b31359c6.jpg?1783903727",
+      "normal": "https://cards.scryfall.io/normal/front/8/9/894aa6b6-0d08-4c43-8734-9cb7b31359c6.jpg?1783903727",
+      "large": "https://cards.scryfall.io/large/front/8/9/894aa6b6-0d08-4c43-8734-9cb7b31359c6.jpg?1783903727"
+    }
+  },
+  "Infernal Grasp": {
+    "name": "Infernal Grasp",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type": "Instant",
+    "oracle": "Destroy target creature. You lose 2 life.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/f/6/f67b323d-0dda-45f8-84b7-d883ce5045a8.jpg?1783903785",
+      "normal": "https://cards.scryfall.io/normal/front/f/6/f67b323d-0dda-45f8-84b7-d883ce5045a8.jpg?1783903785",
+      "large": "https://cards.scryfall.io/large/front/f/6/f67b323d-0dda-45f8-84b7-d883ce5045a8.jpg?1783903785"
+    }
+  },
+  "Lazotep Quarry": {
+    "name": "Lazotep Quarry",
+    "mana_cost": "",
+    "cmc": 0.0,
+    "type": "Land — Desert",
+    "oracle": "{T}: Add {C}.\n{T}, Sacrifice a creature: Add one mana of any color.\n{X}{2}, {T}, Sacrifice a Desert: Exile target creature card with mana value X from your graveyard. Create a token that's a copy of it, except it's a 4/4 black Zombie. Activate only as a sorcery.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/f/f/ff73b7f3-62f3-4a05-b439-bae2d0f63d2f.jpg?1783911415",
+      "normal": "https://cards.scryfall.io/normal/front/f/f/ff73b7f3-62f3-4a05-b439-bae2d0f63d2f.jpg?1783911415",
+      "large": "https://cards.scryfall.io/large/front/f/f/ff73b7f3-62f3-4a05-b439-bae2d0f63d2f.jpg?1783911415"
+    }
+  },
+  "Marauding Blight-Priest": {
+    "name": "Marauding Blight-Priest",
+    "mana_cost": "{2}{B}",
+    "cmc": 3.0,
+    "type": "Creature — Vampire Cleric",
+    "oracle": "Whenever you gain life, each opponent loses 1 life.",
+    "power": "3",
+    "toughness": "2",
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/5/f/5f70dafc-c638-4ec0-ab5b-62998f752720.jpg?1783909072",
+      "normal": "https://cards.scryfall.io/normal/front/5/f/5f70dafc-c638-4ec0-ab5b-62998f752720.jpg?1783909072",
+      "large": "https://cards.scryfall.io/large/front/5/f/5f70dafc-c638-4ec0-ab5b-62998f752720.jpg?1783909072"
+    }
+  },
+  "Massacre Girl": {
+    "name": "Massacre Girl",
+    "mana_cost": "{3}{B}{B}",
+    "cmc": 5.0,
+    "type": "Legendary Creature — Human Assassin",
+    "oracle": "Menace\nWhen Massacre Girl enters, each other creature gets -1/-1 until end of turn. Whenever a creature dies this turn, each creature other than Massacre Girl gets -1/-1 until end of turn.",
+    "power": "4",
+    "toughness": "4",
+    "keywords": [
+      "Menace"
+    ],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/5/9/59957c45-4672-4650-80b1-70e4a60b429e.jpg?1783909617",
+      "normal": "https://cards.scryfall.io/normal/front/5/9/59957c45-4672-4650-80b1-70e4a60b429e.jpg?1783909617",
+      "large": "https://cards.scryfall.io/large/front/5/9/59957c45-4672-4650-80b1-70e4a60b429e.jpg?1783909617"
+    }
+  },
+  "Sudden Edict": {
+    "name": "Sudden Edict",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type": "Instant",
+    "oracle": "Split second (As long as this spell is on the stack, players can't cast spells or activate abilities that aren't mana abilities.)\nTarget player sacrifices a creature of their choice.",
+    "power": null,
+    "toughness": null,
+    "keywords": [
+      "Split second"
+    ],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/5/7/57cc8aeb-221d-46a1-b03f-df8499bba26d.jpg?1783926855",
+      "normal": "https://cards.scryfall.io/normal/front/5/7/57cc8aeb-221d-46a1-b03f-df8499bba26d.jpg?1783926855",
+      "large": "https://cards.scryfall.io/large/front/5/7/57cc8aeb-221d-46a1-b03f-df8499bba26d.jpg?1783926855"
+    }
+  },
+  "Tergrid's Shadow": {
+    "name": "Tergrid's Shadow",
+    "mana_cost": "{3}{B}{B}",
+    "cmc": 5.0,
+    "type": "Instant",
+    "oracle": "Each player sacrifices two creatures.\nForetell {2}{B}{B} (During your turn, you may pay {2} and exile this card from your hand face down. Cast it on a later turn for its foretell cost.)",
+    "power": null,
+    "toughness": null,
+    "keywords": [
+      "Foretell"
+    ],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/4/1/417f71d2-d7da-4279-8847-d27c67e9ea9d.jpg?1783928239",
+      "normal": "https://cards.scryfall.io/normal/front/4/1/417f71d2-d7da-4279-8847-d27c67e9ea9d.jpg?1783928239",
+      "large": "https://cards.scryfall.io/large/front/4/1/417f71d2-d7da-4279-8847-d27c67e9ea9d.jpg?1783928239"
+    }
+  },
+  "Vampiric Rites": {
+    "name": "Vampiric Rites",
+    "mana_cost": "{B}",
+    "cmc": 1.0,
+    "type": "Enchantment",
+    "oracle": "{1}{B}, Sacrifice a creature: You gain 1 life and draw a card.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/9/a/9ae0b1e0-a481-4a98-b67b-0cf8bac53fdd.jpg?1783908926",
+      "normal": "https://cards.scryfall.io/normal/front/9/a/9ae0b1e0-a481-4a98-b67b-0cf8bac53fdd.jpg?1783908926",
+      "large": "https://cards.scryfall.io/large/front/9/a/9ae0b1e0-a481-4a98-b67b-0cf8bac53fdd.jpg?1783908926"
+    }
+  },
+  "Village Rites": {
+    "name": "Village Rites",
+    "mana_cost": "{B}",
+    "cmc": 1.0,
+    "type": "Instant",
+    "oracle": "As an additional cost to cast this spell, sacrifice a creature.\nDraw two cards.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/4/2/42ed35e9-51cd-468a-86a9-9412553cf50d.jpg?1783908135",
+      "normal": "https://cards.scryfall.io/normal/front/4/2/42ed35e9-51cd-468a-86a9-9412553cf50d.jpg?1783908135",
+      "large": "https://cards.scryfall.io/large/front/4/2/42ed35e9-51cd-468a-86a9-9412553cf50d.jpg?1783908135"
+    }
+  },
+  "Voldaren Estate": {
+    "name": "Voldaren Estate",
+    "mana_cost": "",
+    "cmc": 0.0,
+    "type": "Land",
+    "oracle": "{T}: Add {C}.\n{T}, Pay 1 life: Add one mana of any color. Spend this mana only to cast a Vampire spell.\n{5}, {T}: Create a Blood token. This ability costs {1} less to activate for each Vampire you control. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Draw a card.\")",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/1/f/1fcbc704-4fb3-49c3-9040-aa1681e86e2c.jpg?1783913817",
+      "normal": "https://cards.scryfall.io/normal/front/1/f/1fcbc704-4fb3-49c3-9040-aa1681e86e2c.jpg?1783913817",
+      "large": "https://cards.scryfall.io/large/front/1/f/1fcbc704-4fb3-49c3-9040-aa1681e86e2c.jpg?1783913817"
+    }
+  },
+  "Vraan, Executioner Thane": {
+    "name": "Vraan, Executioner Thane",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type": "Legendary Creature — Phyrexian Vampire",
+    "oracle": "Whenever one or more other creatures you control die, each opponent loses 2 life and you gain 2 life. This ability triggers only once each turn.",
+    "power": "2",
+    "toughness": "2",
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/4/c/4c4a3119-c70a-46ff-8ede-6356f2b7bc13.jpg?1783918037",
+      "normal": "https://cards.scryfall.io/normal/front/4/c/4c4a3119-c70a-46ff-8ede-6356f2b7bc13.jpg?1783918037",
+      "large": "https://cards.scryfall.io/large/front/4/c/4c4a3119-c70a-46ff-8ede-6356f2b7bc13.jpg?1783918037"
+    }
+  },
+  "Vraska's Fall": {
+    "name": "Vraska's Fall",
+    "mana_cost": "{2}{B}",
+    "cmc": 3.0,
+    "type": "Instant",
+    "oracle": "Each opponent sacrifices a creature or planeswalker of their choice and gets a poison counter.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/0/1/0173b7b4-2832-4943-ba45-8ba498d7a056.jpg?1783918037",
+      "normal": "https://cards.scryfall.io/normal/front/0/1/0173b7b4-2832-4943-ba45-8ba498d7a056.jpg?1783918037",
+      "large": "https://cards.scryfall.io/large/front/0/1/0173b7b4-2832-4943-ba45-8ba498d7a056.jpg?1783918037"
+    }
+  },
+  "Wayfarer's Bauble": {
+    "name": "Wayfarer's Bauble",
+    "mana_cost": "{1}",
+    "cmc": 1.0,
+    "type": "Artifact",
+    "oracle": "{2}, {T}, Sacrifice this artifact: Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/b/2/b279f268-c37e-4a2d-8195-74f4881226fc.jpg?1785497631",
+      "normal": "https://cards.scryfall.io/normal/front/b/2/b279f268-c37e-4a2d-8195-74f4881226fc.jpg?1785497631",
+      "large": "https://cards.scryfall.io/large/front/b/2/b279f268-c37e-4a2d-8195-74f4881226fc.jpg?1785497631"
+    }
+  },
+  "Westvale Abbey // Ormendahl, Profane Prince": {
+    "name": "Westvale Abbey // Ormendahl, Profane Prince",
+    "mana_cost": "",
+    "cmc": 0.0,
+    "type": "Land // Legendary Creature — Demon",
+    "oracle": "{T}: Add {C}.\n{5}, {T}, Pay 1 life: Create a 1/1 white and black Human Cleric creature token.\n{5}, {T}, Sacrifice five creatures: Transform this land, then untap it.\n---\nFlying, lifelink, indestructible, haste",
+    "power": null,
+    "toughness": null,
+    "keywords": [
+      "Flying",
+      "Lifelink",
+      "Indestructible",
+      "Transform",
+      "Haste"
+    ],
+    "layout": "transform",
+    "card_faces": [
+      {
+        "name": "Westvale Abbey",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/front/5/f/5fbc6091-a161-45b0-9932-543b569caaee.jpg?1783908059",
+          "normal": "https://cards.scryfall.io/normal/front/5/f/5fbc6091-a161-45b0-9932-543b569caaee.jpg?1783908059",
+          "large": "https://cards.scryfall.io/large/front/5/f/5fbc6091-a161-45b0-9932-543b569caaee.jpg?1783908059"
+        }
+      },
+      {
+        "name": "Ormendahl, Profane Prince",
+        "image_uris": {
+          "small": "https://cards.scryfall.io/small/back/5/f/5fbc6091-a161-45b0-9932-543b569caaee.jpg?1783908059",
+          "normal": "https://cards.scryfall.io/normal/back/5/f/5fbc6091-a161-45b0-9932-543b569caaee.jpg?1783908059",
+          "large": "https://cards.scryfall.io/large/back/5/f/5fbc6091-a161-45b0-9932-543b569caaee.jpg?1783908059"
+        }
+      }
+    ]
+  },
+  "Witch's Cottage": {
+    "name": "Witch's Cottage",
+    "mana_cost": "",
+    "cmc": 0.0,
+    "type": "Land — Swamp",
+    "oracle": "({T}: Add {B}.)\nThis land enters tapped unless you control three or more other Swamps.\nWhen this land enters untapped, you may put target creature card from your graveyard on top of your library.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/b/8/b87891cd-b457-4dff-8d18-a7eaf6748fc6.jpg?1783932575",
+      "normal": "https://cards.scryfall.io/normal/front/b/8/b87891cd-b457-4dff-8d18-a7eaf6748fc6.jpg?1783932575",
+      "large": "https://cards.scryfall.io/large/front/b/8/b87891cd-b457-4dff-8d18-a7eaf6748fc6.jpg?1783932575"
+    }
+  },
+  "Yahenni's Expertise": {
+    "name": "Yahenni's Expertise",
+    "mana_cost": "{2}{B}{B}",
+    "cmc": 4.0,
+    "type": "Sorcery",
+    "oracle": "All creatures get -3/-3 until end of turn.\nYou may cast a spell with mana value 3 or less from your hand without paying its mana cost.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/f/2/f2f28735-122c-45ba-bde5-decfd9b11b32.jpg?1783936760",
+      "normal": "https://cards.scryfall.io/normal/front/f/2/f2f28735-122c-45ba-bde5-decfd9b11b32.jpg?1783936760",
+      "large": "https://cards.scryfall.io/large/front/f/2/f2f28735-122c-45ba-bde5-decfd9b11b32.jpg?1783936760"
+    }
+  },
+  "Yahenni, Undying Partisan": {
+    "name": "Yahenni, Undying Partisan",
+    "mana_cost": "{2}{B}",
+    "cmc": 3.0,
+    "type": "Legendary Creature — Aetherborn Vampire",
+    "oracle": "Haste\nWhenever a creature an opponent controls dies, put a +1/+1 counter on Yahenni.\nSacrifice another creature: Yahenni gains indestructible until end of turn.",
+    "power": "2",
+    "toughness": "2",
+    "keywords": [
+      "Haste"
+    ],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/5/1/518b155a-cb84-48d3-9aba-07577f60f091.jpg?1783903779",
+      "normal": "https://cards.scryfall.io/normal/front/5/1/518b155a-cb84-48d3-9aba-07577f60f091.jpg?1783903779",
+      "large": "https://cards.scryfall.io/large/front/5/1/518b155a-cb84-48d3-9aba-07577f60f091.jpg?1783903779"
+    }
+  },
+  "Myriad Landscape": {
+    "name": "Myriad Landscape",
+    "mana_cost": "",
+    "cmc": 0.0,
+    "type": "Land",
+    "oracle": "This land enters tapped.\n{T}: Add {C}.\n{2}, {T}, Sacrifice this land: Search your library for up to two basic land cards that share a land type, put them onto the battlefield tapped, then shuffle.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/a/0/a0e2098f-1d94-491a-a7e9-a45a9f69e3a8.jpg?1783906009",
+      "normal": "https://cards.scryfall.io/normal/front/a/0/a0e2098f-1d94-491a-a7e9-a45a9f69e3a8.jpg?1783906009",
+      "large": "https://cards.scryfall.io/large/front/a/0/a0e2098f-1d94-491a-a7e9-a45a9f69e3a8.jpg?1783906009"
+    }
+  },
+  "Necrodominance": {
+    "name": "Necrodominance",
+    "mana_cost": "{B}{B}{B}",
+    "cmc": 3.0,
+    "type": "Legendary Enchantment",
+    "oracle": "Skip your draw step.\nAt the beginning of your end step, you may pay any amount of life. If you do, draw that many cards.\nYour maximum hand size is five.\nIf a card or token would be put into your graveyard from anywhere, exile it instead.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/f/f/ffc0109c-f939-4424-820e-d6e60cacd794.jpg?1783911278",
+      "normal": "https://cards.scryfall.io/normal/front/f/f/ffc0109c-f939-4424-820e-d6e60cacd794.jpg?1783911278",
+      "large": "https://cards.scryfall.io/large/front/f/f/ffc0109c-f939-4424-820e-d6e60cacd794.jpg?1783911278"
+    }
+  },
+  "Nightmare Unmaking": {
+    "name": "Nightmare Unmaking",
+    "mana_cost": "{3}{B}{B}",
+    "cmc": 5.0,
+    "type": "Sorcery",
+    "oracle": "Choose one —\n• Exile each creature with power greater than the number of cards in your hand.\n• Exile each creature with power less than the number of cards in your hand.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/4/4/44dc5937-4186-4ebf-a3cb-053c270370f3.jpg?1783923267",
+      "normal": "https://cards.scryfall.io/normal/front/4/4/44dc5937-4186-4ebf-a3cb-053c270370f3.jpg?1783923267",
+      "large": "https://cards.scryfall.io/large/front/4/4/44dc5937-4186-4ebf-a3cb-053c270370f3.jpg?1783923267"
+    }
+  },
+  "Nirkana Revenant": {
+    "name": "Nirkana Revenant",
+    "mana_cost": "{4}{B}{B}",
+    "cmc": 6.0,
+    "type": "Creature — Vampire Shade",
+    "oracle": "Whenever you tap a Swamp for mana, add an additional {B}.\n{B}: This creature gets +1/+1 until end of turn.",
+    "power": "4",
+    "toughness": "4",
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/9/6/96da0a4c-2865-4383-875a-9f5d6503baee.jpg?1783924955",
+      "normal": "https://cards.scryfall.io/normal/front/9/6/96da0a4c-2865-4383-875a-9f5d6503baee.jpg?1783924955",
+      "large": "https://cards.scryfall.io/large/front/9/6/96da0a4c-2865-4383-875a-9f5d6503baee.jpg?1783924955"
+    }
+  },
+  "Persistent Specimen": {
+    "name": "Persistent Specimen",
+    "mana_cost": "{B}",
+    "cmc": 1.0,
+    "type": "Creature — Skeleton",
+    "oracle": "{2}{B}: Return this card from your graveyard to the battlefield tapped.",
+    "power": "1",
+    "toughness": "1",
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/f/7/f7baf973-3202-4fea-8861-a4a5ec228640.jpg?1783924853",
+      "normal": "https://cards.scryfall.io/normal/front/f/7/f7baf973-3202-4fea-8861-a4a5ec228640.jpg?1783924853",
+      "large": "https://cards.scryfall.io/large/front/f/7/f7baf973-3202-4fea-8861-a4a5ec228640.jpg?1783924853"
+    }
+  },
+  "Phyrexian Arena": {
+    "name": "Phyrexian Arena",
+    "mana_cost": "{1}{B}{B}",
+    "cmc": 3.0,
+    "type": "Enchantment",
+    "oracle": "At the beginning of your upkeep, you draw a card and you lose 1 life.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/0/7/0784b6f0-9ebf-43d2-ba0f-a6bc93ba0c48.jpg?1783909072",
+      "normal": "https://cards.scryfall.io/normal/front/0/7/0784b6f0-9ebf-43d2-ba0f-a6bc93ba0c48.jpg?1783909072",
+      "large": "https://cards.scryfall.io/large/front/0/7/0784b6f0-9ebf-43d2-ba0f-a6bc93ba0c48.jpg?1783909072"
+    }
+  },
+  "Phyrexian Rager": {
+    "name": "Phyrexian Rager",
+    "mana_cost": "{2}{B}",
+    "cmc": 3.0,
+    "type": "Creature — Phyrexian Horror",
+    "oracle": "When this creature enters, you draw a card and you lose 1 life.",
+    "power": "2",
+    "toughness": "2",
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/a/9/a9861fb3-6722-43b8-bf0a-af6dd166e59d.jpg?1783917153",
+      "normal": "https://cards.scryfall.io/normal/front/a/9/a9861fb3-6722-43b8-bf0a-af6dd166e59d.jpg?1783917153",
+      "large": "https://cards.scryfall.io/large/front/a/9/a9861fb3-6722-43b8-bf0a-af6dd166e59d.jpg?1783917153"
+    }
+  },
+  "Plumb the Forbidden": {
+    "name": "Plumb the Forbidden",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type": "Instant",
+    "oracle": "As an additional cost to cast this spell, you may sacrifice one or more creatures. When you do, copy this spell for each creature sacrificed this way.\nYou draw a card and lose 1 life.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/7/9/79c27df1-0c05-4208-a80c-73185ab35424.jpg?1783903781",
+      "normal": "https://cards.scryfall.io/normal/front/7/9/79c27df1-0c05-4208-a80c-73185ab35424.jpg?1783903781",
+      "large": "https://cards.scryfall.io/large/front/7/9/79c27df1-0c05-4208-a80c-73185ab35424.jpg?1783903781"
+    }
+  },
+  "Ravenous Amulet": {
+    "name": "Ravenous Amulet",
+    "mana_cost": "{2}",
+    "cmc": 2.0,
+    "type": "Artifact",
+    "oracle": "{1}, {T}, Sacrifice a creature: Draw a card and put a soul counter on this artifact. Activate only as a sorcery.\n{4}, {T}, Sacrifice this artifact: Each opponent loses life equal to the number of soul counters on this artifact.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/8/0/80cadee5-6f26-4440-ad31-a8e573a90436.jpg?1783909089",
+      "normal": "https://cards.scryfall.io/normal/front/8/0/80cadee5-6f26-4440-ad31-a8e573a90436.jpg?1783909089",
+      "large": "https://cards.scryfall.io/large/front/8/0/80cadee5-6f26-4440-ad31-a8e573a90436.jpg?1783909089"
+    }
+  },
+  "Reanimate": {
+    "name": "Reanimate",
+    "mana_cost": "{B}",
+    "cmc": 1.0,
+    "type": "Sorcery",
+    "oracle": "Put target creature card from a graveyard onto the battlefield under your control. You lose life equal to that card's mana value.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/3/6/368b6903-5fc4-43e7-bd44-46b8107c8bb4.jpg?1783909614",
+      "normal": "https://cards.scryfall.io/normal/front/3/6/368b6903-5fc4-43e7-bd44-46b8107c8bb4.jpg?1783909614",
+      "large": "https://cards.scryfall.io/large/front/3/6/368b6903-5fc4-43e7-bd44-46b8107c8bb4.jpg?1783909614"
+    }
+  },
+  "Reassembling Skeleton": {
+    "name": "Reassembling Skeleton",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type": "Creature — Skeleton Warrior",
+    "oracle": "{1}{B}: Return this card from your graveyard to the battlefield tapped.",
+    "power": "1",
+    "toughness": "1",
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/4/d/4d431445-d7db-4ce1-b422-41494d9be1b4.jpg?1783907080",
+      "normal": "https://cards.scryfall.io/normal/front/4/d/4d431445-d7db-4ce1-b422-41494d9be1b4.jpg?1783907080",
+      "large": "https://cards.scryfall.io/large/front/4/d/4d431445-d7db-4ce1-b422-41494d9be1b4.jpg?1783907080"
+    }
+  },
+  "Rise of the Dark Realms": {
+    "name": "Rise of the Dark Realms",
+    "mana_cost": "{7}{B}{B}",
+    "cmc": 9.0,
+    "type": "Sorcery",
+    "oracle": "Put all creature cards from all graveyards onto the battlefield under your control.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/8/6/8645bf0c-631f-4003-bd24-3e069ae23513.jpg?1783909071",
+      "normal": "https://cards.scryfall.io/normal/front/8/6/8645bf0c-631f-4003-bd24-3e069ae23513.jpg?1783909071",
+      "large": "https://cards.scryfall.io/large/front/8/6/8645bf0c-631f-4003-bd24-3e069ae23513.jpg?1783909071"
+    }
+  },
+  "Sheoldred's Edict": {
+    "name": "Sheoldred's Edict",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type": "Instant",
+    "oracle": "Choose one —\n• Each opponent sacrifices a nontoken creature of their choice.\n• Each opponent sacrifices a creature token of their choice.\n• Each opponent sacrifices a planeswalker of their choice.",
+    "power": null,
+    "toughness": null,
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/a/9/a9225cc3-90f0-448f-a8d9-7c6c2796d077.jpg?1783918041",
+      "normal": "https://cards.scryfall.io/normal/front/a/9/a9225cc3-90f0-448f-a8d9-7c6c2796d077.jpg?1783918041",
+      "large": "https://cards.scryfall.io/large/front/a/9/a9225cc3-90f0-448f-a8d9-7c6c2796d077.jpg?1783918041"
+    }
+  },
+  "Shirei, Shizo's Caretaker": {
+    "name": "Shirei, Shizo's Caretaker",
+    "mana_cost": "{4}{B}",
+    "cmc": 5.0,
+    "type": "Legendary Creature — Spirit",
+    "oracle": "Whenever a creature with power 1 or less is put into your graveyard from the battlefield, you may return that card to the battlefield at the beginning of the next end step if Shirei is still on the battlefield.",
+    "power": "2",
+    "toughness": "2",
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/6/9/69848ec1-dba7-419f-a5f9-f934bebeeaa6.jpg?1783915665",
+      "normal": "https://cards.scryfall.io/normal/front/6/9/69848ec1-dba7-419f-a5f9-f934bebeeaa6.jpg?1783915665",
+      "large": "https://cards.scryfall.io/large/front/6/9/69848ec1-dba7-419f-a5f9-f934bebeeaa6.jpg?1783915665"
+    }
+  },
+  "Sidisi, Regent of the Mire": {
+    "name": "Sidisi, Regent of the Mire",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type": "Legendary Creature — Zombie Snake Warlock",
+    "oracle": "{T}, Sacrifice a creature you control with mana value X other than Sidisi: Return target creature card with mana value X plus 1 from your graveyard to the battlefield. Activate only as a sorcery.",
+    "power": "1",
+    "toughness": "3",
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/4/7/47374d23-662b-4ba7-a94f-37c9bc759cc6.jpg?1783907370",
+      "normal": "https://cards.scryfall.io/normal/front/4/7/47374d23-662b-4ba7-a94f-37c9bc759cc6.jpg?1783907370",
+      "large": "https://cards.scryfall.io/large/front/4/7/47374d23-662b-4ba7-a94f-37c9bc759cc6.jpg?1783907370"
+    }
+  },
+  "Silversmote Ghoul": {
+    "name": "Silversmote Ghoul",
+    "mana_cost": "{2}{B}",
+    "cmc": 3.0,
+    "type": "Creature — Zombie Vampire",
+    "oracle": "At the beginning of your end step, if you gained 3 or more life this turn, return this card from your graveyard to the battlefield tapped.\n{1}{B}, Sacrifice this creature: Draw a card.",
+    "power": "3",
+    "toughness": "1",
+    "keywords": [],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/c/5/c50a8053-7e79-4e0f-8e72-8df089377cd1.jpg?1783927550",
+      "normal": "https://cards.scryfall.io/normal/front/c/5/c50a8053-7e79-4e0f-8e72-8df089377cd1.jpg?1783927550",
+      "large": "https://cards.scryfall.io/large/front/c/5/c50a8053-7e79-4e0f-8e72-8df089377cd1.jpg?1783927550"
+    }
+  },
+  "Smothering Abomination": {
+    "name": "Smothering Abomination",
+    "mana_cost": "{2}{B}{B}",
+    "cmc": 4.0,
+    "type": "Creature — Eldrazi",
+    "oracle": "Devoid (This card has no color.)\nFlying\nAt the beginning of your upkeep, sacrifice a creature.\nWhenever you sacrifice a creature, draw a card.",
+    "power": "4",
+    "toughness": "3",
+    "keywords": [
+      "Flying",
+      "Devoid"
+    ],
+    "layout": "normal",
+    "image_uris": {
+      "small": "https://cards.scryfall.io/small/front/a/a/aac33238-e4bd-4c72-aecc-9905232c3ab4.jpg?1783903780",
+      "normal": "https://cards.scryfall.io/normal/front/a/a/aac33238-e4bd-4c72-aecc-9905232c3ab4.jpg?1783903780",
+      "large": "https://cards.scryfall.io/large/front/a/a/aac33238-e4bd-4c72-aecc-9905232c3ab4.jpg?1783903780"
+    }
   }
 }

@@ -39,6 +39,20 @@ Big-butt beatdown: get a "deals damage = toughness" effect online, then attack w
 
 ## Game History
 
+### Game 122 (Human): I Call Him Big Booty/Doran (Human) vs Everything Must Go/Mahadi (Claude) — **LOSS**
+**Result: Mahadi wins T15 (round 8), 43–0 via Blood Artist + Vraan sac-chain. Dominance 3 (theirs).**
+
+**Key plays:**
+- The slow, greedy setup got punished exactly as this primer warns: no creature until T10 Doran, while 3 pingers (double Agate Instigator + Roastmaster) chipped 2-3 per ETB plus free swings — 40 → 12 by round 5 with zero pressure back.
+- **Jaws of Defeat underperformed vs a no-combat drain deck** — its ETB drain totaled 7 (Doran 5, Toxicrene 2, Mangara 2 — 40K Toxicrene is 2/4, not the 1/7) while Claude's pings/drains did 40.
+- **The Wanderer was the right card a little late** — she fully blanked the ping board and turned Blasphemous Act one-sided in Ben's favor, but arrived at Ben-10 with Exsanguinate (life loss goes through) already looming.
+- Doran/Toxicrene blocks won every combat (5/10 + deathtouch) — Claude just stopped sending anything that mattered and comboed off at sorcery speed while all four of Ben's producers were tapped.
+
+**Lessons (Big Booty pilot):**
+- **vs aristocrats/drain: life loss ignores The Wanderer, walls, and lifegain-adjacent defense.** The deck's only real lever is speed — pressure by round 3-4 (dorks/rocks into an early threat) or the race is unwinnable; there is no interaction in the 99 for a sac loop.
+- Holding 1 mana open through the opponent's main phase matters vs sorcery-speed combos (a single StP on Blood Artist mid-chain changes the math). Tapping out every turn made the kill risk-free.
+- Mangara's second-spell draw triggered during the combo chain — nice, but a dead card at 0 open mana; the draw engine needs to come online earlier to matter.
+
 ### Game 112 (Human): I Call Him Big Booty/Doran (Human) vs Mill-Steal/Wrexial (Claude) — **WIN**
 **Result: Big Booty wins T23 via exact-lethal alpha (26 into 16). Final: Human 25 (Wrexial CDMG 15/21), Claude 16→dead. Dominance 2.**
 

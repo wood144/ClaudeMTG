@@ -1,0 +1,122 @@
+# "Everything Must Go" — Mahadi, Emporium Master (Rakdos aristocrats: ping on entry, drain on exit)
+# v2 of the Claude-style deck (replaces The Nightly Toll / Braids after playtest #1 + Ben's feedback).
+# Built 2026-08-01 from collection.db only.
+#
+# Plan: every body pings each opponent on the way IN (Impact Tremors, Witty
+# Roastmaster, Sharpshooter, Agate Instigator, Ayara) and drains on the way OUT
+# (Blood Artist, Zulaport, Vraan, Falkenrath Noble, Judith, Garna). Mahadi turns
+# each turn's deaths into Treasures — deaths ARE ramp. Recursive fodder loops
+# through both trigger sets every turn. Red fixes the old deck's gaps: real
+# instant removal (Terminate/Bedevil/Abrade), true wipes (Blasphemous Act with a
+# recursive board is near one-sided; Chain Reaction), Rakdos Charm for GY decks,
+# and Jeska's Will + Treasures into a lethal Exsanguinate. Still no combat math:
+# the deck wins standing completely still.
+
+1 Mahadi, Emporium Master *CMDR*
+
+# Entry pings (5)
+1 Impact Tremors
+1 Witty Roastmaster
+1 Shocking Sharpshooter
+1 Agate Instigator
+1 Ayara, First of Locthwain
+
+# Exit drains (7)
+1 Blood Artist
+1 Zulaport Cutthroat
+1 Vraan, Executioner Thane
+1 Falkenrath Noble
+1 Etched Familiar
+1 Judith, the Scourge Diva
+1 Garna, Bloodfist of Keld
+
+# Recursive fodder (9)
+1 Reassembling Skeleton
+1 Persistent Specimen
+1 Cult Conscript
+1 Fleshless Gladiator
+1 Haunt of the Dead Marshes
+1 Bloodghast
+1 Silversmote Ghoul
+1 Doomed Dissenter
+1 Headless Rider
+
+# Token engines (2)
+1 Totentanz, Swarm Piper
+1 Lagomos, Hand of Hatred
+
+# Sac outlets & value (8)
+1 Yahenni, Undying Partisan
+1 Ashnod's Altar
+1 Vampiric Rites
+1 Ravenous Amulet
+1 Village Rites
+1 Corrupted Conviction
+1 Plumb the Forbidden
+1 Smothering Abomination
+
+# Removal (8)
+1 Terminate
+1 Bedevil
+1 Abrade
+1 Rakdos Charm
+1 Bone Shards
+1 Feed the Swarm
+1 Sheoldred's Edict
+1 Vraska's Fall
+
+# Board wipes (4)
+1 Blasphemous Act
+1 Chain Reaction
+1 Black Sun's Zenith
+1 Yahenni's Expertise
+
+# Recursion (3)
+1 Reanimate
+1 Victimize
+1 Chthonian Nightmare
+
+# Card draw (6)
+1 Phyrexian Arena
+1 Necrodominance
+1 Harvester of Souls
+1 Seize the Spoils
+1 Big Score
+1 Unexpected Windfall
+
+# Ramp (7)
+1 Sol Ring
+1 Arcane Signet
+1 Talisman of Indulgence
+1 Charcoal Diamond
+1 Mind Stone
+1 Fellwar Stone
+1 Commander's Sphere
+
+# Finishers (5)
+1 Exsanguinate
+1 Gray Merchant of Asphodel
+1 Kokusho, the Evening Star
+1 Jeska's Will
+1 Rise of the Dark Realms
+
+# Lands (35)
+1 Sulfurous Springs
+1 Dragonskull Summit
+1 Smoldering Marsh
+1 Bloodfell Caves
+1 Rakdos Carnarium
+1 Tramway Station
+1 Temple of Malice
+1 Canyon Slough
+1 Foreboding Ruins
+1 Westvale Abbey // Ormendahl, Profane Prince
+1 Witch's Cottage
+1 High Market
+1 Lazotep Quarry
+1 Voldaren Estate
+1 Myriad Landscape
+1 Rogue's Passage
+1 Reliquary Tower
+9 Swamp
+9 Mountain

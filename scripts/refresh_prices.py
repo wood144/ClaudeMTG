@@ -7,6 +7,7 @@ Usage:
     python scripts/refresh_prices.py
 """
 
+import gzip
 import json
 import urllib.request
 import tempfile
@@ -26,6 +27,10 @@ def get_download_url():
     req = urllib.request.Request(BULK_DATA_URL, headers=HEADERS)
     with urllib.request.urlopen(req) as resp:
         data = json.loads(resp.read().decode('utf-8'))
+    # Scryfall dropped the plain-JSON download_uri in 2026 in favor of
+    # gzipped JSONL (one card object per line).
+    if 'jsonl_download_uri' in data:
+        return data['jsonl_download_uri']
     return data['download_uri']
 
 
@@ -34,8 +39,10 @@ def download_and_extract_prices(url):
     print(f"  Downloading bulk data...")
     req = urllib.request.Request(url, headers=HEADERS)
 
-    # Download to temp file to avoid holding ~300MB in memory twice
-    with tempfile.NamedTemporaryFile(mode='wb', suffix='.json', delete=False) as tmp:
+    # Download to temp file to avoid holding the bulk file in memory twice
+    is_jsonl_gz = url.endswith('.jsonl.gz') or '.jsonl' in url
+    suffix = '.jsonl.gz' if is_jsonl_gz else '.json'
+    with tempfile.NamedTemporaryFile(mode='wb', suffix=suffix, delete=False) as tmp:
         tmp_path = tmp.name
         with urllib.request.urlopen(req) as resp:
             total = 0
@@ -50,10 +57,18 @@ def download_and_extract_prices(url):
     print()
 
     print(f"  Parsing {total / (1024*1024):.0f} MB of card data...")
-    with open(tmp_path, encoding='utf-8') as f:
-        cards = json.load(f)
-
-    os.unlink(tmp_path)
+    if is_jsonl_gz:
+        # Stream one card object per line; never holds the full file decoded.
+        def iter_cards():
+            with gzip.open(tmp_path, 'rt', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if line:
+                        yield json.loads(line)
+        cards = iter_cards()
+    else:
+        with open(tmp_path, encoding='utf-8') as f:
+            cards = json.load(f)
 
     # Extract cheapest USD price per card name
     prices = {}
@@ -77,6 +92,7 @@ def download_and_extract_prices(url):
         if name not in prices or usd < prices[name]:
             prices[name] = usd
 
+    os.unlink(tmp_path)
     print(f"  Extracted prices for {len(prices)} unique cards ({skipped} printings had no USD price)")
     return prices
 

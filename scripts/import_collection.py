@@ -28,6 +28,7 @@ Query examples (sqlite3 assets/collection.db):
 """
 import argparse
 import csv
+import gzip
 import json
 import os
 import sqlite3
@@ -99,15 +100,15 @@ def read_csv(path):
 
 def fetch_scryfall_oracle(refresh=False):
     """Download (and cache) the oracle_cards bulk file; return name->attrs map."""
-    cache = os.path.join(tempfile.gettempdir(), "scryfall_oracle_cards.json")
+    cache = os.path.join(tempfile.gettempdir(), "scryfall_oracle_cards.jsonl.gz")
     if refresh or not os.path.exists(cache):
         print("Fetching Scryfall bulk-data index...", file=sys.stderr)
         req = urllib.request.Request(SCRYFALL_BULK_INDEX, headers=HEADERS)
         with urllib.request.urlopen(req) as r:
             index = json.load(r)
         entry = next(e for e in index["data"] if e["type"] == "oracle_cards")
-        url = entry["download_uri"]
-        print(f"Downloading {url} (~{entry.get('size',0)//1_000_000} MB)...", file=sys.stderr)
+        url = entry["jsonl_download_uri"]
+        print(f"Downloading {url} (~{entry.get('compressed_size',0)//1_000_000} MB)...", file=sys.stderr)
         req = urllib.request.Request(url, headers=HEADERS)
         with urllib.request.urlopen(req) as r, open(cache, "wb") as out:
             while chunk := r.read(1 << 20):
@@ -115,8 +116,8 @@ def fetch_scryfall_oracle(refresh=False):
     else:
         print(f"Using cached Scryfall bulk file: {cache}", file=sys.stderr)
 
-    with open(cache, encoding="utf-8") as f:
-        cards = json.load(f)
+    with gzip.open(cache, "rt", encoding="utf-8") as f:
+        cards = [json.loads(line) for line in f if line.strip()]
 
     attrs = {}
     for c in cards:

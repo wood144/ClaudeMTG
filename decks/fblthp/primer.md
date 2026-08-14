@@ -41,6 +41,13 @@ Commander: Fblthp, the Lost | Colors: Blue (Mono-U)
 
 ## Game History
 
+### Game 121 (opponent): Fblthp (Human) vs. Everything Must Go/Mahadi (Claude)
+**Result:** Human wins T22 via combo, 32–23. The winning engine was **Sensei's Divining Top + Omniscience**: Top's draw ability puts Top on the library, Omniscience recasts it free — repeatable draw-the-deck loop, no Leveler/remover needed. ~50 free casts in the final turn.
+- **The soft lock that set it up:** Omniscience + Hullbreaker Horror — every free cast bounced Claude's best permanent (Kokusho twice, Mahadi, Roastmaster, Bloodghast). Claude's board only stuck after Bone Shards killed the Horror.
+- **Katara, Waterbending Master is a sleeper engine vs removal-light decks:** flash-casting everything at Claude's end step banked 4 experience; one attack drew 4. She eventually died blocking — the block should have come many turns earlier.
+- Tidal Barracuda fully blanked Claude's instant-speed removal (BR has no counters, so this cost Claude proactive Bedevil turns, not combo-stops).
+- Claude's Abrade on Gauntlet of Power (T11) was the game's only real speed bump — pushed the big-mana line back ~4 turns; the deck rebuilt through Gilded Lotus + Medallion + Lens anyway.
+
 ### Game 115 (opponent): Fblthp (Human) vs. Dicebots/Mr. House (Claude)
 **Result:** Human (Fblthp) wins T14 via Enter the Infinite → Omniscience. Final life: Human 17, Claude 40.
 - Claude raced hard with Warleader's Call pings + Mr. House tokens (Ragavan, Swarming Goblins, Robots, Delina, Havoc Jester) and chipped Human 40 → 17 almost entirely through creature-ETB pings (Claude's ground board is fully blockable by Fblthp/Apprentice/Mm'menon/Disruptor).

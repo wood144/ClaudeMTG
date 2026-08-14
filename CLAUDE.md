@@ -83,6 +83,7 @@ Deeper strategy reference: `~/.claude/projects/.../memory/strategy.md`. Read onc
 3. Batch-lookup all hand cards + your commander.
 4. In `game_current.md` write: deck name, opp name, mechanical win path, 2-3 key threats.
 5. Mulligan: count lands. 0 = auto-mull. 1 = mull unless very low curve with relevant colors. Say "Keep" or "Mulligan."
+6. **THE FIRST MULLIGAN IS FREE (Commander rule). Bottom count = number of mulligans taken MINUS 1.** Mull once → keep all 7, bottom NOTHING. Mull twice → bottom 1. Mull three times → bottom 2. Never announce a bottomed card after a single mulligan.
 
 ### End
 1. `python scripts/update_tracker.py '<JSON>'` — fields per the script's docstring example.

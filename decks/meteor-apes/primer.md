@@ -134,7 +134,52 @@ Commander: Roxanne, Starfall Savant ({3}{R}{G}) | Colors: R/G (Gruul)
 - **Summoning sickness check matters.** Almost declared attackers with freshly cast Elder + Hajar — caught by board state review.
 - **0 counterspells from Faeries this game** — won entirely on tempo, flash, and aura removal. Counter suite didn't even need to show up.
 
+### Game 119: Meteor Apes/Roxanne (Human) vs. Everything Must Go/Mahadi (Claude)
+**Result:** Human wins, sides 23 (T12), 39–1, combat damage + Meteorite pings. Dominance 3.
+
+**Key plays:**
+- Klauth's Will X=3 cast in RESPONSE to Claude's Victimize: killed Mahadi + the sac fodder, made Victimize resolve into nothing (mandatory sacrifice with no creature = no returns). Best play of the game — held removal specifically for the mid-combo window.
+- Tamiyo's Safekeeping ({G}, +2 life rider) blanked Terminate on recast Roxanne with only one land open.
+- Kogla ETB-fight cleared Blood Artist; Roxanne recast (7) + per-attack Meteorite pings finished from 40+ life.
+- Weathered two Claude wipes (BSZ X=4 ate Mandrills + Gibbon; Yahenni's Expertise whiffed on the 4-toughness board) and rebuilt both times.
+
+**Lessons:**
+- **Holding instant X-burn for the opponent's sac/reanimation window is a blowout pattern vs aristocrats** — their spells need bodies on resolution; killing the bodies mid-spell blanks the spell AND can force a commander sacrifice.
+- 4-toughness across the curve (Mandrills, Gibbon, Kogla) blanks -3/-3 effects entirely.
+- Roxanne kept dying in her own cast window (Bedevil T8) — casting her with protection mana ({G} Safekeeping) open is what finally made her stick.
+
+### Game 120: Meteor Apes/Roxanne (Claude) vs. Everything Must Go/Mahadi (Human)
+**Result:** Human wins, sides 17 (T9), 26–0. Kokusho drain off Ben's own BSZ X=5 finished Claude from 3 life. Deck-swap rematch of Game 119.
+
+**Key plays:**
+- Claude stuck on 3 lands until T16; Simian Spirit Guide bridged Roxanne out T12 into a tapped-out window (survived).
+- Best turn: T16 — Port Razer + Roxanne + Licid attack into tapped blockers, Razer connected → extra combat → second Meteorite ping killed Mahadi via marked damage (2 combat-marked + 2 ping on a 3-toughness commander). 16 damage + commander kill in one turn.
+- Tyvar's Stand X=0 mid-combat made Licid an indestructible Harvester-blocker — the cheap protection mode matters.
+- Fatal shape: aristocrats' alpha (Kokusho/Harvester/Judith/Vraan + death triggers) put Claude to 3, then any Kokusho death = 5 to the face. Claude's KW can't touch fliers; nothing in Gruul interacts with a death trigger.
+
+**Lessons:**
+- **vs Kokusho decks: 5 life is the real death line, not 0.** Once Kokusho is on board, count him as guaranteed 5 burn — he WILL die on the owner's terms (their own wipe if needed). Stay above (their-board-alpha + 5), or kill Kokusho while at high life so the drain is absorbed early.
+- **Don't chump-block aristocrats.** Every nontoken death fed Harvester a card; deaths on their turn feed Mahadi Treasures. Correct call all game was open-field damage + surgical blocks that only kill (Ape↔Judith, Razer↔Vraan).
+- Land-screw again (3 lands at T14, mull guide followed but 2-land keep w/ Cluestone was loose vs a deck that punishes slow starts). Cluestone-as-only-G held; barely.
+
+### Game 123: Meteor Apes/Roxanne (Claude) vs. Everything Must Go/Mahadi (Human)
+**Result:** Human wins, sides 15 (round 8), 49–2. Conceded to Kokusho→Vampiric Rites drain. Dominance 3.
+
+**Key plays:**
+- **Tyvar's Stand X=0 for ONE GREEN MANA** on blocked Roxanne: indestructible + hexproof, her 4 killed blocking Mahadi, she lived. Cheapest blowout available in the deck — X=0 is the whole card when the goal is surviving a block.
+- Meteorite ping pre-marked Harvester of Souls (5/5) so any Harvester block would die to Roxanne's 4 (4+2=6). Correct pattern; he simply never blocked with it.
+- Flopsie ETB (+1/+1 on everything incl. itself) turned a 3-body chaff board into Roxanne 5/4 / Flopsie 5/5 / Uktabi 3/3 / Shaman 2/2 — he stopped alpha-striking immediately and attacked with Kokusho alone.
+- Uktabi ETB killed Sol Ring; Gorilla Shaman never had a Treasure to eat (Mahadi died before making one).
+
+**Lessons:**
+- **Kokusho + any free sac outlet (Vampiric Rites) = 5–6 damage on demand. My effective life is (life − 6), not life.** I "stabilized" at 8 with a 15-power wall and was dead anyway. Extends the g120 lesson: it's not 5 life, it's 6 with Blood Artist, and it needs no combat.
+- **Blood Artist at low life inverts combat.** Below ~4 life, every death on either side is damage I can't prevent — I can't block, can't trade, can't even remove their creatures. Kill Blood Artist while life is high or the board stalls into a loss.
+- **MISPLAY: targeted a Meteorite ping at Etched Familiar; he sacrificed it to Plumb the Forbidden in response** — trigger fizzled, he drew 3, I got nothing. vs decks with sac-as-additional-cost spells and free outlets, a ping aimed at a creature they're *happy* to lose is a fizzle. Aim at what they must keep, or at face.
+- **Land-screw for the third straight game vs this deck** (3 lands until T14; 119 and 120 same shape). Roxanne landed T10 for the second time in three games. Ben's T5 Jeska's Will both-modes turn (6 red off my hand size) is a 3-permanent swing I cannot answer from 3 lands.
+- **After any effect returns a land to hand mid-turn, re-check the land drop.** Pulse of Murasa returned Terramorphic and I passed the turn without playing it — Ben caught it.
+
 ## Matchup Notes
+- **vs. Everything Must Go/Mahadi (1-2):** Aristocrats deck: entry pings + death drains + Mahadi Treasures (his trigger only counts deaths on HIS turn — sweeping on YOUR turn gives him nothing). Their removal is real: Bedevil/Terminate at instant speed, BSZ (X=4+ kills the whole ape curve, and it reshuffles), Blasphemous Act. Kill their commander or fodder AT INSTANT SPEED during their sac spells (Victimize/Chthonian Nightmare need a body on resolution). Cast Roxanne only with protection mana open. **Kokusho FLIES — "no fliers" is false, and Gruul cannot block or kill it. Kokusho + Vampiric Rites/any sac outlet = 6 on demand, so play to a life floor of 6, not 0.** Kill Blood Artist early (2-dmg ping range) — below 4 life it makes combat itself lethal. Their pings/drains mean a stalled board still loses; I need the X-sweeper by ~T10 or the game is decided. Do not aim targeted pings at creatures they'd happily sacrifice (Plumb the Forbidden fizzles them at instant speed).
 - **vs. Faeries/Tegwyll (0-1):** Tegwyll's deathtouch makes blocking dangerous, +1/+1 lord buffs all Faeries to survive Meteorite 2-damage pings (base 1/1 → 2/2). Flash package (High Fae Trickster, Alela, Snaremaster) deploys threats on end steps. **Priority:** don't tap out for Roxanne without protection mana. Eaten by Piranhas/aura removal shuts Roxanne down completely — need enchantment removal in hand or on board (Silverback Elder, Collective Resistance, Klauth's Will). **Snaremaster Sprite is a key tempo piece** — taps + stuns for 2 turns. **Air force snowballs fast** — 3-4 flyers by mid-game becomes 10+ damage/turn. Need Starstorm, Magmaquake, or Rolling Earthquake to sweep the board before it's too late.
 - **vs. Scion/Dargons (5-color dragons):** Opponent has a slow mana base but explosive turns with Scion activation combos. Rush Roxanne out and pressure before they stabilize. Watch for Scion → Atarka (double strike) or Scion → Ureni (protection). **Destroying color fixers (Arcane Signet, Chromatic Lantern) is game-winning** — without them, 5-color decks can't cast their commander. Watch for Virtue of Persistence (the enchantment half of Locthwain Scorn) as late-game reanimation threat.
 - **vs. Mill/Steal/Wrexial (Dimir mill):** Opponent mills aggressively to strip combo pieces and fuel Wrexial's GY-casting. **Delve away instants/sorceries from GY to blank Wrexial's trigger** — Hooting Mandrills is perfect for this. Wrexial has islandwalk — Eluge/Flood of Mars enable it, kill on sight. **Mirko Vosk is the scariest mill threat** — reveals until 4 lands, easily mills 10+ cards. Kill immediately (Kogla fights it cleanly). Bloatfly Swarm's damage prevention means combat shrinks it rather than killing it — accept rad counters to strip counters. **Imprisoned in the Moon on Roxanne is devastating** — Klauth's Will (both modes with commander) or Collective Resistance are the answers. Record: 2-1 (Claude wins Games 1, 37; Human wins Game 3/22).

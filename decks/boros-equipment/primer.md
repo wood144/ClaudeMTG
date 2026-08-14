@@ -222,7 +222,25 @@ Commander: Kellan, the Fae-Blooded // Birthright Boon | Colors: Red/White (Boros
 - **Kellan never deployed** — correct not to chump him into the board, but it means Boros put zero pressure on a 40-life opponent across 5 turns. Against a deck that does nothing until it does everything, slow setup = death. Mulligan harder for a fast aggressive curve, or accept Boros is just behind in this matchup and needs the nut draw.
 - Note for opposing-pilot use: **Atla is a red herring as a commander here — the deck is a Gishath/Etali "cheat fat dinos into play" shell. Removing Atla does nothing.** Kill/counter the enablers (Savage Order target, Gishath, Etali) or race.
 
+### Game 124 (pilot): Boros Equipment (Claude) vs. Everything Must Go/Ayara, Widow of the Realm (Human)
+**Result:** Human wins, sides 14 (round 7), 44–7. Conceded to a 5-body, 15-power alpha at 7 life. Dominance 3.
+
+**How Claude lost — the edict problem, in full:**
+- Kept 5 lands + Maul + Dragonfire Blade. Birthright Boon tutored **Wrecking Ball Arm instead of the default Sword of the Animist** (correct — holding 5 lands meant ramp was the one thing I didn't need; WBA + Blackblade at 6 lands is a 13/13 double striker = 26 CDMG in one connect).
+- **Vraska's Fall (round 3) and Sheoldred's Edict (round 6) each ate Kellan as my only creature.** Tax went {2}{R} → {4}{R} → {6}{R}. The second one was cast in response to my declared attack with a 4/4 flying Kellan, so it also blanked the attack.
+- Drew EIGHT equipment and ZERO creatures. By round 7 I had 8 artifacts on the battlefield, all unattached, and one card in hand.
+
+**Lessons — the durable one first:**
+- **A lone creature on board is a free 2-mana kill for any edict.** Hexproof (Champion's Helm), hexproof-from-monocolored (Dragonfire Blade), and indestructible ALL fail to "sacrifice a creature of your choice" — it doesn't target and doesn't destroy.
+- **HAYSTACK IS THE EXCEPTION AND THE BEST PROTECTION IN THE DECK.** A phased-out permanent is treated as though it doesn't exist, so with Kellan phased out I control zero creatures and the edict finds nothing — no sacrifice, no death, **no commander tax.** It also dodges targeted removal, wipes, and -X/-X. Cost: he can't block while phased out, and he returns at my untap step. **Total mana to hold up = {2} for the activation, and Haystack must already be on the battlefield and untapped.** In game 124 I cast Haystack with my last 2 mana and had nothing left to activate it with — that was the loss, not a lack of answers.
+- Second line of defense is a **spare body on the battlefield** so the edict eats chaff: Ornithopter ({0}!), Gingerbrute ({1}), living-weapon equipment (Nettlecyst {3}, Kaldra Compleat {7}). **Do not redeploy Kellan into an untapped black opponent with neither Haystack mana nor a chump body.**
+- Corollary for deckbuilding: ~14 creatures in 99 cards is too few for a deck whose entire plan requires a creature. Ornithopter/Gingerbrute/Nettlecyst are not filler here, they are edict insurance.
+- **Casting the Adventure (Birthright Boon) from the command zone COUNTS as a command-zone cast for commander tax.** So the "free" Kellan-from-exile line still leaves him at {4}{R} on the first recast, not {2}{R}. Budget for that.
+- Deploying cheap equipment while creature-less is still right (pre-pays cast costs so later turns are pure equip mana, and grows a future Nettlecyst Germ) — but it's damage control, not a plan.
+- **vs an aristocrats deck, don't trade Kellan into a small blocker.** Killing Doomed Dissenter upgrades it into a 2/2 Zombie (3/2 under Judith), so the "free" double-strike block actively improves their board.
+
 ## Matchup Notes
+- **vs Everything Must Go/Ayara (0-1):** **They run two edicts (Sheoldred's Edict, Vraska's Fall) plus 6 other removal spells — Kellan will die repeatedly and no protection in this deck stops a sacrifice.** Get a spare body down FIRST (Ornithopter, Gingerbrute, or a living weapon) so the edict eats chaff; only then commit Kellan and equipment. Judith's +1/+0 anthem pushes their whole board to 3 power, which turns OFF Wrecking Ball Arm's "can't be blocked by power ≤2" — Maul's flying is the real evasion (their only fliers are Kokusho and Falkenrath Noble). Ayara, Widow of the Realm is a 3/3 that flips for {5}{R/P} (payable with 2 life off black mana) into Furnace Queen, which reanimates a creature with haste every combat — they sacrifice it before the end-step exile trigger for extra death value. Race hard: their drains and Kokusho mean a long game is unwinnable, and Blasphemous Act stays cheap once their board is wide.
 - **vs Mill decks:** Mantle of the Ancients turns mill into a win condition. Hold Mantle and let them fill your GY. Cloudsteel Kirin prevents mill-out loss.
 - **vs Dimir (U/B):** Sword of Once and Future grants protection from both their colors. Near-total lockout on the equipped creature.
 - Bruenor + equipment + lifelink is a strong clock. Prioritize removing Bruenor or key equipment pieces early (when opposing).

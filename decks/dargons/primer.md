@@ -187,7 +187,22 @@ Commander: Scion of the Ur-Dragon | Colors: WUBRG (5-color)
 - **Earthquake Dragon discount stacks fast:** With Scion (5) + Betor (5) + Regent (4) = 14 MV reduction → 1 mana cost. Even with just Betor + Regent in play = {5}{G} = 6 mana. Realistic mid-game finisher.
 - **Heirloom + 4+ power creature = card advantage engine.** Drew Will of the Abzan off Heirloom's combat-damage-draw trigger T16, which then drew Scavenger Regent reanimation — chain of value.
 
+### Game 118: Dargons/Scion (Human) vs. The Nightly Toll/Braids (Claude)
+**Result:** Human wins T6 (11 sides) via commander damage — 21 exactly (7 Ureni-copy + 4 base + 10 Earthquake-copy). Human 35, Claude 30. Dominance 3.
+
+**Key plays:**
+- T1-3: Petal + BoP + Rampant Growth + suspended Search for Tomorrow → T5 Scion (textbook fast-Scion opener).
+- T7: Scion → Ureni of the Unwritten (tutor-to-GY), attacked as 7/7; top-8 whiffed on Dragons. The "whiff" was actually setup: Ureni in GY became a Defossilize target.
+- T9: Defossilize → real Ureni; its ETB top-8 hit Utvara Hellkite (free). Claude's Yahenni's Expertise + free Vraska's Fall the turn before had killed BoP + forced Terror sac — but reanimation rebuilt the sac-shield in one turn.
+- T11: Sol Ring + Scion → Earthquake Dragon 10/10 flying: exact 21 CDMG. Ureni's attack trigger had also dropped Atarka (no double strike that combat — entered after attack triggers).
+
+**Lessons:**
+- **The whiffed Ureni activation is still a 2-for-1** — the card in GY is a reanimation target even when the top-8 misses. Defossilize turning a whiff into Ureni + free Utvara + free Atarka was the game.
+- **vs edict decks: chaff is armor.** Claude's edicts only threaten Scion when the board is Scion-only. Reanimating ANY dragon re-shields Scion. Sequence reanimation before attacking into open edict mana.
+- **CDMG races ignore drain decks' lifegain** — Claude gained life all game; irrelevant. 3 connects ended it.
+
 ## Matchup Notes
+- **vs. The Nightly Toll/Braids (1-0):** Mono-B sac/drain can't block fliers — pure CDMG race, ~3 Scion connects. Their kills: minus-X wipes + edicts only (targeted black removal is real but they know Ureni Song blanks it). Keep a spare dragon on board at ALL times as edict armor; Defossilize/reanimation rebuilds shields faster than they strip. Braids end-step trigger: declining costs 2 life + a card to them — usually correct anyway; never sac a real dragon to it. Watch Yahenni's Expertise (-3/-3 + free ≤3 spell) around their 5 mana — it killed BoP + Terror (via free Vraska's Fall) in one turn. Their T8 was the only scary turn; close before their 6-mana wipe window (BSZ X=5+/Nightmare Unmaking ~T12).
 - **vs. Bears/Ayula (1-0):** Hardened Scales + Ozolith stacks make every Ayula trigger +4 (not +2). Ayula scales to lethal CDMG fast. **Crux of Fate (mode 2) is the win condition** — wipes all bears + sends Ayula to CZ. Backup: Kindred Dominance (name Dragon, kill everything else). Don't recast Scion without {2} mana for defensive Ureni — bears WILL kill Scion via Ayula fight triggered by any bear ETB. Birthing Boughs is the worst engine to face (repeatable bear ETB = guaranteed Ayula trigger every opp turn for {4} mana). Betor survives Crux (Spirit Dragon type) — perfect post-wipe board presence. Frog with {2} deathtouch activation deters Ayula fight on Frog (deathtouch kills Ayula even at 6/6).
 - **vs. Mill/Steal/Wrexial (1-0):** Dimir mill is too slow to interact with T3-5 Scion. Wrexial needs Scion's instants/sorceries in GY to steal — but Scion puts creatures in GY via activation (useless for Wrexial). Counter suite can't stop Scion's {2} activated ability. Earthquake Dragon at {G} baits counters. Teneb reanimates anything that gets countered. Betor's 10+ toughness draw is free with any 2 dragons. **Risk:** if game goes long, mill strips combo pieces from library. End it fast.
 - **vs. Ghave (Abzan tokens):** Kill The Mycotyrant early before token generation spirals. Scion → Ureni blanks all of Abzan's best removal (Path, Swords, black kill spells).
